@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function HaQuiz() {
+export default function Quiz() {
     const questions = [
         {
             question: 'Hur många jordklot skulle behövas om alla levde som medelsvensken?',
