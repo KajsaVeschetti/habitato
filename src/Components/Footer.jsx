@@ -8,6 +8,8 @@ import Facebook from "../img/facebook.png";
 
 class Footer extends Component {
 
+
+
   render(){
 
     const footerStyling ={
@@ -27,8 +29,8 @@ class Footer extends Component {
     };
 
     const logos = {
-      width: "50px",
-      heigth: "50px",
+      width: "30px",
+      heigth: "30px",
       margin: "5px"
     }
 
@@ -36,6 +38,8 @@ class Footer extends Component {
       textAlign: "right",
       paddingRight: "80px"
     }
+
+ 
 
     return(
      <footer style={footerStyling}>
