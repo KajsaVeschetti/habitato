@@ -1,4 +1,5 @@
 import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./Components/Header.jsx";
 import Comments from "./Components/Comments.jsx";
 import Information from "./Components/FaktaRutor.jsx";
