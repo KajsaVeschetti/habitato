@@ -3,6 +3,7 @@ import Habitato1 from "../img/Habitato1.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Nav from 'react-bootstrap/Nav'
 
 class Header extends Component {
 
@@ -10,7 +11,7 @@ class Header extends Component {
   render(){
 
     const headerStyle={
-      margin: "50px"
+      margin: "50px",
     }
 
     const logoStyle={
@@ -22,26 +23,31 @@ class Header extends Component {
       fontSize: "20px",
       color:"#5f5f5f",
       textDecoration:"none",
-      display: "inline",
-      paddingRight:"70px",
-      paddingLeft:"70px",
+     paddingTop: "55px",
+      paddingRight:"50px",
+      paddingLeft:"50px",
       
     };
 
     return(
-      <header style={headerStyle}>
-        <Row> 
-          <Col>
-          <a href="#" style={linkStyle}>Hem</a>
-          <a href="#" style={linkStyle}>Quiz</a>
-          <a href="index.html" >
-          <img src={Habitato1} style={logoStyle}  alt="Habitato logotyp"/>
-          </a>
-          <a href="#" style={linkStyle}>Tips</a>
-          <a href="#" style={linkStyle}>Fakt</a>
-          </Col>
-        </Row>
+      <header>
+      <Nav className="justify-content-center" activeKey= "/home" style={headerStyle}>
+        <Nav.Item>
+          <Nav.Link  href="#" style={linkStyle}>Hem</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link  href="#" style={linkStyle}>Quiz</Nav.Link>
+        </Nav.Item>
+   
+        <a href="#"> <img src={Habitato1} style={logoStyle}  alt="Habitato logotyp"/> </a>
        
+        <Nav.Item>
+          <Nav.Link  href="#" style={linkStyle}>Tips</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link  href="#" style={linkStyle}>Fakta</Nav.Link>
+        </Nav.Item>
+      </Nav>
       </header>
     );
 
