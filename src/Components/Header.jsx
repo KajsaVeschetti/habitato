@@ -23,8 +23,8 @@ class Header extends Component {
       color:"#5f5f5f",
       textDecoration:"none",
       display: "inline",
-      paddingRight:"80px",
-      paddingLeft:"80px",
+      paddingRight:"70px",
+      paddingLeft:"70px",
       
     };
 
