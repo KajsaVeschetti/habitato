@@ -66,7 +66,7 @@ class Footer extends Component {
          <div style={logoPlace}>
          <a href="#" 
               onMouseEnter={event => onMouseOver(event)}
-              onMouseOut={event => onMouseOut(event)}>
+              onMouseLeave={event => onMouseOut(event)}>
            <FontAwesomeIcon style={logos} size="2x"   icon={faFacebookSquare}/></a>
          <a href="#"
              onMouseEnter={event => onMouseOver(event)}
