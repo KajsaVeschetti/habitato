@@ -2,8 +2,8 @@ import React, {Component} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Instagram from "../img/instagram.png";
-import Facebook from "../img/facebook.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebookSquare, faInstagram  } from '@fortawesome/free-brands-svg-icons'
 
 
 class Footer extends Component {
@@ -15,6 +15,7 @@ class Footer extends Component {
     const footerStyling ={
       marginTop:"40px",
       marginBottom:"40px",
+     
 
     }
 
@@ -29,14 +30,14 @@ class Footer extends Component {
     };
 
     const logos = {
-      width: "30px",
-      heigth: "30px",
       margin: "5px"
     }
 
     const logoPlace = {
       textAlign: "right",
-      paddingRight: "80px"
+      paddingRight: "80px",
+      paddingTop: "30px"
+      
     }
 
  
@@ -54,8 +55,9 @@ class Footer extends Component {
          </Col>
          <Col>
          <div style={logoPlace}>
-         <img src={Instagram} style={logos} alt="Instagram"/>
-         <img src={Facebook} style={logos} alt="Facebook"/>
+         <a href="#"><FontAwesomeIcon style={logos} size="2x" color="#5f5f5f" icon={faFacebookSquare}/></a>
+         <a href="#"><FontAwesomeIcon style={logos} size="2x" color="#5f5f5f" icon={faInstagram}/></a>
+       
          </div>
          </Col>
        </Row>
