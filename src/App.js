@@ -1,23 +1,35 @@
+import React, { Component } from 'react';
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Header from "./Components/Header.jsx";
-import Comments from "./Components/Comments.jsx";
-import Information from "./Components/FaktaRutor.jsx";
-import Quiz from "./Components/Quiz.jsx";
-import Footer from "./Components/Footer.jsx";
+import Page from "./Components/Page";
+import NavBar from './Components/NavBar';
+import Quiz from './Components/Quiz';
+import Footer from './Components/Footer';
+import AllCharts from './Components/Charts/AllCharts';
+import Tips from './Components/Tips';
 
 
 
-function App() {
-  return (
-    <div className="App">
-      <Header/>
-      <Information/>
-      <Comments/>
-      <Quiz/>
-      <Footer/>
-    </div>
-  );
+
+class App extends Component{
+
+
+  render(){
+    return (
+      <div className="App">
+        <NavBar/>
+        <Quiz/>
+       <Tips/>
+
+
+
+
+        <Footer/>
+
+      </div>
+    );
+  }
 }
+
 
 export default App;
