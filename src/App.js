@@ -21,7 +21,7 @@ class App extends Component{
         <Quiz/>
        <Tips/>
 
-
+        <AllCharts/>
 
 
         <Footer/>
