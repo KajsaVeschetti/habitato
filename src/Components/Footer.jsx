@@ -2,20 +2,18 @@ import React, {Component} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Instagram from "../img/instagram.png";
-import Facebook from "../img/facebook.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebookSquare, faInstagram  } from '@fortawesome/free-brands-svg-icons'
+
 
 
 class Footer extends Component {
 
 
-
-  render(){
-
+  render(){ 
     const footerStyling ={
       marginTop:"40px",
       marginBottom:"40px",
-
     }
 
     const linkStyle = {
@@ -29,17 +27,29 @@ class Footer extends Component {
     };
 
     const logos = {
-      width: "30px",
-      heigth: "30px",
-      margin: "5px"
+      margin: "5px",
+      color: "#5f5f5f"
     }
 
     const logoPlace = {
       textAlign: "right",
-      paddingRight: "80px"
+      paddingRight: "80px",
+      paddingTop: "30px"
     }
 
- 
+    const onMouseOver = event => {
+      const el = event.target;
+      let colorhex = "#5cb85c";
+      el.style.color = colorhex;
+    };
+    
+    const onMouseOut = event => {
+      const el = event.target;
+      let grey = "#5f5f5f";
+      el.style.color = grey;
+    };
+    
+
 
     return(
      <footer style={footerStyling}>
@@ -54,8 +64,14 @@ class Footer extends Component {
          </Col>
          <Col>
          <div style={logoPlace}>
-         <img src={Instagram} style={logos} alt="Instagram"/>
-         <img src={Facebook} style={logos} alt="Facebook"/>
+         <a href="#" 
+              onMouseEnter={event => onMouseOver(event)}
+              onMouseLeave={event => onMouseOut(event)}>
+           <FontAwesomeIcon style={logos} size="2x"   icon={faFacebookSquare}/></a>
+         <a href="#"
+             onMouseEnter={event => onMouseOver(event)}
+             onMouseLeave={event => onMouseOut(event)}
+          ><FontAwesomeIcon style={logos} size="2x"  icon={faInstagram}/></a>
          </div>
          </Col>
        </Row>
