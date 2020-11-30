@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import BarCharts from './CO2Emission';
 
 // import { Route, Redirect, Switch } from "react-router-dom";
@@ -14,14 +13,11 @@ class AllCharts extends Component {
       };
     
       async componentDidMount() {
-    
         //Hämta data från API 1
         const url = "https://my.api.mockaroo.com/co2.json?key=8eb9e6f0";
         const response = await fetch(url);
         const data = await response.json();
      
-    
-    
         this.setState({CO2Emission: data});
       }
     
@@ -40,16 +36,16 @@ class AllCharts extends Component {
       };
     render() { 
         return (  
-            <React.Fragment>
-              <BarCharts
-              chartName="Bar1"
-              CO2Emission={this.state.CO2Emission[this.state.indexYear1]}
-              onYearFilter={this.handleYearFilter}/>
-              <BarCharts
-              chartName="Bar2"
-              CO2Emission={this.state.CO2Emission[this.state.indexYear2]}
-              onYearFilter={this.handleYearFilter}/>
-            </React.Fragment>
+            <div>
+          <BarCharts 
+      chartName="Bar1"
+      CO2Emission={this.state.CO2Emission[this.state.indexYear1]} 
+      onYearFilter={this.handleYearFilter}/>
+      <BarCharts
+      chartName="Bar2" 
+      CO2Emission={this.state.CO2Emission[this.state.indexYear2]} 
+      onYearFilter={this.handleYearFilter}/>
+            </div>
 
         );
     }
