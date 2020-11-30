@@ -1,4 +1,11 @@
 import React, { useState } from 'react';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+  
 
 
 
@@ -64,24 +71,16 @@ export default function Quiz() {
                 <div className='score-section'>
 
                     {/* Grön Dina poäng-skylt */}
-                     <div class="alert alert-success" role="alert"><h1 class="display-4">Du fick {score} av {questions.length} möjliga</h1>
+                     <div class="alert alert-success" role="alert"><h1 class="display-4">Du fick {score} av{questions.length} möjliga</h1>
 </div>
                     
-                     <br></br>
-                     {/* länkar */}
-                     <a>Vill du testa att göra quizet igen?</a>
-                     <p>Eller vill du läsa om de rätta svaren?</p>
-
-
-
-
-    
                 </div>
             ) : (
                 <> 
                     <div className='question-section'>
                         <div className='question-count'>
-            <h1>Testa dina kunskaper om klimatförändringar med Habitatos miljö-quiz</h1>
+                        {/* Quiz-rubrik */}
+            <h1 class="display-4"> Habitatos miljö-quiz</h1>
                             <span>Fråga {currentQuestion + 1}</span>/{questions.length}
                         </div>
                         <div className='question-text'>{questions[currentQuestion].question}</div> 
@@ -90,7 +89,9 @@ export default function Quiz() {
 						{/* mapfunktion för att itterera över array */}
                         {questions[currentQuestion].answerOptions.map((answerOption) => (
                             <button type="button" class="btn btn-success" onClick={() => handleAnswerOptionClick(answerOption.answer)}>{answerOption.question}</button>
-							))}
+							))} 
+                            
+                            
                     </div>
                 </>
             )} 
