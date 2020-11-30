@@ -8,6 +8,7 @@ import Footer from './Components/Footer';
 import AllCharts from './Components/Charts/AllCharts';
 import Tips from './Components/Tips';
 import Test from './Components/Test';
+import Comments from './Components/Comments';
 
 
 
@@ -26,7 +27,7 @@ class App extends Component{
 
         <AllCharts/>
 
-
+<Comments />
         <Footer/>
 
       </div>
