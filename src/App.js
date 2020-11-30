@@ -7,6 +7,7 @@ import Quiz from './Components/Quiz';
 import Footer from './Components/Footer';
 import AllCharts from './Components/Charts/AllCharts';
 import Tips from './Components/Tips';
+import Test from './Components/Test';
 
 
 
@@ -19,7 +20,8 @@ class App extends Component{
       <div className="App">
         <NavBar/>
         <Quiz/>
-       <Tips/>
+        <Tips/>
+        <Test/>
 
         <Footer/>
 
