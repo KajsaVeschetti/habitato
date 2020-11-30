@@ -6,7 +6,7 @@ class Information extends Component {
 
     return(
       <div>
-        
+        <h1>Testar om det funkar</h1>
       </div>
     );
 
