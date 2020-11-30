@@ -9,7 +9,7 @@ class AllCharts extends Component {
     state = {
         CO2Emission: [],
         indexYear1:0,
-        indexYear2:0,
+        indexYear2:0
       };
     
       async componentDidMount() {
@@ -25,9 +25,11 @@ class AllCharts extends Component {
         let index = this.state.CO2Emission.findIndex(co2=>co2.Year === parseInt(Year));
         if(index !== -1){
           switch(chartName){
-            case "Bar1" : this.setState({indexYear1: index}); break;
+            case "Bar1" : this.setState({indexYear1: index}); 
+            break;
 
-            case "Bar2" : this.setState({indexYear2: index}); break;
+            case "Bar2" : this.setState({indexYear2: index}); 
+            break;
           }
 
         } else{
@@ -36,7 +38,8 @@ class AllCharts extends Component {
       };
     render() { 
         return (  
-            <div>
+            <div class= "card w-75 text-center border-secondary mx-auto">
+              <div class= "card-body">
           <BarCharts 
       chartName="Bar1"
       CO2Emission={this.state.CO2Emission[this.state.indexYear1]} 
@@ -45,7 +48,11 @@ class AllCharts extends Component {
       chartName="Bar2" 
       CO2Emission={this.state.CO2Emission[this.state.indexYear2]} 
       onYearFilter={this.handleYearFilter}/>
+      <br/>
             </div>
+            </div>
+            
+
 
         );
     }

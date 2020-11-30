@@ -32,7 +32,7 @@ export default class BarCharts extends Component {
 
 
         return (  
-            <div style={{width:"350px", height:"350px"}}>
+            <div style={{width:"350px", height:"400px", float:"left"}}>
                 <input type="text" placeholder="Välj ett år" onKeyDown={e=> this.handleYear(e)}></input>
                 <BarChart
                     width={350}
@@ -49,7 +49,6 @@ export default class BarCharts extends Component {
                 <Cell fill ={COLORS[1]}/>
                 <Cell fill ={COLORS[2]}/>
                 <Cell fill ={COLORS[3]}/>
-                 <Cell fill ={COLORS[4]}/>
 
         </Bar>
        
