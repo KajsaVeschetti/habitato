@@ -9,7 +9,7 @@ import AllCharts from './Components/Charts/AllCharts';
 import Tips from './Components/Tips';
 import Test from './Components/Test';
 import Comments from './Components/Comments';
-
+import FaktaRutor from './Components/FaktaRutor';
 
 
 
@@ -24,10 +24,11 @@ class App extends Component{
        <Tips/>
 
        <Test/>
-
+        
         <AllCharts/>
-
+        
 <Comments />
+       <FaktaRutor/>
         <Footer/>
 
       </div>
