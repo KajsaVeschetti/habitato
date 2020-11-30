@@ -38,7 +38,7 @@ class AllCharts extends Component {
       };
     render() { 
         return (  
-            <div class= "card">
+            <div class= "card w-75 text-center">
               <div class= "card-body">
           <BarCharts 
       chartName="Bar1"
