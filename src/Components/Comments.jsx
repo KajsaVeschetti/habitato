@@ -6,7 +6,7 @@ class Comments extends Component {
 
     return(
       <div>
-        
+        <p> hej</p>
       </div>
     );
 
