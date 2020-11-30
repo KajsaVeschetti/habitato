@@ -81,7 +81,8 @@ export default function Quiz() {
                 <> 
                     <div className='question-section'>
                         <div className='question-count'>
-            <h1>Testa dina kunskaper om klimatförändringar med Habitatos miljö-quiz</h1>
+                        {/* Quiz-rubrik */}
+            <h1 class="display-4"> Habitatos miljö-quiz</h1>
                             <span>Fråga {currentQuestion + 1}</span>/{questions.length}
                         </div>
                         <div className='question-text'>{questions[currentQuestion].question}</div> 
@@ -90,7 +91,9 @@ export default function Quiz() {
 						{/* mapfunktion för att itterera över array */}
                         {questions[currentQuestion].answerOptions.map((answerOption) => (
                             <button type="button" class="btn btn-success" onClick={() => handleAnswerOptionClick(answerOption.answer)}>{answerOption.question}</button>
-							))}
+							))} 
+                            
+                            
                     </div>
                 </>
             )} 
