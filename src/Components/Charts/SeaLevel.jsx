@@ -18,7 +18,7 @@ class SeaLevel extends Component {
             <React.Fragment>
             <div style={{width:"350px", height:"400px", float:"left"}}>
             <LineChart
-              width={350}
+              width={700}
               height={300}
               data={this.props.SeaLeveldata}
               margin={{
