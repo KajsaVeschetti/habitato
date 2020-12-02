@@ -5,6 +5,7 @@ import {  BrowserRouter as Router,
     Link } from "react-router-dom";
 import Habitato1 from "../img/Habitato1.jpg";
 
+
 class NavBar extends Component {
     state = {
 
