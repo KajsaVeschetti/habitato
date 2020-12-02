@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Facit from './Facit';
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -44,6 +46,7 @@ export default function Quiz() {
             ],
         },
     ];
+
 //  så att [indxnr] kan bytas ut mot [currentQuestion]
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	
@@ -67,23 +70,49 @@ export default function Quiz() {
     };
     return (
         <div className='app'>
+            
             {showScore ? (
                 <div className='score-section'>
 
                     {/* Grön Dina poäng-skylt */}
                      <div class="alert alert-success" role="alert"><h1 class="display-4">Du fick {score} av{questions.length} möjliga</h1>
+                     <Router>
+      <div>
+      <h1>vad vill du göra nu?</h1>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/quiz">Vill du göra quizet igen?</Link>
+            </li>
+            <li>
+              <Link to="/facit">eller vill du läsa om de rätta svaren?</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Switch>
+          <Route path="/quiz">
+            <Quiz />
+          </Route>
+          <Route path="/facit">
+            <Facit />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+                   
 </div>
                     
                 </div>
             ) : (
                 <> 
                     <div className='question-section'>
-                        <div className='question-count'>
-                        {/* Quiz-rubrik */}
-            <h1 class="display-4"> Habitatos miljö-quiz</h1>
-                            <span>Fråga {currentQuestion + 1}</span>/{questions.length}
-                        </div>
-                        <div className='question-text'>{questions[currentQuestion].question}</div> 
+                            <div className='question-count'>
+                                {/* Quiz-rubrik */}
+                                <h1 class="display-4"> Habitatos miljö-quiz</h1>
+                                    <span>Fråga {currentQuestion + 1}</span>/{questions.length}
+                            </div>
+                            <div className='question-text'>{questions[currentQuestion].question}</div> 
                         
                     </div>
                     <div className='answer-section'>
@@ -91,14 +120,14 @@ export default function Quiz() {
                         {questions[currentQuestion].answerOptions.map((answerOption) => (
                             <button type="button" class="btn btn-success" onClick={() => handleAnswerOptionClick(answerOption.answer)}>{answerOption.question}</button>
 							))} 
-                            <br></br>
-                            <p>LÄNKTEXT 1 - Quiz laddas om</p>
-                            <p>LÄNKTEXT 2 - Visa Facitkomponent</p>
-                            
+
+                                                    
                             
                     </div>
+                    
                 </>
             )} 
         </div>
     );
 } 
+
