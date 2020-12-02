@@ -8,9 +8,6 @@ import Temp from './Temp';
 import { BrowserRouter as Router, Route, Redirect, Switch, Link } from "react-router-dom";
 
 
-
-
-
 class AllCharts extends Component {
     state = {
         CO2Emission: [],
