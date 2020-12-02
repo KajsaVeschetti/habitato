@@ -14,7 +14,6 @@ import { BrowserRouter as Router, Route, Redirect, Switch, Link } from "react-ro
 class AllCharts extends Component {
     state = {
         CO2Emission: [],
-        GlobalTemp: [],
         indexYear1:0,
         indexYear2:0
       };
@@ -52,23 +51,24 @@ class AllCharts extends Component {
         });
       }
     
-      // handleYearFilter =(chartName, Year)=> {
-      //   let index = this.state.CO2Emission.findIndex(co2=>co2.Year === parseInt(Year));
+      handleYearFilter =(chartName, Year)=> {
+        let index = this.state.CO2Emission.findIndex(co2=>co2.Year === parseInt(Year));
         
-      //   if(index !== -1){
-      //     switch(chartName){
-      //       case "Bar1" : this.setState({indexYear1: index}); 
-      //       break;
+        if(index !== -1){
+      
+         switch(chartName){
+          case "Bar1" : this.setState({indexYear1: index}); 
+             break;
 
-      //       case "Bar2" : this.setState({indexYear2: index}); 
-      //       break;
-      //     }
+          case "Bar2" : this.setState({indexYear2: index}); 
+            break;
+          }
 
-      //   } else{
-      //     alert("Kunde inte finna någon information")
-      //   }
+        } else{
+          alert("Kunde inte finna någon information")
+        }
        
-      // };
+       };
     render() { 
               
     const linkStyle = {
@@ -104,14 +104,22 @@ class AllCharts extends Component {
                         </li> 
                         <li class="nav-link" style={linkStyle}>
                             <Link class="nav-link" to="/sealevel">
-                                Vattennivå
+                                Havsnivå
                             </Link>
                         </li> 
                     </ul>
 
                     <Switch>
+                      <div class="justify-content-center">
                         <Route exact path="/co2emission" component={BarCharts}>
-                        <BarCharts/>
+                        <BarCharts
+                        chartName="Bar1"
+                        CO2Emission={this.state.CO2Emission[this.state.indexYear1]} 
+                        onYearFilter={this.handleYearFilter}/>
+                        <BarCharts
+                        chartName="Bar2"
+                        CO2Emission={this.state.CO2Emission[this.state.indexYear2]} 
+                        onYearFilter={this.handleYearFilter}/>
                         </Route>
                         <Route exact path="/glaciersize" component={Glacier}>
                         <Glacier/>
@@ -122,7 +130,9 @@ class AllCharts extends Component {
                         <Route exact path="/sealevel" component={SeaLevel}>
                         <SeaLevel/>
                         </Route>
-                     </Switch>
+                      </div>
+                    
+                    </Switch>
                     </div>
                 </nav>
             </Router>
