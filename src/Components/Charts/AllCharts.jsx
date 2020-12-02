@@ -122,13 +122,13 @@ class AllCharts extends Component {
                         onYearFilter={this.handleYearFilter}/>
                         </Route>
                         <Route exact path="/glaciersize" component={Glacier}>
-                        <Glacier/>
+                        <Glacier Glacierdata={this.state.GlacierSize}/>
                         </Route>
                         <Route exact path="/temp" component={Temp}>
-                        <Temp/>
+                        <Temp Tempdata={this.state.GlobalTemp}/>
                         </Route>
                         <Route exact path="/sealevel" component={SeaLevel}>
-                        <SeaLevel/>
+                        <SeaLevel Seadata={this.state.SeaLevel}/>
                         </Route>
                       </div>
                     
