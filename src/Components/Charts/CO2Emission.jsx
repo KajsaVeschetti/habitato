@@ -22,7 +22,7 @@ export default class BarCharts extends Component {
         if(co2 === undefined) return <p>Ingen data finns</p>;
         
         const dataBarChart = [
-            {name: 'Gas ', CO2: parseInt(co2["Gas Fuel"])}, 
+            {name: 'Gas', CO2: parseInt(co2["Gas Fuel"])}, 
             {name: 'Liq', CO2: co2["Liquid Fuel"] },
             {name: 'Sol', CO2: co2["Solid Fuel"]}, 
             {name: 'Cem', CO2: co2["Cement"]}
@@ -31,7 +31,8 @@ export default class BarCharts extends Component {
         const COLORS =[ "#d9534f", "#5bc0de", "#5cb85c", "#428bca" ]
 
 
-        return (  
+        return (
+            
             <div style={{width:"350px", height:"400px", float:"left"}}>
                 <input type="text" placeholder="Välj ett år" onKeyDown={e=> this.handleYear(e)}></input>
                 <BarChart
@@ -54,6 +55,7 @@ export default class BarCharts extends Component {
        
       </BarChart>
             </div>
+            
         );
     }
 }
