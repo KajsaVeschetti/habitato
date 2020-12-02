@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Link,  } from 'react-router-dom';
+import Switch from 'react-bootstrap/esm/Switch';
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import BarCharts from './CO2Emission';
+import Glacier from './GlacierSize';
+import SeaLevel from './SeaLevel';
+import Temp from './Temp';
 
 class BodyNav extends Component {
     
@@ -38,9 +43,23 @@ class BodyNav extends Component {
                                 Vattennivå
                             </Link>
                         </li> 
-
-                        
                     </ul>
+
+                    <Switch>
+                        <Route exact path="/co2emission" component={BarCharts}>
+                        <BarCharts/>
+                        </Route>
+                        <Route exact path="/glaciersize" component={Glacier}>
+                        <Glacier/>
+                        </Route>
+                        <Route exact path="/temp" component={Temp}>
+                        <Temp/>
+                        </Route>
+                        <Route exact path="/sealevel" component={SeaLevel}>
+                        <SeaLevel/>
+                        </Route>
+
+                    </Switch>
                 </div>
             </nav>
             </Router>
