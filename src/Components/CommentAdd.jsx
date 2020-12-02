@@ -2,22 +2,9 @@ import { render } from "@testing-library/react";
 import React, { Component } from "react";
 
 
-// class CommentAdd extends Component {
-
-//   render(){
-
-//     return(
-//       <div>
-
-//         <p>hehe ADd</p>
-
-//       </div>
-//     );
-//   }
-// }
 
 class CommentAdd extends Component {
-  constructor(props) {
+  constructor(props) {        // Constructorn visar hur objektet byggs
     super(props);
     this.state = {
       name: "",
@@ -36,7 +23,7 @@ class CommentAdd extends Component {
   handleChangeComment(event) {
     this.setState({ comment: event.target.value });
   }
-  handleSubmit(event) {
+  handleSubmit(event) {     // Säger vad som ska hända när man trycker på knappen
     this.state.commentList.push({
       name: this.state.name,
       comment: this.state.comment,
@@ -73,10 +60,10 @@ class CommentAdd extends Component {
           <input type="submit" value="Skicka kommentar" />
         </form>
         <div>
-          {this.state.commentList.map((item) => (
+          {this.state.commentList.map((item) => (       // skriver ut kommentaren, {item.name}&{item.comment} tar value från formuläret och skriver ut det
             <div>
               <p>
-                {item.name}
+                {item.name}             
                 <br />
                 {item.comment}
               </p>
@@ -89,6 +76,8 @@ class CommentAdd extends Component {
 }
 
 export default CommentAdd;
+
+
 
 // TEST 2 --------------------------------------------------TEST 2
 
