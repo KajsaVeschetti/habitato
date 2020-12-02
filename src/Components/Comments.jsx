@@ -1,3 +1,4 @@
+import { render } from "@testing-library/react";
 import React, { Component } from "react";
 
 // class Comments extends Component {
@@ -14,6 +15,18 @@ import React, { Component } from "react";
 //   }
 // }
 
+// TEST 2 --------------------------------------------------TEST 2
+
+const Test = (props) => (
+<div>
+<p className="App-test">
+    heeej
+  </p>
+</div>
+)
+
+
+
 class Comments extends Component {
   constructor(props) {
     super(props);
@@ -26,7 +39,7 @@ class Comments extends Component {
     this.setState({ value: event.target.value });
   }
   handleSubmit(event) {
-    alert("A name was submitted: " + this.state.value);
+    alert("Din kommentar är publicerad: " + this.state.value);
     event.preventDefault();
   }
 
@@ -37,22 +50,23 @@ class Comments extends Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             Namn:
-            <br />
+            <br/>
             <input
               type="text"
               value={this.state.value}
               onChange={this.handleChange}
             />
           </label>{" "}
-          <br />
+          <br/>
           <label>
             Kommentar:
-            <br />
-            <textarea value={this.state.value} onChange={this.handleChange} />
+            <br/>
+            <textarea value={this.state.value}  onChange={this.handleChange} />
           </label>
-          <br />
+          <br/>
           <input type="submit" value="Skicka kommentar" />
         </form>
+        <Test/>
       </div>
     );
   }
@@ -60,5 +74,12 @@ class Comments extends Component {
 
 export default Comments;
 
+// TEST 2 --------------------------------------------------TEST 2
 
 // kodinspiration från https://reactjs.org/docs/forms.html
+
+
+
+
+
+// export default Comments;
