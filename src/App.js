@@ -10,6 +10,7 @@ import Tips from './Components/Tips';
 import Test from './Components/Test';
 import Comments from './Components/Comments';
 import FaktaRutor from './Components/FaktaRutor';
+import Page from './Components/Page';
 
 
 
@@ -19,14 +20,16 @@ class App extends Component{
   render(){
     return (
       <div className="App">
-        <NavBar/>
+        {/* <NavBar/>
        <Tips/>
        {/* <Test/> */}
-      <AllCharts/>
+      {/* <AllCharts/>
       <Comments />
       <FaktaRutor/>
       <Quiz/>
-      <Footer/>
+      <Footer/> */}
+
+      <Page/>
 
       </div>
     );
