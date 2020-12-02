@@ -3,11 +3,9 @@ import React, {Component} from "react";
 import NavBar from "./NavBar"
 import Footer from "./Footer";
 import AllCharts from "./Charts/AllCharts";
-// import Tips from "./Tips";
-// import Comments from "./Comments";
-// import Quiz from "./Quiz";
-// import Information from "./FaktaRutor";
-// import BarChart from "./Charts/CO2Emission";
+import { faKickstarter } from "@fortawesome/free-brands-svg-icons";
+import Fakta from "./FaktaRutor";
+
 
 
 
@@ -20,7 +18,7 @@ class Page extends Component {
       <React.Fragment>
     
         <NavBar/>
-        <AllCharts/>
+  
         <Footer/>
       </React.Fragment>
     );
