@@ -20,14 +20,7 @@ class App extends Component{
   render(){
     return (
       <div className="App">
-        {/* <NavBar/>
-       <Tips/>
-       {/* <Test/> */}
-      {/* <AllCharts/>
-      <Comments />
-      <FaktaRutor/>
-      <Quiz/>
-      <Footer/> */}
+     
 
       <Page/>
 
