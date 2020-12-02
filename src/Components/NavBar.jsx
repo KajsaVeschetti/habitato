@@ -6,7 +6,6 @@ import {  BrowserRouter as Router,
 import Habitato1 from "../img/Habitato1.jpg";
 import Tips from "./Tips";
 import Quiz from "./Quiz";
-import Footer from "./Footer";
 
 
 class NavBar extends Component {
