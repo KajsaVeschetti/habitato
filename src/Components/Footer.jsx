@@ -14,6 +14,8 @@ class Footer extends Component {
     const footerStyling ={
       marginTop:"40px",
       marginBottom:"40px",
+      maxWidth: "1075px"
+
     }
 
     const linkStyle = {
@@ -34,7 +36,7 @@ class Footer extends Component {
     const logoPlace = {
       textAlign: "right",
       paddingRight: "80px",
-      paddingTop: "30px"
+      paddingTop: "25px"
     }
 
     const onMouseOver = event => {
@@ -52,12 +54,12 @@ class Footer extends Component {
 
 
     return(
-     <footer style={footerStyling}>
+     <footer class="mx-auto" style={footerStyling}>
        <Row>
          <Col>
          <ul style={linkStyle}>
-          <li><a href="#" style={linkStyle}>Hem</a></li>
-          <li><a href="#" style={linkStyle}>Quiz</a></li>
+          <li><a href="/" style={linkStyle}>Hem</a></li>
+          <li><a href="/Quiz" style={linkStyle}>Quiz</a></li>
           <li><a href="#" style={linkStyle}>Om Oss</a></li>
           <li><a href="#" style={linkStyle}>Kontakta oss</a></li>
           </ul>
