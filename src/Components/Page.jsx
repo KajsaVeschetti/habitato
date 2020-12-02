@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import { BrowserRouter as Route, Switch } from 'react-router-dom'; 
 import NavBar from "./NavBar"
 import Footer from "./Footer";
 import Tips from "./Tips";
@@ -7,22 +8,23 @@ import Quiz from "./Quiz";
 // import Information from "./FaktaRutor";
 // import BarChart from "./Charts/CO2Emission";
 
-import { Route, Switch } from "react-router-dom";
+
 
 class Page extends Component {
 
 
   render(){
     return(
+
       <React.Fragment>
         <NavBar/>
 
         <Switch>
-          <Route path="./Tips">
+          <Route exact path="./Tips"component={Tips} >
             <Tips />
           </Route>
         
-          <Route path="./quiz">
+          <Route exact path="./quiz"component={quiz}>
             <Quiz />
           </Route>
         </Switch>
