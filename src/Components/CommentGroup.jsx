@@ -1,7 +1,21 @@
 import { render } from "@testing-library/react";
 import React, { Component } from "react";
 import CommentAdd from './CommentAdd';
-import CommentList from './CommentList';
+
+
+class CommentGroup extends Component {
+   render(){
+      return(
+        <div>
+            <CommentAdd />
+        </div>
+      );
+    }
+  }
+
+
+export default CommentGroup;
+
 
 
 // class CommentGroup extends Component {
@@ -40,39 +54,3 @@ import CommentList from './CommentList';
 //         );
 //     }
 // }
-
-
-
-class CommentGroup extends Component {
-  constructor(props) {    // Constructorn visar hur objektet byggs
-    super(props);             
-    this.state = { 
-      name: "", 
-      comment: "",
-      commentList: []
-    };
-  }
-  
-
-    render(){
-      const {
-        name, 
-        comment, 
-        commentList
-      } = this.state;
-
-      return(
-        <div>
-            <CommentAdd 
-               name comment commentList           
-            />
-            <CommentList />
-
-        </div>
-      );
-  
-    }
-  }
-
-
-export default CommentGroup;
