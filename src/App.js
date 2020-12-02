@@ -20,16 +20,13 @@ class App extends Component{
     return (
       <div className="App">
         <NavBar/>
-        <Quiz/>
        <Tips/>
-
-       <Test/>
-        
-        <AllCharts/>
-        
-<Comments />
-       <FaktaRutor/>
-        <Footer/>
+       {/* <Test/> */}
+      <AllCharts/>
+      <Comments />
+      <FaktaRutor/>
+      <Quiz/>
+      <Footer/>
 
       </div>
     );
