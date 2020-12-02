@@ -12,6 +12,6 @@ import {
 export default function Tips() {
   return (
 <div>
-    <h1>Här kan vi testa kod</h1>
+    <h1>Här kommer kommentar och tips från läsare finnas</h1>
 </div>  );
 }
