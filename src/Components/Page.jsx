@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import AllCharts from "./Charts/AllCharts";
 import { faKickstarter } from "@fortawesome/free-brands-svg-icons";
 import Fakta from "./FaktaRutor";
-
+import CommentGroup from "./CommentGroup";
 
 
 
@@ -18,7 +18,7 @@ class Page extends Component {
       <React.Fragment>
     
         <NavBar/>
-  
+        <CommentGroup/>
         <Footer/>
       </React.Fragment>
     );
