@@ -1,11 +1,13 @@
 import React, {Component} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {  BrowserRouter as Router,
-  Route, Switch,
+  Route, Switch, Redirect,
     Link } from "react-router-dom";
 import Habitato1 from "../img/Habitato1.jpg";
 import Tips from "./Tips";
 import Quiz from "./Quiz";
+import Fakta from "./FaktaRutor";
+import AllCharts from "./Charts/AllCharts";
 
 
 class NavBar extends Component {
@@ -50,7 +52,7 @@ class NavBar extends Component {
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-link active" style={linkStyle}>
-                        <Link class="nav-link" to="/">
+                        <Link class="nav-link" to="/Charts/AllCharts">
                             Hem <span class="sr-only">(current)</span>
                         </Link>
                     </li>
@@ -78,12 +80,20 @@ class NavBar extends Component {
             
        
         <Switch>
+        <Route exact path="/Charts/AllCharts"component={AllCharts}>
+            <AllCharts/>
+          </Route>
         <Route exact path="/Quiz"component={Quiz}>
             <Quiz/>
           </Route>
         <Route exact path="/Tips"component={Tips} >
           <Tips/>
           </Route>
+        <Route exact path="/FaktaRutor"component={Fakta} >
+          <Fakta/>
+          </Route>
+
+          <Redirect from="/" exact to="/Charts/AllCharts"></Redirect>
           
         </Switch>
             </Router>
