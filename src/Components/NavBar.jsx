@@ -1,8 +1,7 @@
 import React, {Component} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {  BrowserRouter as Router,
-    Switch,
-    Route,
+  
     Link } from "react-router-dom";
 import Habitato1 from "../img/Habitato1.jpg";
 
@@ -41,7 +40,7 @@ class NavBar extends Component {
             data-target="#navbarNav"
             aria-controls="navbarNav"
             aria-expanded="false"
-            aria-lable="Toggle navigation">
+            aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
