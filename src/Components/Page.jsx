@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { BrowserRouter as Route, Switch } from 'react-router-dom'; 
+import { Route, Switch } from "react-router-dom";
 import NavBar from "./NavBar"
 import Footer from "./Footer";
 import Tips from "./Tips";
@@ -18,17 +18,12 @@ class Page extends Component {
 
       <React.Fragment>
         <NavBar/>
-
         <Switch>
-          <Route exact path="./Tips"component={Tips} >
-            <Tips />
+        <Route exact path="./Tips"component={Tips} >
           </Route>
-        
           <Route exact path="./quiz"component={quiz}>
-            <Quiz />
           </Route>
         </Switch>
-
         <Footer/>
       </React.Fragment>
     );
