@@ -5,7 +5,7 @@ import Tips from "./Tips";
 // import Comments from "./Comments";
 import Quiz from "./Quiz";
 // import Information from "./FaktaRutor";
-import BarChart from "./Charts/CO2Emission";
+// import BarChart from "./Charts/CO2Emission";
 
 import { Route, Switch } from "react-router-dom";
 
