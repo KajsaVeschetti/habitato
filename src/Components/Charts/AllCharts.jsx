@@ -5,8 +5,8 @@ import Glacier from './GlacierSize';
 import SeaLevel from './SeaLevel';
 import Temp from './Temp';
 
-import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
-import BodyNav from './Navigation';
+import { BrowserRouter as Router, Route, Redirect, Switch, Link } from "react-router-dom";
+
 
 
 
@@ -70,44 +70,65 @@ class AllCharts extends Component {
        
       // };
     render() { 
+              
+    const linkStyle = {
+      fontFamily: "Roboto",
+      fontSize: "16px",
+      color:"#5f5f5f",
+      textDecoration:"none",
+      paddingRight:"50px",
+      paddingLeft:"50px",
+   }
         return (  
           <React.Fragment>
-              <div class="card mx-auto">
-                <BodyNav></BodyNav>
-                <Router class="card-body">
-                 <Switch>
-                   <Route
-                      path="/co2Emission"
-                      render={props => (
-                     <BarCharts {...props} CO2data={this.state.CO2Emission}/>
-                     )} 
-                   />
+              <div class="card mx-auto" style={{width:"900px"}}>
+              <Router>
+                <nav class="navbar navbar-expand-lg navbar-light mx-auto">
+           
+                     <div class="justify-content-center" >
+                    <ul class="navbar-nav">
+                        <li class="nav-link" style={linkStyle}>
+                            <Link class="nav-link" to="/co2emission">
+                                CO2 
+                            </Link>
+                        </li> 
+                        <li class="nav-link " style={linkStyle}>
+                            <Link class="nav-link" to="/glaciersize">
+                                Glaciärstorlek
+                            </Link>
+                        </li> 
+                        <li class="nav-link" style={linkStyle}>
+                            <Link class="nav-link" to="/temp">
+                                Global Temperatur
+                            </Link>
+                        </li> 
+                        <li class="nav-link" style={linkStyle}>
+                            <Link class="nav-link" to="/sealevel">
+                                Vattennivå
+                            </Link>
+                        </li> 
+                    </ul>
 
-                   <Route
-                      path="/glaciesize"
-                      render={props => (
-                      <Glacier {...props} Glacierdata={this.state.GlacierSize}/>      
-                      
-                      )}
-                   />
-
-                   <Route
-                      path="/temp"
-                      render={props => (
-                      <Temp {...props} Tempdata={this.state.GlobalTemp}/>
-                      )}
-                    />
-                  
-                  <Route
-                      path="/sealevel"
-                      render={props => (
-                      <SeaLevel {...props} Seadata={this.state.SeaLevel}/>
-                      )}
-                  />
-                </Switch>
-                </Router>
-
+                    <Switch>
+                        <Route exact path="/co2emission" component={BarCharts}>
+                        <BarCharts/>
+                        </Route>
+                        <Route exact path="/glaciersize" component={Glacier}>
+                        <Glacier/>
+                        </Route>
+                        <Route exact path="/temp" component={Temp}>
+                        <Temp/>
+                        </Route>
+                        <Route exact path="/sealevel" component={SeaLevel}>
+                        <SeaLevel/>
+                        </Route>
+                     </Switch>
+                    </div>
+                </nav>
+            </Router>
+            
               </div>
+          
           </React.Fragment>  
           
             
