@@ -17,6 +17,15 @@ export default class BarCharts extends Component {
 
     render() { 
 
+      const linkStyle = {
+        fontFamily: "Roboto",
+        fontSize: "14px",
+        color:"#5f5f5f",
+        textDecoration:"none",
+        listStyleType: "none", 
+        paddingRight:"50px",
+        paddingLeft:"50px",
+     }
         let co2 = this.props.CO2Emission;
 
         if(co2 === undefined) return <p>Ingen data finns</p>;
@@ -25,7 +34,8 @@ export default class BarCharts extends Component {
             {name: 'Gas', CO2: parseInt(co2["Gas Fuel"])}, 
             {name: 'Liq', CO2: co2["Liquid Fuel"] },
             {name: 'Sol', CO2: co2["Solid Fuel"]}, 
-            {name: 'Cem', CO2: co2["Cement"]}
+            {name: 'Cem', CO2: co2["Cement"]},
+            {name: 'Flar', CO2: co2["Gas Flaring"]},
           ];
 
         const COLORS =[ "#d9534f", "#5bc0de", "#5cb85c", "#428bca" ]
@@ -33,7 +43,7 @@ export default class BarCharts extends Component {
 
         return (
             
-            <div style={{width:"350px", height:"400px", float:"left"}}>
+            <div style={{width:"350px", height:"500px", float:"left"}}>
                 <input type="text" placeholder="Välj ett år" onKeyDown={e=> this.handleYear(e)}></input>
                 <BarChart
                     width={350}
@@ -50,10 +60,19 @@ export default class BarCharts extends Component {
                 <Cell fill ={COLORS[1]}/>
                 <Cell fill ={COLORS[2]}/>
                 <Cell fill ={COLORS[3]}/>
-
-        </Bar>
+                <Cell fill ={COLORS[0]}/>
+                </Bar>
        
-      </BarChart>
+                </BarChart>
+                <div>
+                  <ul >
+                    <li style={linkStyle}>Gas = Gas fuel</li>
+                    <li style={linkStyle}>Liq = Liquid fuel</li>
+                    <li style={linkStyle}>Sol = Solid fuel</li>
+                    <li style={linkStyle}>Cem = Cement</li>
+                    <li style={linkStyle}>Flar = Gas Flaring</li>
+                  </ul>
+                </div>
             </div>
             
         );
