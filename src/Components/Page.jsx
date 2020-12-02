@@ -2,6 +2,7 @@ import React, {Component} from "react";
 // import {BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from "./NavBar"
 import Footer from "./Footer";
+import AllCharts from "./Charts/AllCharts";
 // import Tips from "./Tips";
 // import Comments from "./Comments";
 // import Quiz from "./Quiz";
@@ -19,7 +20,7 @@ class Page extends Component {
       <React.Fragment>
     
         <NavBar/>
-        
+        <AllCharts/>
         <Footer/>
       </React.Fragment>
     );
