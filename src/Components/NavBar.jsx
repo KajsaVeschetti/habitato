@@ -8,6 +8,7 @@ import Tips from "./Tips";
 import Quiz from "./Quiz";
 import Footer from "./Footer";
 
+
 class NavBar extends Component {
     state = {
 
