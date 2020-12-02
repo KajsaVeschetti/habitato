@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import BarCharts from './CO2Emission';
 import Glacier from './GlacierSize';
-import SeaLevel from './SeaLevel';
+import Sea from './SeaLevel';
 import Temp from './Temp';
 
 import { BrowserRouter as Router, Route, Redirect, Switch, Link } from "react-router-dom";
@@ -14,6 +14,9 @@ import { BrowserRouter as Router, Route, Redirect, Switch, Link } from "react-ro
 class AllCharts extends Component {
     state = {
         CO2Emission: [],
+        GlobalTemp: [],
+        GlacierSize: [],
+        SeaLevel: [],
         indexYear1:0,
         indexYear2:0
       };
@@ -47,7 +50,7 @@ class AllCharts extends Component {
           CO2Emission: CO2data,
           GlobalTemp: Tempdata,
           GlacierSize: Glacierdata,
-          SeaLevel: Seadata
+          SeaLevel: Seadata,
         });
       }
     
@@ -127,8 +130,8 @@ class AllCharts extends Component {
                         <Route exact path="/temp" component={Temp}>
                         <Temp Tempdata={this.state.GlobalTemp}/>
                         </Route>
-                        <Route exact path="/sealevel" component={SeaLevel}>
-                        <SeaLevel Seadata={this.state.SeaLevel}/>
+                        <Route exact path="/sealevel" component={Sea}>
+                        <Sea Seadata={this.state.SeaLevel}/>
                         </Route>
                       </div>
                     
