@@ -11,7 +11,7 @@ import {
     Label
   } from "recharts";
 
-class SeaLevel extends Component {
+class Sea extends Component {
     
     render() { 
         return ( 
@@ -20,9 +20,9 @@ class SeaLevel extends Component {
             <LineChart
               width={700}
               height={300}
-              data={this.props.SeaLeveldata}
+              data={this.props.Seadata}
               margin={{
-                top: 5,
+                top: 20,
                 right: 30,
                 left: 20,
                 bottom: 5
@@ -46,4 +46,4 @@ class SeaLevel extends Component {
     }
 }
  
-export default SeaLevel;
+export default Sea;

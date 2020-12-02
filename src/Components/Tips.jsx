@@ -9,7 +9,7 @@ import {
   Link
 } from "react-router-dom";
 
-export default function App() {
+export default function Tips() {
   return (
 <div>
     <h1>Här kan vi testa kod</h1>
