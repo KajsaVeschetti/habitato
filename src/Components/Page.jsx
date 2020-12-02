@@ -20,8 +20,10 @@ class Page extends Component {
         <NavBar/>
         <Switch>
         <Route exact path="./Tips"component={Tips} >
+          <Tips/>
           </Route>
           <Route exact path="./quiz"component={quiz}>
+            <Quiz/>
           </Route>
         </Switch>
         <Footer/>
