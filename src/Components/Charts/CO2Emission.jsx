@@ -1,12 +1,31 @@
 import React, { Component } from 'react';
-
-import { BarChart, Bar, Cell,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-  } from "recharts";
+import PropTypes from 'prop-types';
+import {
+  BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+} from 'recharts';
 
 
+
+  const getPath = (x, y, width, height) => `M${x},${y + height}
+  C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3} ${x + width / 2}, ${y}
+  C${x + width / 2},${y + height / 3} ${x + 2 * width / 3},${y + height} ${x + width}, ${y + height}
+  Z`;
+
+const TriangleBar = (props) => {
+const {
+fill, x, y, width, height,
+} = props;
+
+return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
+};
+
+TriangleBar.propTypes = {
+fill: PropTypes.string,
+x: PropTypes.number,
+y: PropTypes.number,
+width: PropTypes.number,
+height: PropTypes.number,
+};
 export default class BarCharts extends Component {
     handleYear = e => {
         if(e.key === "Enter")
@@ -14,6 +33,7 @@ export default class BarCharts extends Component {
            this.props.onYearFilter(this.props.chartName, e.target.value);
          }
       };
+      
 
     render() { 
 
@@ -55,12 +75,12 @@ export default class BarCharts extends Component {
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="name" />
                 <YAxis />
-                <Bar dataKey="CO2" fill="#8884d8"> 
-                <Cell fill ={COLORS[0]}/>
-                <Cell fill ={COLORS[1]}/>
-                <Cell fill ={COLORS[2]}/>
-                <Cell fill ={COLORS[3]}/>
-                <Cell fill ={COLORS[0]}/>
+                <Bar dataKey="CO2" fill="#8884d8" shape={<TriangleBar/>} label={{ position: 'top' }}> 
+                <Cell  fill ={COLORS[0]}/>
+                <Cell  fill ={COLORS[1]}/>
+                <Cell  fill ={COLORS[2]}/>
+                <Cell  fill ={COLORS[3]}/>
+                <Cell  fill ={COLORS[0]}/>
                 </Bar>
        
                 </BarChart>
