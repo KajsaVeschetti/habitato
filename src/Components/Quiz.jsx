@@ -84,12 +84,16 @@ export default function Quiz() {
                             <span>Fråga {currentQuestion + 1}</span>/{questions.length}
                         </div>
                         <div className='question-text'>{questions[currentQuestion].question}</div> 
+                        
                     </div>
                     <div className='answer-section'>
 						{/* mapfunktion för att itterera över array */}
                         {questions[currentQuestion].answerOptions.map((answerOption) => (
                             <button type="button" class="btn btn-success" onClick={() => handleAnswerOptionClick(answerOption.answer)}>{answerOption.question}</button>
 							))} 
+                            <br></br>
+                            <p>LÄNKTEXT 1 - Quiz laddas om</p>
+                            <p>LÄNKTEXT 2 - Visa Facitkomponent</p>
                             
                             
                     </div>
