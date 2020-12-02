@@ -54,8 +54,11 @@ class AllCharts extends Component {
         });
       }
     
-      handleYearFilter =(chartName, Year)=> {
+      handleYearFilter =(chartName, Year, Time)=> {
         let index = this.state.CO2Emission.findIndex(co2=>co2.Year === parseInt(Year));
+        let index2 = this.state.GlacierSize.findIndex(glacier=>glacier.Year === parseInt(Year));
+        let index3 = this.state.GlobalTemp.findIndex(temp=>temp.Year === parseInt(Year));
+        let index4 = this.state.SeaLevel.findIndex(sea=>sea.Time === parseInt(Time));
         
         if(index !== -1){
       
@@ -70,6 +73,41 @@ class AllCharts extends Component {
         } else{
           alert("Kunde inte finna någon information")
         }
+        if(index2 !== -1){
+      
+         switch(chartName){
+          case "Glacier1" : this.setState({indexYear1: index2}); 
+             break;
+
+          case "Glacier2" : this.setState({indexYear2: index2}); 
+            break;
+          }
+
+        } 
+
+        if(index3 !== -1){
+      
+         switch(chartName){
+          case "Temp1" : this.setState({indexYear1: index3}); 
+             break;
+
+          case "Temp2" : this.setState({indexYear2: index3}); 
+            break;
+          }
+
+        } 
+        if(index4 !== -1){
+      
+         switch(chartName){
+          case "Sea1" : this.setState({indexYear1: index4}); 
+             break;
+
+          case "Sea2" : this.setState({indexYear2: index4}); 
+            break;
+          }
+
+        } 
+      
        
        };
     render() { 
@@ -92,7 +130,7 @@ class AllCharts extends Component {
                     <ul class="navbar-nav">
                         <li class="nav-link" style={linkStyle}>
                             <Link class="nav-link" to="/co2emission">
-                                CO2 
+                                CO2 <span class="sr-only">(current)</span>
                             </Link>
                         </li> 
                         <li class="nav-link " style={linkStyle}>
@@ -125,16 +163,38 @@ class AllCharts extends Component {
                         onYearFilter={this.handleYearFilter}/>
                         </Route>
                         <Route exact path="/glaciersize" component={Glacier}>
-                        <Glacier Glacierdata={this.state.GlacierSize}/>
+                        <Glacier
+                        chartName="Glacier1"
+                        GlacierSize={this.state.GlacierSize[this.state.indexYear1]}
+                        onYearFilter={this.handleYearFilter}/>
+                        <Glacier 
+                        chartName="Glacier2"
+                        GlacierSize={this.state.GlacierSize[this.state.indexYear2]}
+                        onYearFilter={this.handleYearFilter}/>
                         </Route>
                         <Route exact path="/temp" component={Temp}>
-                        <Temp Tempdata={this.state.GlobalTemp}/>
+                        <Temp 
+                        chartName="Temp1"
+                        GlobalTemp={this.state.GlobalTemp[this.state.indexYear1]}
+                        onYearFilter={this.handleYearFilter}/>
+                        <Temp 
+                        chartName="Temp2"
+                        GlobalTemp={this.state.GlobalTemp[this.state.indexYear2]}
+                        onYearFilter={this.handleYearFilter}/>
                         </Route>
                         <Route exact path="/sealevel" component={Sea}>
-                        <Sea Seadata={this.state.SeaLevel}/>
+                        <Sea 
+                        chartName="Sea1"
+                        SeaLevel={this.state.SeaLevel[this.state.indexYear1]}
+                        onYearFilter={this.handleYearFilter}/>
+                        <Sea 
+                        chartName="Sea2"
+                        SeaLevel={this.state.SeaLevel[this.state.indexYear2]}
+                        onYearFilter={this.handleYearFilter}/>
                         </Route>
+                      
+                      <Redirect from="/" exact to="/co2emission"></Redirect>
                       </div>
-                    
                     </Switch>
                     </div>
                 </nav>
