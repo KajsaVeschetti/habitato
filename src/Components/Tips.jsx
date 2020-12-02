@@ -11,29 +11,7 @@ import {
 
 export default function App() {
   return (
-    <Router>
-      <div>
-      <h1>TIPS KOMPONENT</h1>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/quiz">Vill du göra quizet igen?</Link>
-            </li>
-            <li>
-              <Link to="/facit">eller vill du läsa om de rätta svaren?</Link>
-            </li>
-          </ul>
-        </nav>
-
-        <Switch>
-          <Route path="/quiz">
-            <Quiz />
-          </Route>
-          <Route path="/facit">
-            <Facit />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
-  );
+<div>
+    <h1>Här kan vi testa kod</h1>
+</div>  );
 }
