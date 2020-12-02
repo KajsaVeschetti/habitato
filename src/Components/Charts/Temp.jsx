@@ -22,7 +22,7 @@ class Temp extends Component {
             <div style={{width:"350px", height:"400px", float:"left"}}>
                 {/* <input type="text" placeholder="Välj ett år"></input> */}
                 <LineChart
-          width={350}
+          width={700}
           height={300}
           data={this.props.Tempdata}
           margin={{
