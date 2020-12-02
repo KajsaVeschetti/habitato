@@ -1,6 +1,5 @@
 import { render } from "@testing-library/react";
-import React,  { Component } from "react";
-import CommentList from './CommentList';
+import React, { Component } from "react";
 
 
 // class CommentAdd extends Component {
@@ -10,7 +9,6 @@ import CommentList from './CommentList';
 //     return(
 //       <div>
 
-
 //         <p>hehe ADd</p>
 
 //       </div>
@@ -18,59 +16,79 @@ import CommentList from './CommentList';
 //   }
 // }
 
-
 class CommentAdd extends Component {
-      constructor(props) {
-        super(props);
-        // this.state = { 
-        //   name: "", 
-        //   comment: "",
-        //   commentList: []
-        // };
-        this.state = this.props; 
-        this.handleChangeName = this.handleChangeName.bind(this);
-        this.handleChangeComment = this.handleChangeComment.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-      }
-    
-      handleChangeName(event) {
-        this.setState({ name: event.target.value });
-      }
-      handleChangeComment(event) {
-        this.setState({ comment: event.target.value });
-      }
-      handleSubmit(event) {
-        alert("Din kommentar är publicerad: " + "Namn: " + this.state.name + " Kommentar: " + this.state.comment);
-        event.preventDefault();
-      }
-    
-      render() {
-        return (
-          <div>
-            <h2>Dela med dig av ditt bästa miljötips!</h2>
-            <form onSubmit={this.handleSubmit}>
-              <label>
-                Namn:
-                <br/>
-                <input
-                  type="text"
-                  value={this.state.name}
-                  onChange={this.handleChangeName}
-                />
-              </label>{" "}
-              <br/>
-              <label>
-                Kommentar:
-                <br/>
-                <textarea value={this.state.comment}  onChange={this.handleChangeComment} />
-              </label>
-              <br/>
-              <input type="submit" value="Skicka kommentar" />
-            </form>
-          </div>
-        );
-      }
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "",
+      comment: "",
+      commentList: [],
+    };
+
+    this.handleChangeName = this.handleChangeName.bind(this);
+    this.handleChangeComment = this.handleChangeComment.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChangeName(event) {
+    this.setState({ name: event.target.value });
+  }
+  handleChangeComment(event) {
+    this.setState({ comment: event.target.value });
+  }
+  handleSubmit(event) {
+    this.state.commentList.push({
+      name: this.state.name,
+      comment: this.state.comment,
+    });
+    this.setState(this.state.commentList);
+    // alert("Din kommentar är publicerad: " + "Namn: " + this.state.name + " Kommentar: " + this.state.comment);
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      <div>
+        <h2>Dela med dig av ditt bästa miljötips!</h2>
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            Namn:
+            <br />
+            <input
+              type="text"
+              value={this.state.name}
+              onChange={this.handleChangeName}
+            />
+          </label>{" "}
+          <br />
+          <label>
+            Kommentar:
+            <br />
+            <textarea
+              value={this.state.comment}
+              onChange={this.handleChangeComment}
+            />
+          </label>
+          <br />
+          <input type="submit" value="Skicka kommentar" />
+        </form>
+        <div>
+          {this.state.commentList.map((item) => (
+            <div>
+              <p>
+                {item.name}
+                <br />
+                {item.comment}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+}
+
+export default CommentAdd;
 
 // TEST 2 --------------------------------------------------TEST 2
 
@@ -82,7 +100,6 @@ class CommentAdd extends Component {
 // </div>
 // )
 
-
 // function CommentAdd(props) {
 //     // let comment = '';
 //     const [comment, setComment] = useState('');
@@ -90,12 +107,12 @@ class CommentAdd extends Component {
 //         <div>
 //             <div className="card mt-4 mb-3">
 //                 <div className="card-body">
-//                     <textarea name="comment" className="form-control" placeholder="Skriv en ny kommentar" 
+//                     <textarea name="comment" className="form-control" placeholder="Skriv en ny kommentar"
 //                     onChange={event => comment = setComment(event.target.value)} value ={comment}></textarea>
 //                 </div>
 //             </div>
 //             <div>
-//                 <button className="btn btn-primary mr-3" onClick={event =>{ 
+//                 <button className="btn btn-primary mr-3" onClick={event =>{
 //                     handleCommentSubmit(comment);
 //                 setComment('');
 //                 }}>Kommentera</button>
@@ -107,8 +124,6 @@ class CommentAdd extends Component {
 
 // TEST 2 --------------------------------------------------TEST 2
 // TEST 3 --------------------------------------------------TEST 3
-
-
 
 // class Comments extends Component {
 //   constructor(props) {
@@ -155,13 +170,11 @@ class CommentAdd extends Component {
 //   }
 // }
 
-export default CommentAdd;
+
 // export default CommentList;
 
 // TEST 3 --------------------------------------------------TEST 3
 
 // kodinspiration från https://reactjs.org/docs/forms.html
 
-
-
-
+// https://stackoverflow.com/questions/26505064/what-is-the-best-way-to-add-a-value-to-an-array-in-state
