@@ -72,7 +72,7 @@ class AllCharts extends Component {
     render() { 
         return (  
           <React.Fragment>
-              <div class="card">
+              <div class="card mx-auto">
                 <BodyNav></BodyNav>
                 <Router class="card-body">
                  <Switch>
