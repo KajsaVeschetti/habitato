@@ -8,6 +8,7 @@ import Tips from "./Tips";
 import Quiz from "./Quiz";
 import Fakta from "./FaktaRutor";
 import AllCharts from "./Charts/AllCharts";
+import CommentAdd from "./CommentGroup";
 
 
 class NavBar extends Component {
@@ -65,7 +66,7 @@ class NavBar extends Component {
                     <Link class="navbar-brand" to="/"><img src={Habitato1} style={logoStyle}  alt="Habitato logotyp"/></Link>
                     </li>
                     <li class="nav-link" style={linkStyle}>
-                        <Link class="nav-link" to="/Tips">
+                        <Link class="nav-link" to="/CommentAdd">
                             Tips
                         </Link>
                     </li>
@@ -86,8 +87,8 @@ class NavBar extends Component {
         <Route exact path="/Quiz"component={Quiz}>
             <Quiz/>
           </Route>
-        <Route exact path="/Tips"component={Tips} >
-          <Tips/>
+        <Route exact path="/CommentAdd"component={CommentAdd} >
+        <CommentAdd/>
           </Route>
         <Route exact path="/FaktaRutor"component={Fakta} >
           <Fakta/>
