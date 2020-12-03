@@ -18,7 +18,7 @@ class Page extends Component {
       <React.Fragment>
     
         <NavBar/>
-        <CommentGroup/>
+        
         <Footer/>
       </React.Fragment>
     );
