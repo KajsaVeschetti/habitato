@@ -19,7 +19,6 @@ class Footer extends Component {
     }
 
     const linkStyle = {
-      fontFamily: "Roboto",
       fontSize: "14px",
       color:"#5f5f5f",
       textDecoration:"none",
