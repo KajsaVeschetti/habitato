@@ -4,13 +4,19 @@
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
-  background-image: url
+ border: solid #f3f3f3 1px;
+ max-width: 1024px;
+ height: 1500px;
+ justify-content: center;
+
+
 }
 
 html {
   width: 100vw;
+  height: 100vw;
   overflow-x: hidden;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .App-logo {
