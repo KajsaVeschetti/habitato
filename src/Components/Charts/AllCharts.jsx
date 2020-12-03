@@ -120,8 +120,10 @@ class AllCharts extends Component {
         return (  
           <React.Fragment>
               <div class="card mx-auto" style={{width:"900px"}}>
+              <h3>Skriv in två årtal och se vad <br/> klimatförändringarna har gjort under åren</h3>
               <Router>
                 <nav class="navbar navbar-expand-lg navbar-light mx-auto">
+                  
            
                      <div class="justify-content-center" >
                     <ul class="navbar-nav">
