@@ -11,6 +11,7 @@ import AllCharts from "./Charts/AllCharts";
 import CommentAdd from "./CommentGroup";
 
 
+
 class NavBar extends Component {
     state = {
 
@@ -25,8 +26,8 @@ class NavBar extends Component {
     }
 
     const linkStyle = {
-       fontFamily: "Roboto",
-       fontSize: "20px",
+       fontFamily: "Ink Free",
+       fontSize: "30px",
        color:"#5f5f5f",
        textDecoration:"none",
        paddingTop: "55px",
