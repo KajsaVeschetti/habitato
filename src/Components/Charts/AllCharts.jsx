@@ -110,7 +110,6 @@ class AllCharts extends Component {
     render() { 
               
     const linkStyle = {
-      fontFamily: "Roboto",
       fontSize: "16px",
       color:"#5f5f5f",
       textDecoration:"none",
