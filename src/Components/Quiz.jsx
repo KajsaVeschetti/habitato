@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Facit from './Facit';
+import Page from './Page';
 
 import {
     BrowserRouter as Router,
@@ -76,7 +77,7 @@ export default function Quiz() {
 
                     {/* Grön Dina poäng-skylt */}
                      <div class="alert alert-success" role="alert"><h1 class="display-4">Du fick {score} av{questions.length} möjliga</h1>
-                     <Router>
+    <Router>
       <div>
       <h1>vad vill du göra nu?</h1>
         <nav>
@@ -110,13 +111,19 @@ export default function Quiz() {
                             <div className='question-count'>
                                 {/* Quiz-rubrik */}
                                 <h1 class="display-4"> Habitatos miljö-quiz</h1>
+                                {/* Visar vilken fråga användaren är på */}
                                     <span>Fråga {currentQuestion + 1}</span>/{questions.length}
                             </div>
+                            {/* Frågan */}
                             <div className='question-text'>{questions[currentQuestion].question}</div> 
                         
                     </div>
+                    {/* Slut på fråg-sekton */}
+
+
                     <div className='answer-section'>
 						{/* mapfunktion för att itterera över array */}
+                        {/* Knappar med de olika svarsalternativen */}
                         {questions[currentQuestion].answerOptions.map((answerOption) => (
                             <button type="button" class="btn btn-success" onClick={() => handleAnswerOptionClick(answerOption.answer)}>{answerOption.question}</button>
 							))} 
