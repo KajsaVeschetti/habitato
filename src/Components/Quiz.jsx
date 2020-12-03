@@ -70,39 +70,16 @@ export default function Quiz() {
         }
     };
     return (
+        
         <div className='app'>
             
             {showScore ? (
                 <div className='score-section'>
 
-                    {/* Grön Dina poäng-skylt */}
-                     <div class="alert alert-success" role="alert"><h1 class="display-4">Du fick {score} av{questions.length} möjliga</h1>
-    <Router>
-      <div>
-      <h1>vad vill du göra nu?</h1>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/quiz">Vill du göra quizet igen?</Link>
-            </li>
-            <li>
-              <Link to="/facit">eller vill du läsa om de rätta svaren?</Link>
-            </li>
-          </ul>
-        </nav>
-
-        <Switch>
-          <Route path="/quiz">
-            <Quiz />
-          </Route>
-          <Route path="/facit">
-            <Facit />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
-                   
-</div>
+                    {/* Dina poäng */}
+                     <div>
+                         <h1>Du fick {score} poäng av {questions.length} möjliga</h1>
+                    </div>
                     
                 </div>
             ) : (
@@ -110,31 +87,49 @@ export default function Quiz() {
                     <div className='question-section'>
                             <div className='question-count'>
                                 {/* Quiz-rubrik */}
-                                <h1 class="display-4"> Habitatos miljö-quiz</h1>
+                                <h1> Habitatos miljö-quiz</h1>
                                 {/* Visar vilken fråga användaren är på */}
                                     <span>Fråga {currentQuestion + 1}</span>/{questions.length}
                             </div>
                             {/* Frågan */}
                             <div className='question-text'>{questions[currentQuestion].question}</div> 
-                        
                     </div>
                     {/* Slut på fråg-sekton */}
-
 
                     <div className='answer-section'>
 						{/* mapfunktion för att itterera över array */}
                         {/* Knappar med de olika svarsalternativen */}
                         {questions[currentQuestion].answerOptions.map((answerOption) => (
-                            <button type="button" class="btn btn-success" onClick={() => handleAnswerOptionClick(answerOption.answer)}>{answerOption.question}</button>
+                            <button type="button" onClick={() => handleAnswerOptionClick(answerOption.answer)}>{answerOption.question}</button>
 							))} 
-
-                                                    
-                            
                     </div>
-                    
                 </>
             )} 
         </div>
     );
 } 
 
+{/* <Router>
+<div>
+<h1>vad vill du göra nu?</h1>
+  <nav>
+    <ul>
+      <li>
+        <Link to="/quiz">Vill du göra quizet igen?</Link>
+      </li>
+      <li>
+        <Link to="/facit">eller vill du läsa om de rätta svaren?</Link>
+      </li>
+    </ul>
+  </nav>
+
+  <Switch>
+    <Route path="/quiz">
+      <Quiz />
+    </Route>
+    <Route path="/facit">
+      <Facit />
+    </Route>
+  </Switch>
+</div>
+</Router> */}
