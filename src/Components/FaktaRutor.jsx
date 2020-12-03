@@ -10,8 +10,8 @@ function Fakta() {
     <>
     <Container>
     <Row>
-   <div className="col-md-6 p-5 col-xs-6 p-4">
-     <h3 className="text-center p-4">Vad är fossila bränslen?</h3>
+   <div className="col-md-6 p-5 col-xs-6 p-3">
+     <h3 className="text-center p-3">Vad är fossila bränslen?</h3>
       <p>Dagens fossila bränslen skapades för miljontals år sedan av resterna från döda djur och växter. Resterna bröts ned och ombildades till exempelvis kol, naturgas och olja. Ur dessa fossila bränslen utvinner vi energi som t ex används till att driva motorer, uppvärmning och för att skapa elektricitet.</p>
 
       <Button variant="secondary" size="sm" block
