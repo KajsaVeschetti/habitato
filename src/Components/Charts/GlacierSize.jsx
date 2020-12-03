@@ -49,11 +49,11 @@ class Glacier extends Component {
 
         return ( 
             <React.Fragment>
-            <div style={{width:"350px", height:"400px", float:"left"}}>
+            <div style={{width:"300px", height:"350px", float:"left"}}>
             <input type="text" placeholder="Välj ett år" onKeyDown={e=> this.handleYear(e)}></input>
             <BarChart
-                    width={350}
-                    height={350}
+                    width={300}
+                    height={300}
                     data={dataGlacier}
                     margin={{
                     top: 25, right: 30, left: 20, bottom: 5,

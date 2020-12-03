@@ -113,19 +113,20 @@ class AllCharts extends Component {
       fontSize: "16px",
       color:"#5f5f5f",
       textDecoration:"none",
-      paddingRight:"50px",
-      paddingLeft:"50px",
+      paddingRight:"40px",
+      paddingLeft:"40px",
+
    }
         return (  
           <React.Fragment>
-              <div class="card mx-auto" style={{width:"900px"}}>
+              <div class="card mx-auto" style={{width:"750px"}}>
               <h3>Skriv in två årtal och se vad <br/> klimatförändringarna har gjort under åren</h3>
               <Router>
                 <nav class="navbar navbar-expand-lg navbar-light mx-auto">
                   
            
-                     <div class="justify-content-center" >
-                    <ul class="navbar-nav">
+                     <div class="mx-auto" >
+                    <ul class="navbar-nav mx-auto">
                         <li class="nav-link" style={linkStyle}>
                             <Link class="nav-link" to="/co2emission">
                                 CO2 <span class="sr-only">(current)</span>
@@ -149,7 +150,7 @@ class AllCharts extends Component {
                     </ul>
 
                     <Switch>
-                      <div class="justify-content-center">
+                      <div class="mx-auto">
                         <Route exact path="/co2emission" component={BarCharts}>
                         <BarCharts
                         chartName="Bar1"
