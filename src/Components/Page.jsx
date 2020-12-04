@@ -18,7 +18,7 @@ class Page extends Component {
       <React.Fragment>
     
         <NavBar/>
-        
+        <div class= "Container"></div>
         <Footer/>
       </React.Fragment>
     );
