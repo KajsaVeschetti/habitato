@@ -1,23 +1,59 @@
+/*Reset*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*Main Styling*/
+body {
+  width: 1200px;
+  min-height: 100%;
+  background-image: url(./img/Bakgrundsbild.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 11.5em;
+  background-size: cover;
+  background-color: #f9f9f9;
+  font-family: 'Quicksand', sans-serif;
+ }
+
+ html {
+  width: 100vw;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #f9f9f9;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+h1,h2, h3, h4, h5 {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+
 .App {
   text-align: center;
-  background-image: url(./img/Bakgrundsbild.svg);
+  margin: auto;
+  
 }
 
-body {
- border: solid #f3f3f3 1px;
- max-width: 1024px;
- height: 1500px;
- justify-content: center;
 
 
+.navbar {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  background-color: #f9f9f9;
+  
 }
 
-html {
-  width: 100vw;
-  height: 100vw;
-  overflow-x: hidden;
-  font-family: 'Quicksand', sans-serif;
+.navbar .sr-only {
+  border-color: #fe0000;
 }
+
 
 .App-logo {
   height: 40vmin;
