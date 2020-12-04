@@ -14,8 +14,10 @@ class Footer extends Component {
     const footerStyling ={
       marginTop:"40px",
       marginBottom:"40px",
-      maxWidth: "1075px"
-
+      maxWidth: "1200px",
+      background:"#f9f9f9",
+      padding:"2em",
+  
     }
 
     const linkStyle = {
