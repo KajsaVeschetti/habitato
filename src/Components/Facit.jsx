@@ -1,12 +1,9 @@
-import React, {Component} from "react";
+import React,{useState} from 'react';
 
-class Facit extends Component {
-
-  render(){
-
-    return(
-      <div>
-        <p>FACIT KOMPONENT</p>
+function Facit() {
+  const [readMore,setReadMore]=useState(false);
+  const extraContent=<div>
+      <p className="extra-content">
         <div class="container">
                 <div class="row row-cols-2">
 
@@ -29,11 +26,15 @@ class Facit extends Component {
                 </div>
                 </div>
                 </div>
-
-      </div>
-    );
-
-  }
+      </p>
+  </div>
+  const linkName=readMore?'Göm facit ':'Visa frågor och de rätta svaren'
+  return (
+    <div className="App">
+      <a className="read-more-link" onClick={()=>{setReadMore(!readMore)}}><h2>{linkName}</h2></a>
+      {readMore && extraContent}
+    </div>
+  );
 }
 
 export default Facit;
