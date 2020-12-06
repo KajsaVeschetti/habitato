@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import ReadMore from './ReadMore';
+
 import Facit from './Facit';
 import Page from './Page';
 
@@ -79,6 +81,8 @@ export default function Quiz() {
                     {/* Dina poäng */}
                      <div>
                          <h1>Du fick {score} poäng av {questions.length} möjliga</h1>
+                         <Facit/>
+
                     </div>
                     
                 </div>
@@ -105,9 +109,12 @@ export default function Quiz() {
                     </div>
                 </>
             )} 
+
         </div>
     );
 } 
+
+
 
 {/* <Router>
 <div>
