@@ -1,18 +1,5 @@
 import React, { useState } from 'react';
-import ReadMore from './ReadMore';
-
 import Facit from './Facit';
-import Page from './Page';
-
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
-  
-
-
 
 export default function Quiz() {
     const questions = [
@@ -72,19 +59,15 @@ export default function Quiz() {
         }
     };
     return (
-        
         <div className='app'>
-            
             {showScore ? (
                 <div className='score-section'>
-
                     {/* Dina poäng */}
                      <div>
                          <h1>Du fick {score} poäng av {questions.length} möjliga</h1>
+                         {/* Länk till facit-komponent */}
                          <Facit/>
-
                     </div>
-                    
                 </div>
             ) : (
                 <> 
@@ -99,7 +82,6 @@ export default function Quiz() {
                             <div className='question-text'>{questions[currentQuestion].question}</div> 
                     </div>
                     {/* Slut på fråg-sekton */}
-
                     <div className='answer-section'>
 						{/* mapfunktion för att itterera över array */}
                         {/* Knappar med de olika svarsalternativen */}
@@ -113,30 +95,3 @@ export default function Quiz() {
         </div>
     );
 } 
-
-
-
-{/* <Router>
-<div>
-<h1>vad vill du göra nu?</h1>
-  <nav>
-    <ul>
-      <li>
-        <Link to="/quiz">Vill du göra quizet igen?</Link>
-      </li>
-      <li>
-        <Link to="/facit">eller vill du läsa om de rätta svaren?</Link>
-      </li>
-    </ul>
-  </nav>
-
-  <Switch>
-    <Route path="/quiz">
-      <Quiz />
-    </Route>
-    <Route path="/facit">
-      <Facit />
-    </Route>
-  </Switch>
-</div>
-</Router> */}
