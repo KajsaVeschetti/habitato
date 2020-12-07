@@ -28,10 +28,10 @@ function Facit() {
                 </div>
       </p>
   </div>
-  const linkName=readMore?'Göm facit ':'Visa frågor och de rätta svaren'
+  const BtnName=readMore?'Göm facit ':'Visa frågor och de rätta svaren'
   return (
     <div className="App">
-      <a className="read-more-link" onClick={()=>{setReadMore(!readMore)}}><h2>{linkName}</h2></a>
+      <button onClick={()=>{setReadMore(!readMore)}}><h2>{BtnName}</h2></button>
       {readMore && extraContent}
     </div>
   );
