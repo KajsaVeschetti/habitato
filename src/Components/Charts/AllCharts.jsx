@@ -4,6 +4,8 @@ import BarCharts from './CO2Emission';
 import Glacier from './GlacierSize';
 import Sea from './SeaLevel';
 import Temp from './Temp';
+import ReadMore from "../ReadMore"
+
 
 import { BrowserRouter as Router, Route, Redirect, Switch, Link } from "react-router-dom";
 
@@ -149,9 +151,11 @@ class AllCharts extends Component {
                         </li> 
                     </ul>
 
+
                     <Switch>
                       <div class="mx-auto">
                         <Route exact path="/co2emission" component={BarCharts}>
+                        <ReadMore />
                         <BarCharts
                         chartName="Bar1"
                         CO2Emission={this.state.CO2Emission[this.state.indexYear1]} 
