@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReadMore from "../ReadMore"
 
 import PropTypes from 'prop-types';
 import {
@@ -96,8 +95,6 @@ export default class BarCharts extends Component {
                   </ul>
 
                 </div>
-                {/* Visas två ggr */}
-                  <ReadMore />
             </div>
             
             
