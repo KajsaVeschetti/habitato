@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ReadMore from "../ReadMore"
+
 import PropTypes from 'prop-types';
 import {
   BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
@@ -61,8 +63,10 @@ export default class BarCharts extends Component {
 
 
         return (
+          
             
             <div style={{width:"300px", height:"500px", float:"left"}}>
+              
                 <input type="text" placeholder="Välj ett år" onKeyDown={e=> this.handleYear(e)}></input>
                 <BarChart
                     width={300}
@@ -81,7 +85,6 @@ export default class BarCharts extends Component {
                 <Cell  fill ={COLORS[3]}/>
                 <Cell  fill ={COLORS[0]}/>
                 </Bar>
-       
                 </BarChart>
                 <div>
                   <ul >
@@ -91,8 +94,13 @@ export default class BarCharts extends Component {
                     <li style={linkStyle}>Cem = Cement</li>
                     <li style={linkStyle}>Flar = Gas Flaring</li>
                   </ul>
+
                 </div>
+                {/* Visas två ggr */}
+                  <ReadMore />
             </div>
+            
+            
             
         );
     }
