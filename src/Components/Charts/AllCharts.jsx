@@ -5,6 +5,11 @@ import Glacier from './GlacierSize';
 import Sea from './SeaLevel';
 import Temp from './Temp';
 import ReadMore from "../ReadMore"
+import ReadMoreGS from "../ReadMoreGS"
+import ReadMoreSL from "../ReadMoreSL"
+import ReadMoreGT from "../ReadMoreGT"
+
+
 
 
 import { BrowserRouter as Router, Route, Redirect, Switch, Link } from "react-router-dom";
@@ -155,6 +160,7 @@ class AllCharts extends Component {
                     <Switch>
                       <div class="mx-auto">
                         <Route exact path="/co2emission" component={BarCharts}>
+                          {/* Co2-info */}
                         <ReadMore />
                         <BarCharts
                         chartName="Bar1"
@@ -166,6 +172,8 @@ class AllCharts extends Component {
                         onYearFilter={this.handleYearFilter}/>
                         </Route>
                         <Route exact path="/glaciersize" component={Glacier}>
+                        {/* Glasiär-info */}
+                        <ReadMoreGS />
                         <Glacier
                         chartName="Glacier1"
                         GlacierSize={this.state.GlacierSize[this.state.indexYear1]}
@@ -176,6 +184,8 @@ class AllCharts extends Component {
                         onYearFilter={this.handleYearFilter}/>
                         </Route>
                         <Route exact path="/temp" component={Temp}>
+                        <ReadMoreGT />
+
                         <Temp 
                         chartName="Temp1"
                         GlobalTemp={this.state.GlobalTemp[this.state.indexYear1]}
@@ -186,6 +196,8 @@ class AllCharts extends Component {
                         onYearFilter={this.handleYearFilter}/>
                         </Route>
                         <Route exact path="/sealevel" component={Sea}>
+                         {/* Havsnivå-info  */}
+                        <ReadMoreSL />
                         <Sea 
                         chartName="Sea1"
                         SeaLevel={this.state.SeaLevel[this.state.indexYear1]}
