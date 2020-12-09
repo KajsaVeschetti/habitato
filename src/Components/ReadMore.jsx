@@ -10,7 +10,7 @@ Runt jorden, i vår atmosfär, finns det flera olika gaser, bland annat koldioxi
 När växthusgaserna ökar i atmosfären förstärks den naturliga växthuseffekten, vilket leder till att jordens medeltemperatur ökar. Det är den här temperaturökningen som kallas för global uppvärmning.
       </p>
   </div>
-  const linkName=readMore?'Tillbaka ':'Läs mer om Co2 '
+  const linkName=readMore?'Göm info ':'Läs mer om Co2 '
   return (
     <div className="App">
       <a className="read-more-link" onClick={()=>{setReadMore(!readMore)}}><h2>{linkName}</h2></a>
