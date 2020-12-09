@@ -16,7 +16,7 @@ class Page extends Component {
     return(
      <>
         <NavBar/>
-        <div class= "Container"></div>
+        <div className= "Container"></div>
         <Footer/>
       </>
     );
