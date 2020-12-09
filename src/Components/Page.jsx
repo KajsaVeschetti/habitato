@@ -14,13 +14,11 @@ class Page extends Component {
 
   render(){
     return(
-
-      <React.Fragment>
-    
+     <>
         <NavBar/>
         <div class= "Container"></div>
         <Footer/>
-      </React.Fragment>
+      </>
     );
 
   }
