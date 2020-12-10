@@ -95,6 +95,8 @@ export default function Quiz() {
                          <h1 style={HStyle}>Du fick {score} poäng av {questions.length} möjliga!</h1>
                          {/* Länk till facit-komponent */}
                          <Facit/>
+                         <p>Länk: Gör testet igen</p>
+
                     </div>
                 </div>
             ) : (
