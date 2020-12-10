@@ -11,22 +11,15 @@ class Footer extends Component {
 
 
   render(){ 
-    const footerStyling ={
-      marginTop:"40px",
-      marginBottom:"40px",
-      maxWidth: "1200px",
-      background:"#f9f9f9",
-      padding:"2em",
-  
-    }
+    
 
     const linkStyle = {
       fontSize: "14px",
       color:"#5f5f5f",
       textDecoration:"none",
       listStyle: "none",
-      textAlign: "left",
-      paddingLeft: "45px"
+      paddingLeft: "45px",
+      float: "left"
     };
 
     const logos = {
@@ -35,7 +28,7 @@ class Footer extends Component {
     }
 
     const logoPlace = {
-      textAlign: "right",
+      float: "right",
       paddingRight: "80px",
       paddingTop: "25px"
     }
@@ -55,8 +48,8 @@ class Footer extends Component {
 
 
     return(
-     <footer class="mx-auto" style={footerStyling}>
-       <Row>
+     <footer class="fixedFooter">
+       <Row className="justify-content-md-center">
          <Col>
          <ul style={linkStyle}>
           <li><a href="/" style={linkStyle}>Hem</a></li>
