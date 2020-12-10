@@ -1,5 +1,12 @@
 import React,{useState} from 'react';
 
+const LinkStyle = {
+    fontFamily: "Quicksand",
+    color:"#1F1F1F",
+    paddingRight:"150px",
+    paddingLeft:"150px",
+
+  }
 function ReadMore() {
   const [readMore,setReadMore]=useState(false);
   const extraContent=<div>
@@ -9,7 +16,7 @@ function ReadMore() {
   const linkName=readMore?'Göm info ':'Läs mer om Global temperatur '
   return (
     <div className="App">
-      <a className="read-more-link" onClick={()=>{setReadMore(!readMore)}}><h2>{linkName}</h2></a>
+      <a style={LinkStyle} className="read-more-link" onClick={()=>{setReadMore(!readMore)}}><h2>{linkName}</h2></a>
       {readMore && extraContent}
     </div>
   );
