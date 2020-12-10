@@ -1,4 +1,15 @@
 import React,{useState} from 'react';
+import { Button } from 'react-bootstrap';
+
+
+const LinkStyle = {
+    fontFamily: "Quicksand",
+    color:"#1F1F1F",
+    paddingRight:"150px",
+    paddingLeft:"150px",
+
+  }
+  
 
 function ReadMore() {
   const [readMore,setReadMore]=useState(false);
@@ -13,7 +24,7 @@ När växthusgaserna ökar i atmosfären förstärks den naturliga växthuseffek
   const linkName=readMore?'Göm info ':'Läs mer om Co2 '
   return (
     <div className="App">
-      <a className="read-more-link" onClick={()=>{setReadMore(!readMore)}}><h2>{linkName}</h2></a>
+      <a style={LinkStyle}  size="sm" variant="info" className="read-more-link" onClick={()=>{setReadMore(!readMore)}}><h2>{linkName}</h2></a>
       {readMore && extraContent}
     </div>
   );
