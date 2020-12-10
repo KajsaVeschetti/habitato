@@ -160,8 +160,6 @@ class AllCharts extends Component {
                     <Switch>
                       <div class="mx-auto">
                         <Route exact path="/co2emission" component={BarCharts}>
-                          {/* Co2-info */}
-                        <ReadMore />
                         <BarCharts
                         chartName="Bar1"
                         CO2Emission={this.state.CO2Emission[this.state.indexYear1]} 
@@ -170,10 +168,10 @@ class AllCharts extends Component {
                         chartName="Bar2"
                         CO2Emission={this.state.CO2Emission[this.state.indexYear2]} 
                         onYearFilter={this.handleYearFilter}/>
+                       {/* Co2-info */}
+                        <ReadMore />
                         </Route>
                         <Route exact path="/glaciersize" component={Glacier}>
-                        {/* Glasiär-info */}
-                        <ReadMoreGS />
                         <Glacier
                         chartName="Glacier1"
                         GlacierSize={this.state.GlacierSize[this.state.indexYear1]}
@@ -182,10 +180,10 @@ class AllCharts extends Component {
                         chartName="Glacier2"
                         GlacierSize={this.state.GlacierSize[this.state.indexYear2]}
                         onYearFilter={this.handleYearFilter}/>
+                        {/* Glasiär-info */}
+                        <ReadMoreGS />
                         </Route>
                         <Route exact path="/temp" component={Temp}>
-                        <ReadMoreGT />
-
                         <Temp 
                         chartName="Temp1"
                         GlobalTemp={this.state.GlobalTemp[this.state.indexYear1]}
@@ -194,10 +192,10 @@ class AllCharts extends Component {
                         chartName="Temp2"
                         GlobalTemp={this.state.GlobalTemp[this.state.indexYear2]}
                         onYearFilter={this.handleYearFilter}/>
+                        {/* Globaltemp-info */}
+                        <ReadMoreGT />
                         </Route>
                         <Route exact path="/sealevel" component={Sea}>
-                         {/* Havsnivå-info  */}
-                        <ReadMoreSL />
                         <Sea 
                         chartName="Sea1"
                         SeaLevel={this.state.SeaLevel[this.state.indexYear1]}
@@ -206,6 +204,8 @@ class AllCharts extends Component {
                         chartName="Sea2"
                         SeaLevel={this.state.SeaLevel[this.state.indexYear2]}
                         onYearFilter={this.handleYearFilter}/>
+                        {/* Havsnivå-info  */}
+                        <ReadMoreSL />
                         </Route>
                       
                       <Redirect from="/" exact to="/co2emission"></Redirect>
