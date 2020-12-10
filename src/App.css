@@ -10,12 +10,19 @@ body {
   min-height: 100%;
   background-image: url(./img/Bakgrundsbild.svg);
   background-repeat: no-repeat;
-  background-position-x: center;
   background-position-y: 11.5em;
   background-size: cover;
   background-color: #f9f9f9;
   font-family: 'Quicksand', sans-serif;
+  margin: 0 auto;
  }
+
+.wrapper {
+  max-width: 1200px;
+  margin: auto
+  
+}
+ 
 
  html {
   width: 100vw;
@@ -32,7 +39,9 @@ a{
 h1,h2, h3, h4, h5 {
   padding-top: 20px;
   padding-bottom: 10px;
+  font-family: 'Segoe UI';
 }
+
 
 
 .App {
@@ -41,8 +50,6 @@ h1,h2, h3, h4, h5 {
   
 }
 
-
-
 .navbar {
   margin-top: 3em;
   margin-bottom: 3em;
@@ -50,42 +57,32 @@ h1,h2, h3, h4, h5 {
   
 }
 
-.navbar .sr-only {
-  border-color: #fe0000;
+footer {
+  margin: 0 auto;
 }
 
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.fixedHeader, .fixedFooter {
+  width: 100%;
+  position: fixed;
+  padding: 10px 0;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fixedHeader{
+  top:0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.fixedFooter{
+  bottom:0;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: #f9f9f9;
+  padding:2em;
+  max-width: 1200px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container{
+  width: 80%;
+  margin: 0 auto;
+  overflow-y: scroll;
+  height: 800px;
 }
