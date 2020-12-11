@@ -6,12 +6,14 @@ import Footer from "./Footer";
 
 
 class Page extends Component {
-
+ 
 
   render(){
+
     return(
      <div className="wrapper">
         <NavBar/>
+      
         <Footer/>
       </div>
     );
