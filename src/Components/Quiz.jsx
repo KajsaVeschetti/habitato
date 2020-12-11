@@ -61,27 +61,9 @@ export default function Quiz() {
         }
     };
     
-    const HStyle = {
-        fontFamily: "Ink Free",
-        fontSize: "70px",
-        color:"#1F1F1F",
-        textDecoration:"none",
-        paddingTop: "55px",
-        paddingRight:"50px",
-        paddingLeft:"50px",
-     }
-
-     const PStyle = {
-        fontFamily: "Quicksand",
-        fontSize: "25px",
-        color:"#1F1F1F",
-        textDecoration:"none",
-        paddingRight:"100px",
-        paddingLeft:"100px",
-     }
      const BtnStyle = {
         fontFamily: "Quicksand",
-        fontSize: "25px",
+        fontSize: "15px",
         color:"#1F1F1F",
      }
 
@@ -92,7 +74,7 @@ export default function Quiz() {
                 <div className='score-section'>
                     {/* Dina poäng */}
                      <div>
-                         <h1 style={HStyle}>Du fick {score} poäng av {questions.length} möjliga!</h1>
+                         <h1>Du fick {score} poäng av {questions.length} möjliga!</h1>
                          {/* Länk till facit-komponent */}
                          <Facit/>
                          <p>Länk: Gör testet igen</p>
@@ -104,12 +86,12 @@ export default function Quiz() {
                     <div className='question-section'>
                             <div className='question-count'>
                                 {/* Quiz-rubrik */}
-                                <h1 style={HStyle}> Habitatos miljö-quiz</h1>
+                                <h1> Habitatos miljö-quiz</h1>
                                 {/* Visar vilken fråga användaren är på */}
                                     <span>Fråga {currentQuestion + 1}</span>/{questions.length}
                             </div>
                             {/* Frågan */}
-                            <p style={PStyle} className='question-text'>{questions[currentQuestion].question}</p> 
+                            <p className='question-text'>{questions[currentQuestion].question}</p> 
                     </div>
                     {/* Slut på fråg-sekton */}
                     <div className='answer-section'>
