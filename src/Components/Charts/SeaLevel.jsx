@@ -46,11 +46,11 @@ class Sea extends Component {
     const COLORS =[ "#d9534f", "#5bc0de", "#5cb85c", "#428bca" ] 
         return ( 
             <React.Fragment>
-              <div style={{width:"350px", height:"400px", float:"left"}}>
+              <div style={{width:"300px", height:"400px", float:"left"}}>
             <input type="text" placeholder="Välj ett år" onKeyDown={e=> this.handleYear(e)}></input>
             <BarChart
-                    width={350}
-                    height={350}
+                    width={300}
+                    height={300}
                     data={dataSea}
                     margin={{
                     top: 25, right: 30, left: 20, bottom: 5,
