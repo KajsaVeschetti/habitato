@@ -158,7 +158,7 @@ class AllCharts extends Component {
 
 
                     <Switch>
-                      <div class="mx-auto">
+                      <div class="mx-auto chartContainer">
                         <Route exact path="/co2emission" component={BarCharts}>
                         <BarCharts
                         chartName="Bar1"
