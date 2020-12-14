@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Facit from './Facit';
-import { Button } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Quiz() {
@@ -86,32 +86,32 @@ export default function Quiz() {
 
  
     return (
+        <Container className="bg-white col-6 col-sm-6">
         <div className='app'>
             {showScore ? (
-                <div className='score-section'>
+                <div>
                     {/* Dina poäng */}
                      <div>
                          <h1>Du fick {score} poäng av {questions.length} möjliga!</h1>
                          {/* Länk till facit-komponent */}
                          <Facit/>
-                         <p>Länk: Gör testet igen</p>
 
                     </div>
                 </div>
             ) : (
                 <> 
-                    <div className='question-section'>
-                            <div className='question-count'>
+                    <div>
+                            <div>
                                 {/* Quiz-rubrik */}
                                 <h1> Habitatos miljö-quiz</h1>
                                 {/* Visar vilken fråga användaren är på */}
                                     <span>Fråga {currentQuestion + 1}</span>/{questions.length}
                             </div>
                             {/* Frågan */}
-                            <p className='question-text'>{questions[currentQuestion].question}</p> 
+                            <p>{questions[currentQuestion].question}</p> 
                     </div>
                     {/* Slut på fråg-sekton */}
-                    <div className='answer-section'>
+                    <div>
 						{/* mapfunktion för att itterera över array */}
                         {/* Knappar med de olika svarsalternativen */}
                         {questions[currentQuestion].answerOptions.map((answerOption) => (
@@ -122,5 +122,6 @@ export default function Quiz() {
             )} 
 
         </div>
+        </Container>
     );
 } 
