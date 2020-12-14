@@ -1,8 +1,10 @@
-
-
 .wrapper {
-  max-width: 1200px;
-  margin: auto
+  max-width: 1000px;
+  margin: auto;
+  background-image: url(./img/Bakgrundsbild.svg);
+  background-repeat: no-repeat;
+  background-position-y: 5em;
+  background-size: cover;
 }
  
 html {
@@ -12,6 +14,12 @@ html {
   background-color: #f9f9f9;
 }
 
+body {
+  max-width: auto;
+  min-height: 100%;
+  background-color: #f9f9f9;
+  font-family: 'Quicksand', sans-serif;
+ }
 
 a{
   text-decoration: none;
@@ -43,26 +51,14 @@ h1, h2, h3, h4, h5 {
 
 footer {
   margin: 0 auto;
-  padding-top: 1em;
-  padding-bottom: 1em;
 }
 
-.fixedHeader, .fixedFooter {
-  width: 100%;
-  position: fixed;
-  padding: 10px 0;
-  margin: 0 auto;
-}
-
-.fixedHeader{
-  top:0;
-}
 
 .fixedFooter{
-  bottom:0;
+
   align-items: center;
   background: #f9f9f9;
-  padding:1em;
+ padding: 0.5em;
   max-width: 1200px;
   justify-content: center;
 }
@@ -70,14 +66,14 @@ footer {
 .container{
   width: 80%;
   margin: 0 auto;
-  overflow-y: scroll;
-  height: 400px;
-  
+ 
 }
 
 .chartContainer{
   margin: 0 auto;
-  overflow-y: scroll;
   height: auto;
-  max-height: 400px;
+}
+
+div.charts {
+  background: rgba(249, 249, 249, 0.8);
 }
