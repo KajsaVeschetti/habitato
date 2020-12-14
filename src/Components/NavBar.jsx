@@ -22,12 +22,12 @@ class NavBar extends Component {
     render () {
 
     const logoStyle={
-      width: "150px"
+      width: "125px"
     }
 
     const linkStyle = {
        fontFamily: "Segoe UI Light",
-       fontSize: "25px",
+       fontSize: "24px",
        color:"#5f5f5f",
        textDecoration:"none",
        paddingTop: "25px",
