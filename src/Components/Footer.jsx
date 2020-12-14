@@ -27,19 +27,14 @@ class Footer extends Component {
       float: "center",
       display:"inline",
       listStyleType:"none",
-      
-
     };
 
     const logos = {
       margin: "5px",
-      color: "#5f5f5f"
+      color: "#5f5f5f",
     }
 
-    const logoPlace = {
-      paddingTop: "10px"
-    }
-
+  
     const onMouseOver = event => {
       const el = event.target;
       let colorhex = "#5cb85c";
@@ -58,22 +53,22 @@ class Footer extends Component {
            
         <footer className="fixedFooter">
      
-       <div style={logoPlace}>
-         <a href="#" 
-              onMouseEnter={event => onMouseOver(event)}
-              onMouseLeave={event => onMouseOut(event)}>
-           <FontAwesomeIcon style={logos} size="2x"   icon={faFacebookSquare}/></a>
-         <a href="#"
-             onMouseEnter={event => onMouseOver(event)}
-             onMouseLeave={event => onMouseOut(event)}
-          ><FontAwesomeIcon style={logos} size="2x"  icon={faInstagram}/></a>
-         </div>
          <ul class="footerMenu" style={listStyle}>
           <li><a href="/" style={linkStyle}>Hem</a></li>
           <li><a href="/Quiz" style={linkStyle}>Quiz</a></li>
           <li><a href="#" style={linkStyle}>Om Oss</a></li>
           <li><a href="#" style={linkStyle}>Kontakta oss</a></li>
           </ul>
+          <div >
+         <a href="#" 
+              onMouseEnter={event => onMouseOver(event)}
+              onMouseLeave={event => onMouseOut(event)}>
+           <FontAwesomeIcon style={logos} size='lg' icon={faFacebookSquare}/></a>
+         <a href="#"
+             onMouseEnter={event => onMouseOver(event)}
+             onMouseLeave={event => onMouseOut(event)}
+          ><FontAwesomeIcon style={logos} size="lg"  icon={faInstagram}/></a>
+         </div>
      </footer>
     
 
