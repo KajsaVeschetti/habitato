@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -13,11 +13,11 @@ const BtnStyle = {
 function Facit() {
   const [readMore,setReadMore]=useState(false);
   const extraContent=<div>
-      <p className="extra-content">
-        <div class="container">
-                <div class="row row-cols-2">
+    <Container className="bg-white">
+<p className="extra-content">
+                <div class="row row-cols-1">
 
-                    <div class="col"><h2>Hur många jordklot skulle behövas om alla levde som medelsvensken?</h2>
+                    <div class="col"><h3>Hur många jordklot skulle behövas om alla levde som medelsvensken?</h3>
                 <b>Rätt svar: 3 jordklot</b>
                 <p>Om man skulle dela upp jordens produktiva yta på antalet människor på jorden, så skulle var och en av oss få 1,8 globala hektar till vårt förfogande. Vi svenskar gör ett genomsnittligt ekologiskt fotavtryck på 5,9 globala hektar och ligger på 13e plats på listan över länder med störst fotavtryck per person. Om resten av världens befolkning skulle göra lika stora avtryck, behöver vi drygt 3 jordklot i stället för det enda vi har. Vi överutnytttjar naturens grundläggande resurser. Ett överuttag som underminerar våra barnbarns och hela vår civilisations framtid. (Källa WWF)</p>
                 </div>
@@ -35,8 +35,8 @@ function Facit() {
                 <p>Sverige skulle ligga betydligt högre upp på rankinglistan om vi i utgick från konsumtion istället för produktion. Det mesta i vår livsstil – vad vi äter, klär oss i, möblerar med, förflyttar oss med, snackar i, twittrar, zappar, facebookar, googlar och skriver på – är tillverkat utomlands. Främst i utvecklingsländer som Kina och Indien vilka indirekt får stå för våra utsläpp. (Källa CDIAK – US department of Energy´s Carbon Dioxide Information Analysis Center)</p> 
                 </div>
                 </div>
-                </div>
       </p>
+      </Container>
   </div>
   const BtnName=readMore?'Göm facit ':'Visa frågor och de rätta svaren'
   return (
@@ -46,5 +46,6 @@ function Facit() {
     </div>
   );
 }
+
 
 export default Facit;
