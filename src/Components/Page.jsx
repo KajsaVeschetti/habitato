@@ -12,8 +12,9 @@ class Page extends Component {
 
     return(
      <div className="wrapper">
+       <div className="contentWrap">
         <NavBar/>
-      
+      </div>
         <Footer/>
       </div>
     );
