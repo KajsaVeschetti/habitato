@@ -15,7 +15,7 @@ function Facit() {
   const extraContent=<div>
     <Container className="bg-white">
 <p className="extra-content">
-                <div class="row row-cols-1">
+                <div class="row row-cols-2">
 
                     <div class="col"><h3>Hur många jordklot skulle behövas om alla levde som medelsvensken?</h3>
                 <b>Rätt svar: 3 jordklot</b>
