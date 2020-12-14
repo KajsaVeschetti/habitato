@@ -10,25 +10,25 @@ class Fakta extends Component {
 
 render() {
 const linkStyle={
-fontSize: "16px",
+fontSize: "16x",
 fontFamily: "Quicksand",
 color:"#5f5f5f",
 textDecoration:"none",
-paddingLeft: "15px",
-paddingRight: "15px",
+paddingLeft: "10px",
+paddingRight: "10px",
 }
 
  return(
    <>
-<Container className="col-xl-6 fluid=sm text-center mb-5 mt-4 bg-white">
+<Container className="col-xl-8 fluid=sm text-center mb-5 bg-white">
   <h3 className="p-4">Fakta om klimatförändringar</h3>
-<Card border="light"className="bg-light pl-4 pr-4 pb-4">
+<Card border="white"className="bg-white pl-4 pr-4 pb-4">
     <Card.Body>  
 <Router>
-<Navbar collapseOnSelect expand="xl" bg="light" variant="light">
+<Navbar collapseOnSelect expand="xl" bg="white" variant="light">
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className="mx-auto font-weight-normal">
+    <Nav className="mx-auto font-weight-normal mb-3">
 <Link class="nav-link" style={linkStyle} to="/FossilFuel">
 Fossilt bränsle  
 </Link>
