@@ -31,7 +31,7 @@ export default function Quiz() {
             ],
         },
         {
-            question: 'Förnybar energi ses som miljövänliga alternariv till fossila bränslen. Vad av följande är en förnybar energikälla?',
+            question: 'Förnybar energi ses som miljövänliga alternativ till fossila bränslen. Vad av följande är en förnybar energikälla?',
             answerOptions: [
                 { question: 'Kärnkraft', answer: false },
                 { question: 'Solkraft', answer: true },
