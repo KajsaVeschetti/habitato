@@ -35,8 +35,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .navbar {
-  margin-top: 0.5em;
-  margin-bottom: 3em;
+  margin-top: 0;
+  margin-bottom: 0; 
   background-color: #f9f9f9;
   
 }
@@ -71,11 +71,13 @@ footer {
   width: 80%;
   margin: 0 auto;
   overflow-y: scroll;
-  height: 800px;
+  height: 400px;
+  
 }
 
 .chartContainer{
   margin: 0 auto;
   overflow-y: scroll;
-  height: 400px;
+  height: auto;
+  max-height: 400px;
 }
