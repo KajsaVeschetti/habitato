@@ -86,7 +86,7 @@ export default function Quiz() {
 
  
     return (
-        <Container className="bg-white col-6 col-sm-6">
+        <Container className="bg-white col-sm-9">
         <div className='app'>
             {showScore ? (
                 <div>
