@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Quiz() {
     const questions = [
+
         {
             question: 'Hur många jordklot skulle behövas om alla levde som medelsvensken?',
             answerOptions: [
@@ -14,11 +15,27 @@ export default function Quiz() {
             ],
         },
         {
+            question: 'Vad menas med den förstärkta växthuseffekten?',
+            answerOptions: [
+                { question: 'Jorden snurrar snabbare', answer: false },
+                { question: 'Ökad upphettning i atmosfären', answer: true },
+                { question: 'Ökad nedkylningen i atmosfären', answer: false },
+            ],
+        },
+        {
             question: 'En vuxen svensk släpper årligen i genomsnitt ut 4400 kg växthusgaser. Hur mycket släpper en flygresa t.o.r Thailand ut per person?',
             answerOptions: [
                 { question: '8 800 kg koldioxid', answer: false },
                 { question: '5 700 kg koldioxid', answer: true },
                 { question: '6 500 kg koldioxid', answer: false },
+            ],
+        },
+        {
+            question: 'Förnybar energi ses som miljövänliga alternariv till fossila bränslen. Vad av följande är en förnybar energikälla?',
+            answerOptions: [
+                { question: 'Kärnkraft', answer: false },
+                { question: 'Solkraft', answer: true },
+                { question: 'Kolkraft', answer: false },
             ],
         },
         {
