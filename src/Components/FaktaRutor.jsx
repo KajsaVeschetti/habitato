@@ -20,9 +20,9 @@ paddingRight: "10px",
 
  return(
    <>
-<Container className="col-xl-8 fluid=sm text-center mb-5 bg-white">
+<Container className="col-xl-9 fluid=sm text-center mb-5 bg-white">
   <h3 className="p-4">Fakta om klimatförändringar</h3>
-<Card border="white"className="bg-white pl-4 pr-4 pb-4">
+<Card border="white"className="bg-white pl-5 pr-5 pb-4">
     <Card.Body>  
 <Router>
 <Navbar collapseOnSelect expand="xl" bg="white" variant="light">
