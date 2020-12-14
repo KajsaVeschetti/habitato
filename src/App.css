@@ -1,13 +1,20 @@
 .wrapper {
   max-width: 1000px;
-  min-height: 100%;
+  min-height: 100vh;
+  position: relative;
   margin: auto;
-  background-image: url(./img/Bakgrundsbild.svg);
+  background-image: url(./img/bakgrundsbild2.svg);
   background-repeat: no-repeat;
   background-position-y: 5em;
   background-size: cover;
+  background-position:center top;
+  background-color: #f9f9f9;
 }
- 
+
+.contentWrap {
+  padding-bottom: 7em;
+}
+
 html {
   width: 100vw;
   height: 100%;
@@ -45,21 +52,22 @@ h1, h2, h3, h4, h5 {
 
 .navbar {
   margin-top: 0;
-  margin-bottom: 0; 
+  margin-bottom: 3em; 
   background-color: #f9f9f9;
+  
   
 }
 
 footer {
   margin: 0 auto;
-  position: sticky;
+  position: absolute;
   bottom: 0;
   width: 100%;
 }
 
 
 .fixedFooter{
-
+  bottom: 0;
   align-items: center;
   background: #f9f9f9;
   padding: 0.5em;
