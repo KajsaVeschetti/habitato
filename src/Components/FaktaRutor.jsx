@@ -12,25 +12,23 @@ render() {
 const linkStyle={
 fontSize: "16x",
 fontFamily: "Quicksand",
-color:"#5f5f5f",
-textDecoration:"none",
-paddingLeft: "10px",
-paddingRight: "10px",
+paddingLeft: "18px",
+paddingRight: "18px",
 }
 
  return(
    <>
-<Container className="col-xl-9 fluid=sm text-center mb-5 bg-white">
+<Container className="col-lg-9 col-xs-12 mb-5 bg-white">
   <h3 className="p-4">Fakta om klimatförändringar</h3>
-<Card border="white"className="bg-white pl-5 pr-5 pb-4">
+<Card border="white"className="bg-white px-md-4 pb-4">
     <Card.Body>  
 <Router>
-<Navbar collapseOnSelect expand="xl" bg="white" variant="light">
+<Navbar collapseOnSelect expand="lg" bg="white" variant="light">
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className="mx-auto font-weight-normal mb-3">
+    <Nav className="mx-auto">
 <Link class="nav-link" style={linkStyle} to="/FossilFuel">
-Fossilt bränsle  
+Fossila bränslen  
 </Link>
 <Link class="nav-link " style={linkStyle} to="/GlobalWarming" >
 Global uppvärmning 
