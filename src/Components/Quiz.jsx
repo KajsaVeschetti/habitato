@@ -47,6 +47,30 @@ export default function Quiz() {
             ],
         },
         {
+            question: 'Hur mycket skulle havsnivån stiga om alla glaciärer smälter?',
+            answerOptions: [
+                { question: '75 meter', answer: false },
+                { question: '170 meter', answer: false },
+                { question: '120 meter', answer: true },
+            ],
+        },
+        {
+            question: 'Vilket av följande val är klimatsmart?',
+            answerOptions: [
+                { question: 'Äta kött', answer: false },
+                { question: 'Flyga', answer: false },
+                { question: 'Shoppa mindre', answer: true },
+            ],
+        },
+        {
+            question: 'Varför stiger havsnivåerna?',
+            answerOptions: [
+                { question: 'Fuktigare klimat', answer: false },
+                { question: 'Varmare klimat', answer: true },
+                { question: 'Kallare klimat', answer: false },
+            ],
+        },
+        {
             question: 'Vilket av följande länder släpper ut mest koldioxid per invånare?',
             answerOptions: [
                 { question: 'Sverige', answer: false },
