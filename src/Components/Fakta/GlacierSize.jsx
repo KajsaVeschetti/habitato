@@ -18,7 +18,7 @@ function GlacierSize () {
 
       <Collapse in={open}> 
         <div id="glacier-collapse-text">
-        <Card.Title className="pt-2 text-left">Vilka konsekvenserna får smältande glaciärer?</Card.Title>
+        <Card.Title className="pt-2">Vilka konsekvenserna får smältande glaciärer?</Card.Title>
           <Card.Text className="text-left"> De två främsta konsekvenserna av att glaciärisen smälter är dels att havsnivåerna höjs, dels att färskvattnet minskar. Det gör oss mer sårbara eftersom tillgången till vatten och ökade havsnivåer påverkar allt liv på jorden. Om alla glaciärer smälte skulle havsnivån stiga med över 120 meter. Det skulle drabba många kuststäder och hela länder som då hamnar under havsytan, t ex New York och Bangladesh. Många platser på jorden är också beroende av färskvattnet från glaciärer, bland annat länderna runt Himalaya och Anderna.</Card.Text>.
         <Card.Title>Vad kan vi göra?</Card.Title>
         <Card.Text className="pb-5 text-left">Vi måste minska användningen av fossila bränslen, men också rent allmänt börja agera mer miljövänligt i vår vardag. Det är dags att välja väg för framtiden. Vi kan hjälpa till genom att arbeta för att minska utsläppen och genom att vi lära oss att leva mer klimatsmart; shoppa mindre, äta mer vegetariskt, välja hållbara energikällor, slänga mindre (både matvaror och prylar) osv.</Card.Text>
