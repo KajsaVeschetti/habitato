@@ -120,23 +120,23 @@ class AllCharts extends Component {
       fontSize: "16px",
       color:"#5f5f5f",
       textDecoration:"none",
-      paddingRight:"40px",
-      paddingLeft:"40px",
+      paddingRight:"10px",
+      paddingLeft:"10px",
 
    }
         return (  
           <React.Fragment>
-              <div class="card mx-auto charts" style={{width:"725px"}}>
+              <div class="card mx-auto charts " style={{width:"750px"}}>
               <h5>Skriv in två årtal och se vad <br/> klimatförändringarna har gjort under åren</h5>
               <Router>
                 <nav class="navbar navbar-expand-lg navbar-light mx-auto">
                   
            
-                     <div class="mx-auto" >
+                     <div class="mx-auto justify-content-center" >
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-link" style={linkStyle}>
                             <Link class="nav-link" to="/co2emission">
-                                CO2 <span class="sr-only">(current)</span>
+                                CO2 
                             </Link>
                         </li> 
                         <li class="nav-link " style={linkStyle}>
