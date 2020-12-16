@@ -10,11 +10,14 @@ const LinkStyle = {
 
   }
   
+  const extra ={
+    width: "600px"
+  }
 
 function ReadMore() {
   const [readMore,setReadMore]=useState(false);
-  const extraContent=<div>
-      <p className="extra-content">
+  const extraContent=<div style={extra}>
+      <p className="extra-content" >
 Co2 är den kemiska formeln för Koldioxid. Koldioxid är en färg- och luktfri gas. 
 Runt jorden, i vår atmosfär, finns det flera olika gaser, bland annat koldioxid. Men även metan, lustgas och andra så kallade växthusgaser. Växthusgaserna hjälper till att hålla jorden varm, utan den naturliga växthuseffekten skulle vår jord vara ungefär 30 grader kallare än vad den är idag.
 
@@ -24,7 +27,7 @@ När växthusgaserna ökar i atmosfären förstärks den naturliga växthuseffek
   const linkName=readMore?'Göm info ':'Läs mer om Co2 '
   return (
     <div className="App">
-      <a style={LinkStyle}  size="sm" variant="info" className="read-more-link" onClick={()=>{setReadMore(!readMore)}}><h2>{linkName}</h2></a>
+      <a style={LinkStyle}  variant="info" className="read-more-link" onClick={()=>{setReadMore(!readMore)}}><h2>{linkName}</h2></a>
       {readMore && extraContent}
     </div>
   );
