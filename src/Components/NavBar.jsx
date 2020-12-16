@@ -8,7 +8,7 @@ import Tips from "./Tips";
 import Quiz from "./Quiz";
 import Fakta from "./FaktaRutor";
 import AllCharts from "./Charts/AllCharts";
-import CommentAdd from "./CommentGroup";
+import CommentAdd from "./CommentAdd";   // changed from CommentGroup
 
 
 
