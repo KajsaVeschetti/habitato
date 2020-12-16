@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import  { getCO2data } from "./data/co2";
+import { getGlacierdata } from "./data/glacier";
+import { getSeadata } from "./data/sealevel";
+import { getTempdata } from "./data/temp";
 
 import BarCharts from './CO2Emission';
 import Glacier from './GlacierSize';
@@ -27,34 +31,37 @@ class AllCharts extends Component {
     
       async componentDidMount() {
         //Hämta data från API 1
-        const CO2url = "https://my.api.mockaroo.com/co2.json?key=8eb9e6f0";
-        const CO2response = await fetch(CO2url);
-        const CO2data = await CO2response.json();
+        // const CO2url = "https://my.api.mockaroo.com/co2.json?key=8eb9e6f0";
+        // const CO2response = await fetch(CO2url);
+        // const CO2data = await CO2response.json();
 
-        //Hämta data från API 2
-        const Tempurl = "https://my.api.mockaroo.com/temp.json?key=8eb9e6f0";
-        const Tempresponse = await fetch(Tempurl);
-        let Tempdata = await Tempresponse.json();
+
+        // //Hämta data från API 2
+        // const Tempurl = "https://my.api.mockaroo.com/temp.json?key=8eb9e6f0";
+        // const Tempresponse = await fetch(Tempurl);
+        // let Tempdata = await Tempresponse.json();
        
-        Tempdata = Tempdata.sort((a, b) =>
-        a.Year > b.Year ? 1 : b.Year > a.Year ? -1 : 0
-        );
+        // Tempdata = Tempdata.sort((a, b) =>
+        // a.Year > b.Year ? 1 : b.Year > a.Year ? -1 : 0
+        //  );
 
         //hämta data from API 3 
-        const Glacierurl ="https://my.api.mockaroo.com/glaciersize.json?key=8eb9e6f0";
-        const Glacierresponse = await fetch(Glacierurl);
-        const Glacierdata = await Glacierresponse.json();
+        // const Glacierurl ="https://my.api.mockaroo.com/glaciersize.json?key=8eb9e6f0";
+        // const Glacierresponse = await fetch(Glacierurl);
+        // const Glacierdata = await Glacierresponse.json();
        
         //hämta data from API 4
-        const Seaurl ="https://my.api.mockaroo.com/sealevel.json?key=8eb9e6f0";
-        const Searesponse = await fetch(Seaurl);
-        const Seadata = await Searesponse.json();
+        // const Seaurl ="https://my.api.mockaroo.com/sealevel.json?key=8eb9e6f0";
+        // const Searesponse = await fetch(Seaurl);
+        // const Seadata = await Searesponse.json();
      
         this.setState({
-          CO2Emission: CO2data,
-          GlobalTemp: Tempdata,
-          GlacierSize: Glacierdata,
-          SeaLevel: Seadata,
+          CO2Emission: getCO2data(),
+          GlobalTemp: getTempdata().sort((a, b) =>
+          a.Year > b.Year ? 1 : b.Year > a.Year ? -1 : 0
+           ),
+          GlacierSize: getGlacierdata(),
+          SeaLevel: getSeadata(),
         });
       }
     
