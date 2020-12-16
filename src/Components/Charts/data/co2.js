@@ -1,4 +1,5 @@
-[{
+const CO2data = [ 
+{
 	"Row": 1,
 	"Year": 1751,
 	"Total": 3,
@@ -2638,4 +2639,8 @@
 	"Cement": 568,
 	"Gas Flaring": 68,
 	"Per Capita": 1.36
-}]
+}];
+
+export function getCO2data() {
+	return CO2data;
+}

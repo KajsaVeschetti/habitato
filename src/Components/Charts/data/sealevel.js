@@ -1,4 +1,5 @@
-[{
+const seadata = [
+{
     "Row": 1,
     "Time": "1880-03-15",
     "GMSL": -158.7,
@@ -670,4 +671,8 @@
     "GMSL": 67.7,
     "GMSL uncertainty": 8.9
 }
-]
+];
+
+export function getSeadata(){
+    return seadata;
+}

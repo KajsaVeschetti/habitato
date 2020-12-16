@@ -1,4 +1,5 @@
-[{
+const glacierdata = [
+	{
 	"Row": 1,
 	"Year": 1945,
 	"Mean cumulative mass balance": 0,
@@ -348,4 +349,8 @@
 	"Year": 2014,
 	"Mean cumulative mass balance": -28.652,
 	"Number of observations": 24
-}]
+}];
+
+export function getGlacierdata(){
+	return glacierdata;
+}

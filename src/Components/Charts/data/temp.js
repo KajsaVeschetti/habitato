@@ -1,4 +1,5 @@
-[{
+const tempdata = [
+	{
 	"Row": 1,
 	"Year": 2016,
 	"Mean": 0.9363,
@@ -1368,4 +1369,8 @@
 	"Year": 1880,
 	"Mean": -0.2,
 	"Source": "GISTEMP"
-}]
+}];
+
+export function getTempdata() {
+	return tempdata;
+}
