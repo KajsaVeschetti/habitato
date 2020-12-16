@@ -8,10 +8,10 @@ import BarCharts from './CO2Emission';
 import Glacier from './GlacierSize';
 import Sea from './SeaLevel';
 import Temp from './Temp';
-import ReadMore from "../ReadMore"
-import ReadMoreGS from "../ReadMoreGS"
-import ReadMoreSL from "../ReadMoreSL"
-import ReadMoreGT from "../ReadMoreGT"
+import ReadMore from "./InfoCharts/ReadMore"
+import ReadMoreGS from "./InfoCharts/ReadMoreGS"
+import ReadMoreSL from "./InfoCharts/ReadMoreSL"
+import ReadMoreGT from "./InfoCharts/ReadMoreGT"
 
 
 
@@ -60,6 +60,7 @@ class AllCharts extends Component {
         } else{
           alert("Kunde inte finna någon information")
         }
+
         if(index2 !== -1){
       
          switch(chartName){
