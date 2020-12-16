@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import  { getCO2data } from "./data/co2";
+import { getCO2data } from "./data/co2";
 import { getGlacierdata } from "./data/glacier";
 import { getSeadata } from "./data/sealevel";
 import { getTempdata } from "./data/temp";
@@ -30,31 +30,7 @@ class AllCharts extends Component {
       };
     
       async componentDidMount() {
-        //Hämta data från API 1
-        // const CO2url = "https://my.api.mockaroo.com/co2.json?key=8eb9e6f0";
-        // const CO2response = await fetch(CO2url);
-        // const CO2data = await CO2response.json();
 
-
-        // //Hämta data från API 2
-        // const Tempurl = "https://my.api.mockaroo.com/temp.json?key=8eb9e6f0";
-        // const Tempresponse = await fetch(Tempurl);
-        // let Tempdata = await Tempresponse.json();
-       
-        // Tempdata = Tempdata.sort((a, b) =>
-        // a.Year > b.Year ? 1 : b.Year > a.Year ? -1 : 0
-        //  );
-
-        //hämta data from API 3 
-        // const Glacierurl ="https://my.api.mockaroo.com/glaciersize.json?key=8eb9e6f0";
-        // const Glacierresponse = await fetch(Glacierurl);
-        // const Glacierdata = await Glacierresponse.json();
-       
-        //hämta data from API 4
-        // const Seaurl ="https://my.api.mockaroo.com/sealevel.json?key=8eb9e6f0";
-        // const Searesponse = await fetch(Seaurl);
-        // const Seadata = await Searesponse.json();
-     
         this.setState({
           CO2Emission: getCO2data(),
           GlobalTemp: getTempdata().sort((a, b) =>
@@ -65,11 +41,11 @@ class AllCharts extends Component {
         });
       }
     
-      handleYearFilter =(chartName, Year, Time)=> {
+      handleYearFilter =(chartName, Year)=> {
         let index = this.state.CO2Emission.findIndex(co2=>co2.Year === parseInt(Year));
         let index2 = this.state.GlacierSize.findIndex(glacier=>glacier.Year === parseInt(Year));
         let index3 = this.state.GlobalTemp.findIndex(temp=>temp.Year === parseInt(Year));
-        let index4 = this.state.SeaLevel.findIndex(sea=>sea.Time === parseInt(Time));
+        let index4 = this.state.SeaLevel.findIndex(sea=>sea.Year === parseInt(Year));
         
         if(index !== -1){
       
@@ -129,8 +105,8 @@ class AllCharts extends Component {
       textDecoration:"none",
       paddingRight:"10px",
       paddingLeft:"10px",
-
    }
+
         return (  
           <React.Fragment>
               <div class="card mx-auto charts " style={{width:"750px"}}>
