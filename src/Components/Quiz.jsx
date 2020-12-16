@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
 import Facit from './Facit';
-import Page from './Page';
-
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
-  
-
-
+import { Button, Container } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Quiz() {
     const questions = [
+
         {
             question: 'Hur många jordklot skulle behövas om alla levde som medelsvensken?',
             answerOptions: [
                 { question: '2', answer: false },
                 { question: '3', answer: true },
                 { question: '4', answer: false },
+            ],
+        },
+        {
+            question: 'Vad menas med den förstärkta växthuseffekten?',
+            answerOptions: [
+                { question: 'Jorden snurrar snabbare', answer: false },
+                { question: 'Ökad upphettning i atmosfären', answer: true },
+                { question: 'Ökad nedkylningen i atmosfären', answer: false },
             ],
         },
         {
@@ -31,11 +31,43 @@ export default function Quiz() {
             ],
         },
         {
+            question: 'Förnybar energi ses som miljövänliga alternativ till fossila bränslen. Vad av följande är en förnybar energikälla?',
+            answerOptions: [
+                { question: 'Kärnkraft', answer: false },
+                { question: 'Solkraft', answer: true },
+                { question: 'Kolkraft', answer: false },
+            ],
+        },
+        {
             question: 'Palmolja framställs i huvudsak ur palmodlingar på skövlad regnskogsmark. Vad är den vanligaste innehållsbeteckningen för palmolja?',
             answerOptions: [
                 { question: 'Vegetabiliskt fett', answer: true },
                 { question: 'Palmolja', answer: false },
                 { question: 'Anges ej', answer: false },
+            ],
+        },
+        {
+            question: 'Hur mycket skulle havsnivån stiga om alla glaciärer smälter?',
+            answerOptions: [
+                { question: '75 meter', answer: false },
+                { question: '170 meter', answer: false },
+                { question: '120 meter', answer: true },
+            ],
+        },
+        {
+            question: 'Vilket av följande val är klimatsmart?',
+            answerOptions: [
+                { question: 'Äta kött', answer: false },
+                { question: 'Flyga', answer: false },
+                { question: 'Shoppa mindre', answer: true },
+            ],
+        },
+        {
+            question: 'Varför stiger havsnivåerna?',
+            answerOptions: [
+                { question: 'Fuktigare klimat', answer: false },
+                { question: 'Varmare klimat', answer: true },
+                { question: 'Kallare klimat', answer: false },
             ],
         },
         {
@@ -69,72 +101,51 @@ export default function Quiz() {
             setShowScore(true);
         }
     };
+    
+     const BtnStyle = {
+        fontFamily: "Quicksand",
+        fontSize: "15px",
+        color:"#1F1F1F",
+     }
+
+ 
     return (
+        <Container className="bg-white col-sm-9">
         <div className='app'>
-            
             {showScore ? (
-                <div className='score-section'>
+                <div>
+                    {/* Dina poäng */}
+                     <div>
+                         <h1>Du fick {score} poäng av {questions.length} möjliga!</h1>
+                         {/* Länk till facit-komponent */}
+                         <Facit/>
 
-                    {/* Grön Dina poäng-skylt */}
-                     <div class="alert alert-success" role="alert"><h1 class="display-4">Du fick {score} av{questions.length} möjliga</h1>
-    <Router>
-      <div>
-      <h1>vad vill du göra nu?</h1>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/quiz">Vill du göra quizet igen?</Link>
-            </li>
-            <li>
-              <Link to="/facit">eller vill du läsa om de rätta svaren?</Link>
-            </li>
-          </ul>
-        </nav>
-
-        <Switch>
-          <Route path="/quiz">
-            <Quiz />
-          </Route>
-          <Route path="/facit">
-            <Facit />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
-                   
-</div>
-                    
+                    </div>
                 </div>
             ) : (
                 <> 
-                    <div className='question-section'>
-                            <div className='question-count'>
+                    <div>
+                            <div>
                                 {/* Quiz-rubrik */}
-                                <h1 class="display-4"> Habitatos miljö-quiz</h1>
+                                <h1> Habitatos miljö-quiz</h1>
                                 {/* Visar vilken fråga användaren är på */}
                                     <span>Fråga {currentQuestion + 1}</span>/{questions.length}
                             </div>
                             {/* Frågan */}
-                            <div className='question-text'>{questions[currentQuestion].question}</div> 
-                        
+                            <p>{questions[currentQuestion].question}</p> 
                     </div>
                     {/* Slut på fråg-sekton */}
-
-
-                    <div className='answer-section'>
+                    <div>
 						{/* mapfunktion för att itterera över array */}
                         {/* Knappar med de olika svarsalternativen */}
                         {questions[currentQuestion].answerOptions.map((answerOption) => (
-                            <button type="button" class="btn btn-success" onClick={() => handleAnswerOptionClick(answerOption.answer)}>{answerOption.question}</button>
+                            <Button style={BtnStyle} variant="info" size="lg" onClick={() => handleAnswerOptionClick(answerOption.answer)}>{answerOption.question}</Button>
 							))} 
-
-                                                    
-                            
                     </div>
-                    
                 </>
             )} 
+
         </div>
+        </Container>
     );
 } 
-

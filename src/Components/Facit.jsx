@@ -1,16 +1,23 @@
-import React, {Component} from "react";
+import React,{useState} from 'react';
+import { Button, Container } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-class Facit extends Component {
 
-  render(){
+const BtnStyle = {
+  fontFamily: "Quicksand",
+  fontSize: "15px",
+  color:"#1F1F1F",
+}
 
-    return(
-      <div>
-        <p>FACIT KOMPONENT</p>
-        <div class="container">
+
+function Facit() {
+  const [readMore,setReadMore]=useState(false);
+  const extraContent=<div>
+    <Container className="bg-white">
+<p className="extra-content">
                 <div class="row row-cols-2">
 
-                    <div class="col"><h2>Hur många jordklot skulle behövas om alla levde som medelsvensken?</h2>
+                    <div class="col"><h3>Hur många jordklot skulle behövas om alla levde som medelsvensken?</h3>
                 <b>Rätt svar: 3 jordklot</b>
                 <p>Om man skulle dela upp jordens produktiva yta på antalet människor på jorden, så skulle var och en av oss få 1,8 globala hektar till vårt förfogande. Vi svenskar gör ett genomsnittligt ekologiskt fotavtryck på 5,9 globala hektar och ligger på 13e plats på listan över länder med störst fotavtryck per person. Om resten av världens befolkning skulle göra lika stora avtryck, behöver vi drygt 3 jordklot i stället för det enda vi har. Vi överutnytttjar naturens grundläggande resurser. Ett överuttag som underminerar våra barnbarns och hela vår civilisations framtid. (Källa WWF)</p>
                 </div>
@@ -28,12 +35,17 @@ class Facit extends Component {
                 <p>Sverige skulle ligga betydligt högre upp på rankinglistan om vi i utgick från konsumtion istället för produktion. Det mesta i vår livsstil – vad vi äter, klär oss i, möblerar med, förflyttar oss med, snackar i, twittrar, zappar, facebookar, googlar och skriver på – är tillverkat utomlands. Främst i utvecklingsländer som Kina och Indien vilka indirekt får stå för våra utsläpp. (Källa CDIAK – US department of Energy´s Carbon Dioxide Information Analysis Center)</p> 
                 </div>
                 </div>
-                </div>
-
-      </div>
-    );
-
-  }
+      </p>
+      </Container>
+  </div>
+  const BtnName=readMore?'Göm facit ':'Visa frågor och de rätta svaren'
+  return (
+    <div className="App">
+      <Button style={BtnStyle} variant="info" size="sm" onClick={()=>{setReadMore(!readMore)}}>{BtnName}</Button>
+      {readMore && extraContent}
+    </div>
+  );
 }
+
 
 export default Facit;

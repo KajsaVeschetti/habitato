@@ -1,7 +1,5 @@
 import React, {Component} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookSquare, faInstagram  } from '@fortawesome/free-brands-svg-icons'
 
@@ -11,33 +9,32 @@ class Footer extends Component {
 
 
   render(){ 
-    const footerStyling ={
-      marginTop:"40px",
-      marginBottom:"40px",
-      maxWidth: "1075px"
-
-    }
+    
 
     const linkStyle = {
       fontSize: "14px",
       color:"#5f5f5f",
       textDecoration:"none",
-      listStyle: "none",
-      textAlign: "left",
-      paddingLeft: "45px"
+     display:"inline",
+     margin:"20px"
+    };
+
+    const listStyle = {
+      fontSize: "14px",
+      color:"#5f5f5f",
+      textDecoration:"none",
+      listStyle:"none",
+      float: "center",
+      display:"inline",
+      listStyleType:"none",
     };
 
     const logos = {
       margin: "5px",
-      color: "#5f5f5f"
+      color: "#5f5f5f",
     }
 
-    const logoPlace = {
-      textAlign: "right",
-      paddingRight: "80px",
-      paddingTop: "25px"
-    }
-
+  
     const onMouseOver = event => {
       const el = event.target;
       let colorhex = "#5cb85c";
@@ -53,31 +50,28 @@ class Footer extends Component {
 
 
     return(
-     <footer class="mx-auto" style={footerStyling}>
-       <Row>
-         <Col>
-         <ul style={linkStyle}>
+           
+        <footer className="fixedFooter">
+     
+         <ul class="footerMenu" style={listStyle}>
           <li><a href="/" style={linkStyle}>Hem</a></li>
           <li><a href="/Quiz" style={linkStyle}>Quiz</a></li>
           <li><a href="#" style={linkStyle}>Om Oss</a></li>
           <li><a href="#" style={linkStyle}>Kontakta oss</a></li>
           </ul>
-         </Col>
-         <Col>
-         <div style={logoPlace}>
+          <div >
          <a href="#" 
               onMouseEnter={event => onMouseOver(event)}
               onMouseLeave={event => onMouseOut(event)}>
-           <FontAwesomeIcon style={logos} size="2x"   icon={faFacebookSquare}/></a>
+           <FontAwesomeIcon style={logos} size='lg' icon={faFacebookSquare}/></a>
          <a href="#"
              onMouseEnter={event => onMouseOver(event)}
              onMouseLeave={event => onMouseOut(event)}
-          ><FontAwesomeIcon style={logos} size="2x"  icon={faInstagram}/></a>
+          ><FontAwesomeIcon style={logos} size="lg"  icon={faInstagram}/></a>
          </div>
-         </Col>
-       </Row>
-
      </footer>
+    
+
     );
 
   }

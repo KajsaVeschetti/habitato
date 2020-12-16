@@ -22,20 +22,22 @@ class NavBar extends Component {
     render () {
 
     const logoStyle={
-      width: "200px"
+      width: "125px"
     }
 
     const linkStyle = {
-       fontFamily: "Ink Free",
-       fontSize: "30px",
+       fontFamily: "Segoe UI Light",
+       fontSize: "24px",
        color:"#5f5f5f",
        textDecoration:"none",
-       paddingTop: "55px",
+       paddingTop: "25px",
        paddingRight:"50px",
        paddingLeft:"50px",
+    
     }
 
         return(
+            <div className="fixedHeader">
             <Router>
             <nav class="navbar navbar-expand-lg navbar-light mx-auto">
 
@@ -53,14 +55,14 @@ class NavBar extends Component {
 
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-link active" style={linkStyle}>
+                    <li class="nav-link" style={linkStyle}>
                         <Link class="nav-link" to="/Charts/AllCharts">
-                            Hem <span class="sr-only">(current)</span>
+                            HEM 
                         </Link>
                     </li>
                     <li class="nav-link" style={linkStyle}>
                         <Link class="nav-link" to="/Quiz">
-                            Quiz
+                            QUIZ
                         </Link>
                     </li>
                     <li>
@@ -68,12 +70,12 @@ class NavBar extends Component {
                     </li>
                     <li class="nav-link" style={linkStyle}>
                         <Link class="nav-link" to="/CommentAdd">
-                            Tips
+                            TIPS
                         </Link>
                     </li>
                     <li class="nav-link" style={linkStyle}>
                         <Link class="nav-link" to="/Faktarutor">
-                            Fakta
+                            FAKTA 
                         </Link>
                     </li>
                 </ul>
@@ -82,6 +84,7 @@ class NavBar extends Component {
             
        
         <Switch>
+            
         <Route exact path="/Charts/AllCharts"component={AllCharts}>
             <AllCharts/>
           </Route>
@@ -98,7 +101,8 @@ class NavBar extends Component {
           <Redirect from="/" exact to="/Charts/AllCharts"></Redirect>
           
         </Switch>
-            </Router>
+        </Router>
+            </div>
         );
     }
 }

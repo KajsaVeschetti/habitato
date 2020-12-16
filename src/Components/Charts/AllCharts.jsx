@@ -4,6 +4,13 @@ import BarCharts from './CO2Emission';
 import Glacier from './GlacierSize';
 import Sea from './SeaLevel';
 import Temp from './Temp';
+import ReadMore from "../ReadMore"
+import ReadMoreGS from "../ReadMoreGS"
+import ReadMoreSL from "../ReadMoreSL"
+import ReadMoreGT from "../ReadMoreGT"
+
+
+
 
 import { BrowserRouter as Router, Route, Redirect, Switch, Link } from "react-router-dom";
 
@@ -113,22 +120,23 @@ class AllCharts extends Component {
       fontSize: "16px",
       color:"#5f5f5f",
       textDecoration:"none",
-      paddingRight:"50px",
-      paddingLeft:"50px",
+      paddingRight:"10px",
+      paddingLeft:"10px",
+
    }
         return (  
           <React.Fragment>
-              <div class="card mx-auto" style={{width:"900px"}}>
-              <h3>Skriv in två årtal och se vad <br/> klimatförändringarna har gjort under åren</h3>
+              <div class="card mx-auto charts " style={{width:"750px"}}>
+              <h5>Skriv in två årtal och se vad <br/> klimatförändringarna har gjort under åren</h5>
               <Router>
                 <nav class="navbar navbar-expand-lg navbar-light mx-auto">
                   
            
-                     <div class="justify-content-center" >
-                    <ul class="navbar-nav">
+                     <div class="mx-auto justify-content-center" >
+                    <ul class="navbar-nav mx-auto">
                         <li class="nav-link" style={linkStyle}>
                             <Link class="nav-link" to="/co2emission">
-                                CO2 <span class="sr-only">(current)</span>
+                                CO2 
                             </Link>
                         </li> 
                         <li class="nav-link " style={linkStyle}>
@@ -148,8 +156,9 @@ class AllCharts extends Component {
                         </li> 
                     </ul>
 
+
                     <Switch>
-                      <div class="justify-content-center">
+                      <div class="mx-auto chartContainer">
                         <Route exact path="/co2emission" component={BarCharts}>
                         <BarCharts
                         chartName="Bar1"
@@ -159,6 +168,8 @@ class AllCharts extends Component {
                         chartName="Bar2"
                         CO2Emission={this.state.CO2Emission[this.state.indexYear2]} 
                         onYearFilter={this.handleYearFilter}/>
+                       {/* Co2-info */}
+                        <ReadMore />
                         </Route>
                         <Route exact path="/glaciersize" component={Glacier}>
                         <Glacier
@@ -169,6 +180,8 @@ class AllCharts extends Component {
                         chartName="Glacier2"
                         GlacierSize={this.state.GlacierSize[this.state.indexYear2]}
                         onYearFilter={this.handleYearFilter}/>
+                        {/* Glasiär-info */}
+                        <ReadMoreGS />
                         </Route>
                         <Route exact path="/temp" component={Temp}>
                         <Temp 
@@ -179,6 +192,8 @@ class AllCharts extends Component {
                         chartName="Temp2"
                         GlobalTemp={this.state.GlobalTemp[this.state.indexYear2]}
                         onYearFilter={this.handleYearFilter}/>
+                        {/* Globaltemp-info */}
+                        <ReadMoreGT />
                         </Route>
                         <Route exact path="/sealevel" component={Sea}>
                         <Sea 
@@ -189,6 +204,8 @@ class AllCharts extends Component {
                         chartName="Sea2"
                         SeaLevel={this.state.SeaLevel[this.state.indexYear2]}
                         onYearFilter={this.handleYearFilter}/>
+                        {/* Havsnivå-info  */}
+                        <ReadMoreSL />
                         </Route>
                       
                       <Redirect from="/" exact to="/co2emission"></Redirect>

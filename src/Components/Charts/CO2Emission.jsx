@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import PropTypes from 'prop-types';
 import {
   BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
@@ -61,12 +62,14 @@ export default class BarCharts extends Component {
 
 
         return (
+          
             
-            <div style={{width:"350px", height:"500px", float:"left"}}>
+            <div style={{width:"300px", height:"500px", float:"left"}}>
+              
                 <input type="text" placeholder="Välj ett år" onKeyDown={e=> this.handleYear(e)}></input>
                 <BarChart
-                    width={350}
-                    height={350}
+                    width={300}
+                    height={300}
                     data={dataBarChart}
                     margin={{
                     top: 25, right: 30, left: 20, bottom: 5,
@@ -81,7 +84,6 @@ export default class BarCharts extends Component {
                 <Cell  fill ={COLORS[3]}/>
                 <Cell  fill ={COLORS[0]}/>
                 </Bar>
-       
                 </BarChart>
                 <div>
                   <ul >
@@ -91,8 +93,11 @@ export default class BarCharts extends Component {
                     <li style={linkStyle}>Cem = Cement</li>
                     <li style={linkStyle}>Flar = Gas Flaring</li>
                   </ul>
+
                 </div>
             </div>
+            
+            
             
         );
     }
