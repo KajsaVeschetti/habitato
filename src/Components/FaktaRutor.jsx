@@ -8,43 +8,43 @@ import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-ro
 
 class Fakta extends Component {
 
-render() {
-const linkStyle={
-fontSize: "16x",
-fontFamily: "Quicksand",
-paddingLeft: "18px",
-paddingRight: "18px",
-}
+   render() {
+   const linkStyle={
+   fontSize: "16x",
+   fontFamily: "Quicksand",
+   paddingLeft: "18px",
+   paddingRight: "18px",
+  }
 
- return(
+   return(
    <>
-<Container className="col-lg-9 col-xs-12 mb-5 bg-white">
-  <h3 className="p-4">Fakta om klimatförändringar</h3>
-<Card border="white"className="bg-white px-md-4 pb-4">
+  <Container className="col-lg-9 col-xs-12 mb-5 bg-white">
+    <h3 className="p-4">Fakta om klimatförändringar</h3>
+    <Card border="white"className="bg-white px-md-4 pb-4">
     <Card.Body>  
-<Router>
-<Navbar collapseOnSelect expand="lg" bg="white" variant="light">
-  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-  <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className="mx-auto">
-<Link class="nav-link" style={linkStyle} to="/FossilFuel">
-Fossila bränslen  
-</Link>
-<Link class="nav-link " style={linkStyle} to="/GlobalWarming" >
-Global uppvärmning 
-</Link>
-<Link class="nav-link " style={linkStyle} to="/GlacierSize"> 
-Glaciär storlek 
-</Link>
-<Link class="nav-link " style={linkStyle} to="/SeaLevel">
-Havsnivå 
-</Link>
-</Nav>
-  </Navbar.Collapse>
-</Navbar>  
+    <Router>
+     <Navbar collapseOnSelect expand="lg" bg="white" variant="light">
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+       <Nav className="mx-auto">
+         <Link class="nav-link" style={linkStyle} to="/FossilFuel">
+         Fossila bränslen  
+         </Link>
+         <Link class="nav-link " style={linkStyle} to="/GlobalWarming" >
+         Global uppvärmning 
+         </Link>
+         <Link class="nav-link " style={linkStyle} to="/GlacierSize"> 
+         Glaciär storlek 
+         </Link>
+         <Link class="nav-link " style={linkStyle} to="/SeaLevel">
+         Havsnivå 
+         </Link>
+        </Nav>
+      </Navbar.Collapse>
+     </Navbar>  
 
-<Switch>
-  <div class="mx-auto">
+     <Switch>
+       <div class="mx-auto">
               <Route exact path='/FossilFuel' component={FossilFuel}>
               <FossilFuel/>
               </Route> 
@@ -61,15 +61,12 @@ Havsnivå
               <SeaLevel/>
               </Route> 
              <Redirect from="/" exact to="/FossilFuel"></Redirect>
-          </div>
-          
-      
-           </Switch>
- 
-       </Router> 
-    </Card.Body>
-    </Card>
-       </Container>
+         </div>  
+      </Switch>
+    </Router> 
+   </Card.Body>
+   </Card>
+ </Container>
        
 </>
  );
