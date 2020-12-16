@@ -57,7 +57,6 @@ class Footer extends Component {
           <li><a href="/" style={linkStyle}>Hem</a></li>
           <li><a href="/Quiz" style={linkStyle}>Quiz</a></li>
           <li><a href="#" style={linkStyle}>Om Oss</a></li>
-          <li><a href="#" style={linkStyle}>Kontakta oss</a></li>
           </ul>
           <div >
          <a href="#" 
