@@ -167,3 +167,13 @@ export default CommentAdd;
 // kodinspiration från https://reactjs.org/docs/forms.html
 
 // https://stackoverflow.com/questions/26505064/what-is-the-best-way-to-add-a-value-to-an-array-in-state
+
+// https://www.w3schools.com/react/react_forms.asp
+
+// https://reactjs.org/docs/forms.html
+
+// https://www.qcode.in/learn-react-by-creating-a-comment-app/
+
+// https://stackoverflow.com/questions/53106250/react-js-user-enters-value-in-the-input-field-on-button-click-to-display-the-val
+
+
