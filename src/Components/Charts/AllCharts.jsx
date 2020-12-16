@@ -69,7 +69,7 @@ class AllCharts extends Component {
         let index = this.state.CO2Emission.findIndex(co2=>co2.Year === parseInt(Year));
         let index2 = this.state.GlacierSize.findIndex(glacier=>glacier.Year === parseInt(Year));
         let index3 = this.state.GlobalTemp.findIndex(temp=>temp.Year === parseInt(Year));
-        let index4 = this.state.SeaLevel.findIndex(sea=>sea.Time === parseInt(Time));
+        let index4 = this.state.SeaLevel.findIndex(sea=>sea.Year === parseInt(Year));
         
         if(index !== -1){
       
@@ -129,8 +129,8 @@ class AllCharts extends Component {
       textDecoration:"none",
       paddingRight:"10px",
       paddingLeft:"10px",
-
    }
+
         return (  
           <React.Fragment>
               <div class="card mx-auto charts " style={{width:"750px"}}>
