@@ -7,9 +7,13 @@ const LinkStyle = {
     paddingLeft:"150px",
 
   }
+
+  const extra ={
+    width: "600px"
+  }
 function ReadMore() {
   const [readMore,setReadMore]=useState(false);
-  const extraContent=<div>
+  const extraContent=<div style={extra}>
       <p className="extra-content">
       Global uppvärmning, eller växthuseffekten som det också kallas påverkar jordens temperatur. Det är när jordens medeltemperatur ökar som man brukar tala om global temperatur. Utan den naturliga växthuseffekten skulle inte vi människor kunna leva på jorden, problemet är den ökade växthuseffekten, den så kallade global uppvärmningen som vi människor bidrar till. De tre största orsakerna till utsläpp av växthusgaser är: utsläpp från fossila bränslen, från skogsavverkning och från jordbruket.     </p>
   </div>
