@@ -4,9 +4,9 @@ import {  BrowserRouter as Router,
   Route, Switch, Redirect,
     Link } from "react-router-dom";
 import Habitato1 from "../img/Habitato1.jpg";
-import Tips from "./Tips";
-import Quiz from "./Quiz";
-import Fakta from "./FaktaRutor";
+
+import Quiz from "./Quiz/Quiz";
+import Fakta from "./Fakta/FaktaRutor";
 import AllCharts from "./Charts/AllCharts";
 import CommentAdd from "./CommentAdd";   // changed from CommentGroup
 
