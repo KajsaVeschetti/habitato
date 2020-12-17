@@ -10,6 +10,8 @@ function SeaLevel() {
 
   return ( 
     <>
+    <Card border="white"className="bg-white px-md-4 pb-4">
+    <Card.Body>
    <div className="text-center mb-5">
    <Image src={seaLevel}fluid rounded/>
    </div>
@@ -31,7 +33,8 @@ function SeaLevel() {
       aria-expanded={open}
       >{buttonName}
       </Button>
-    
+    </Card.Body>
+    </Card>
   </>
 
  );
