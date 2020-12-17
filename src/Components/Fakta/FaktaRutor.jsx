@@ -3,7 +3,7 @@ import FossilFuel from './FossilFuel';
 import GlobalWarming from './GlobalWarming'; 
 import GlacierSize from './GlacierSize'; 
 import SeaLevel from './SeaLevel'; 
-import {Container, Card, Nav, Navbar} from 'react-bootstrap';
+import {Container, Nav, Navbar} from 'react-bootstrap';
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-router-dom'; 
 
 class Fakta extends Component {
@@ -18,10 +18,8 @@ class Fakta extends Component {
 
    return(
    <>
-  <Container className="col-lg-9 col-xs-12 mb-5 bg-white">
-    <h3 className="p-4">Fakta om klimatförändringar</h3>
-    <Card border="white"className="bg-white px-md-4 pb-4">
-    <Card.Body>  
+   <Container className="col-lg-9 col-xs-12 mb-5 bg-white">
+    <h3 className="p-4">Fakta om klimatförändringar</h3>  
     <Router>
      <Navbar collapseOnSelect expand="lg" bg="white" variant="light">
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -64,9 +62,7 @@ class Fakta extends Component {
          </div>  
       </Switch>
     </Router> 
-   </Card.Body>
-   </Card>
- </Container>
+   </Container>
        
 </>
  );

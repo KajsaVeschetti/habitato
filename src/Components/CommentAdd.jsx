@@ -34,41 +34,101 @@ class CommentAdd extends Component {
   }
 
   render() {
+    const commentComponentStyle={
+      background: "white",
+      opacity: "80%",
+      margin: "0 20%",
+      padding: "2em",
+    }
+    const commentComponentGridStyle={
+      display:"grid",
+      gridTemplateColumns: "50% 50%",
+    }
+
+    const commentInputAreaStyle={
+      margin: "0.5%",
+      borderRadius: "7px",
+    }
+    
+    const commentComponentFormStyle={
+      gridColumn: "1",
+    }
+
+    const commentDisplayStyle={
+      gridColumn: "2",
+    }
+
+
+    const commentDisplayNameStyle={
+      textAlign: "left",
+      fontWeight: "bold",
+      marginTop: "2em", 
+      marginBottom: "0em",
+      padding: "0",
+    }
+
+    const commentDisplayCommentStyle={
+      textAlign: "left",
+      marginTop: "0",
+      padding: "0",
+    }
+
+    const commentInputBtnStyle={
+      color: "white",
+      fontWeight: "bold",
+      background: "#17A2B8",
+      padding: "0.5em 1em",
+    }
+
     return (
-      <div>
+      <div style={commentComponentStyle}>
         <h2>Dela med dig av ditt bästa miljötips!</h2>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Namn:
-            <br />
-            <input
-              type="text"
-              value={this.state.name}
-              onChange={this.handleChangeName}
-            />
-          </label>{" "}
-          <br />
-          <label>
-            Kommentar:
-            <br />
-            <textarea
-              value={this.state.comment}
-              onChange={this.handleChangeComment}
-            />
-          </label>
-          <br />
-          <input type="submit" value="Skicka kommentar" />
-        </form>
-        <div>
-          {this.state.commentList.map((item) => (       // skriver ut kommentaren, {item.name}&{item.comment} tar value från formuläret och skriver ut det
-            <div>
-              <p>
-                {item.name}             
+        <div style={commentComponentGridStyle} >
+            <form 
+            style={commentComponentFormStyle} 
+            onSubmit={this.handleSubmit}>
+              <label>
+                Namn: 
                 <br />
-                {item.comment}
-              </p>
-            </div>
-          ))}
+                <input 
+                  style={commentInputAreaStyle}
+                  type="text"
+                  value={this.state.name}
+                  onChange={this.handleChangeName}
+                />
+              </label>{" "}
+              <br />
+              <label>
+                Kommentar:
+                <br />
+                <textarea
+                  style={commentInputAreaStyle}
+                  value={this.state.comment}
+                  onChange={this.handleChangeComment}
+                />
+              </label>
+              <br />
+              <input 
+              style={commentInputBtnStyle}
+              type="submit" 
+              value="Skicka kommentar" />
+            </form>
+        
+          <div style={commentDisplayStyle}>
+            {this.state.commentList.map((item) => (       // skriver ut kommentaren, {item.name}&{item.comment} tar value från formuläret och skriver ut det
+              <div>
+                <p>
+                  <div style={commentDisplayNameStyle}>
+                  {item.name} 
+                  </div>            
+                
+                  <div style={commentDisplayCommentStyle} >
+                  {item.comment}
+                  </div>
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     );

@@ -10,11 +10,13 @@ function SeaLevel() {
 
   return ( 
     <>
-   <div className="text-center mb-5">
-   <Image src={seaLevel}fluid rounded/>
-   </div>
-   <Card.Title>Varför stiger havsnivåerna?</Card.Title>
-   <Card.Text className="text-left pb-3">Havsnivåerna stiger som följd av det allt varmare klimatet. När den globala temperaturen stiger smälter glaciärer och inlandsisar samtidigt som vattnets volym ökar av värmen. Sedan mitten av 1800-talet har vattennivån stigit med cirka 20 centimeter och den förväntade ökningen under detta århundrande sker med dubbla hastigheten, dvs ifall temperaturökningen kan begränsas till under två grader. Om den globala uppvärmningen överstiger två grader kommer det få större effekt på klimatet. Havsnivåerna kommer stiga ännu snabbare.</Card.Text>
+   <Card border="white"className="bg-white px-md-4 pb-4">
+    <Card.Body>
+    <div className="text-center mb-5">
+    <Image src={seaLevel}fluid rounded/>
+    </div>
+    <Card.Title>Varför stiger havsnivåerna?</Card.Title>
+    <Card.Text className="text-left pb-3">Havsnivåerna stiger som följd av det allt varmare klimatet. När den globala temperaturen stiger smälter glaciärer och inlandsisar samtidigt som vattnets volym ökar av värmen. Sedan mitten av 1800-talet har vattennivån stigit med cirka 20 centimeter och den förväntade ökningen under detta århundrande sker med dubbla hastigheten, dvs ifall temperaturökningen kan begränsas till under två grader. Om den globala uppvärmningen överstiger två grader kommer det få större effekt på klimatet. Havsnivåerna kommer stiga ännu snabbare.</Card.Text>
 
       <Collapse in={open}> 
         <div id="sea-collapse-text">
@@ -31,7 +33,8 @@ function SeaLevel() {
       aria-expanded={open}
       >{buttonName}
       </Button>
-    
+    </Card.Body>
+   </Card>
   </>
 
  );

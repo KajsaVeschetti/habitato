@@ -8,7 +8,7 @@ import Habitato1 from "../img/Habitato1.jpg";
 import Quiz from "./Quiz/Quiz";
 import Fakta from "./Fakta/FaktaRutor";
 import AllCharts from "./Charts/AllCharts";
-import CommentAdd from "./CommentGroup";
+import CommentAdd from "./CommentAdd";   // changed from CommentGroup
 
 
 
