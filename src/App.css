@@ -81,11 +81,18 @@ footer {
 }
 
 .chartContainer{
-  margin: 0 auto;
+  margin: 0 auto 16px auto;
   height: auto;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  padding: 16px;
 }
 
 div.charts {
   background: rgba(249, 249, 249, 0.8);
+  border: 1px solid #999;
+  border-radius: 5px;
+  padding: 2em;
+  
 }
 

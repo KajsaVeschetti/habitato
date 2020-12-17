@@ -13,9 +13,6 @@ import ReadMoreGS from "./InfoCharts/ReadMoreGS"
 import ReadMoreSL from "./InfoCharts/ReadMoreSL"
 import ReadMoreGT from "./InfoCharts/ReadMoreGT"
 
-
-
-
 import { BrowserRouter as Router, Route, Redirect, Switch, Link } from "react-router-dom";
 
 

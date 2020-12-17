@@ -110,24 +110,26 @@ export default function Quiz() {
 
  
     return (
-        <Container className="bg-white col-sm-9">
-        <div className='app'>
+        <Container className="charts" style={{width:"750px", padding: "0px"}}>
+        <div>
+             {/* Quiz-rubrik */}
+             <h1> Habitatos miljö-quiz</h1>
+            
             {showScore ? (
-                <div>
+                <div className="chartContainer"  style={{width:"600px"}}>
                     {/* Dina poäng */}
                      <div>
-                         <h1>Du fick {score} poäng av {questions.length} möjliga!</h1>
+                         <h4>Du fick {score} poäng av {questions.length} möjliga!</h4>
                          {/* Länk till facit-komponent */}
                          <Facit/>
 
                     </div>
                 </div>
             ) : (
-                <> 
+                <div className="chartContainer"  style={{width:"600px"}}> 
                     <div>
                             <div>
-                                {/* Quiz-rubrik */}
-                                <h1> Habitatos miljö-quiz</h1>
+                               
                                 {/* Visar vilken fråga användaren är på */}
                                     <span>Fråga {currentQuestion + 1}</span>/{questions.length}
                             </div>
@@ -142,10 +144,10 @@ export default function Quiz() {
                             <Button style={BtnStyle} variant="info" size="lg" onClick={() => handleAnswerOptionClick(answerOption.answer)}>{answerOption.question}</Button>
 							))} 
                     </div>
-                </>
+                </div>
             )} 
-
-        </div>
+            </div>
+        
         </Container>
     );
 } 
