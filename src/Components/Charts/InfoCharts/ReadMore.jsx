@@ -32,7 +32,8 @@ function ReadMore() {
   const [readMore,setReadMore]=useState(false);
 
 
-  const extraContent=<div style={extra}>
+  const extraContent=
+  <div style={extra}>
       <p >
 
 Co2 är den kemiska formeln för Koldioxid. Koldioxid är en färg- och luktfri gas. 
