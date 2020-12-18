@@ -26,7 +26,6 @@ class NavBar extends Component {
     const linkStyle = {
        fontFamily: "Segoe UI Light",
        fontSize: "24px",
-       color:"#5f5f5f",
        textDecoration:"none",
        paddingTop: "25px",
        paddingRight:"50px",
@@ -62,7 +61,7 @@ class NavBar extends Component {
             
        
         <Switch>
-            
+        <div class="mx-auto"> 
         <Route exact path="/Charts/AllCharts"component={AllCharts}>
             <AllCharts/>
           </Route>
@@ -81,7 +80,7 @@ class NavBar extends Component {
 
 
           <Redirect from="/" exact to="/Charts/AllCharts"></Redirect>
-          
+          </div>
         </Switch>
         </Router>
             </div>
