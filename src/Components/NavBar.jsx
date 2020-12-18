@@ -37,7 +37,7 @@ class NavBar extends Component {
         return(
             <div className="fixedHeader">
              <Router>
-              <Navbar collapseOnSelect expand="lg" bg="light" variant="light" sticky="top">
+              <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
               <Link class="navbar-toggler border-0" to="index.html"><img src={Habitato1} style={logoStyle}  alt="Habitato logotyp"/></Link>
               <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                <Navbar.Collapse id="responsive-navbar-nav">
