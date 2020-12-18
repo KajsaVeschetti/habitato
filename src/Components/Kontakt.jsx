@@ -1,5 +1,5 @@
 import React from 'react';
-import {Form, Container} from 'react-bootstrap';
+import {Form, Container, Button} from 'react-bootstrap';
 
 function Kontakt () {
 
@@ -33,6 +33,9 @@ function Kontakt () {
             <Form.Label>Meddelande</Form.Label>
             <Form.Control as="textarea" rows={3} />
         </Form.Group>
+        <Button variant="info" type="submit">
+    Skicka
+  </Button>
     </Form> 
 </Container>
 );
