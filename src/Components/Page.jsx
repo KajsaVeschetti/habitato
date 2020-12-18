@@ -4,7 +4,7 @@ import NavBar from "./NavBar";
 import Footer from "./Footer";
 import Popa from "./Charts/kajsaTest"; 
 
-import Test from "./Quiz/Test";
+// import Test from "./Quiz/Test";
 import Kontakt from "./Kontakt";
 
 
