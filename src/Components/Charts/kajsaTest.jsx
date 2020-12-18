@@ -81,8 +81,9 @@ export default function Popa() {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            <h2 id="spring-modal-title">Kajsa är bäst</h2>
-            <p id="spring-modal-description">Men hennes projektgrupp är Bättre.</p>
+            <h2 id="spring-modal-title">KajsaBajsa är präst</h2>
+            <p id="spring-modal-description">Never stop eating. &#9994;</p>
+            <p style={{fontSize: "4em", textAlign: "center"}}>&#127828;</p>
           </div>
         </Fade>
       </Modal>
