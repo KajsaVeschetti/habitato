@@ -13,7 +13,7 @@ const BtnStyle = {
 function Facit() {
   const [readMore,setReadMore]=useState(false);
   const extraContent=<div>
-    <Container className="bg-white">
+    <Container className="bg-light">
 <p className="extra-content">
                 <div class="row row-cols-2">
 
