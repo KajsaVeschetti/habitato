@@ -1,5 +1,7 @@
 import { render } from "@testing-library/react";
 import React, { Component } from "react";
+import { Button, Container } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -109,7 +111,8 @@ class CommentAdd extends Component {
               </label>
               <br />
               <input 
-              style={commentInputBtnStyle}
+              // style={commentInputBtnStyle}
+              style={BtnStyle}
               type="submit" 
               value="Skicka kommentar" />
             </form>
