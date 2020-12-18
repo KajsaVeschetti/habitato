@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import React, { Component } from "react";
-// import { Button, Container } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -75,12 +75,12 @@ class CommentAdd extends Component {
       padding: "0",
     }
 
-    const commentInputBtnStyle={
-      color: "white",
-      fontWeight: "bold",
-      background: "#17A2B8",
-      padding: "0.5em 1em",
-    }
+    // const commentInputBtnStyle={
+    //   color: "white",
+    //   fontWeight: "bold",
+    //   background: "#17A2B8",
+    //   padding: "0.5em 1em",
+    // }
 
     return (
       <div style={commentComponentStyle}>
@@ -94,9 +94,10 @@ class CommentAdd extends Component {
                 <br />
                 <input 
                   style={commentInputAreaStyle}
-                  type="text"
+                  type="text" 
                   value={this.state.name}
                   onChange={this.handleChangeName}
+                  required
                 />
               </label>{" "}
               <br />
@@ -106,14 +107,16 @@ class CommentAdd extends Component {
                 <textarea
                   style={commentInputAreaStyle}
                   value={this.state.comment}
-                  onChange={this.handleChangeComment}
+                  onChange={this.handleChangeComment} 
+                  required
                 />
               </label>
               <br />
-              <input 
+              <Button as="input" type="submit" variant="info" size="sm" value="Skicka kommentar"></Button>
+              {/* <input 
               style={commentInputBtnStyle}
               type="submit" 
-              value="Skicka kommentar" />
+              value="Skicka kommentar" /> */}
             </form>
         
           <div style={commentDisplayStyle}>
@@ -238,4 +241,5 @@ export default CommentAdd;
 
 // https://stackoverflow.com/questions/53106250/react-js-user-enters-value-in-the-input-field-on-button-click-to-display-the-val
 
+// https://stackoverflow.com/questions/54256701/how-to-highlight-empty-mandatory-input-field-with-red-border-click-on-button
 
