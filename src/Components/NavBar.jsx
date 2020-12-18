@@ -41,17 +41,17 @@ class NavBar extends Component {
               <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                <Navbar.Collapse id="responsive-navbar-nav">
                <Nav className="mx-auto text-left" >
-                        <Link class="nav-link" style ={linkStyle} to="/Charts/AllCharts">
+                        <Link className="nav-link" style={linkStyle} to="/Charts/AllCharts">
                             HEM 
                         </Link>
-                        <Link class="nav-link" style={linkStyle} to="/Quiz">
+                        <Link className="nav-link" style={linkStyle} to="/Quiz">
                             QUIZ
                         </Link>
-                    <Link class="navbar-brand d-none d-lg-block" to="/"><img src={Habitato1} style={logoStyle}  alt="Habitato logotyp"/></Link>
-                        <Link class="nav-link" style={linkStyle} to="/CommentAdd">
+                    <Link className="navbar-brand d-none d-lg-block" to="/"><img src={Habitato1} style={logoStyle}  alt="Habitato logotyp"/></Link>
+                        <Link className="nav-link" style={linkStyle} to="/CommentAdd">
                             TIPS 
                         </Link>
-                        <Link class="nav-link" style={linkStyle} to="/Faktarutor">
+                        <Link className="nav-link" style={linkStyle} to="/Faktarutor">
                             FAKTA 
                         </Link>
             
