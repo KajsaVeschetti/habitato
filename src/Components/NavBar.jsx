@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import {  BrowserRouter as Router,
   Route, Switch, Redirect,
     Link } from "react-router-dom";
+import {Nav, Navbar} from 'react-bootstrap';   
 import Habitato1 from "../img/Habitato1.jpg";
 
 import Quiz from "./Quiz/Quiz";
@@ -15,11 +16,6 @@ import Kontakt from "./Kontakt";
 
 
 class NavBar extends Component {
-    state = {
-
-    };
-
-
 
     render () {
 
@@ -40,55 +36,29 @@ class NavBar extends Component {
 
         return(
             <div className="fixedHeader">
-            <Router>
-            <nav class="navbar navbar-expand-lg navbar-light mx-auto">
-
-            <Link class="navbar-toggler border-0" to="index.html"><img src={Habitato1} style={logoStyle}  alt="Habitato logotyp"/></Link>
-            <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-link" style={linkStyle}>
-                        <Link class="nav-link" to="/Charts/AllCharts">
+             <Router>
+              <Navbar collapseOnSelect expand="lg" bg="light" variant="light" sticky="top">
+              <Link class="navbar-toggler border-0" to="index.html"><img src={Habitato1} style={logoStyle}  alt="Habitato logotyp"/></Link>
+              <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
+               <Navbar.Collapse id="responsive-navbar-nav">
+               <Nav className="mx-auto text-left" >
+                        <Link class="nav-link" style ={linkStyle} to="/Charts/AllCharts">
                             HEM 
                         </Link>
-                    </li>
-                    <li class="nav-link" style={linkStyle}>
-                        <Link class="nav-link" to="/Quiz">
+                        <Link class="nav-link" style={linkStyle} to="/Quiz">
                             QUIZ
                         </Link>
-                    </li>
-                    <li>
-                    <Link class="navbar-brand" to="/"><img src={Habitato1} style={logoStyle}  alt="Habitato logotyp"/></Link>
-                    </li>
-                    <li class="nav-link" style={linkStyle}>
-                        <Link class="nav-link" to="/CommentAdd">
-                            TIPS
+                    <Link class="navbar-brand d-none d-lg-block" to="/"><img src={Habitato1} style={logoStyle}  alt="Habitato logotyp"/></Link>
+                        <Link class="nav-link" style={linkStyle} to="/CommentAdd">
+                            TIPS 
                         </Link>
-                    </li>
-                    <li class="nav-link" style={linkStyle}>
-                        <Link class="nav-link" to="/Faktarutor">
+                        <Link class="nav-link" style={linkStyle} to="/Faktarutor">
                             FAKTA 
                         </Link>
-                    </li>
-                    <li class="nav-link" style={linkStyle}>
-                        <Link class="nav-link" to="/Kontakt">
-                            KONTAKT
-                        </Link>
-                    </li>
-
-                </ul>
-             </div>
-            </nav>
+            
+                        </Nav>
+            </Navbar.Collapse>
+            </Navbar> 
             
        
         <Switch>
