@@ -33,6 +33,15 @@ class NavBar extends Component {
     
     }
 
+    // test
+    const activeLink = {
+      fontWeight: "bold",
+      color: "#17A2B8",
+      textDecoration: "underline",
+      textDecorationColor: "#17A2B8",
+      textDecorationStyle: "double"
+    }
+
         return(
             <div className="fixedHeader">
              <Router>
@@ -45,21 +54,13 @@ class NavBar extends Component {
                   <NavLink className="nav-link" 
                         style={linkStyle} 
                         to="/Charts/AllCharts" 
-                        activeStyle={{
-                        fontWeight: "bold",
-                        color: "#0090AA",
-                        textDecoration: "underline"
-                        }}>
+                        activeStyle={activeLink}>
                             HEM 
                   </NavLink>
                   <NavLink className="nav-link" 
                         style={linkStyle} 
                         to="/Quiz" 
-                        activeStyle={{
-                        fontWeight: "bold",
-                        color: "#0090AA",
-                        textDecoration: "underline"
-                        }}>
+                        activeStyle={activeLink}>
                             QUIZ
                   </NavLink>
                   <Link className="navbar-brand d-none d-lg-block" 
@@ -71,21 +72,13 @@ class NavBar extends Component {
                   <NavLink className="nav-link" 
                         style={linkStyle} 
                         to="/CommentAdd" 
-                        activeStyle={{
-                        fontWeight: "bold",
-                        color: "#0090AA",
-                        textDecoration: "underline"
-                        }}>
+                        activeStyle={activeLink}>
                             TIPS 
                   </NavLink>
                   <NavLink className="nav-link" 
                         style={linkStyle} 
                         to="/Faktarutor" 
-                        activeStyle={{
-                        fontWeight: "bold",
-                        color: "#0090AA",
-                        textDecoration: "underline"
-                        }}>
+                        activeStyle={activeLink}>
                             FAKTA 
                   </NavLink>
                            {/* <Link className="nav-link" style={linkStyle} to="/Charts/AllCharts">
