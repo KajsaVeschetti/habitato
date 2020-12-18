@@ -61,7 +61,7 @@ class NavBar extends Component {
             
        
         <Switch>
-        <div class="mx-auto"> 
+       
         <Route exact path="/Charts/AllCharts"component={AllCharts}>
             <AllCharts/>
           </Route>
@@ -80,10 +80,10 @@ class NavBar extends Component {
 
 
           <Redirect from="/" exact to="/Charts/AllCharts"></Redirect>
-          </div>
+        
         </Switch>
         </Router>
-            </div>
+          </div>
         );
     }
 }
