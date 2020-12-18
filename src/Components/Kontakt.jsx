@@ -14,9 +14,9 @@ function Kontakt () {
             <Form.Text className="text-muted">
                 Det är ok att ange ett alias
             </Form.Text>
-            <Form.Control type="email" placeholder="mailadress" />
+            <Form.Control type="email" placeholder="Mailadress" />
             <Form.Text className="text-muted">
-            Vi sparar inte din mail-adress
+            Vi sparar inte din mailadress
             </Form.Text>
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlSelect1">
