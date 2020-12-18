@@ -24,9 +24,9 @@
         // const Seadata = await Searesponse.json();
      
 
-     
+     //Nav
 
-import React, {Component} from "react";
+     import React, {Component} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {  BrowserRouter as Router,
   Route, Switch, Redirect,
@@ -38,6 +38,7 @@ import Fakta from "./Fakta/FaktaRutor";
 import AllCharts from "./Charts/AllCharts";
 import CommentAdd from "./CommentAdd";   // changed from CommentGroup
 import Kontakt from "./Kontakt";
+
 
 
 
@@ -148,6 +149,7 @@ class NavBar extends Component {
 
 export default NavBar;
 
+<<<<<<< HEAD
 ----- QUIZ-----
 import React, { useState } from 'react';
 import Facit from './Facit';
@@ -333,3 +335,5 @@ export default Quiz;
     <Button style={BtnStyle} variant="info" size="lg" onClick={() => handleAnswerOptionClick(answerOption.answer)}>{answerOption.question}</Button>
     ))} 
     ---SLUT PÅ QUIZ---
+=======
+>>>>>>> e7d737e0a0772d123a5e48b39b56657256dcba0a
