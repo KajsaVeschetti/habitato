@@ -9,6 +9,8 @@ import Quiz from "./Quiz/Quiz";
 import Fakta from "./Fakta/FaktaRutor";
 import AllCharts from "./Charts/AllCharts";
 import CommentAdd from "./CommentAdd";   // changed from CommentGroup
+import Kontakt from "./Kontakt";
+
 
 
 
@@ -78,6 +80,12 @@ class NavBar extends Component {
                             FAKTA 
                         </Link>
                     </li>
+                    <li class="nav-link" style={linkStyle}>
+                        <Link class="nav-link" to="/Kontakt">
+                            KONTAKT
+                        </Link>
+                    </li>
+
                 </ul>
              </div>
             </nav>
@@ -97,6 +105,10 @@ class NavBar extends Component {
         <Route exact path="/FaktaRutor"component={Fakta} >
           <Fakta/>
           </Route>
+          <Route exact path="/Kontakt"component={Kontakt}>
+            <Kontakt/>
+          </Route>
+
 
           <Redirect from="/" exact to="/Charts/AllCharts"></Redirect>
           
