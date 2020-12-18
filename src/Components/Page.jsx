@@ -3,6 +3,7 @@ import React, {Component} from "react";
 import NavBar from "./NavBar"
 import Footer from "./Footer";
 import Test from "./Quiz/Test";
+import Kontakt from "./Kontakt";
 
 
 class Page extends Component {
@@ -15,7 +16,6 @@ class Page extends Component {
      <div className="wrapper">
        <div className="contentWrap">
         <NavBar/>
-        <Test/>
 
 
       </div>
