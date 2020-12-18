@@ -10,11 +10,11 @@ function Kontakt () {
 
     <Form>
         <Form.Group controlId="exampleForm.ControlInput1">
-        <Form.Control placeholder="Namn" />
-            <Form.Text className="text-muted">
+        <Form.Control placeholder="Namn" required/>
+            <Form.Text className="text-muted" >
                 Det är ok att ange ett alias
             </Form.Text>
-            <Form.Control type="email" placeholder="Mailadress" />
+            <Form.Control type="email" placeholder="Mailadress" required />
             <Form.Text className="text-muted">
             Vi sparar inte din mailadress
             </Form.Text>
@@ -31,7 +31,7 @@ function Kontakt () {
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlTextarea1">
             <Form.Label>Meddelande</Form.Label>
-            <Form.Control as="textarea" rows={3} />
+            <Form.Control as="textarea" rows={3} required/>
         </Form.Group>
         <Button variant="info" type="submit">
     Skicka
