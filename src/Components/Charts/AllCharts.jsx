@@ -4,6 +4,7 @@ import { getGlacierdata } from "./data/glacier";
 import { getSeadata } from "./data/sealevel";
 import { getTempdata } from "./data/temp";
 
+
 import BarCharts from './CO2Emission';
 import Glacier from './GlacierSize';
 import Sea from './SeaLevel';
@@ -17,6 +18,7 @@ import { BrowserRouter as Router, Route, Redirect, Switch, Link } from "react-ro
 
 
 class AllCharts extends Component {
+  // skapar arrayer för de olika typerna av information
     state = {
         CO2Emission: [],
         GlobalTemp: [],
@@ -26,6 +28,7 @@ class AllCharts extends Component {
         indexYear2:0
       };
     
+      //hämtar information från de olika data filerna 
       async componentDidMount() {
 
         this.setState({
@@ -38,6 +41,7 @@ class AllCharts extends Component {
         });
       }
     
+      //Hämtar rätt information från det år som skrivs in 
       handleYearFilter =(chartName, Year)=> {
         let index = this.state.CO2Emission.findIndex(co2=>co2.Year === parseInt(Year));
         let index2 = this.state.GlacierSize.findIndex(glacier=>glacier.Year === parseInt(Year));
