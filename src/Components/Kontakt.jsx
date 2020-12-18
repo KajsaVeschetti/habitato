@@ -1,5 +1,5 @@
 import React from 'react';
-import {Form, Container} from 'react-bootstrap';
+import {Form, Container, Button} from 'react-bootstrap';
 
 function Kontakt () {
 
@@ -14,9 +14,9 @@ function Kontakt () {
             <Form.Text className="text-muted">
                 Det är ok att ange ett alias
             </Form.Text>
-            <Form.Control type="email" placeholder="mailadress" />
+            <Form.Control type="email" placeholder="Mailadress" />
             <Form.Text className="text-muted">
-            Vi sparar inte din mail-adress
+            Vi sparar inte din mailadress
             </Form.Text>
         </Form.Group>
         <Form.Group controlId="exampleForm.ControlSelect1">
@@ -33,6 +33,9 @@ function Kontakt () {
             <Form.Label>Meddelande</Form.Label>
             <Form.Control as="textarea" rows={3} />
         </Form.Group>
+        <Button variant="info" type="submit">
+    Skicka
+  </Button>
     </Form> 
 </Container>
 );
