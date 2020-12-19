@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import Facit from './Facit';
 import { Button, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+ 
 export default function Quiz() {
     const questions = [
-
+ 
         {
             question: 'Hur många jordklot skulle behövas om alla levde som medelsvensken?',
             answerOptions: [
@@ -79,25 +79,25 @@ export default function Quiz() {
             ],
         },
     ];
-
+ 
 //  så att [indxnr] kan bytas ut mot [currentQuestion]
-	const [currentQuestion, setCurrentQuestion] = useState(0);
-	
+    const [currentQuestion, setCurrentQuestion] = useState(0);
+    
     const [showScore, setShowScore] = useState(false);
     const [score, setScore] = useState(0);
-
-	// event till knappen som tar en vidare till nästa fråga
+ 
+    // event till knappen som tar en vidare till nästa fråga
     const handleAnswerOptionClick = (answer) => {
         if (answer) {
-			setScore(score + 1);
-			// lägg till 1p vid rätt
+            setScore(score + 1);
+            // lägg till 1p vid rätt
     } 
 // För att inte få error när det inte finns fler frågor
         const nextQuestion = currentQuestion + 1;
         if (nextQuestion < questions.length) {
             setCurrentQuestion(nextQuestion);
         } else {
-			// visa resultat när sista frågan är hämtad
+            // visa resultat när sista frågan är hämtad
             setShowScore(true);
         }
     };
@@ -107,7 +107,7 @@ export default function Quiz() {
         fontSize: "15px",
         color:"#1F1F1F",
      }
-
+ 
  
     return (
         <Container className="charts" style={{width:"750px", padding: "0px"}}>
@@ -122,7 +122,7 @@ export default function Quiz() {
                          <h4>Du fick {score} poäng av {questions.length} möjliga!</h4>
                          {/* Länk till facit-komponent */}
                          <Facit/>
-
+ 
                     </div>
                 </div>
             ) : (
@@ -138,11 +138,11 @@ export default function Quiz() {
                     </div>
                     {/* Slut på fråg-sekton */}
                     <div>
-						{/* mapfunktion för att itterera över array */}
+                        {/* mapfunktion för att itterera över array */}
                         {/* Knappar med de olika svarsalternativen */}
                         {questions[currentQuestion].answerOptions.map((answerOption) => (
                             <Button style={BtnStyle} variant="info" size="lg" onClick={() => handleAnswerOptionClick(answerOption.answer)}>{answerOption.question}</Button>
-							))} 
+                            ))} 
                     </div>
                 </div>
             )} 
@@ -151,3 +151,49 @@ export default function Quiz() {
         </Container>
     );
 } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { Component } from "react"
+// import { getQuestions } from "./questions"
+
+
+// class Quiz extends Component {
+//     state = {
+//         // array med namnet: questionArray. Här hamnar frågorna när man hämtat dom från filen
+//         questionArray:[]
+//     }
+//     getQuestions = () => {
+//     questions().then(question => {
+//         this.setState({
+//             questionArray: question
+//         })
+//     })
+//  }
+//      async componentDidMount () {
+//         this.setState({
+//             questionArray: getQuestions(),
+//         });
+//     }
+//     render() { 
+//         return ( 
+//             <div className="container">
+//                 <div className="title">Habitatos miljöquiz!</div>
+//                 {this.state.questionArray.length > 0 && this.state.questionArray.map(({question, correct_answer, incorrect_answer}) => <h4>{question}</h4>
+//                 )}
+//             </div>
+//          );
+//     }
+// }
+ 
+// export default Quiz;

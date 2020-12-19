@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {  BrowserRouter as Router,
   Route, Switch, Redirect,
-    Link } from "react-router-dom";
+  NavLink, Link } from "react-router-dom";
 import {Nav, Navbar} from 'react-bootstrap';   
 import Habitato1 from "../img/Habitato1.jpg";
 
@@ -33,29 +33,68 @@ class NavBar extends Component {
     
     }
 
+    // test
+    const activeLink = {
+      fontWeight: "bold",
+      color: "#17A2B8",
+      textDecoration: "underline",
+      textDecorationColor: "#17A2B8",
+      textDecorationStyle: "double"
+    }
+
         return(
             <div className="fixedHeader">
              <Router>
               <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
-              <Link class="navbar-toggler border-0" to="index.html"><img src={Habitato1} style={logoStyle}  alt="Habitato logotyp"/></Link>
+              {/* <Link class="navbar-toggler border-0" to="index.html"><img src={Habitato1} style={logoStyle}  alt="Habitato logotyp"/></Link> */}
+              <NavLink class="navbar-toggler border-0" to="index.html"><img src={Habitato1} style={logoStyle}  alt="Habitato logotyp"/></NavLink>
               <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                <Navbar.Collapse id="responsive-navbar-nav">
                <Nav className="mx-auto text-left" >
-                        <Link class="nav-link" style ={linkStyle} to="/Charts/AllCharts">
+                  <NavLink className="nav-link" 
+                        style={linkStyle} 
+                        to="/Charts/AllCharts" 
+                        activeStyle={activeLink}>
+                            HEM 
+                  </NavLink>
+                  <NavLink className="nav-link" 
+                        style={linkStyle} 
+                        to="/Quiz" 
+                        activeStyle={activeLink}>
+                            QUIZ
+                  </NavLink>
+                  <Link className="navbar-brand d-none d-lg-block" 
+                        to="/"><img 
+                        src={Habitato1} 
+                        style={logoStyle}  
+                        alt="Habitato logotyp"/>
+                  </Link>
+                  <NavLink className="nav-link" 
+                        style={linkStyle} 
+                        to="/CommentAdd" 
+                        activeStyle={activeLink}>
+                            TIPS 
+                  </NavLink>
+                  <NavLink className="nav-link" 
+                        style={linkStyle} 
+                        to="/Faktarutor" 
+                        activeStyle={activeLink}>
+                            FAKTA 
+                  </NavLink>
+                           {/* <Link className="nav-link" style={linkStyle} to="/Charts/AllCharts">
                             HEM 
                         </Link>
-                        <Link class="nav-link" style={linkStyle} to="/Quiz">
+                        <Link className="nav-link" style={linkStyle} to="/Quiz">
                             QUIZ
                         </Link>
-                    <Link class="navbar-brand d-none d-lg-block" to="/"><img src={Habitato1} style={logoStyle}  alt="Habitato logotyp"/></Link>
-                        <Link class="nav-link" style={linkStyle} to="/CommentAdd">
+                    <Link className="navbar-brand d-none d-lg-block" to="/"><img src={Habitato1} style={logoStyle}  alt="Habitato logotyp"/></Link>
+                        <Link className="nav-link" style={linkStyle} to="/CommentAdd">
                             TIPS 
                         </Link>
-                        <Link class="nav-link" style={linkStyle} to="/Faktarutor">
+                        <Link className="nav-link" style={linkStyle} to="/Faktarutor">
                             FAKTA 
-                        </Link>
-            
-                        </Nav>
+                        </Link> */}
+              </Nav>
             </Navbar.Collapse>
             </Navbar> 
             
@@ -90,3 +129,7 @@ class NavBar extends Component {
 
 export default NavBar;
 
+
+
+
+// https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/api/NavLink.md
