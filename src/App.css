@@ -96,6 +96,10 @@ div.charts {
   
 }
 
+#test{
+  background: rgba(249, 249, 249, 0.8);
+}
+
 /* -------------------------  CommentComponent  ------------------------- */
 
 .commentComponentStyle {  
