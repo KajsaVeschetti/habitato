@@ -9,8 +9,7 @@ function GlobalWarming() {
 
   return ( 
     <>
-  <Card border="white"className="bg-white px-md-4 pb-4">
-  <Card.Body>
+  
    <div className="text-center mb-5">
    <Image src={globalWarming}fluid rounded/>
    </div>
@@ -32,8 +31,7 @@ function GlobalWarming() {
       aria-expanded={open}
      >{buttonName}
      </Button> 
-     </Card.Body>
-     </Card>
+    
    </>
 
   );
