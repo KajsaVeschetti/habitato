@@ -5,7 +5,7 @@ import globalWarming from "./faktaImg/globalWarming.jpg";
 function GlobalWarming() {
   let [openButton, setOpenButton] = useState(false);
 
-  const buttonName=openButton?'Läs mindre ':'Läs mer '
+  const buttonName=openButton?'Mindre info':'Mer info'
 
   return ( 
     <>
@@ -22,7 +22,7 @@ function GlobalWarming() {
         <Card.Text className="text-left">Temperaturen stiger och klimatet förändras med allvarliga konsekvenser som följd: glaciärer smälter, havsnivåer höjs, extremare väder blir vanligare, tillgången till mat och friskt vatten minskar, djur och biologisk mångfald påverkas osv Det finns också en stor risk för att det i framtiden blir mer vanligt med klimatflyktingar, som tvingas fly på grund av översvämningar, torka och att skördar förstörs. Den global uppvärmning kommer därför påverka våra dagliga liv i allt större utsträckning, allt från försämrad världsekonomi till att förändrade levnadsvillkor.</Card.Text>.
         <Card.Title>Vad kan vi göra?</Card.Title>
         <Card.Text className="pb-4 text-left">Vi måste minska användningen av fossila bränslen, men också rent allmänt börja agera mer miljövänligt i vår vardag. Det är dags att välja väg för framtiden. Vi kan hjälpa till genom att arbeta för att minska utsläppen och genom att vi lära oss att leva mer klimatsmart; shoppa mindre, äta mer vegetariskt, välja hållbara energikällor, slänga mindre (både matvaror och prylar) osv.</Card.Text>
-        <h4>Vill du veta mer? Titta på en video om global uppvärmning</h4>
+        <h4>Vill du veta mer? Titta på en video om global uppvärmning.</h4>
         <div className="embed-responsive embed-responsive-16by9 mb-4">
           <iframe title="Youtube-video about global warming" className="embed-responsive-item" width="560" height="315" src="https://www.youtube-nocookie.com/embed/Z_b2A-d5hGY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
