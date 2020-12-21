@@ -166,12 +166,15 @@
 
 import React, { Component } from "react"
 import { getQuestions } from "./questions"
+import QBtns from "./QBtns"
 
 
 class Quiz extends Component {
     state = {
         // array med namnet: questionArray. Här hamnar frågorna när man hämtat dom från filen
-        questionArray:[]
+        questionArray:[],
+        score: 0,
+        responses: 0
     }
 //     getQuestions = () => {
 //     getQuestions().then(question => {
@@ -181,9 +184,18 @@ class Quiz extends Component {
 //     })
 //  }
 
-   
 
-
+// lifecykle metod. To bring in a set of objekts som vi populerar state med. 
+computeAnswer = (answer, correct_answer) => {
+    if (answer  === correct_answer){
+        this.setState({
+            score: this.state.score +1
+        });
+    }
+    this.setState({
+        responses: this.state.responses < 9 ? this.state.responses + 1 : 5
+    });
+};
      async componentDidMount () {
         this.setState({
             questionArray: getQuestions(),
@@ -193,8 +205,16 @@ class Quiz extends Component {
         return ( 
             <div className="container">
                 <div className="title">Habitatos miljöquiz!</div>
-                {this.state.questionArray.length > 0 && this.state.questionArray.map(({question, correct_answer, incorrect_answer}) => <h4>{question}</h4>
+                {this.state.questionArray.length > 0 && 
+                this.state.responses < 9 &&
+                    this.state.questionArray.map(({question, correct_answer, incorrect_answer}) => 
+                    <QBtns question={question} 
+                    options={correct_answer, incorrect_answer}
+                    selected={answer => this.computeAnswer(answer, correct_answer)}
+                />
                 )}
+                                {/* knappar försvinner och visar resultat  ANNIKA --Tänkt på att uppdatera antal om du lägger till frågor.*/}
+                {this.state.responses  === 9 ? ( <h1>{this.state.score}</h1>) : null }
             </div>
          );
     }
