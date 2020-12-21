@@ -36,68 +36,19 @@ class CommentAdd extends Component {
   }
 
   render() {
-    const commentComponentStyle={
-      background: "white",
-      opacity: "80%",
-      margin: "0 20%",
-      padding: "2em",
-    }
-    const commentComponentGridStyle={
-      display:"grid",
-      gridTemplateColumns: "50% 50%",
-    }
-
-    const commentInputAreaStyle={
-      margin: "0.5%",
-      borderRadius: "7px",
-    }
-    
-    const commentComponentFormStyle={
-      gridColumn: "1",
-    }
-
-    const commentDisplayStyle={
-      gridColumn: "2",
-    }
-
-
-    const commentDisplayNameStyle={
-      textAlign: "left",
-      fontWeight: "bold",
-      marginTop: "2em", 
-      marginBottom: "0em",
-      padding: "0.2em 0.5em 0 0.5em",
-      borderLeft: "solid #17A2B8 3px"
-    }
-
-    const commentDisplayCommentStyle={
-      textAlign: "left",
-      marginTop: "0",
-      padding: "0.2em 0 0.5em 0.5em ",
-      borderLeft: "solid #17A2B8 3px",
-      // background: "green",
-      
-    }
-
-    // const commentInputBtnStyle={
-    //   color: "white",
-    //   fontWeight: "bold",
-    //   background: "#17A2B8",
-    //   padding: "0.5em 1em",
-    // }
 
     return (
-      <div style={commentComponentStyle}>
+      <div className="commentComponentStyle">
         <h2>Dela med dig av ditt bästa miljötips!</h2>
-        <div style={commentComponentGridStyle} >
+        <div className="commentComponentGridStyle">
             <form 
-            style={commentComponentFormStyle} 
+            className="commentComponentFormStyle"
             onSubmit={this.handleSubmit}>
               <label>
                 Namn: 
                 <br />
                 <input 
-                  style={commentInputAreaStyle}
+                  className="commentInputAreaStyle"
                   type="text" 
                   value={this.state.name}
                   onChange={this.handleChangeName}
@@ -109,7 +60,7 @@ class CommentAdd extends Component {
                 Kommentar:
                 <br />
                 <textarea
-                  style={commentInputAreaStyle}
+                  className="commentInputAreaStyle"
                   value={this.state.comment}
                   onChange={this.handleChangeComment} 
                   required
@@ -123,15 +74,15 @@ class CommentAdd extends Component {
               value="Skicka kommentar" /> */}
             </form>
         
-          <div style={commentDisplayStyle}>
+          <div className="commentDisplayStyle" >
             {this.state.commentList.map((item) => (       // skriver ut kommentaren, {item.name}&{item.comment} tar value från formuläret och skriver ut det
-              <div>
+              <div className="commentContainer">
                 <p>
-                  <div style={commentDisplayNameStyle}>
+                  <div className="commentDisplayNameStyle" >
                   {item.name} 
                   </div>            
                 
-                  <div style={commentDisplayCommentStyle} >
+                  <div className="commentDisplayCommentStyle" >
                   {item.comment}
                   </div>
                 </p>
