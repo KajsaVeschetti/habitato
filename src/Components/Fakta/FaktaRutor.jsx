@@ -21,9 +21,7 @@ class Fakta extends Component {
    <Container className="col-lg-9 col-xs-12 mb-5 bg-white">
     <h3 className="p-4">Fakta om klimatförändringar</h3>  
     <Router>
-     <Navbar collapseOnSelect expand="lg" bg="white" variant="light">
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
+     <Navbar expand="lg" bg="white" variant="light">
        <Nav className="mx-auto">
          <Link class="nav-link" style={linkStyle} to="/FossilFuel">
          Fossila bränslen  
@@ -38,11 +36,12 @@ class Fakta extends Component {
          Havsnivå 
          </Link>
         </Nav>
-      </Navbar.Collapse>
      </Navbar>  
 
      <Switch>
-       <div class="mx-auto">
+
+     <div class="mx-auto">
+
               <Route exact path='/FossilFuel' component={FossilFuel}>
               <FossilFuel/>
               </Route> 
@@ -59,7 +58,8 @@ class Fakta extends Component {
               <SeaLevel/>
               </Route> 
              <Redirect from="/" exact to="/FossilFuel"></Redirect>
-         </div>  
+
+         </div>
       </Switch>
     </Router> 
    </Container>
