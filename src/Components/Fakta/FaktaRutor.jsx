@@ -18,9 +18,9 @@ class Fakta extends Component {
 
    return(
    <>
-   <Container id="test" className="col-lg-9 col-xs-12 pl-4 pr-4 pb-5 bg-white">
-    <h3 className="p-4">Fakta om klimatförändringar</h3> 
-    <Card className="bg-light">
+   <Container id="test" className="col-lg-9 col-xs-12 px-lg-5 px-xs-0 pb-5 rounded">
+    <h3 className="pt-5 pb-2">Fakta om klimatförändringar</h3> 
+    <Card className="bg-light rounded">
    <Card.Body>
     <Router>
      <Navbar expand="lg" bg="light" variant="light">
