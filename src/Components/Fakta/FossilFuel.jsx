@@ -10,8 +10,7 @@ function FossilFuel () {
 
   return ( 
     <>
-  <Card border="white"className="bg-white">
-   <Card.Body>
+  
    <div className="text-center mb-5">
    <Image src={fossilFuel}fluid rounded/>
    </div>
@@ -26,7 +25,7 @@ function FossilFuel () {
         <Card.Text className="pb-5 text-left">Vår förbrukning av fossila bränslen sker i snabbare takt än det återskapas. Det är en icke-förnybar energikälla som en dag kommer ta slut. Det är därför viktig att hitta hållbara alternativ. Världsnaturfonden menar att förnybar energi, såsom exempelvis solkraft, vattenkraft och vindkraft, är miljövänliga alternativ till fossila bränslen. Det beror på att med förnybar energi slipper vi föroreningar och farliga restprodukter, det är energikällor som aldrig tar slut och de påverkar inte naturen negativt.</Card.Text>
         
         <div className="embed-responsive embed-responsive-16by9 mb-4">
-  <iframe title="Youtube-video about fossil fuel" className="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/yJQVao3neVI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe title="Youtube-video about fossil fuel" className="embed-responsive-item" width="560" height="315" src="https://www.youtube-nocookie.com/embed/zaXBVYr9Ij0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
    </div>
         
         </div>
@@ -38,8 +37,7 @@ function FossilFuel () {
       aria-expanded={open}
       >{buttonName}
      </Button>
-     </Card.Body>
-     </Card>
+  
   </>
  );
 }
