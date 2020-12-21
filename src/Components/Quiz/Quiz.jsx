@@ -173,13 +173,17 @@ class Quiz extends Component {
         // array med namnet: questionArray. Här hamnar frågorna när man hämtat dom från filen
         questionArray:[]
     }
-    getQuestions = () => {
-    questions().then(question => {
-        this.setState({
-            questionArray: question
-        })
-    })
- }
+//     getQuestions = () => {
+//     getQuestions().then(question => {
+//         this.setState({
+//             questionArray: question
+//         })
+//     })
+//  }
+
+   
+
+
      async componentDidMount () {
         this.setState({
             questionArray: getQuestions(),
