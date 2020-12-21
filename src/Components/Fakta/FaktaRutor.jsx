@@ -20,7 +20,7 @@ class Fakta extends Component {
    <>
    <Container id="test" className="col-lg-9 col-xs-12 px-lg-5 px-xs-2 pb-5 rounded">
     <h3 className="pt-5 pb-3">Fakta om klimatförändringar</h3> 
-    <Card className="bg-light rounded">
+    <Card className="bg-light rounded pb-3">
    <Card.Body>
     <Router>
      <Navbar expand="lg" bg="light" variant="light">
