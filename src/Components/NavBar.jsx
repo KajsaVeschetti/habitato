@@ -9,7 +9,7 @@ import Habitato1 from "../img/Habitato1.jpg";
 import Quiz from "./Quiz/Quiz";
 import Fakta from "./Fakta/FaktaRutor";
 import AllCharts from "./Charts/AllCharts";
-import CommentAdd from "./CommentAdd";   // changed from CommentGroup
+import CommentAdd from "./Comments/CommentAdd";   // changed from CommentGroup
 import Kontakt from "./Kontakt";
 
 
