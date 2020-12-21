@@ -47,7 +47,7 @@ class NavBar extends Component {
              <Router>
               <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
               {/* <Link class="navbar-toggler border-0" to="index.html"><img src={Habitato1} style={logoStyle}  alt="Habitato logotyp"/></Link> */}
-              <NavLink class="navbar-toggler border-0" to="index.html"><img src={Habitato1} style={logoStyle}  alt="Habitato logotyp"/></NavLink>
+              <NavLink class="navbar-toggler border-0" to="/"><img src={Habitato1} style={logoStyle}  alt="Habitato logotyp"/></NavLink>
               <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                <Navbar.Collapse id="responsive-navbar-nav">
                <Nav className="mx-auto text-left" >
