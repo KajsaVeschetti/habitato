@@ -3,9 +3,9 @@ import {Button, Collapse, Image, Card} from 'react-bootstrap';
 import fossilFuel from "./faktaImg/fossilFuel.jpg";
 
 function FossilFuel () {
-  let [open, setOpen] = useState(false);
+  let [openButton, setOpenButton] = useState(false);
 
-  const buttonName=open?'Läs mindre ':'Läs mer '
+  const buttonName=Button?'Läs mindre ':'Läs mer '
 
 
   return ( 
@@ -17,7 +17,7 @@ function FossilFuel () {
      <Card.Title>Vad är fossila bränslen?</Card.Title>
      <Card.Text className="text-left pb-3"> De fossila bränslen som vi idag använder skapades för miljontals år sedan av rester från döda djur och växter. Resterna har under en lång process brutits ned och ombildats till exempelvis kol, naturgas och olja. Ur dessa fossila bränslen utvinner vi energi som t ex används till att driva motorer, till uppvärmning och för att skapa elektricitet. Vid förbränning av fossila bränslen släpps det ut farliga gaser i atmosfären, t ex koldioxid (CO2).</Card.Text>
 
-      <Collapse in={open}> 
+      <Collapse in={openButton}> 
         <div id="fuel-collapse-text">
         <Card.Title className="pt-2"> Varför är fossila bränslen dåligt för klimatet?</Card.Title>
         <Card.Text className="text-left">Vår höga användning av fossila bränslen gör att koldioxidhalten i atmosfären hela tiden ökar. Förbränningen av fossila bränslen förstärker därför växthuseffekten, vilket gör att jordens värmebalans rubbas. Temperaturen på jorden stiger och det får negativa konsekvenser för klimat och ekosystem. Även hälso-och miljöfarliga ämnen släpps ut vid förbränning. Det leder till ökad miljöförstöring och att människors hälsa påverkas negativt.</Card.Text>.
@@ -32,9 +32,9 @@ function FossilFuel () {
       </Collapse>
 
       <Button variant="info" size="sm" block    
-      onClick={() => setOpen(!open)}
+      onClick={() => setOpenButton(!openButton)}
       aria-controls="fuel-collapse-text"
-      aria-expanded={open}
+      aria-expanded={openButton}
       >{buttonName}
      </Button>
   
