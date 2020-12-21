@@ -9,8 +9,6 @@ function GlacierSize () {
 
   return ( 
     <>
-  <Card border="white"className="bg-white px-md-4 pb-4">
-   <Card.Body>
    <div className="text-center mb-5">
    <Image src={glacierSize}fluid rounded/>
    </div>
@@ -32,8 +30,7 @@ function GlacierSize () {
       aria-expanded={open}
      >{buttonName}
      </Button>
-     </Card.Body>
-    </Card>
+  
  </>
  );
 }
