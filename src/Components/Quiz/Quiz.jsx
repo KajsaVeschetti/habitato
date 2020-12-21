@@ -167,6 +167,8 @@
 import React, { Component } from "react"
 import { getQuestions } from "./questions"
 import QBtns from "./QBtns"
+import Resultat from "./Resultat"
+import Facit from "./Facit"
 
 
 class Quiz extends Component {
@@ -193,9 +195,15 @@ computeAnswer = (answer, correct_answer) => {
         });
     }
     this.setState({
-        responses: this.state.responses < 9 ? this.state.responses + 1 : 5
+        responses: this.state.responses < 9 ? this.state.responses + 1 : 9
     });
 };
+playAgain = () => {
+    this.setState({
+        score: 0,
+        responses: 0
+    })
+}
      async componentDidMount () {
         this.setState({
             questionArray: getQuestions(),
@@ -214,7 +222,9 @@ computeAnswer = (answer, correct_answer) => {
                 />
                 )}
                                 {/* knappar försvinner och visar resultat  ANNIKA --Tänkt på att uppdatera antal om du lägger till frågor.*/}
-                {this.state.responses  === 9 ? ( <h1>{this.state.score}</h1>) : null }
+
+                {this.state.responses  === 9 ? (  <Resultat score={this.state.score} playAgain={this.playAgain} /> ) : null } 
+
             </div>
          );
     }
