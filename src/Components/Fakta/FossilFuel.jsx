@@ -5,7 +5,7 @@ import fossilFuel from "./faktaImg/fossilFuel.jpg";
 function FossilFuel () {
   let [openButton, setOpenButton] = useState(false);
 
-  const buttonName=Button?'Läs mindre ':'Läs mer '
+  const buttonName=openButton?'Läs mindre ':'Läs mer '
 
 
   return ( 
