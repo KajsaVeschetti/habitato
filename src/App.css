@@ -147,3 +147,13 @@ div.charts {
   padding: 0.2em 0 0.5em 0.5em ;
   border-left: solid #17A2B8 3px;
 }
+
+/* -------------------------  quizComponent  ------------------------- */
+.btnWrap {
+  margin: 1em;
+}
+
+.questWrap {
+  padding-bottom: 2em;
+}
+
