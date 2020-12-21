@@ -9,12 +9,14 @@ import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-ro
 class Fakta extends Component {
 
    render() {
+
    const linkStyle={
    fontSize: "16x",
    fontFamily: "Quicksand",
    paddingLeft: "15px",
    paddingRight: "15px",
   }
+
 
    return(
    <>
@@ -26,9 +28,9 @@ class Fakta extends Component {
      <Navbar expand="lg" bg="light" variant="light">
        <Nav className="mx-auto">
          <Link class="nav-link" style={linkStyle} to="/FossilFuel">
-         Fossila bränslen  
+         Fossila bränslen   
          </Link>
-         <Link class="nav-link " style={linkStyle} to="/GlobalWarming" >
+         <Link class="nav-link " style={linkStyle} to="/GlobalWarming">
          Global uppvärmning 
          </Link>
          <Link class="nav-link " style={linkStyle} to="/GlacierSize"> 
