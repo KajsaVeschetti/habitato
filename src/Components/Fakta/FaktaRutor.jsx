@@ -3,7 +3,7 @@ import FossilFuel from './FossilFuel';
 import GlobalWarming from './GlobalWarming'; 
 import GlacierSize from './GlacierSize'; 
 import SeaLevel from './SeaLevel'; 
-import {Container, Nav, Navbar} from 'react-bootstrap';
+import {Container, Nav, Navbar, Card} from 'react-bootstrap';
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-router-dom'; 
 
 class Fakta extends Component {
@@ -12,16 +12,18 @@ class Fakta extends Component {
    const linkStyle={
    fontSize: "16x",
    fontFamily: "Quicksand",
-   paddingLeft: "18px",
-   paddingRight: "18px",
+   paddingLeft: "15px",
+   paddingRight: "15px",
   }
 
    return(
    <>
-   <Container className="col-lg-9 col-xs-12 mb-5 bg-white">
-    <h3 className="p-4">Fakta om klimatförändringar</h3>  
+   <Container id="test" className="col-lg-9 col-xs-12 pl-4 pr-4 pb-5 bg-white">
+    <h3 className="p-4">Fakta om klimatförändringar</h3> 
+    <Card className="bg-light">
+   <Card.Body>
     <Router>
-     <Navbar expand="lg" bg="white" variant="light">
+     <Navbar expand="lg" bg="light" variant="light">
        <Nav className="mx-auto">
          <Link class="nav-link" style={linkStyle} to="/FossilFuel">
          Fossila bränslen  
@@ -36,8 +38,7 @@ class Fakta extends Component {
          Havsnivå 
          </Link>
         </Nav>
-     </Navbar>  
-
+     </Navbar>
      <Switch>
 
      <div class="mx-auto">
@@ -62,6 +63,8 @@ class Fakta extends Component {
          </div>
       </Switch>
     </Router> 
+    </Card.Body>
+   </Card>
    </Container>
        
 </>
