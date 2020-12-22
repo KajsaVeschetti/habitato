@@ -1,11 +1,10 @@
-import { render } from "@testing-library/react";
 import React, { Component } from "react";
 import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import LikeButton from "./LikeButton";
 
 
-
-class CommentAdd extends Component {
+class Comments extends Component {
   constructor(props) {        // Constructorn visar hur objektet byggs
     super(props);
     this.state = {
@@ -35,11 +34,22 @@ class CommentAdd extends Component {
     event.preventDefault();
   }
 
+
+
+  
+
+
+  
+
+
+
+
   render() {
 
     return (
       <div className="commentComponentStyle">
         <h2>Dela med dig av ditt bästa miljötips!</h2>
+        <LikeButton />
         <div className="commentComponentGridStyle">
             <form 
             className="commentComponentFormStyle"
@@ -78,24 +88,25 @@ class CommentAdd extends Component {
             {this.state.commentList.map((item) => (       // skriver ut kommentaren, {item.name}&{item.comment} tar value från formuläret och skriver ut det
               <div className="commentContainer">
                 <p>
-                  <div className="commentDisplayNameStyle" >
+                  <div className="commentDisplayNameStyle" key={item.commentLikeButton} >
                   {item.name} 
                   </div>            
                 
                   <div className="commentDisplayCommentStyle" >
-                  {item.comment}
+                  {item.comment} <LikeButton />
                   </div>
                 </p>
               </div>
             ))}
           </div>
         </div>
+        
       </div>
     );
   }
 }
 
-export default CommentAdd;
+export default Comments;
 
 
 
