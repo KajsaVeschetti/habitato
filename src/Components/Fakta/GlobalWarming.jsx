@@ -3,14 +3,14 @@ import {Button, Collapse, Image, Card} from 'react-bootstrap';
 import globalWarming from "./faktaImg/globalWarming.jpg";
 
 function GlobalWarming() {
-  let [openButton, setOpenButton] = useState(false);
+  const [openButton, setOpenButton] = useState(false);
 
   const buttonName=openButton?'Mindre info':'Mer info'
 
   return ( 
     <>
   
-  <Card.Img className="px-lg-5 pb-5" variant="top" src={globalWarming} alt="Bright sun with clouds"/>
+    <Card.Img className="px-lg-5 pb-5" variant="top" src={globalWarming} alt="Bright sun with clouds"/>
     <Card.Title>Vad menas med global uppvärmning?</Card.Title>
     <Card.Text className="text-left pb-2">Den förstärka växthuseffekten som leder till att upphettningen i atmosfären hela tiden ökar brukar kallas global uppvärmning. Den naturliga växthuseffekten, som gör att en del av värmen från solens strålar hålls kvar på jordytan via växthusgaser, är ett måste för att vi ska kunna leva på jorden. Utan den skull jorden vara en kall och livlös planet. Den förhöjda växthuseffekten är en följd av vår användning av fossila bränslen som gör att växthusgaserna ökar i sådan takt att balansen i det naturliga kretsloppet förändras. Följden blir att värmen hålls kvar längre på jordytan, vilket leder till att temperaturen höjs och klimatet förändras.</Card.Text>
 
