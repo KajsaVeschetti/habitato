@@ -1,0 +1,89 @@
+import React, { Component } from "react";
+import likeIcon from "./CommentsImg/likeIcon.svg";
+
+class LikeButton extends React.Component {
+    
+    state = {
+    likes: 0
+  };
+  
+  addLike = () => {
+    let newCount = this.state.likes + 1;
+      this.setState({
+      likes: newCount
+    });
+  };
+
+  
+  render() {
+	
+      return (
+      <div>
+        <button 
+          className="likeButton" 
+          onClick={this.addLike}> 
+          {this.state.likes} 
+        </button>
+      </div>
+      );
+  }
+}
+    
+
+
+//<Img src={likeIcon}fluid rounded/>
+
+
+//  ---------------------- NYTT TEST from codepen -------------------
+
+
+// class LikeButton extends React.Component {
+//   state = {
+//     likes: 0
+//   };
+
+//   addLike = () => {
+//     let newCount = this.state.likes + 1;
+//      this.setState({
+//      likes: newCount
+//      });
+//   };
+
+//   render() {
+//     const likes = this.state.likes;
+//     if (likes === 0) {
+//       return (
+//         <div>
+//           <button
+//             className="button"
+//             onClick={this.addLike}
+//           >
+//             <i className="far fa-heart fa-lg" style={{ color: "#33c3f0" }}></i>
+//           </button>
+//         </div>
+//       );
+//     }
+//     if (likes === 1) {
+//       return (
+//         <div>
+//           <button className="button" onClick={this.addLike}>
+//             <i className="fas fa-heart fa-lg" style={{ color: "red" }}></i>
+//           </button>
+//         </div>
+//       );
+//     }
+//     if (likes > 1) {
+//       return (
+//         <div>
+//           <button className="button" onClick={this.addLike}>
+//             <i className="fas fa-heart fa-lg" style={{ color: "red" }}></i>{" "}
+//             {likes}
+//           </button>
+//         </div>
+//       );
+//     }
+//   }
+// }
+
+   
+        export default LikeButton;
