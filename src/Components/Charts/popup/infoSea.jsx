@@ -58,10 +58,11 @@ class InfoSea extends Component {
         return (  
           <div>
               <div class="card mx-auto charts " style={{width:"750px"}}>
-              <h5>Skriv in två årtal och se vad <br/> klimatförändringarna har gjort under åren</h5>
-
-              
-                        <div exact path="/sealevel" component={Sea}>
+              <div className="chartHeader">
+              <h3>Skriv in två årtal och se vad <br/> klimatförändringarna har gjort under åren</h3>
+              </div>
+              <div class="mx-auto chartContainer">
+                        <div component={Sea}>
                         <Sea 
                         chartName="Sea1"
                         SeaLevel={this.state.SeaLevel[this.state.indexYear1]}
@@ -76,7 +77,7 @@ class InfoSea extends Component {
 
                       </div>
           </div>  
-
+   </div>
         );
     }
 
