@@ -82,8 +82,8 @@ export default function PopupGL() {
         }}
       >
         <Fade in={open}>
-          <div className={classes.paper}>
-            <h2 id="spring-modal-title">Glaciärstorlek</h2>
+          <div className={classes.paper} style={{background:"rgba(0, 144, 170, 0.9)"}}>
+            <h2 id="spring-modal-title" className="chartTitle">Glaciärstorlek</h2>
             <InfoGlacier/>
           </div>
         </Fade>
