@@ -17,7 +17,7 @@ class AllCharts extends Component {
         return (  
           <React.Fragment>
               <div className="card mx-auto charts  " style={{width:"750px"}}>
-                  <div className="chartsTitel">
+                  <div className="containerTitle">
                     <h2> Se hur klimatförändringen har påverkat jorden under åren genom att använda våra diagram för att jämföra två olika år.</h2>
                   </div>
 
