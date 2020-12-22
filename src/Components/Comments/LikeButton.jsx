@@ -1,5 +1,10 @@
 import React, { Component } from "react";
+import { faHeart as farHeart } from "@fortawesome/free-regular-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+
+// const HeartIcon = <FontAwesomeIcon icon={faCoffee} />
 
 class LikeButton extends React.Component {
     
@@ -7,12 +12,17 @@ class LikeButton extends React.Component {
     likes: 0
   };
   
+
+  
   addLike = () => {
     let newCount = this.state.likes + 1;
       this.setState({
       likes: newCount
     });
+    
   };
+
+
 
   
   render() {
@@ -21,7 +31,7 @@ class LikeButton extends React.Component {
       <div>
         <button 
           className="likeButton" 
-          onClick={this.addLike}> 
+          onClick={this.addLike} > <FontAwesomeIcon icon={farHeart} />
           {this.state.likes} 
         </button>
       </div>
@@ -31,7 +41,7 @@ class LikeButton extends React.Component {
     
 
 
-//<Img src={likeIcon}fluid rounded/>
+
 
 
 //  ---------------------- NYTT TEST from codepen -------------------
@@ -87,3 +97,9 @@ class LikeButton extends React.Component {
 
    
         export default LikeButton;
+
+
+
+        // https://medium.com/javascript-in-plain-english/creating-a-reusable-like-button-component-in-react-8028d17c024c
+        // https://stackoverflow.com/questions/59091882/how-can-i-use-outlined-icons-with-react-fontawesome
+        
