@@ -93,16 +93,21 @@ div.charts {
   border: 1px solid #999;
   border-radius: 5px;
   padding-bottom: 2em;
-  margin-top: 100px;
+  margin-top: 80px;
 
 }
 
 .chartsTitel {
   background-color: rgba(41, 90, 116, 0.9) ;
   color: #f9f9f9;
-  font-family: "Segoe UI Light";
   padding: 2em;
   border-radius: 5px 5px 0 0 ;
+}
+
+.chartsTitel h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 100;
+  font-size: 20px;
 }
 
 #test{
