@@ -6,10 +6,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
-const Resultat = ({score, playAgain }) => 
+const Resultat = ({score, playAgain, responses }) => 
 <div class="contentWrap" >
     <div> 
-        <h2>Du fick {score} av XX möjliga </h2> 
+        {/* Funkar inte måste hårdkoda antal frågor */}
+        <h2>Du fick {score} av {responses}  XX möjliga </h2> 
     </div>
 
     <div class="btnWrap">
