@@ -68,8 +68,9 @@ export default class BarCharts extends Component {
           
             
             <div style={{width:"300px", height:"500px", float:"left"}}>
-              
-                <input type="text" placeholder="Välj ett år" onKeyDown={e=> this.handleYear(e)}></input>
+              <div style={{textAlign:"center", marginLeft:"3.5em"}}>
+                <input className="diagramInput" type="text" placeholder="Välj ett år" style={{textAlign:"center"}} onKeyDown={e=> this.handleYear(e)}></input>
+                </div>
                 <BarChart
                     width={300}
                     height={300}
@@ -88,7 +89,7 @@ export default class BarCharts extends Component {
                 <Cell  fill ={COLORS[0]}/>
                 </Bar>
                 </BarChart>
-                <div>
+                <div style={{textAlign:"center", marginLeft:"3.5em"}}>
                   <ul >
                     <li style={linkStyle}>Gas = Gas fuel</li>
                     <li style={linkStyle}>Liq = Liquid fuel</li>
