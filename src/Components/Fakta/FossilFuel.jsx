@@ -1,14 +1,14 @@
 import React, { useState } from 'react'; //Importerar useState hook från React. 
 import {Button, Collapse, Card} from 'react-bootstrap'; //Importerar Button, Collapse, Card från react-bootstrap
-import fossilFuel from "./faktaImg/fossilFuel.jpg"; // Importerar fossilFuel-bilden från faktaImg-mappen.
+import fossilFuel from "./faktaImg/fossilFuel.jpg"; // Importerar fossilFuel-bild från faktaImg-mappen.
 
 function FossilFuel () {
   //En ny state-variabel deklareras genom att kalla på useState hook. Den returnerar ett par värden som namnges.
   //Variabeln kallas openButton eftersom den ska hålla värdena för knappen. Knappens värde sätts till false eftersom knappen inte är tryckt och därmed är innehållet dolt.
-  //Den andra delen, som själv är en funktion, gör att knappens nuvarande värde kan uppdateras, dvs när knappen trycks ska ytterligare innehåll visas.
+  //Den andra delen, som själv är en funktion, gör att knappens nuvarande värde kan uppdateras, dvs när knappen trycks öppnar det upp för att ytterligare innehåll visas.
   const [openButton, setOpenButton] = useState(false);
 
-  //Gör så texten på knappen ändras beroende på om innehållet syns eller är dolt. 
+  //Gör så texten på knappen ändras från "Mer info" (när knappen är otyckt) till "Mindre info" (när knappen är tryckt).
   const buttonName=openButton?'Mindre info':'Mer info'
 
 
