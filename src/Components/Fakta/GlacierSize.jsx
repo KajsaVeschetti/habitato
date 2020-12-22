@@ -5,7 +5,7 @@ import glacierSize from "./faktaImg/glacierSize.jpg";
 function GlacierSize () {
   const [openButton, setOpenButton] = useState(false);
 
-  const buttonName=openButton?'Mer info':'Mindre info'
+  const buttonName=openButton?'Mindre info':'Mer info'
 
   return ( 
     <>
