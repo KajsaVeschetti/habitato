@@ -92,8 +92,17 @@ div.charts {
   background: rgba(249, 249, 249, 0.8);
   border: 1px solid #999;
   border-radius: 5px;
+  padding-bottom: 2em;
+  margin-top: 100px;
+
+}
+
+.chartsTitel {
+  background-color: rgba(41, 90, 116, 0.9) ;
+  color: #f9f9f9;
+  font-family: "Segoe UI Light";
   padding: 2em;
-  
+  border-radius: 5px 5px 0 0 ;
 }
 
 #test{
@@ -185,3 +194,24 @@ div.charts {
   padding-bottom: 2em;
 }
 
+/*----------------------  Popup  ----------------------*/
+.popup{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 20px;
+  list-style: none;
+  padding-top:2.5em;
+  
+}
+
+.popupButton {
+  width: 250px;
+  height: 125px;
+  border-radius: 7px;
+  border: 1px #555;
+  color: #f9f9f9;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: 'Quicksand', sans-serif;
+}

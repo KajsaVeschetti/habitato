@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 import PropTypes from 'prop-types';
 import {
   BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
@@ -28,13 +29,15 @@ width: PropTypes.number,
 height: PropTypes.number,
 };
 export default class BarCharts extends Component {
-    handleYear = e => {
+
+  handleYear = e => {
         if(e.key === "Enter")
          {
            this.props.onYearFilter(this.props.chartName, e.target.value);
          }
       };
       
+1
 
     render() { 
 

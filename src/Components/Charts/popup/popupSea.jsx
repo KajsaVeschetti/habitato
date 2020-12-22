@@ -4,6 +4,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is required for IE 11 support
+import 'semantic-ui-css/semantic.min.css'
+
+import InfoSea from './infoSea';
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -50,7 +53,7 @@ Fade.propTypes = {
   onExited: PropTypes.func,
 };
 
-export default function Popa() {
+export default function PopupSea() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
@@ -64,8 +67,8 @@ export default function Popa() {
 
   return (
     <div>
-      <button type="button" onClick={handleOpen}>
-        react-spring
+      <button type="button" className="popupButton" style={{background:"rgba(20, 109, 177, 0.9)"}} onClick={handleOpen}>
+        Havsnivå
       </button>
       <Modal
         aria-labelledby="spring-modal-title"
@@ -81,9 +84,8 @@ export default function Popa() {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            <h2 id="spring-modal-title">KajsaBajsa är präst</h2>
-            <p id="spring-modal-description">Never stop eating. &#9994;</p>
-            <p style={{fontSize: "4em", textAlign: "center"}}>&#127828;</p>
+            <h2 id="spring-modal-title">Havsnivån</h2>
+            <InfoSea/>
           </div>
         </Fade>
       </Modal>
