@@ -83,8 +83,8 @@ export default function PopupCO2() {
         }}
       >
         <Fade in={open}>
-          <div className={classes.paper}>
-            <h2 id="spring-modal-title">CO2 Emission</h2>
+          <div className={classes.paper} style={{background:"rgba(41, 170, 225, 0.9)", overflow:"scroll", maxHeight:"600px", minHeight:"100%"}}>
+            <h2 id="spring-modal-title" className="chartTitle">CO2 Emission</h2>
             <InfoCo2/>
           </div>
         </Fade>
