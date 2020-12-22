@@ -42,12 +42,12 @@ export default class BarCharts extends Component {
     render() { 
 
       const linkStyle = {
-        fontSize: "14px",
-        color:"#5f5f5f",
-        textDecoration:"none",
-        listStyleType: "none", 
-        paddingRight:"50px",
-        paddingLeft:"50px",
+        // fontSize: "14px",
+        // color:"#5f5f5f",
+        // textDecoration:"none",
+        // listStyleType: "none", 
+        // paddingRight:"50px",
+        // paddingLeft:"50px",
      }
         let co2 = this.props.CO2Emission;
 
@@ -91,11 +91,11 @@ export default class BarCharts extends Component {
                 </BarChart>
                 <div style={{textAlign:"center", marginLeft:"3.5em"}}>
                   <ul >
-                    <li style={linkStyle}>Gas = Gas fuel</li>
-                    <li style={linkStyle}>Liq = Liquid fuel</li>
-                    <li style={linkStyle}>Sol = Solid fuel</li>
-                    <li style={linkStyle}>Cem = Cement</li>
-                    <li style={linkStyle}>Flar = Gas Flaring</li>
+                    <li className="dataAbbrGas" style={linkStyle}>Gas = Gas fuel</li>
+                    <li className="dataAbbrLiq" style={linkStyle}>Liq = Liquid fuel</li>
+                    <li className="dataAbbrSol" style={linkStyle}>Sol = Solid fuel</li>
+                    <li className="dataAbbrCem" style={linkStyle}>Cem = Cement</li>
+                    <li className="dataAbbrFlar" style={linkStyle}>Flar = Gas Flaring</li>
                   </ul>
 
                 </div>
