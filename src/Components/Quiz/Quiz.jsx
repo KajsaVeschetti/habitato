@@ -168,7 +168,9 @@ import React, { Component } from "react"
 import { getQuestions } from "./questions"
 import QBtns from "./QBtns"
 import Resultat from "./Resultat"
-import Facit from "./Facit"
+import {Container } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 class Quiz extends Component {
@@ -178,14 +180,6 @@ class Quiz extends Component {
         score: 0,
         responses: 0
     }
-//     getQuestions = () => {
-//     getQuestions().then(question => {
-//         this.setState({
-//             questionArray: question
-//         })
-//     })
-//  }
-
 
 // lifecykle metod. To bring in a set of objekts som vi populerar state med. 
 computeAnswer = (answer, correct_answer) => {
@@ -211,8 +205,10 @@ playAgain = () => {
     }
     render() { 
         return ( 
+            <Container className="charts" style={{width:"750px", padding: "0px"}}>
+
             <div className="container">
-                <div className="title">Habitatos miljöquiz!</div>
+                <h1>Habitatos miljöquiz</h1>
                 {this.state.questionArray.length > 0 && 
                 this.state.responses < 9 &&
                     this.state.questionArray.map(({question, correct_answer, incorrect_answer}) => 
@@ -226,6 +222,8 @@ playAgain = () => {
                 {this.state.responses  === 9 ? (  <Resultat score={this.state.score} playAgain={this.playAgain} /> ) : null } 
 
             </div>
+            </Container>
+
          );
     }
 }
