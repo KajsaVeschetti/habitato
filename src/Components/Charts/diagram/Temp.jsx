@@ -51,7 +51,9 @@ class Temp extends Component {
         return ( 
             <React.Fragment>
                <div style={{width:"300px", height:"400px", float:"left"}}>
-            <input type="text" placeholder="Välj ett år" onKeyDown={e=> this.handleYear(e)}></input>
+               <div style={{textAlign:"center", marginLeft:"3.5em"}}>
+            <input className="diagramInput" type="text" placeholder="Välj ett år" onKeyDown={e=> this.handleYear(e)}></input>
+            </div>
             <BarChart
                     width={300}
                     height={300}
