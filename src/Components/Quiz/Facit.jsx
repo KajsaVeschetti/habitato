@@ -2,15 +2,12 @@ import React,{useState} from 'react';
 import { Button, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
-
-
 function Facit() {
   const [readMore,setReadMore]=useState(false);
   const extraContent=<div>
     <Container className="bg-light">
 <p className="extra-content">
-                <div class="row row-cols-2">
+                <div class="row row-cols-1">
 
                     <div class="col"><h3>Hur många jordklot skulle behövas om alla levde som medelsvensken?</h3>
                 <b>Rätt svar: 3 jordklot</b>
