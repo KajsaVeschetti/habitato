@@ -3,11 +3,6 @@ import { Button, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-const BtnStyle = {
-  fontFamily: "Quicksand",
-  fontSize: "15px",
-  color:"#1F1F1F",
-}
 
 
 function Facit() {
@@ -41,7 +36,7 @@ function Facit() {
   const BtnName=readMore?'Göm facit ':'Visa frågor och de rätta svaren'
   return (
     <div className="App">
-      <Button style={BtnStyle} variant="info" size="sm" onClick={()=>{setReadMore(!readMore)}}>{BtnName}</Button>
+      <Button variant="info" size="sm" onClick={()=>{setReadMore(!readMore)}}>{BtnName}</Button>
       {readMore && extraContent}
     </div>
   );

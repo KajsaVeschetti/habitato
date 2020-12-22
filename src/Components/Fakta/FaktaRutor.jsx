@@ -3,32 +3,34 @@ import FossilFuel from './FossilFuel';
 import GlobalWarming from './GlobalWarming'; 
 import GlacierSize from './GlacierSize'; 
 import SeaLevel from './SeaLevel'; 
-import {Container, Nav, Navbar} from 'react-bootstrap';
+import {Container, Nav, Navbar, Card} from 'react-bootstrap';
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-router-dom'; 
 
 class Fakta extends Component {
 
    render() {
+
    const linkStyle={
    fontSize: "16x",
    fontFamily: "Quicksand",
-   paddingLeft: "18px",
-   paddingRight: "18px",
+   paddingLeft: "15px",
+   paddingRight: "15px",
   }
+
 
    return(
    <>
-   <Container className="col-lg-9 col-xs-12 mb-5 bg-white">
-    <h3 className="p-4">Fakta om klimatförändringar</h3>  
+   <Container id="test" className="col-lg-9 col-xs-12 px-lg-5  pb-5 rounded">
+    <h3 className="pt-5 pb-3">Fakta om klimatförändringar</h3> 
+    <Card className="bg-light pb-3">
+   <Card.Body>
     <Router>
-     <Navbar collapseOnSelect expand="lg" bg="white" variant="light">
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
+     <Navbar expand="lg" bg="light" variant="light">
        <Nav className="mx-auto">
          <Link class="nav-link" style={linkStyle} to="/FossilFuel">
-         Fossila bränslen  
+         Fossila bränslen   
          </Link>
-         <Link class="nav-link " style={linkStyle} to="/GlobalWarming" >
+         <Link class="nav-link " style={linkStyle} to="/GlobalWarming">
          Global uppvärmning 
          </Link>
          <Link class="nav-link " style={linkStyle} to="/GlacierSize"> 
@@ -38,11 +40,11 @@ class Fakta extends Component {
          Havsnivå 
          </Link>
         </Nav>
-      </Navbar.Collapse>
-     </Navbar>  
-
+     </Navbar>
      <Switch>
-       <div class="mx-auto">
+
+     <div class="mx-auto">
+
               <Route exact path='/FossilFuel' component={FossilFuel}>
               <FossilFuel/>
               </Route> 
@@ -59,9 +61,12 @@ class Fakta extends Component {
               <SeaLevel/>
               </Route> 
              <Redirect from="/" exact to="/FossilFuel"></Redirect>
-         </div>  
+
+         </div>
       </Switch>
     </Router> 
+    </Card.Body>
+   </Card>
    </Container>
        
 </>

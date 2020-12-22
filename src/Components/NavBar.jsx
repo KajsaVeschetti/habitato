@@ -9,7 +9,7 @@ import Habitato1 from "../img/Habitato1.jpg";
 import Quiz from "./Quiz/Quiz";
 import Fakta from "./Fakta/FaktaRutor";
 import AllCharts from "./Charts/AllCharts";
-import CommentAdd from "./CommentAdd";   // changed from CommentGroup
+import CommentAdd from "./Comments/CommentAdd";   // changed from CommentGroup
 import Kontakt from "./Kontakt";
 
 
@@ -45,9 +45,9 @@ class NavBar extends Component {
         return(
             <div className="fixedHeader">
              <Router>
-              <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+              <Navbar collapseOnSelect expand="lg" bg="light" variant="light" className="pr-4">
               {/* <Link class="navbar-toggler border-0" to="index.html"><img src={Habitato1} style={logoStyle}  alt="Habitato logotyp"/></Link> */}
-              <NavLink class="navbar-toggler border-0" to="index.html"><img src={Habitato1} style={logoStyle}  alt="Habitato logotyp"/></NavLink>
+              <NavLink class="navbar-toggler border-0" to="/"><img src={Habitato1} style={logoStyle}  alt="Habitato logotyp"/></NavLink>
               <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                <Navbar.Collapse id="responsive-navbar-nav">
                <Nav className="mx-auto text-left" >
