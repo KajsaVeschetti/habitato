@@ -36,7 +36,7 @@ class AllCharts extends Component {
                        
                         <li>
                             <PopupTemp />
-                        </li> 
+                        </li>
                     </ul>
 
 
