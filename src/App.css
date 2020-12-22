@@ -93,7 +93,8 @@ div.charts {
   border: 1px solid #999;
   border-radius: 5px;
   padding-bottom: 2em;
-  margin-top: 80px;
+  margin-top: 15px;
+  margin-bottom: 20px;
 
 }
 
@@ -102,6 +103,31 @@ div.charts {
   color: #f9f9f9;
   padding: 2em;
   border-radius: 5px 5px 0 0 ;
+}
+
+
+.chartsTitel h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+}
+
+.containerTitle {
+  background-color: rgba(41, 90, 116, 0.9) ;
+  color: #f9f9f9;
+  padding: 2em;
+  border-radius: 5px 5px 0 0 ;
+}
+
+.containerTitle h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+}
+
+#test{
+  background: rgba(249, 249, 249, 0.8);
+  border: 1px solid #999;
 }
 
 /*  FARGKODNING TEST */
@@ -150,16 +176,6 @@ div.charts {
 
 
 
-.chartsTitel h2 {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 100;
-  font-size: 20px;
-}
-
-#test{
-  background: rgba(249, 249, 249, 0.8);
-  border: 1px solid #999;
-}
 
 /* -------------------------  CommentComponent  ------------------------- */
 
@@ -279,4 +295,30 @@ div.charts {
   font-size: 20px;
   text-transform: uppercase;
   font-family: 'Quicksand', sans-serif;
+}
+
+h2.chartTitle {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  color: #f9f9f9;
+  text-align: center;
+}
+
+.diagramInput {
+  text-align: center;
+  width: 75%;
+  padding: 8px 15px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.chartHeader h3 {
+  text-align: center;
+  color: #555;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  padding-bottom: 1em;
+  padding-top: 1em;
 }
