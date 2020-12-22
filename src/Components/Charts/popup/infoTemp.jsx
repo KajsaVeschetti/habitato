@@ -60,10 +60,11 @@ class InfoTemp extends Component {
         return (  
           <div>
               <div class="card mx-auto charts " style={{width:"750px"}}>
-              <h5>Skriv in två årtal och se vad <br/> klimatförändringarna har gjort under åren</h5>
-
-              
-              <div exact path="/temp" component={Temp}>
+              <div className="chartHeader">
+              <h3>Skriv in två årtal och se vad <br/> klimatförändringarna har gjort under åren</h3>
+              </div>
+              <div class="mx-auto chartContainer">
+              <div  component={Temp}>
                         <Temp 
                         chartName="Temp1"
                         GlobalTemp={this.state.GlobalTemp[this.state.indexYear1]}
@@ -78,7 +79,7 @@ class InfoTemp extends Component {
 
                       </div>
           </div>  
-
+          </div>
         );
     }
 
