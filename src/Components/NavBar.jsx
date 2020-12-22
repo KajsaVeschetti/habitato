@@ -9,7 +9,7 @@ import Habitato1 from "../img/Habitato1.jpg";
 import Quiz from "./Quiz/Quiz";
 import Fakta from "./Fakta/FaktaRutor";
 import AllCharts from "./Charts/AllCharts";
-import CommentAdd from "./Comments/CommentAdd";   // changed from CommentGroup
+import Comments from "./Comments/Comments";   // changed from CommentGroup
 import Kontakt from "./Kontakt";
 
 
@@ -71,7 +71,7 @@ class NavBar extends Component {
                   </Link>
                   <NavLink className="nav-link" 
                         style={linkStyle} 
-                        to="/CommentAdd" 
+                        to="/Comments" 
                         activeStyle={activeLink}>
                             TIPS 
                   </NavLink>
@@ -107,8 +107,8 @@ class NavBar extends Component {
         <Route exact path="/Quiz"component={Quiz}>
             <Quiz/>
           </Route>
-        <Route exact path="/CommentAdd"component={CommentAdd} >
-        <CommentAdd/>
+        <Route exact path="/Comments"component={Comments} >
+        <Comments/>
           </Route>
         <Route exact path="/FaktaRutor"component={Fakta} >
           <Fakta/>
