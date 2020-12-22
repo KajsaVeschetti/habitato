@@ -14,7 +14,7 @@ function FossilFuel () {
 
   return ( 
     <>
-  
+      {/* Lägger in bild, titel och text i Card*/}
       <Card.Img className="px-lg-5 pb-5" variant="top" src={fossilFuel} alt="Factories, with smoke coming out of large chimneys"/>
       <Card.Title>Vad är fossila bränslen?</Card.Title>
       <Card.Text className="text-left pb-3"> De fossila bränslen som vi idag använder skapades för miljontals år sedan av rester från döda djur och växter. Resterna har under en lång process brutits ned och ombildats till exempelvis kol, naturgas och olja. Ur dessa fossila bränslen utvinner vi energi som t ex används till att driva motorer, till uppvärmning och för att skapa elektricitet. Vid förbränning av fossila bränslen släpps det ut farliga gaser i atmosfären, t ex koldioxid (CO2).</Card.Text>
