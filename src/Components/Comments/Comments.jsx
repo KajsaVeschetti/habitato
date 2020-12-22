@@ -93,7 +93,7 @@ class Comments extends Component {
                   </div>            
                 
                   <div className="commentDisplayCommentStyle" >
-                  {item.comment}
+                  {item.comment} <LikeButton />
                   </div>
                 </p>
               </div>
