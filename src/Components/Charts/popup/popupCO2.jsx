@@ -6,7 +6,13 @@ import Backdrop from '@material-ui/core/Backdrop';
 import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is required for IE 11 support
 
 
+//Nedan kod är hämtad från https://react.semantic-ui.com/modules/modal/ för att få till popup knappar på förstasidan.
+
+
 import InfoCo2 from './infoCO2';
+import InfoGlacier from './infoGlacier';
+import InfoSea from './infoSea';
+import InfoTemp from './infoTemp'
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -66,7 +72,9 @@ export default function PopupCO2() {
   };
 
   return (
+    /*Nedan kod skapar en knapp som när man trycker på den visar ett diagram */
     <div>
+      
       <button type="button" className="popupButton" style={{background:"rgba(41, 170, 225, 0.9)"}} onClick={handleOpen}>
        CO2 Emission
       </button>
@@ -80,7 +88,7 @@ export default function PopupCO2() {
         BackdropComponent={Backdrop}
         BackdropProps={{
           timeout: 500,
-        }}
+        }} 
       >
         <Fade in={open}>
           <div className={classes.paper} style={{background:"rgba(41, 170, 225, 0.9)", overflow:"scroll", maxHeight:"600px", minHeight:"100%"}}>
@@ -89,6 +97,8 @@ export default function PopupCO2() {
           </div>
         </Fade>
       </Modal>
+
+      
     </div>
   );
 }
