@@ -51,8 +51,9 @@ class InfoCo2 extends Component {
         return (  
           <div>
               <div class="card mx-auto charts " style={{width:"750px"}}>
-              <h5>Skriv in två årtal och se vad <br/> klimatförändringarna har gjort under åren</h5>
-              
+              <div className="chartHeader">
+              <h3>Skriv in två årtal och se vad <br/> klimatförändringarna har gjort under åren</h3>
+              </div>
                       <div class="mx-auto chartContainer">
                         <div  component={BarCharts}>
                         <BarCharts
