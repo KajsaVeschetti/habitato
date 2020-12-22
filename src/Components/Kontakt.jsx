@@ -5,7 +5,7 @@ function Kontakt () {
 
 
   return ( 
-    <Container className="charts" style={{width:"750px", padding: "30px"}}>
+    <Container className="charts col-lg-9">
                      <h1> Kontakta oss</h1> 
 
     <Form>
