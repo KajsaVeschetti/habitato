@@ -21,13 +21,13 @@ computeAnswer = (answer, correct_answer) => {
             score: this.state.score +1
         });
     }
-    // håller koll på hur många frågor användaren svarat på +1 oavsätt rätt eller fel conditional (ternary) operator"
+    // håller koll på hur många frågor användaren svarat på +1 oavsätt rätt eller fel *conditional (ternary) operator*
     this.setState({
         responses: this.state.responses < 9 ? this.state.responses + 1 : 9
     });
 };
 
-// Gör quiz igen funktion nollställer poän och svar
+// Gör quiz igen. funktion nollställer poäng och svar
 playAgain = () => {
     this.setState({
         score: 0,
@@ -41,7 +41,7 @@ playAgain = () => {
     }
     render() { 
         return ( 
-            <Container className="charts" style={{width:"750px", padding: "0px"}}>
+            <Container className="charts col-lg-9">
 
             <div className="container">
                 <h1>Habitatos miljöquiz</h1>
@@ -56,7 +56,7 @@ playAgain = () => {
                     selected={answer => this.computeAnswer(answer, correct_answer)}
                 />
                 )}
-                                {/* knappar försvinner och visar resultat  ANNIKA --Tänkt på att uppdatera antal om du lägger till frågor.*/}
+                                {/* knappar försvinner och visar resultat */}
 
                 {this.state.responses  === 9 ? (  <Resultat score={this.state.score} playAgain={this.playAgain} /> ) : null } 
 
