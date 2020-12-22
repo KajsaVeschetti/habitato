@@ -35,7 +35,8 @@ class InfoSea extends Component {
       
         
         if(index !== -1){
-      
+        //Ser till så att rätt data kommer i rätt diagram och så att inte samma kommer i båda om inte detta år skrivs in i båda input-fälten
+
          switch(chartName){
           case "Sea1" : this.setState({indexYear1: index}); 
              break;
@@ -43,6 +44,7 @@ class InfoSea extends Component {
           case "Sea2" : this.setState({indexYear2: index}); 
             break;
           }
+          //Skulle ingen data finnas kommer ett felmeddelande upp 
 
         } else{
           alert("Kunde inte finna någon information")
@@ -56,6 +58,9 @@ class InfoSea extends Component {
  
 
         return (  
+           /*Nedan kod hämtar ner datan till de två diagram som ska synas. Dessa diagram hämtas från en annan komponent
+          Där finnen en div för att bygga in de två diagrammen och en informationsruta till en bredd.
+          Varje diagram har ett chartName för att kunna hämta data från det årtal som skrivs in  */ 
           <div>
               <div class="card mx-auto charts " style={{width:"750px"}}>
               <div className="chartHeader">
