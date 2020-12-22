@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import likeIcon from "./CommentsImg/likeIcon.svg";
+// import likeIcon from "./CommentsImg/likeIcon.svg";
 
 class LikeButton extends React.Component {
     
