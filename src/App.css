@@ -166,6 +166,7 @@ div.charts {
 
 .likeButton {
   display: inline-block;
+  margin-left: 80%;
   height: 2em;
   padding: 0 0.5em;
   color: #555;
