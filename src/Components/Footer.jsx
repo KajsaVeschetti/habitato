@@ -8,7 +8,7 @@ import { faFacebookSquare, faInstagram  } from '@fortawesome/free-brands-svg-ico
 
 class Footer extends Component {
 
-
+//Nedan kod skapar en komponent för footern på webbplatsen
   render(){ 
     return(
            
