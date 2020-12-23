@@ -9,6 +9,9 @@ import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is requir
 
 import InfoTemp from './infoTemp';
 
+//Nedan kod är hämtad från https://react.semantic-ui.com/modules/modal/ för att få till popup knappar på förstasidan.
+
+
 const useStyles = makeStyles((theme) => ({
   modal: {
     display: 'flex',
@@ -67,6 +70,7 @@ export default function PopupTemp() {
   };
 
   return (
+    /*Nedan kod skapar en knapp som när man trycker på den visar ett diagram */
     <div>
       <button type="button" className="popupButton" style={{background:"rgba(68, 118, 128, 0.9)"}} onClick={handleOpen}>
        Global Temperatur
