@@ -18,20 +18,7 @@ import Kontakt from "./Kontakt";
 class NavBar extends Component {
 
     render () {
-
-    const logoStyle={
-      width: "125px"
-    }
-
-    const linkStyle = {
-       fontFamily: "Segoe UI Light",
-       fontSize: "24px",
-       textDecoration:"none",
-       paddingTop: "25px",
-       paddingRight:"50px",
-       paddingLeft:"50px",
-    
-    }
+ 
 
     // test
     const activeLink = {
@@ -47,18 +34,18 @@ class NavBar extends Component {
              <Router>
               <Navbar collapseOnSelect expand="lg" bg="light" variant="light" className="pr-4">
               {/* <Link class="navbar-toggler border-0" to="index.html"><img src={Habitato1} style={logoStyle}  alt="Habitato logotyp"/></Link> */}
-              <NavLink class="navbar-toggler border-0" to="/"><img src={Habitato1} style={logoStyle}  alt="Habitato logotyp"/></NavLink>
+              <NavLink class="navbar-toggler border-0" to="/"><img src={Habitato1} className="navLogo" alt="Habitato logotyp"/></NavLink>
               <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                <Navbar.Collapse id="responsive-navbar-nav">
                <Nav className="mx-auto text-left" >
-                  <NavLink className="nav-link" 
-                        style={linkStyle} 
+                  <NavLink className="nav-link "
+                        className="navLink" 
                         to="/Charts/AllCharts" 
                         activeStyle={activeLink}>
                             HEM 
                   </NavLink>
-                  <NavLink className="nav-link" 
-                        style={linkStyle} 
+                  <NavLink className="nav-link"
+                   className="navLink"  
                         to="/Quiz" 
                         activeStyle={activeLink}>
                             QUIZ
@@ -66,17 +53,18 @@ class NavBar extends Component {
                   <Link className="navbar-brand d-none d-lg-block" 
                         to="/"><img 
                         src={Habitato1} 
-                        style={logoStyle}  
+                      
+                        className="navLogo" 
                         alt="Habitato logotyp"/>
                   </Link>
-                  <NavLink className="nav-link" 
-                        style={linkStyle} 
+                  <NavLink className="nav-link"
+                   className="navLink"  
                         to="/Comments" 
                         activeStyle={activeLink}>
                             TIPS 
                   </NavLink>
                   <NavLink className="nav-link" 
-                        style={linkStyle} 
+                   className="navLink" 
                         to="/Faktarutor" 
                         activeStyle={activeLink}>
                             FAKTA 
