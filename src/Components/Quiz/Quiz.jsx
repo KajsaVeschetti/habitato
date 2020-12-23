@@ -45,7 +45,9 @@ playAgain = () => {
 
             <div className="container">
                 <h1>Habitatos miljöquiz</h1>
+
                 {/* renderar data från state */}
+                <div className="chartContainer">
                 {this.state.questionArray.length > 0 && 
                 this.state.responses < 9 &&
                 // mapar genom data och delar upp information
@@ -59,7 +61,7 @@ playAgain = () => {
                                 {/* knappar försvinner och visar resultat */}
 
                 {this.state.responses  === 9 ? (  <Resultat score={this.state.score} playAgain={this.playAgain} /> ) : null } 
-
+                </div>   
             </div>
             </Container>
 
