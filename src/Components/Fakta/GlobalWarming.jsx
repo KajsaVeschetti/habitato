@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Button, Collapse, Image, Card} from 'react-bootstrap';
+import {Button, Collapse, Card} from 'react-bootstrap';
 import globalWarming from "./faktaImg/globalWarming.jpg";
 
 function GlobalWarming() {
