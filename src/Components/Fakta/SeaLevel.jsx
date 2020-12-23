@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Button, Collapse, Image, Card} from 'react-bootstrap';
+import {Button, Collapse, Card} from 'react-bootstrap';
 import seaLevel from "./faktaImg/seaLevel.jpg";
 
 
