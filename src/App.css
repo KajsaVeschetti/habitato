@@ -50,6 +50,7 @@ h1, h2, h3, h4, h5 {
   
 }
 
+/*--------------------  Navbar  --------------------*/
 .navbar {
   margin-top: 0;
   margin-bottom: 3em; 
@@ -137,6 +138,7 @@ div.charts {
   border: 1px solid #999;
   border-radius: 5px;
   padding-bottom: 2em;
+  padding-top: 2em;
   margin-top: 15px;
   margin-bottom: 20px;
 
@@ -160,6 +162,7 @@ div.charts {
   background-color: rgba(41, 90, 116, 0.9) ;
   color: #f9f9f9;
   padding: 2em;
+  margin-top: -2em;
   border-radius: 5px 5px 0 0 ;
 }
 
