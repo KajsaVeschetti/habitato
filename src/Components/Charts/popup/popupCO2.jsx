@@ -10,9 +10,7 @@ import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is requir
 
 
 import InfoCo2 from './infoCO2';
-import InfoGlacier from './infoGlacier';
-import InfoSea from './infoSea';
-import InfoTemp from './infoTemp'
+
 
 const useStyles = makeStyles((theme) => ({
   modal: {
