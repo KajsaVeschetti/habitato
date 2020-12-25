@@ -83,6 +83,10 @@ h1, h2, h3, h4, h5 {
   color: #5f5f5f;
 }
 
+.faktaLink:hover{
+  color: #5cb85c;
+}
+
 /*---------------------  Footer  --------------------*/
 footer {
   margin: 0 auto;
