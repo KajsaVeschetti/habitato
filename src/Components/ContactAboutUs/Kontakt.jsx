@@ -8,7 +8,7 @@ function Kontakt () {
   return ( 
         <div className= "contactAboutGrid charts col-lg-9">
             <h1> Kontakta oss</h1>
-            <div className="contactAboutContainer">
+            <div className="charts">
                 <AboutUs/>
             </div>
             <div className="contactContainer">
