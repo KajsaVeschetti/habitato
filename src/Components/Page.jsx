@@ -4,7 +4,7 @@ import NavBar from "./NavBar";
 import Footer from "./Footer";
 
 // import Test from "./Quiz/Test";
-import Kontakt from "./Kontakt";
+import Kontakt from "./ContactAboutUs/Kontakt";
 
 
 
