@@ -89,7 +89,7 @@ export default class BarCharts extends Component {
                 <Cell  fill ={COLORS[0]}/>
                 </Bar>
                 </BarChart>
-                <div style={{textAlign:"center", marginLeft:"3.5em"}}>
+                <div className="dataAbbrContainer" >
                   <ul >
                     <li className="dataAbbrGas" style={linkStyle}>Gas = Gas fuel</li>
                     <li className="dataAbbrLiq" style={linkStyle}>Liq = Liquid fuel</li>
@@ -97,7 +97,6 @@ export default class BarCharts extends Component {
                     <li className="dataAbbrCem" style={linkStyle}>Cem = Cement</li>
                     <li className="dataAbbrFlar" style={linkStyle}>Flar = Gas Flaring</li>
                   </ul>
-
                 </div>
             </div>
             
