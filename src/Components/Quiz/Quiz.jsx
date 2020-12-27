@@ -23,7 +23,7 @@ computeAnswer = (answer, correct_answer) => {
     }
     // håller koll på hur många frågor användaren svarat på +1 oavsätt rätt eller fel *conditional (ternary) operator*
     this.setState({
-        responses: this.state.responses < 9 ? this.state.responses + 1 : 9
+        responses: this.state.responses < 10 ? this.state.responses + 1 : 10
     });
 };
 
@@ -49,7 +49,7 @@ playAgain = () => {
                 {/* renderar data från state */}
                 <div className="chartContainer">
                 {this.state.questionArray.length > 0 && 
-                this.state.responses < 9 &&
+                this.state.responses < 10 &&
                 // mapar genom data och delar upp information
                     this.state.questionArray.map(({question, correct_answer, incorrect_answer}) => 
                     // Props // renderar komponent med knappar
@@ -60,7 +60,7 @@ playAgain = () => {
                 )}
                                 {/* knappar försvinner och visar resultat */}
 
-                {this.state.responses  === 9 ? (  <Resultat score={this.state.score} playAgain={this.playAgain} /> ) : null } 
+                {this.state.responses  === 10 ? (  <Resultat score={this.state.score} playAgain={this.playAgain} /> ) : null } 
                 </div>   
             </div>
             </Container>

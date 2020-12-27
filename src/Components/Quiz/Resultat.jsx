@@ -10,7 +10,7 @@ const Resultat = ({score, playAgain, responses }) =>
 <div class="contentWrap" >
     <div> 
         {/* Funkar inte måste hårdkoda antal frågor */}
-        <h2>Du fick {score} av {responses}  XX möjliga </h2> 
+        <h2>Du fick {score} av {responses}  10 möjliga </h2> 
     </div>
 
     <div class="btnWrap">

@@ -4,41 +4,33 @@ import GlobalWarming from './GlobalWarming';
 import GlacierSize from './GlacierSize'; 
 import SeaLevel from './SeaLevel'; 
 import {Container, Nav, Navbar, Card} from 'react-bootstrap';
-import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-router-dom'; 
+import { BrowserRouter as Router, Route, Switch, Redirect, NavLink } from 'react-router-dom'; 
 
 class Fakta extends Component {
 
    render() {
 
-   const linkStyle={
-   fontSize: "16x",
-   fontFamily: "Quicksand",
-   paddingLeft: "15px",
-   paddingRight: "15px",
-  }
-
-
    return(
    <>
-   <Container id="test" className="col-lg-9 col-xs-12 px-lg-5  pb-5 rounded">
-    <h3 className="pt-5 pb-3">Fakta om klimatförändringar</h3> 
+   <Container className="faktaContainer col-lg-9 col-xs-12 px-lg-5 pb-5 rounded ">
+    <h1 className="pt-5">Fakta om klimatförändringar</h1> 
     <Card className="bg-light pb-3">
    <Card.Body>
     <Router>
-     <Navbar expand="lg" bg="light" variant="light">
+     <Navbar expand="lg" bg="light" variant="light">        
        <Nav className="mx-auto">
-         <Link class="nav-link" style={linkStyle} to="/FossilFuel">
+       <NavLink className="faktaLink py-2" to="/FossilFuel" activeStyle={{color: "#5cb85c"}}>
          Fossila bränslen   
-         </Link>
-         <Link class="nav-link " style={linkStyle} to="/GlobalWarming">
+         </NavLink>
+         <NavLink className="faktaLink py-2" to="/GlobalWarming" activeStyle={{color:"#5cb85c"}}>
          Global uppvärmning 
-         </Link>
-         <Link class="nav-link " style={linkStyle} to="/GlacierSize"> 
+         </NavLink>
+         <NavLink className="faktaLink py-2" to="/GlacierSize" activeStyle={{color: "#5cb85c"}}>
          Glaciär storlek 
-         </Link>
-         <Link class="nav-link " style={linkStyle} to="/SeaLevel">
+         </NavLink>
+         <NavLink className="faktaLink py-2" to="/SeaLevel" activeStyle={{color:"#5cb85c"}}>
          Havsnivå 
-         </Link>
+         </NavLink>
         </Nav>
      </Navbar>
      <Switch>
@@ -60,6 +52,7 @@ class Fakta extends Component {
               <Route exact path='/SeaLevel' component={SeaLevel}>
               <SeaLevel/>
               </Route> 
+              
              <Redirect from="/" exact to="/FossilFuel"></Redirect>
 
          </div>

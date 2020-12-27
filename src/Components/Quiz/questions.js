@@ -11,12 +11,12 @@ const questions = [
       incorrect_answer: ["3", "2", "4"]
     },
     {
-      question: "Vad menas med den förstärkta växthuseffekten?",
+      question: "Vad är konsekvensen av den förstärkta växthuseffekten?",
       correct_answer: "Ökad upphettning i atmosfären",
       incorrect_answer: ["Jorden snurrar snabbare", "Ökad upphettning i atmosfären", "Ökad nedkylning i atmosfären"]
     },
     {
-      question: "Förnybar energi ses som miljövänliga alternativ till fossila bränslen. Vad av följande är en förnybar energikälla?",
+      question: "Förnybar energi ses som miljövänligt alternativ till fossila bränslen. Vad av följande är en förnybar energikälla?",
       correct_answer: "Solkraft",
       incorrect_answer: ["Solkraft", "Kolkraft", "Kärnkraft"]
     },
@@ -39,6 +39,11 @@ const questions = [
       question: "Varför stiger havsnivåerna?",
       correct_answer: "Varmare klimat",
       incorrect_answer: ["Kallare klimat", "Fuktigare klimat", "Varmare klimat"]
+    },
+    {
+      question: "Vad brukar betraktas som jordens kylskåp?",
+      correct_answer: "Arktis",
+      incorrect_answer: ["Antarktis", "Arktis", "Anatarktis"]
     },
     {
       question: "Vilket av följande länder släpper ut mest koldioxid per invånare?",
