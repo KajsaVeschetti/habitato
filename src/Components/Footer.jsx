@@ -17,7 +17,7 @@ class Footer extends Component {
          <ul class="footerMenu" className="footerStyle" >
           <li><a href="/" className="footerLinks" >Hem</a></li>
           <li><a href="/Quiz"  className="footerLinks" >Quiz</a></li>
-          <li><a href="/Kontakt"  className="footerLinks" >Kontakta oss</a></li>
+          <li><a href="/ContactAboutUs/Kontakt"  className="footerLinks" >Kontakta oss</a></li>
           </ul>
           <div >
          <a href="https://www.facebook.com/" >
