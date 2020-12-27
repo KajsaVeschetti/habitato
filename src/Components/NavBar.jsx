@@ -10,7 +10,7 @@ import Quiz from "./Quiz/Quiz";
 import Fakta from "./Fakta/FaktaRutor";
 import AllCharts from "./Charts/AllCharts";
 import Comments from "./Comments/Comments";  
-import Kontakt from "./Kontakt";
+import Kontakt from "./ContactAboutUs/Kontakt";
 
 
 
@@ -101,7 +101,7 @@ class NavBar extends Component {
         <Route exact path="/FaktaRutor"component={Fakta} >
           <Fakta/>
           </Route>
-          <Route exact path="/Kontakt"component={Kontakt}>
+          <Route exact path="/ContactAboutUs/Kontakt"component={Kontakt}>
             <Kontakt/>
           </Route>
 
