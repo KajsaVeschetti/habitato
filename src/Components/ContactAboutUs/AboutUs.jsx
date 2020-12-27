@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
 import karl from "./img/karl.svg";
 import lars from "./img/lars.svg";
 import linn from "./img/linn.svg";
@@ -9,14 +9,15 @@ class AboutUs extends Component {
     render() {
         return (
             <div className="aboutUsContainer">
+                
                 <Card className="cardKarl" style={{ width: '18rem' }}>
                     <Card.Img className="aboutUsImg" variant="top" src={karl} />
                     <Card.Body>
                         <Card.Title>Karl Larsson</Card.Title>
                         <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
+                        Karl Larsson är professor i Fysik och Geovetenskap, att förstå jorden ligger honom varmt om hjärtat. 
                         </Card.Text>
+                        <Button variant="info" href="mailto:#" >Kontakta Karl</Button>
                     </Card.Body>
                 </Card>
                 <Card className="cardLars" style={{ width: '18rem' }}>
@@ -24,19 +25,19 @@ class AboutUs extends Component {
                     <Card.Body>
                         <Card.Title>Lars Karlsson</Card.Title>
                         <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
+                        Lars Karlsson är professor i Biologi och Etologi och intresserar sig mycket i natur, blommor och bin och allt därtill.
                         </Card.Text>
+                        <Button variant="info" href="mailto:#" >Kontakta Lars</Button>
                     </Card.Body>
                 </Card>
                 <Card className="cardLinn" style={{ width: '18rem' }}>
                     <Card.Img className="aboutUsImg" variant="top" src={linn} />
                     <Card.Body>
                         <Card.Title>Linn Annson</Card.Title>
-                        <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
+                        <Card.Text className="aboutUsCardText">
+                        Linn Annson är professor i Social-antropologi med intresse för samhället och kultur. 
                         </Card.Text>
+                        <Button variant="info" href="mailto:#" >Kontakta Linn</Button>
                     </Card.Body>
                 </Card>
                 <Card className="cardAnn" style={{ width: '18rem' }}>
@@ -44,11 +45,12 @@ class AboutUs extends Component {
                     <Card.Body>
                         <Card.Title>Ann Linnson</Card.Title>
                         <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
+                        Ann Linnson är forskare inom Vulkanologi och brinner för att hitta lösningar som hjälper oss bevara jorden. 
                         </Card.Text>
+                        <Button variant="info" href="mailto:#" >Kontakta Ann</Button>
                     </Card.Body>
                 </Card>
+                
             </div>
         );
     }
