@@ -1,10 +1,11 @@
-import React,{useState} from 'react';
+import React,{useState} from 'react'; //Importerar useState hook from React för att kunna använda useState i en functino
 import { Button } from 'react-bootstrap';
 
-function ReadMore() {
+function ReadMore() { // False = Knappen är inte tryckt på = texten gömd
   const [readMore,setReadMore]=useState(false);
 
-  const extraContent=
+  const extraContent= 
+  // Variabel att förvara text man vill visa/gömma. 
     <div class="extra">
       <p>
         Co2 är den kemiska formeln för Koldioxid. Koldioxid är en färg- och luktfri gas. 
@@ -15,13 +16,20 @@ function ReadMore() {
   </div>
   
   const BtnName=
+  // Variabel med de olika namnen som knappen ska toggla mellan. 
   readMore?'Göm info ':'Läs mer om Co2 '
   
+  // Här renderas en knapp med ett onClick event.
+  // setReadMore 
+  // Readmore
+  // btnname - namnen som knappen ska toggla mellan.
+  //extraContent= min text som ska visat 
   return (
     <div className="App">
-      <Button size="sm" variant="info"  onClick={()=>{setReadMore(!readMore)}}>{BtnName}</Button> {readMore && extraContent}
+      <Button size="sm" variant="info"  onClick={()=>{setReadMore(!readMore)}}>{BtnName}</Button> {readMore && extraContent} 
     </div>
   );
 }
 
 export default ReadMore;
+
