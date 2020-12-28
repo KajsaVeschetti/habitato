@@ -18,9 +18,9 @@ class Fakta extends Component {
    <Card.Body>
     <Router>
      <Navbar expand="lg" bg="light" variant="light">        
-       <Nav className="mx-auto">
-       <NavLink className="faktaLink py-2" to="/FossilFuel" activeStyle={{color: "#5cb85c"}}>
-         Fossila bränslen   
+       <Nav className="mx-auto"> 
+         <NavLink className="faktaLink py-2" to="/FossilFuel" activeStyle={{color: "#5cb85c"}}>
+         Fossila bränslen  
          </NavLink>
          <NavLink className="faktaLink py-2" to="/GlobalWarming" activeStyle={{color:"#5cb85c"}}>
          Global uppvärmning 
@@ -52,9 +52,7 @@ class Fakta extends Component {
               <Route exact path='/SeaLevel' component={SeaLevel}>
               <SeaLevel/>
               </Route> 
-              
-             <Redirect from="/" exact to="/FossilFuel"></Redirect>
-
+             <Redirect from="/" exact to="/FossilFuel"></Redirect> 
          </div>
       </Switch>
     </Router> 
