@@ -339,6 +339,12 @@ div.charts {
   padding-bottom: 2em;
 }
 
+/* -------------------------  ReadMoreComponent  ------------------------- */
+.extra {
+  width: 600px;
+}
+
+
 /*----------------------  Popup  ----------------------*/
 .popup{
   display: grid;
