@@ -1,58 +1,39 @@
-import React, { Component } from "react";
-import { Button, Container } from 'react-bootstrap';
-import { faHeart as farHeart } from "@fortawesome/free-regular-svg-icons";
+import React from "react";
+import {  Container } from 'react-bootstrap';
+// import { faHeart as farHeart } from "@fortawesome/free-regular-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
-
 class LikeButton extends React.Component {
-  
   state = {
-    likes: 0
-    
+  likes: 0
   };
 
- 
   addLike = () => {
     let newCount = this.state.likes + 1;
-      this.setState({
+    this.setState({
       likes: newCount,
       bgColor: 'red'
     });
-  
-  
-}
-
-
-
-
+  }
 
   render() {
-
-      return (
-      // <div>
-      //   <Button className="likeButton" 
-      //       > <FontAwesomeIcon icon={faHeart} onClick={this.addLike}  />
-      //     {this.state.likes} 
-      //   </Button>
-      // </div>
-
-
-        <Container className="likeBtnContainer">
-          <FontAwesomeIcon icon={faHeart} 
+    return (
+      <Container className="likeBtnContainer">
+        <FontAwesomeIcon 
+          icon={faHeart} 
           onClick={this.addLike} 
-          className="likeBtnIcon" style={{color:this.state.bgColor}} />
-          <span>
-           {this.state.likes} </span>
-          
-        </Container>
-
-      );
+          className="likeBtnIcon" 
+          style={{color:this.state.bgColor}}/>
+        <span>
+           {this.state.likes} 
+        </span>
+      </Container>
+    );
   }
 }
     
-
 export default LikeButton;
 
 
