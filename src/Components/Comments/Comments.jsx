@@ -3,7 +3,6 @@ import { Button, Container, Row, Col, Form, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LikeButton from "./LikeButton";
 
-
 class Comments extends Component {
   constructor(props) {        // Constructorn visar hur objektet byggs
     super(props);
@@ -39,7 +38,7 @@ class Comments extends Component {
 
   render() {
     return (
-      <Container className="commentComponentStyle">
+      <Container className="charts comCompStyle">
         <Row>
           <h1>Dela med dig av ditt bästa miljötips!</h1>
         </Row>
@@ -47,52 +46,64 @@ class Comments extends Component {
           <LikeButton />
         </Row>
         <Row>
-          <Container className="commentComponentGridStyle">
+          <Container>
             <Row>
               <Col xs={7} >
             <Form 
-                  className="commentComponentFormStyle"
+                  className="comCompFormStyle"
                   onSubmit={this.handleSubmit}>
-              <Form.Group className="charts " controlId="exampleForm.ControlInput1">
+              <Form.Group 
+              className="charts " >
                   <Row>
-                    <Form.Text className="commentNameInput" >
-                      NAMETEST
-                    </Form.Text>
+                    <Form.Label className="comFormLabel" >
+                      NAMN
+                    </Form.Label>
                   </Row>
                   <Row>
                     <Form.Control 
-                        className="commentInputAreaStyle"
+                        placeholder="Skriv ditt namn här..."
+                        className="comFormInput"
                         type="text" 
                         value={this.state.name}
                         onChange={this.handleChangeName}
                         required/>
                   </Row>
                   <Row>
-                    <Form.Text className="text-muted">
-                      KOMMENTEARTEST
-                    </Form.Text>
+                    <Form.Label className="comFormLabel">
+                      KOMMENTAR
+                    </Form.Label>
                   </Row>
                   <Row>
                     <Form.Control 
-                        className="commentInputAreaStyle"
+                        as="textarea" 
+                        rows={3}
+                        placeholder="Skriv ditt bästa miljötips här..."
+                        className="comFormInput"
                         value={this.state.comment}
                         onChange={this.handleChangeComment} 
                         required />
-                  </Row>          
+                  </Row>  
+                  <Row>
+                <Button 
+                className="comFormBtn"
+                as="input" 
+                type="submit" 
+                variant="info" 
+                size="sm" 
+                value="Skicka kommentar"/>
+              </Row>        
               </Form.Group>
-              <Row>
-                <Button as="input" type="submit" variant="info" size="sm" value="Skicka kommentar"></Button>
-              </Row>
+              
             </Form>
             </Col>
           <Col>
-            <Container className="commentDisplayStyle" >
+            <Container className=" " >
               {this.state.commentList.map((item) => (       // skriver ut kommentaren, {item.name}&{item.comment} tar value från formuläret och skriver ut det
-                  <Card className="charts commentContainer" style={{ width: '18rem' }}>
-                    <Card.Title className="commentDisplayNameStyle" key={item.commentLikeButton} >
+                  <Card className=" comDisplayContainer " >
+                    <Card.Title className="comDisplayName" key={item.commentLikeButton} >
                       {item.name} 
                     </Card.Title>
-                    <Card.Text className="commentDisplayCommentStyle" >
+                    <Card.Text className="comDisplayComment" >
                       {item.comment} 
                       <LikeButton/>
                     </Card.Text>
