@@ -15,8 +15,8 @@ const questions = [
     },
     {
       question: "Vad är konsekvensen av den förstärkta växthuseffekten?",
-      correct_answer: "Ökad upphettning i atmosfären",
-      incorrect_answer: ["Jorden snurrar snabbare", "Ökad upphettning i atmosfären", "Ökad nedkylning i atmosfären"],
+      correct_answer: "Temperaturen stiger",
+      incorrect_answer: ["Temperaturen är oförändrad", "Temperaturen stiger", "Temperaturen sjunker"],
       questionId: "003"
 
     },
