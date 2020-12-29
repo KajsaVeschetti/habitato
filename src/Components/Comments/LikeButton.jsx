@@ -206,4 +206,6 @@ export default LikeButton;
 
         // https://medium.com/javascript-in-plain-english/creating-a-reusable-like-button-component-in-react-8028d17c024c
         // https://stackoverflow.com/questions/59091882/how-can-i-use-outlined-icons-with-react-fontawesome
-        
+        // https://stackoverflow.com/questions/56935208/change-the-color-when-onclick-with-react
+        // https://forum.freecodecamp.org/t/react-js-i-need-a-button-color-to-change-onclick-but-cannot-determine-how-to-properly-set-and-change-state-for-that-component/45168/2
+        // 
