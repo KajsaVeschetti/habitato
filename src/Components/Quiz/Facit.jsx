@@ -36,15 +36,15 @@ function Facit() {
                  </div> 
                     <div class="col pt-4"><h3>Vilket av följande är klimatsmart?</h3>
                  <b>Rätt svar: Shoppa mindre</b>
-                 <p>Att vara klimatsmart innebär att agera på ett som främjar miljön och motverkar klimatförändringar. Det är därför klimatsmart att shoppa mindre. Det beror på att industrierna som tillverkar det vi köper står för en stor del av utsläppen av växthusgaser. Om vi konsumerade mindre nya prylar, nya kläder osv skulle det påverka miljön och klimatet positivt. Maten står däremot för en tredjedel av hushållens klimatpåverkan, och störst andel utsläpp kommer från köttproduktionen. Utsläppen skulle minska med upp till hälften om fler valde att äta vegomat. Det är inte heller klimatsmart att flyga. Trots det så flyger vi allt mer, vilket gjorde att klimatpåverkan från flygen steg med 43 procent mellan åren 1990 - 2017. Utsläppen motsvarar ungefär 1 ton per person och år, och sammantaget släpper flygplan ut 74 000 gånger mer koldioxid än tåg.  (Källor: Naturskyddsföreningen, Naturvårdsverket, WWF).</p>
+                 <p>Att vara klimatsmart innebär att agera på ett som främjar miljön och motverkar klimatförändringar. Det är därför klimatsmart att shoppa mindre. Det beror på att industrierna som tillverkar det vi köper står för en stor del av utsläppen av växthusgaser. Om vi konsumerade mindre nya prylar, nya kläder osv skulle det påverka miljön och klimatet positivt. Maten står däremot för en tredjedel av hushållens klimatpåverkan, och störst andel utsläpp kommer från köttproduktionen. Utsläppen skulle minska med upp till hälften om fler valde att äta vegomat. Det är inte heller klimatsmart att flyga. Trots det så flyger vi allt mer, vilket gjorde att klimatpåverkan från flygen steg med 43 procent mellan åren 1990 - 2017. Utsläppen motsvarar ungefär 1 ton per person och år, och sammantaget släpper flygplan ut 74 000 gånger mer koldioxid än tåg. (Källor: Naturskyddsföreningen, Naturvårdsverket, WWF).</p>
                  </div> 
                     <div class="col pt-4"><h3>Varför stiger havsnivåerna??</h3>
                  <b>Rätt svar: Varmare klimat</b>
-                 <p></p>
+                 <p>Havsnivåerna stiger som följd av det allt varmare klimatet. När den globala temperaturen stiger smälter glaciärer och polarisar samtidigt som vattnets volym ökar av värmen. Sedan 1880 har havsnivån stigit med 20 cm, men enligt en rapport från IPCC kan havsnivån under det här århundrandet stiga med upp till en meter. (Källa: Havet.nu).</p>
                  </div>
                  <div class="col pt-4"><h3>Vad brukar betraktas som jordens kylskåp?</h3>
                  <b>Rätt svar: Arktis</b>
-                 <p></p>
+                 <p>Arktis ligger i nordpolen medan Antarktis ligger i sydpolen. Båda platserna är dock täckta av is men enligt Johan Rockström, professor i jordsystemsforskning, är det allt fler forskare som betraktar just Arktis som nyckeln till ett stabilt klimat på jorden. Arktis fungerar som jordens kylskåp genom att 90 procent av värmen från solstrålarna återförs ut i atmosfären, vilket hjälper till att reglera klimatet. Att glaciärisen minskar i Arktis får också effekt i Antarktis då det även påskyndar issmältningen där. Det är en följd av att golfströmmen påverkas av värmecirkulationen i norra Atlanten. (Källor: Havet.nu, Vetenskapsradion - Sveriges Radio).</p>
                  </div>
                     <div class="col pt-4"><h3>Vilket av följande länder släpper ut mest koldioxid per invånare?</h3> 
                 <b>Rätt svar: Finland</b>
