@@ -425,7 +425,10 @@ h2.chartTitle {
   padding-top: 1em;
 }
 
-
+.carousel-indicators li
+{
+  display: none;
+}
 
 
 /*----------------------  About us / Contact  ----------------------*/
