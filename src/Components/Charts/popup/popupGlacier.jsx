@@ -86,7 +86,8 @@ export default function PopupGL() {
         }}
       >
         <Fade in={open}>
-          <div className={classes.paper} style={{background:"rgba(0, 144, 170, 0.9)"}}>
+          {/*<div className={classes.paper} style={{background:"rgba(0, 144, 170, 0.9)"}}>*/}
+          <div className={classes.paper} style={{background:"rgba(68, 118, 128, 0.9)", overflow:"scroll", maxHeight:"600px", minHeight:"100%"}}>
             <h2 id="spring-modal-title" className="chartTitle">Glaciärstorlek</h2>
             {/*<InfoGlacier/>*/}
             <CarouSelGlacier/>
