@@ -9,8 +9,8 @@ import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is requir
 //Nedan kod är hämtad från https://react.semantic-ui.com/modules/modal/ för att få till popup knappar på förstasidan.
 
 
-import InfoCo2 from './infoCO2';
-
+//import InfoCo2 from './infoCO2';
+import CarouSel from '../../CarouSel';
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -91,8 +91,9 @@ export default function PopupCO2() {
         <Fade in={open}>
           <div className={classes.paper} style={{background:"rgba(41, 170, 225, 0.9)", overflow:"scroll", maxHeight:"600px", minHeight:"100%"}}>
             <h2 id="spring-modal-title" className="chartTitle">CO2 Emission</h2>
-            <InfoCo2/>
-          </div>
+            {/*<InfoCo2/>*/}
+            <CarouSel/>
+          </div>       
         </Fade>
       </Modal>
 
