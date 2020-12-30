@@ -15,7 +15,7 @@ class CarouSelGlacier extends Component {
   render() {
     return (
 
-<Carousel interval={null} style={{width:"780px"}} >
+<Carousel interval={null} style={{width:"780px", height:"600px"}} >
 <Carousel.Item>
     <div><InfoGlacier/></div>
 </Carousel.Item>
