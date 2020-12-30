@@ -8,21 +8,21 @@ function FossilFuel () {
   //Den andra delen, som själv är en funktion, gör att knappens nuvarande värde kan uppdateras, dvs när knappen trycks öppnar det upp för att ytterligare innehåll visas.
   const [openButton, setOpenButton] = useState(false);
 
-  //Gör så texten på knappen ändras från "Mer info" (före knappen är trycks) till "Mindre info" (efter knappen tryckts), och vice versa.
+  //Gör så texten på knappen ändras från "Mer info" (före knappen trycks) till "Mindre info" (efter att knappen trycks), och vice versa.
   const buttonName=openButton?'Mindre info':'Mer info'
 
 
   return ( 
     <>
-      {/* Lägger in bild, titel och text i Card*/}
-      <Card.Img className="px-lg-5 pb-5" variant="top" src= {fossilFuel} fluid alt="Factories, with smoke coming out of large chimneys"/>
+      {/* Bild, rubrik och text*/}
+      <Card.Img className="px-lg-5 pb-5" variant="top" src= {fossilFuel} fluid alt="Factories with smoke coming out of large chimneys"/>
       <Card.Title> Vad är fossila bränslen?</Card.Title>
       <Card.Text className="text-left pb-3"> De fossila bränslen som vi idag använder skapades för miljontals år sedan av rester från döda djur och växter. Resterna har under en lång process brutits ned och ombildats till exempelvis kol, naturgas och olja. Ur dessa fossila bränslen utvinner vi energi som t ex används till att driva motorer, till uppvärmning och för att skapa elektricitet. Vid förbränning av fossila bränslen släpps det ut farliga gaser i atmosfären, t ex koldioxid (CO2).</Card.Text>
 
-      {/*Gör så att innehållet (titlar, text plus video) döljs efter att knappen tryckts (innehållet är då synligt)*/}
+      {/*Gör så att innehållet (rubriker, text plus video) döljs efter att knappen tryckts*/}
       <Collapse in={openButton}> 
        <div id="Fuel-collapse-content">
-        {/*Innehåll med titlar plus text samt inbäddad youtube-video som är responsive*/}
+        {/*Innehåll med rubriker plus text samt inbäddad youtube-video som är responsive*/}
         <Card.Title> Varför är fossila bränslen dåligt för klimatet?</Card.Title>
         <Card.Text className="text-left">
           Vår höga användning av fossila bränslen gör att koldioxidhalten i atmosfären hela tiden ökar. Förbränningen av fossila bränslen förstärker därför växthuseffekten, vilket gör att jordens värmebalans rubbas. Temperaturen på jorden stiger och det får negativa konsekvenser för klimat och ekosystem. Även hälso-och miljöfarliga ämnen släpps ut vid förbränning. Det leder till ökad miljöförstöring och att människors hälsa påverkas negativt.</Card.Text>.
@@ -35,7 +35,7 @@ function FossilFuel () {
        </div>
       </Collapse>
       
-      {/*Gör så att innehållet (titlar, text plus video) blir synligt när knappen trycks*/}
+      {/*Gör så att innehållet (rubriker, text plus video) blir synligt när knappen trycks*/}
       <Button variant="info" size="sm" block    
        onClick={() => setOpenButton(!openButton)}
        aria-controls="Fuel-collapse-content"
