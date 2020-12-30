@@ -1,21 +1,61 @@
-import React, { Component } from 'react';
+//import React, { Component } from 'react';
+import React, { useState } from 'react';
 import FossilFuel from './FossilFuel'; 
 import GlobalWarming from './GlobalWarming'; 
 import GlacierSize from './GlacierSize'; 
 import SeaLevel from './SeaLevel'; 
-import {Container, Nav, Navbar, Card} from 'react-bootstrap';
+import {Container, Nav, Navbar, Card, Tabs, Tab} from 'react-bootstrap';
 import { BrowserRouter as Router, Route, Switch, Redirect, NavLink } from 'react-router-dom'; 
 
-class Fakta extends Component {
-
-   render() {
+function Fakta (){
+//class Fakta extends Component {
+   const [keyTab, setKeyTab] = useState();
+  // render() {
 
    return(
    <>
    <Container className="faktaContainer col-lg-9 col-xs-12 px-lg-5 pb-5 rounded ">
     <h1 className="pt-5 pb-2">Fakta om klimatförändringar</h1> 
-    <Card className="bg-light pb-3">
+    <Card className="bg-light pb-3  px-lg-5">
    <Card.Body>
+
+  <Tabs 
+    id="Fakta-tab"
+    className="d-lg-flex d-block"
+    activeKey={keyTab}
+    onSelect={(key) => setKeyTab(key)}
+  >
+    <Tab eventKey ="Fossilt bränsle" title="Fossilt bränsle">
+      <div className="mt-5">
+        <FossilFuel/>
+      </div>
+    </Tab>
+    <Tab eventKey="Global uppvärmning" title="Global uppvärmning">
+    <div className="mt-5">
+        <GlobalWarming/>
+      </div> 
+    </Tab>
+    <Tab eventKey="Glaciär storlek" title="Glaciär storlek">
+    <div className="mt-5">
+        <GlacierSize/>
+      </div>
+    </Tab>
+    <Tab eventKey="Havsnivåer" title="Havsnivåer">
+    <div className="mt-5">
+        <SeaLevel/>
+      </div>  
+    </Tab>
+    </Tabs>
+
+
+
+
+
+
+
+
+{/*
+
     <Router>
      <Navbar expand="lg" bg="light" variant="light">        
        <Nav className="mx-auto"> 
@@ -56,12 +96,18 @@ class Fakta extends Component {
          </div>
       </Switch>
     </Router> 
+
+*/}
     </Card.Body>
    </Card>
    </Container>
-       
 </>
+   );
+}
+
+       
+{/*</>
  );
  }
-}
+}*/}
 export default Fakta;
