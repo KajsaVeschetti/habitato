@@ -10,7 +10,7 @@ import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is requir
 
 
 //import InfoCo2 from './infoCO2';
-import CarouSel from '../../CarouSel';
+import CarouSelCo2 from '../../CarouSelCo2';
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -92,8 +92,8 @@ export default function PopupCO2() {
           <div className={classes.paper} style={{background:"rgba(41, 170, 225, 0.9)", overflow:"scroll", maxHeight:"600px", minHeight:"100%"}}>
             <h2 id="spring-modal-title" className="chartTitle">CO2 Emission</h2>
             {/*<InfoCo2/>*/}
-            <CarouSel/>
-          </div>       
+            <CarouSelCo2/>  
+          </div>
         </Fade>
       </Modal>
 
