@@ -256,7 +256,9 @@ div.charts {
   grid-template-columns: 50% 50%;
 }*/
 
-
+.comCompStyle{
+  margin: 5em;
+}
 
 .comCompStyle h1 {
   text-align: center;
@@ -280,20 +282,26 @@ margin: auto auto;
 
 
 .comDisplayContainer {  
-  border-left: blue solid 3px;
-
-  max-width: 18rem;
+  border-left: solid #17A2B8 0.3em;
+  border-top: solid #17A2B8 0.2em;
+  border-radius: 1em;
+  padding: 0.5em;
+  margin: 2em 2em;
+/* background-color: lightpink; */
+  /* max-width: 18rem; */
 }
 
+
 .comDisplayName {
-  text-align: left;
-  margin-left: 2em;
+  text-align: right;
+  /* margin-left: 2em; */
+  /* border-left: solid #17A2B8 0.1em; */
   /* padding: 1em 2em 1em 2em; */
 }
 
 .comDisplayComment {
   text-align: left;
-  margin-left: 1em;
+  /* margin-left: 1em; */
 
   /* padding: 1em 2em 1em 2em; */
 }
@@ -359,7 +367,7 @@ max-width: 50%;
 }
 
 .likeBtnIcon {
-  color: white;
+  color: lightgrey;
 }
 
 /* -------------------------  quizComponent  ------------------------- */
