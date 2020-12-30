@@ -38,89 +38,80 @@ class Comments extends Component {
 
   render() {
     return (
-      <Container className="charts comCompStyle">
+      <Container className="charts col-lg-9 comCompStyle">
         <Row>
           <h1>Dela med dig av ditt bästa miljötips!</h1>
-        </Row>
-        <Row>
-          <LikeButton />
         </Row>
         <Row>
           <Container>
             <Row>
               <Col xs={7} >
-            <Form 
-                  className="comCompFormStyle"
-                  onSubmit={this.handleSubmit}>
-              <Form.Group 
-              className="charts " >
-                  <Row>
-                    <Form.Label className="comFormLabel" >
-                      NAMN
-                    </Form.Label>
-                  </Row>
-                  <Row>
-                    <Form.Control 
-                        placeholder="Skriv ditt namn här..."
-                        className="comFormInput"
-                        type="text" 
-                        value={this.state.name}
-                        onChange={this.handleChangeName}
-                        required/>
-                  </Row>
-                  <Row>
-                    <Form.Label className="comFormLabel">
-                      KOMMENTAR
-                    </Form.Label>
-                  </Row>
-                  <Row>
-                    <Form.Control 
-                        as="textarea" 
-                        rows={3}
-                        placeholder="Skriv ditt bästa miljötips här..."
-                        className="comFormInput"
-                        value={this.state.comment}
-                        onChange={this.handleChangeComment} 
-                        required />
-                  </Row>  
-                  <Row>
-                <Button 
-                className="comFormBtn"
-                as="input" 
-                type="submit" 
-                variant="info" 
-                size="sm" 
-                value="Skicka kommentar"/>
-              </Row>        
-              </Form.Group>
-              
-            </Form>
-            </Col>
-          <Col>
-            <Container className=" " >
-              {this.state.commentList.map((item) => (       // skriver ut kommentaren, {item.name}&{item.comment} tar value från formuläret och skriver ut det
-                  <Card className=" comDisplayContainer " >
-                    <Card.Title className="comDisplayName" key={item.commentLikeButton} >
-                      {item.name} 
-                    </Card.Title>
-                    <Card.Text className="comDisplayComment" >
-                      {item.comment} 
-                      <LikeButton/>
-                    </Card.Text>
-                  </Card>
-              ))}
-            </Container>
-            </Col>
+                <Form 
+                    className="comCompFormStyle"
+                    onSubmit={this.handleSubmit}>
+                  <Form.Group 
+                      className="charts " >
+                    <Row>
+                      <Form.Label className="comFormLabel" >
+                        NAMN
+                      </Form.Label>
+                    </Row>
+                    <Row>
+                      <Form.Control 
+                          placeholder="Skriv ditt namn här..."
+                          className="comFormInput"
+                          type="text" 
+                          value={this.state.name}
+                          onChange={this.handleChangeName}
+                          required/>
+                    </Row>
+                    <Row>
+                      <Form.Label className="comFormLabel">
+                        KOMMENTAR
+                      </Form.Label>
+                    </Row>
+                    <Row>
+                      <Form.Control 
+                          as="textarea" 
+                          rows={3}
+                          placeholder="Skriv ditt bästa miljötips här..."
+                          className="comFormInput"
+                          value={this.state.comment}
+                          onChange={this.handleChangeComment} 
+                          required />
+                    </Row>  
+                    <Row>
+                      <Button 
+                        className="comFormBtn"
+                        as="input" 
+                        type="submit" 
+                        variant="info" 
+                        size="sm" 
+                        value="Skicka kommentar"/>
+                    </Row>        
+                  </Form.Group>
+                </Form>
+              </Col>
+              <Col>
+                <Container className=" charts " >
+                  <p> Läs vad dina vänner gör för att minska negativ påverkan på jorden:</p>
+                  {this.state.commentList.map((item) => (       // skriver ut kommentaren, {item.name}&{item.comment} tar value från formuläret och skriver ut det
+                    <Container className="comDisplayContainer " >
+                      <Card.Title className="comDisplayName" key={item.commentLikeButton} >
+                          {item.name} 
+                      </Card.Title>
+                      <Card.Text className="comDisplayComment" >
+                          {item.comment} 
+                        <LikeButton/>
+                      </Card.Text>   
+                    </Container> 
+                  ))}
+                </Container>
+              </Col>
             </Row>
           </Container>
         </Row>
       </Container>
-
-
-
-
-
-
     );
   }
 }
