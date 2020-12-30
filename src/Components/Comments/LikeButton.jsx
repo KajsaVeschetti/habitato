@@ -14,7 +14,7 @@ class LikeButton extends React.Component {
     let newCount = this.state.likes + 1;
     this.setState({
       likes: newCount,
-      bgColor: 'red'
+      bgColor: '#EB2805'
     });
   }
 
