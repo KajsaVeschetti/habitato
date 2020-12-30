@@ -20,13 +20,13 @@ class CarouSelSea extends Component {
     <div><InfoSea/></div>
 </Carousel.Item>
 <Carousel.Item>   
+    <div><InfoGlacier/></div>
+</Carousel.Item>
+<Carousel.Item>
     <div><InfoTemp/></div>
 </Carousel.Item>
 <Carousel.Item>
-    <div><InfoCo2/></div>
-</Carousel.Item>
-<Carousel.Item>
-   <div><InfoGlacier/></div>
+   <div><InfoCo2/></div>
 </Carousel.Item>  
 </Carousel>
 );
