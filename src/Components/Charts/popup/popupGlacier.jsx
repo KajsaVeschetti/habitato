@@ -5,8 +5,8 @@ import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is required for IE 11 support
 
-import InfoGlacier from './infoGlacier';
-
+//import InfoGlacier from './infoGlacier';
+import CarouSel from '../../CarouSel';
 //Nedan kod är hämtad från https://react.semantic-ui.com/modules/modal/ för att få till popup knappar på förstasidan.
 
 
@@ -88,7 +88,8 @@ export default function PopupGL() {
         <Fade in={open}>
           <div className={classes.paper} style={{background:"rgba(0, 144, 170, 0.9)"}}>
             <h2 id="spring-modal-title" className="chartTitle">Glaciärstorlek</h2>
-            <InfoGlacier/>
+            {/*<InfoGlacier/>*/}
+            <CarouSel/>
           </div>
         </Fade>
       </Modal>
