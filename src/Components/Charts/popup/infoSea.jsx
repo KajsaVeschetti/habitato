@@ -62,6 +62,8 @@ class InfoSea extends Component {
           Där finnen en div för att bygga in de två diagrammen och en informationsruta till en bredd.
           Varje diagram har ett chartName för att kunna hämta data från det årtal som skrivs in  */ 
           <div>
+            <div style={{background:"rgba(20, 109, 177, 0.9)", paddingBottom: "15px", border:'2px solid #000'}}>
+            <h2 className="chartTitle pt-3">Havsnivån</h2>
               <div class="card mx-auto charts " style={{width:"750px"}}>
               <div className="chartHeader">
               <h3>Skriv in två årtal och se vad <br/> klimatförändringarna har gjort under åren</h3>
@@ -82,6 +84,7 @@ class InfoSea extends Component {
 
                       </div>
           </div>  
+   </div>
    </div>
         );
     }
