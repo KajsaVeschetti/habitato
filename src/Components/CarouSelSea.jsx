@@ -15,10 +15,10 @@ class CarouSelSea extends Component {
   render() {
     return (
 
-<Carousel interval={null} style={{width:"780px", height:"600px"}} >
-<Carousel.Item>
+<Carousel interval={null} style={{width:"785px", height:"800px"}} >
+<Carousel.Item>  
     <div><InfoSea/></div>
-</Carousel.Item>
+</Carousel.Item>  
 <Carousel.Item>   
     <div><InfoGlacier/></div>
 </Carousel.Item>
