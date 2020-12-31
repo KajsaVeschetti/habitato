@@ -23,10 +23,10 @@ class CarouSelTemp extends Component {
     <div><InfoCo2/></div>
 </Carousel.Item>
 <Carousel.Item> 
-    <div><InfoGlacier/></div>
+    <div><InfoSea/></div>
     </Carousel.Item>  
     <Carousel.Item> 
-   <div><InfoSea/></div>
+   <div><InfoGlacier/></div>
 </Carousel.Item>  
 </Carousel>
 );
