@@ -21,7 +21,7 @@ function Fakta (){
 
   <Tabs 
     id="Fakta-tab"
-    className="d-lg-flex d-block"
+    className="d-lg-flex d-block "
     activeKey={keyTab}
     onSelect={(key) => setKeyTab(key)}
   >
