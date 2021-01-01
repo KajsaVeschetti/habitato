@@ -86,22 +86,22 @@ class NavBar extends Component {
                         </Link> */}
 
            <NavLink className="navLink" 
-              to="/Charts/AllCharts" activeStyle={{textDecoration:"underline 5px", textDecorationColor:"#17A2B8"}}>
+             to="/Charts/AllCharts" activeClassName="activeLink">
               HEM
            </NavLink>
            <NavLink className="navLink" 
-              to="/Quiz" activeStyle={{textDecoration:"underline 5px", textDecorationColor:"#17A2B8"}}>
+              to="/Quiz" activeClassName="activeLink">
                QUIZ
           </NavLink>
           <NavLink className="navbar-brand d-none d-lg-block" 
             to="/"><img src={Habitato1} alt="Habitato logo" className="navLogo"/>
           </NavLink>
           <NavLink className="navLink" 
-            to="/Comments" activeStyle={{textDecoration:"underline 5px", textDecorationColor:"#17A2B8"}}>
+            to="/Comments" activeClassName="activeLink">
              TIPS
          </NavLink>
          <NavLink className="navLink" 
-            to="/Faktarutor" activeStyle={{textDecoration:"underline 5px", textDecorationColor:"#17A2B8"}}>
+            to="/Faktarutor" activeClassName="activeLink">
              FAKTA
          </NavLink>
 
