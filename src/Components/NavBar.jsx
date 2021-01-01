@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 import {  BrowserRouter as Router,
   Route, Switch, Redirect,
   NavLink, Link } from "react-router-dom";
@@ -21,14 +21,14 @@ class NavBar extends Component {
     render () {
  
 
-    // test
+   {/*// test
     const activeLink = {
       fontWeight: "bold",
       color: "#17A2B8",
       textDecoration: "underline",
       textDecorationColor: "#17A2B8",
       textDecorationStyle: "double"
-    }
+    }*/}
 
         return(
             <div className="fixedHeader">
@@ -39,7 +39,8 @@ class NavBar extends Component {
               <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                <Navbar.Collapse id="responsive-navbar-nav">
                <Nav className="mx-auto text-left" >
-                  <NavLink className="nav-link "
+                  
+                  {/*<NavLink className="nav-link "
                         className="navLink" 
                         to="/Charts/AllCharts" 
                         activeStyle={activeLink}>
@@ -83,6 +84,27 @@ class NavBar extends Component {
                         <Link className="nav-link" style={linkStyle} to="/Faktarutor">
                             FAKTA 
                         </Link> */}
+
+           <NavLink className="navLink" 
+              to="/Charts/AllCharts" activeStyle={{textDecoration:"underline 5px", textDecorationColor:"#17A2B8"}}>
+              HEM
+           </NavLink>
+           <NavLink className="navLink" 
+              to="/Quiz" activeStyle={{textDecoration:"underline 5px", textDecorationColor:"#17A2B8"}}>
+               QUIZ
+          </NavLink>
+          <NavLink className="navbar-brand d-none d-lg-block" 
+            to="/"><img src={Habitato1} alt="Habitato logo" className="navLogo"/>
+          </NavLink>
+          <NavLink className="navLink" 
+            to="/Comments" activeStyle={{textDecoration:"underline 5px", textDecorationColor:"#17A2B8"}}>
+             TIPS
+         </NavLink>
+         <NavLink className="navLink" 
+            to="/Faktarutor" activeStyle={{textDecoration:"underline 5px", textDecorationColor:"#17A2B8"}}>
+             FAKTA
+         </NavLink>
+
               </Nav>
             </Navbar.Collapse>
             </Navbar> 
