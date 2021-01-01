@@ -15,7 +15,7 @@ class CarouSelTemp extends Component {
   render() {
     return (
 
-<Carousel interval={null} style={{width:"785px", height: "800px"}} >
+<Carousel interval={null} style={{width:"785px", height: "800px"}}>
 <Carousel.Item>  
     <div><InfoTemp/></div>
 </Carousel.Item>
