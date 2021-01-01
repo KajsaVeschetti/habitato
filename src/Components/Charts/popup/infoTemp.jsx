@@ -65,7 +65,7 @@ class InfoTemp extends Component {
           Varje diagram har ett chartName för att kunna hämta data från det årtal som skrivs in  */ 
           <div>
             <div style={{background:"rgba(68, 118, 128, 0.9)", paddingBottom: "15px", border:'2px solid #000'}}>
-            <h2 className="chartTitle pt-3">Global Tempratur</h2>
+            <h2 id="spring-modal-title"className="chartTitle pt-3">Global Tempratur</h2>
 
               <div class="card mx-auto charts " style={{width:"750px"}}>
               <div className="chartHeader">
