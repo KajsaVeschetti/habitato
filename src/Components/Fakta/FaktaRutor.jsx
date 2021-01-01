@@ -35,7 +35,7 @@ function Fakta (){
         <GlobalWarming/>
       </div> 
     </Tab>
-    <Tab eventKey="Glaciär storlek" title="Glaciär storlek">
+    <Tab eventKey="Glaciärstorlek" title="Glaciärstorlek">
     <div className="mt-5">
         <GlacierSize/>
       </div>
