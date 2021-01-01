@@ -7,7 +7,7 @@ function ReadMore() {
 
   // Create a state variable to store the present state that conveys information about the expanded or collapsed state of the link
   const extraContent=
-    <div class="extra">
+    <div className="extra">
       <p>Den globala uppvärmningen gör så att vattnet på jorden blir varmare och när vatten värms utvidgas det. Den höjda temperaturen leder också till att glaciärer och polarisar smälter. Dessa två kombinationerna gör så att havsnivån höjs.Följder av en höjd havsnivå kan till exempel vara översvämningar och att stora delar av kustområden försvinner.</p>
   </div>
 
