@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button} from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 const QBtns = ({ question, options, selected }) => {
@@ -9,10 +9,10 @@ const QBtns = ({ question, options, selected }) => {
     return (
         <div>
             <div>{question}</div>
-                <div class="questWrap">
+                <div className="questWrap">
                     {/* mappar ut knappar */}
                 {answer.map((text) => (
-                    <Button class="btnWrap" variant="info" size="sm" onClick={() => {
+                    <Button className="btnWrap" variant="info" size="sm" onClick={() => {
                         setAnswer([text]);
                         selected(text);
                     }}>
