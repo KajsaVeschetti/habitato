@@ -9,7 +9,7 @@ function FossilFuel () {
   const [openButton, setOpenButton] = useState(false);
 
   //Gör så texten på knappen ändras från "Mer info" (före knappen trycks) till "Mindre info" (efter att knappen trycks), och vice versa.
-  const buttonName=openButton?'Mindre info':'Mer info'
+  const BtnName=openButton?'Mindre info':'Mer info'
 
 
   return ( 
@@ -40,7 +40,7 @@ function FossilFuel () {
        onClick={() => setOpenButton(!openButton)}
        aria-controls="Fuel-collapse-content"
        aria-expanded={openButton}
-       >{buttonName}
+       >{BtnName}
       </Button>
   
    </>
