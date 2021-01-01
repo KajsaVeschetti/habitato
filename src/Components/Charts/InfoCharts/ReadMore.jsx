@@ -6,7 +6,7 @@ function ReadMore() { // False = Knappen är inte tryckt på = texten gömd
 
   const extraContent= 
   // Variabel att förvara text man vill visa/gömma. 
-    <div class="extra">
+    <div className="extra">
       <p>
         Co2 är den kemiska formeln för Koldioxid. Koldioxid är en färg- och luktfri gas. 
         Runt jorden, i vår atmosfär, finns det flera olika gaser, bland annat koldioxid. Men även metan, lustgas och andra så kallade växthusgaser. Växthusgaserna hjälper till att hålla jorden varm, utan den naturliga växthuseffekten skulle vår jord vara ungefär 30 grader kallare än vad den är idag.
