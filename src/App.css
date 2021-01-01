@@ -39,16 +39,13 @@ h1, h2, h3, h4, h5 {
   font-family: "Segoe UI Light";
 }
 
-.fixedFooter li{
-  display: inline-block
-}
-
 .App {
   text-align: center;
   margin: auto; 
 }
 
 /*--------------------  Navbar  --------------------*/
+
 .navbar {
   margin-top: 0;
   margin-bottom: 3em; 
@@ -81,6 +78,7 @@ h1, h2, h3, h4, h5 {
 
 
 /*---------------------  Footer  --------------------*/
+
 footer {
   margin: 0 auto;
   position: absolute;
@@ -115,6 +113,10 @@ footer {
   padding: 0.5em;
   max-width: 1000px;
   justify-content: center;
+}
+
+.fixedFooter li{
+  display: inline-block
 }
 
 footer .footerLogo:hover{
@@ -153,7 +155,6 @@ div.charts {
   border-radius: 5px 5px 0 0 ;
 }
 
-
 .chartsTitel h2 {
   font-family: 'Quicksand', sans-serif;
   font-weight: 100;
@@ -172,11 +173,6 @@ div.charts {
   font-family: 'Quicksand', sans-serif;
   font-weight: 100;
   font-size: 20px;
-}
-
-.faktaContainer{
-  background: rgba(249, 249, 249, 0.8);
-  border: 1px solid #999;
 }
 
 
@@ -262,7 +258,6 @@ margin: auto auto;
   margin: 1.5em auto 0 auto;
 }
 
-
 .comDisplayContainer {  
   border-left: solid #17A2B8 0.3em;
   border-top: solid #17A2B8 0.2em;
@@ -272,7 +267,6 @@ margin: auto auto;
 /* background-color: lightpink; */
   /* max-width: 18rem; */
 }
-
 
 .comDisplayName {
   text-align: right;
@@ -352,7 +346,9 @@ max-width: 50%;
   color: lightgrey;
 }
 
+
 /* -------------------------  quizComponent  ------------------------- */
+
 .btnWrap {
   margin: 4px;
 }
@@ -361,7 +357,9 @@ max-width: 50%;
   padding-bottom: 2em;
 }
 
+
 /* -------------------------  ReadMoreComponent  ------------------------- */
+
 .extra {
   width: 600px;
   padding: 1em;
@@ -369,6 +367,7 @@ max-width: 50%;
 
 
 /*----------------------  Popup  ----------------------*/
+
 .popup{
   margin-left: 15%;
   margin-right: 15%;
@@ -416,6 +415,9 @@ h2.chartTitle {
   padding-bottom: 1em;
   padding-top: 1em;
 }
+
+
+/*----------------------  Carousel  ----------------------*/
 
 .carousel-indicators li{
   display: none;
