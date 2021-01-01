@@ -26,7 +26,7 @@ body {
   min-height: 100%;
   background-color: #f9f9f9;
   font-family: 'Quicksand', sans-serif;
- }
+}
 
 a{
   text-decoration: none;
@@ -45,8 +45,7 @@ h1, h2, h3, h4, h5 {
 
 .App {
   text-align: center;
-  margin: auto;
-  
+  margin: auto; 
 }
 
 /*--------------------  Navbar  --------------------*/
@@ -55,7 +54,6 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 3em; 
   background-color: #f9f9f9;
   font-weight: 600;
-  
 }
 
 .navLogo{
@@ -90,8 +88,6 @@ footer {
   width: 100%;
 }
 
-
-
 .footerStyle{
   font-size: 1em;
   text-decoration: none;
@@ -99,13 +95,11 @@ footer {
   float: center;
   display: inline;
   list-style-type: none;
-  
 }
 
 .footerLinks{
   margin: 1.25em;
   color: #5f5f5f;
-
 }
 
 .footerLogo {
@@ -150,7 +144,6 @@ div.charts {
   padding-top: 2em;
   margin-top: 15px;
   margin-bottom: 20px;
-
 }
 
 .chartsTitel {
@@ -165,7 +158,6 @@ div.charts {
   font-family: 'Quicksand', sans-serif;
   font-weight: 100;
   font-size: 20px;
- 
 }
 
 .containerTitle{
@@ -195,7 +187,6 @@ div.charts {
   margin-left: 3.5em;
   /* margin-bottom: 4em;
   padding-bottom: 4em; */
-  
 }
 
 .dataAbbrGas, .dataAbbrLiq, .dataAbbrSol, .dataAbbrCem, .dataAbbrFlar {
@@ -231,10 +222,6 @@ div.charts {
 .dataAbbrFlar {
   border-left: #d9534f solid 15px;
 }
-
-
-
-
 
 
 /* -------------------------  CommentComponent  ------------------------- */
@@ -273,7 +260,6 @@ margin: auto auto;
 
 .comFormBtn {
   margin: 1.5em auto 0 auto;
-
 }
 
 
@@ -392,7 +378,6 @@ max-width: 50%;
   grid-gap: 20px;
   list-style: none;
   padding-top:2em;
-
 }
 
 .popupButton {
@@ -432,8 +417,7 @@ h2.chartTitle {
   padding-top: 1em;
 }
 
-.carousel-indicators li
-{
+.carousel-indicators li{
   display: none;
 }
 
