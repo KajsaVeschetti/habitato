@@ -73,14 +73,12 @@ h1, h2, h3, h4, h5 {
 }
 
 .navLink:hover{
-  text-decoration: underline 4px;
-  text-decoration-color: #17A2B8;
+  text-decoration: underline 4px #17A2B8 ;
 }
 
 
 .activeLink{
-  text-decoration: underline 4px;
-  text-decoration-color: #17A2B8;
+  text-decoration: underline 4px #17A2B8;
 }
 
 
