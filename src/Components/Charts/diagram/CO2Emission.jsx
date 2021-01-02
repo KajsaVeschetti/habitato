@@ -69,7 +69,8 @@ export default class BarCharts extends Component {
             
             <div style={{width:"300px", height:"500px", float:"left"}}>
               <div style={{textAlign:"center", marginLeft:"3.5em"}}>
-                <input className="diagramInput" type="text" placeholder="Välj ett år" style={{textAlign:"center"}} onKeyDown={e=> this.handleYear(e)}></input>
+              <label>Koldioxidutsläpp från fossila bränslen <br/> Välj årtal mellan 1751-2014</label>
+                <input className="diagramInput" type="text" placeholder="Välj år och tryck enter" style={{textAlign:"center"}} onKeyDown={e=> this.handleYear(e)}></input>
                 </div>
                 <BarChart
                     width={300}
@@ -89,8 +90,8 @@ export default class BarCharts extends Component {
                 <Cell  fill ={COLORS[0]}/>
                 </Bar>
                 </BarChart>
-                <div className="dataAbbrContainer" >
-                  <ul >
+                <div className="dataAbbrContainer">
+                  <ul>
                     <li className="dataAbbrGas" style={linkStyle}>Gas = Gas fuel</li>
                     <li className="dataAbbrLiq" style={linkStyle}>Liq = Liquid fuel</li>
                     <li className="dataAbbrSol" style={linkStyle}>Sol = Solid fuel</li>
