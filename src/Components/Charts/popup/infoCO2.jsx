@@ -56,9 +56,9 @@ class InfoCo2 extends Component {
           Där finnen en div för att bygga in de två diagrammen och en informationsruta till en bredd.
           Varje diagram har ett chartName för att kunna hämta data från det årtal som skrivs in  */  
           <div style={{background:"rgba(41, 170, 225, 0.9)", paddingBottom: "15px", border:'2px solid #000' }}>
-          <h2 className="chartTitle pt-3">CO2 Emission</h2>
-
-              <div class="card mx-auto charts " style={{width:"750px"}}> 
+          <h2 id="spring-modal-title" className="chartTitle pt-3">CO2-utsläpp från fossila bränslen</h2>
+        
+              <div className="card mx-auto charts " style={{width:"750px"}}> 
              
               <div className="chartHeader">
               <h3>Skriv in två årtal och se vad <br/> klimatförändringarna har gjort under åren</h3>
@@ -74,13 +74,13 @@ class InfoCo2 extends Component {
                         CO2Emission={this.state.CO2Emission[this.state.indexYear2]} 
                         onYearFilter={this.handleYearFilter}/>
                        {/* Co2-info */}
-                        <ReadMore />
-                        </div>  
+                       <ReadMore/> 
+                        </div>   
                                       <div>
-                                             
+                                                    
                       </div>  
                     </div>       
-       
+                      
                     </div>
   
                     </div>
