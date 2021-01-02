@@ -68,7 +68,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .navLink:hover{
-  text-decoration: underline 4px #17A2B8 ;
+  text-decoration: underline 4px #17A2B8;
+  color: #5f5f5f;
 }
 
 
@@ -423,7 +424,6 @@ h2.chartTitle {
   display: none;
 }
 
-
 /*----------------------  About us / Contact  ----------------------*/
 
 .conTitle {
@@ -449,3 +449,21 @@ h2.chartTitle {
 }
 
 
+@media only screen and (max-width: 600px) {
+
+  .popup{
+    display: grid;
+    grid-template-columns: 1fr; 
+  }
+
+  div.charts {
+    padding-top: 0;
+    margin-top: -12px;
+  
+  }
+  
+  
+
+ }
+
+ 
