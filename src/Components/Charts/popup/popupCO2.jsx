@@ -90,7 +90,7 @@ export default function PopupCO2() {
       >
         <Fade in={open}> 
         
-          <div style={{ overflow:"scroll", maxHeight:"600px", minHeight:"100%", }}>
+          <div style={{ overflow:"scroll", maxHeight:"600px", minHeight:"100%" }}>
             {/*<InfoCo2/>*/}
             <CarouSelCo2/>  
         </div>
