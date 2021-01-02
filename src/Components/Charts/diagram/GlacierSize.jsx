@@ -53,8 +53,7 @@ class Glacier extends Component {
             <React.Fragment>
             <div style={{width:"300px", height:"350px", float:"left"}}>
               <div style={{textAlign:"center", marginLeft:"3em"}}>
-                <label>Välj ett år: 1945-2014</label>
-            <input className="diagramInput" type="text" placeholder="Tryck enter" onKeyDown={e=> this.handleYear(e)}></input>
+            <input className="diagramInput" type="text" placeholder="Välj ett år" onKeyDown={e=> this.handleYear(e)}></input>
             </div>
             <BarChart
                     width={300}
