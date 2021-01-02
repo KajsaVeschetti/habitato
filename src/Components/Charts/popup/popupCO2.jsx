@@ -74,7 +74,7 @@ export default function PopupCO2() {
     /*Nedan kod skapar en knapp som när man trycker på den visar ett diagram */
     <div> 
       <button type="button" className="popupButton" style={{background:"rgba(41, 170, 225, 0.9)"}} onClick={handleOpen}>
-       CO2 Emission
+       Koldioxidutsläpp
       </button>
       <Modal
         aria-labelledby="spring-modal-title"
@@ -89,11 +89,11 @@ export default function PopupCO2() {
         }}
       >
         <Fade in={open}> 
-        <div style={{ overflow:"scroll", maxHeight:"600px", minHeight:"100%", }}> 
-      
+        
+          <div style={{ overflow:"scroll", maxHeight:"600px", minHeight:"100%", }}>
             {/*<InfoCo2/>*/}
             <CarouSelCo2/>  
-          </div>
+        </div>
         </Fade>
       </Modal>
 
