@@ -6,7 +6,7 @@ import seaLevel from "./faktaImg/seaLevel.jpg";
 function SeaLevel() {
   let [openButton, setOpenButton] = useState(false);
 
-  const buttonName=openButton?'Mindre info':'Mer info'
+  const buttonName=openButton?'Visa mindre':'Läs mer'
 
   return ( 
     <>
