@@ -67,7 +67,7 @@ export default class BarCharts extends Component {
         return (
           
             
-            <div style={{width:"300px", height:"500px", float:"left"}}>
+          <div style={{width:"280px", height:"600px", float:"left"}}>
               <div style={{textAlign:"center", marginLeft:"3.5em"}}>
               <label>Koldioxidutsläpp från fossila bränslen <br/> Välj årtal mellan 1751-2014</label>
                 <input className="diagramInput" type="text" placeholder="Välj år och tryck enter" style={{textAlign:"center"}} onKeyDown={e=> this.handleYear(e)}></input>
