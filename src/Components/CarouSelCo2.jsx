@@ -15,7 +15,7 @@ class CarouSelCo2 extends Component {
   render() {
     return (
 
-<Carousel interval={null} style={{width:"785px", height:"800px"}} >
+<Carousel interval={null} indicators={false} style={{width:"785px", height:"800px"}} >
 <Carousel.Item>  
     <div><InfoCo2/></div>
 </Carousel.Item>
