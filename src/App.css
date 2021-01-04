@@ -418,12 +418,6 @@ h2.chartTitle {
 }
 
 
-/*----------------------  Carousel  ----------------------*/
-
-.carousel-indicators li{
-  display: none;
-}
-
 /*----------------------  About us / Contact  ----------------------*/
 
 .conTitle {
@@ -458,12 +452,9 @@ h2.chartTitle {
 
   div.charts {
     padding-top: 0;
-    margin-top: -12px;
-  
+    margin-top: -12px; 
   }
-  
-  
 
- }
+}
 
  
