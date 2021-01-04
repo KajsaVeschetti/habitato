@@ -26,7 +26,7 @@ function ReadMore() { // False = Knappen är inte tryckt på = texten gömd
   //extraContent= min text som ska visat 
   return (
     <div className="App">
-      <Button className="ml-4 mt-4" size="sm" variant="info"  onClick={()=>{setReadMore(!readMore)}}>{BtnName}</Button> {readMore && extraContent} 
+      <Button size="sm" variant="info"  onClick={()=>{setReadMore(!readMore)}}>{BtnName}</Button> {readMore && extraContent} 
     </div>
   );
 }
