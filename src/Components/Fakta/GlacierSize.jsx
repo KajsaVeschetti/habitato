@@ -26,7 +26,7 @@ function GlacierSize () {
          Arktis). Glaciärer kan betraktas som världens största färskvattenreserv, men i takt med att jordens medeltemperatur stiger 
          så har glaciärernas storlek börjat minska i allt snabbare takt; under sommaren smälter mer av isen och mindre återbildas under 
          vintern. Denna process går allt snabbare och många forskare oroar sig för följderna då Arktis, jordens kylskåp, inte längre 
-         är tillräckligt kallt. Det blivit en ond spiral då glaciärisarna hjälper till att kyla jorden, men i takt med att de smälter 
+         är tillräckligt kallt. Det har blivit en ond spiral; glaciärisarna hjälper till att kyla jorden, men i takt med att de smälter 
          blir det svårare att hålla kylskåpet kallt. Vad händer om alla glaciär smälter?
        </Card.Text>
        {/*Gör så att innehållet (rubriker, text plus video) döljs efter att knappen tryckts*/}
@@ -39,9 +39,9 @@ function GlacierSize () {
          <Card.Text className="text-left pb-1">
           Om alla glaciärer smälter skulle havsnivån stiga med över 120 meter, men enbart ett par meters stigning skulle få stor påverkan. 
           Ett flertal kuststäder och stora delar av hela länder skulle hamna under havsytan, t ex New York och Bangladesh. Många platser 
-          på jorden är också beroende av färskvattnen från glaciärerna, bland annat länderna runt Himalaya och Anderna. De två främsta 
+          på jorden är också beroende av färskvatten från glaciärerna, bland annat länderna runt Himalaya och Anderna. De två främsta 
           konsekvenserna av att glaciärierna smälter är således att havsnivåerna höjs och att tillgången till färskvatten på sikt kommer 
-          minska. Glaciärerna kommer ge ifrån sig mindre färskvatten eftersom dess storlek minskar. Detta gör oss mer sårbara eftersom 
+          minska. Glaciärerna kommer ge ifrån sig mindre färskvatten eftersom deras storlek minskar. Detta gör oss mer sårbara eftersom 
           tillgången till färskvatten och ökade havsnivåer påverkar allt liv på jorden.
          </Card.Text> 
          <Card.Title>

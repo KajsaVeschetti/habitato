@@ -49,7 +49,7 @@ function SeaLevel() {
          <Card.Text className="text-left ">
            För att kunna mildra effekterna är det viktigt att vi minskar utsläppen av växthusgaser, men också att vi arbetar för mer 
            klimatanpassade samhällen. Det kan t ex innebära att vi bygger med utgångspunkt från att havsnivåerna kommer att fortsätta 
-           stiga. Det gör oss mindre sårbara för konsekvenserna av ökade havsnivåer, men det påverkar inte klimatförändringarna. Enda 
+           stiga. Det gör oss mindre sårbara för konsekvenserna av stigande havsnivåer, men det påverkar inte klimatförändringarna. Enda 
            sättet att minska klimatförändringarna är att vi blir mer klimatsmarta i stort som smått. Vilka klimatsmarta val gör du? 
            Lämna gärna ett <a href= "./Comments">tips</a>.</Card.Text>
          <h4>Vill du veta mer? Titta på en video om varför havsnivån stiger.</h4>
