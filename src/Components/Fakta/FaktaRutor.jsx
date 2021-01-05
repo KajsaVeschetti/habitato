@@ -29,9 +29,9 @@ function Fakta (){
        onSelect={(k) => setKeyTab(k)} 
       >
       <Tab eventKey ="Fossilt bränsle" title="Fossilt bränsle" tabClassName="tabitem1" >
-       <div className="mt-5">
+        <div className="mt-5">
         <FossilFuel/>
-       </div>
+        </div>
       </Tab>
       <Tab eventKey="Global uppvärmning" title="Global uppvärmning" tabClassName="tabitem2">
        <div className="mt-5">
