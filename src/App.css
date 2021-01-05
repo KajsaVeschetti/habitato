@@ -271,6 +271,9 @@ div.charts {
   grid-template-columns: 50% 50%;
 }*/
 
+.comFirstRow {
+ border-bottom: solid 1em #0090AA;
+}
 .comCompStyle{
   margin: 5em;
 }
@@ -278,6 +281,14 @@ div.charts {
 .comCompStyle h1 {
   text-align: center;
 margin: auto auto;
+/* margin-top: 3em; */
+padding: 3em 2em 1em;
+}
+
+.comImg {
+  /* border: green solid 5px; */
+  padding: 3em 0em 0em 5em;
+  margin-bottom: 0;
 }
 
 .comFormLabel {
@@ -319,50 +330,6 @@ margin: auto auto;
 }
 
 
-/* .commentComponentFormStyle {
-max-width: 50%;
- 
-  border-radius: 5px;
-  padding: 2em 0em;
-  margin: 0 1em;
-  max-height: 15em;
-}  */
-
-
-
-/* 
-.commentInputAreaStyle {
-  margin: auto auto;
-  border-radius: 7px;
-}
-
-.commentDisplayStyle {
-  grid-column: 2;
-}
-
-.commentContainer {
-  margin: 0 auto 16px auto;
-  height: auto;
-  background-color: #f7f7f7;
-  border-radius: 5px;
-  padding: 0em;
-}
-
-.commentDisplayNameStyle {
-  text-align: left;
-  font-weight: bold;
-  margin-top: 2em; 
-  margin-bottom: 0;
-  padding: 0.2em 0.5em 0 0.5em;
-  border-left: solid #17A2B8 3px;
-}
-
-.commentDisplayCommentStyle {
-  text-align: left;
-  margin-top: 0;
-  padding: 0.2em 0 0.5em 0.5em ;
-  border-left: solid #17A2B8 3px;
-} */
 
 /* -------------------------  LikeButton  ------------------------- */
 
