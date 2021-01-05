@@ -216,8 +216,6 @@ div.charts {
 .dataAbbrContainer {
   text-align:center;
   margin-left: 3.5em;
-  /* margin-bottom: 4em;
-  padding-bottom: 4em; */
 }
 
 .dataAbbrGas, .dataAbbrLiq, .dataAbbrSol, .dataAbbrCem, .dataAbbrFlar {
@@ -226,8 +224,6 @@ div.charts {
   text-decoration: none;
   list-style-type: none; 
   padding: 0.5em;
-  /* padding-right: 2em;
-  padding-left: 1em; */
   margin-left: 20%;
   margin-right: 20%;
   border-radius: 80%;
@@ -305,7 +301,6 @@ padding: 3em 2em 1em;
 .comDisplayComment {
   text-align: left;
 }
-
 
 
 /* -------------------------  LikeButton  ------------------------- */
@@ -406,13 +401,13 @@ h2.chartTitle {
 }
 
 .conAboutContainer {
-  border: pink solid 5px;
   margin-left: 3em;
 }
 
 .aboutCard {
   border: green 5px solid;
-  width: 12.3em;
+  /* width: 12.3em; */
+  width: 90%;
   margin-bottom: 1.5em;
 }
 
