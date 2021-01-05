@@ -105,13 +105,20 @@ class Comments extends Component {
                   <p> Läs vad dina vänner gör för att minska negativ påverkan på jorden:</p>
                   {this.state.commentList.map((item) => (       // skriver ut kommentaren, {item.name}&{item.comment} tar value från formuläret och skriver ut det
                     <Container className="comDisplayContainer " >
+                     
                       <Card.Title className="comDisplayName" key={item.commentLikeButton} >
                           {item.name} 
                       </Card.Title>
+                      
+                      
                       <Card.Text className="comDisplayComment" >
                           {item.comment} 
-                        <LikeButton/>
-                      </Card.Text>   
+                        {/* <LikeButton/> */}
+                      </Card.Text> 
+                     
+                    
+                      <LikeButton/>
+                     
                     </Container> 
                   ))}
                 </Container>
