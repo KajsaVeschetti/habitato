@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { Button, Container, Row, Col, Form, Card } from 'react-bootstrap';
+import { Button, Container, Row, Col, Form, Card, Image } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LikeButton from "./LikeButton";
+import tipsIcon from "./img/tipsIcon.svg";
 
 class Comments extends Component {
   constructor(props) {        // Constructorn visar hur objektet byggs
@@ -39,8 +40,15 @@ class Comments extends Component {
   render() {
     return (
       <Container className="charts col-lg-9 comCompStyle">
-        <Row>
-          <h1>Dela med dig av ditt bästa miljötips!</h1>
+        <Row className="comFirstRow">
+          <Col xs={7}>
+            <h1>Dela med dig av ditt bästa miljötips!</h1>
+          </Col>
+          <Col>
+            <Image 
+            src={tipsIcon} rounded 
+            className="comImg"/>
+          </Col>
         </Row>
         <Row>
           <Container>
@@ -290,4 +298,6 @@ export default Comments;
 // https://stackoverflow.com/questions/53106250/react-js-user-enters-value-in-the-input-field-on-button-click-to-display-the-val
 
 // https://stackoverflow.com/questions/54256701/how-to-highlight-empty-mandatory-input-field-with-red-border-click-on-button
+
+// https://react-bootstrap.github.io/components/images/
 
