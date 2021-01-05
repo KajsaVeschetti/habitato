@@ -55,7 +55,7 @@ function GlobalWarming() {
           Utsläppen av växthusgaser behöver minska. Det kan exempelvis ske genom att fossila bränslen ersätts av miljövänligare 
           alternativ. Vi kan också påverka utsläppen av fossila bränslen genom att spara energi. Vi kan spara energi genom att 
           t.ex. sortera sopor, köra miljövänliga bilar, välja lågenergilampor och att använda kollektiva transportmedel, såsom 
-          exempelvis bus och tåg. Hur kan vi hjälpa till att minska klimatförändringar? Dela med dig av dina 
+          exempelvis bus och tåg. Hur tycker du att vi kan hjälpa till med att minska klimatförändringarna? Dela med dig av dina 
           bästa <a href="/Comments"> tips</a>.
         </Card.Text>
         <h4>Vill du veta mer? Titta på en video om global uppvärmning.</h4>
