@@ -8,17 +8,15 @@ function FossilFuel () {
   //knappen inte är tryckt och därmed är innehållet dolt.
   //Den andra delen, som själv är en funktion, gör att knappens nuvarande värde kan uppdateras, dvs när knappen trycks 
   //visas ytterligare innehåll.
-  const [openButton, setOpenButton] = useState(false);
+   const [openButton, setOpenButton] = useState(false);
 
   //Gör så texten på knappen ändras från "Läs mer" (före knappen trycks) till "Visa mindre" (efter att knappen tryckts), och vice versa.
-  const ButtonName=openButton?'Visa mindre':'Läs mer'
+   const buttonName=openButton?'Visa mindre':'Läs mer'
 
 
   return ( 
      <>
        {/* Bild, rubrik och text*/}
-      
-       
        <Card.Img className="px-lg-5 pb-5" variant="top" 
         src= {fossilFuel} fluid alt="Factories with smoke coming out of large chimneys"/>
        <Card.Title> 
@@ -32,8 +30,8 @@ function FossilFuel () {
          det ut farliga gaser i atmosfären, t.ex. koldioxid (CO<sub>2</sub>), metan och lustgas.
        </Card.Text>
        {/*Gör så att innehållet (rubriker, text plus video) döljs efter att knappen tryckts*/}
-       <Collapse in={openButton}> 
-        <div id="Collapse-fuel-content">
+        <Collapse in={openButton}> 
+        <div className="Collapse-fuel-content">
         {/*Innehåll med rubriker, text samt inbäddad youtube-video som är responsive*/}
         <Card.Title>
         <h3> Varför är fossila bränslen dåligt för klimatet?</h3> 
@@ -65,15 +63,14 @@ function FossilFuel () {
         </div>
        </div>
       </Collapse>
-      
-      {/*Gör så att innehållet (rubriker, text plus video) blir synligt när knappen trycks*/}
+       
+      {/*Gör så att innehållet (rubriker, text plus video) blir synligt när knappen trycks*/}      
       <Button variant="info" size="sm" block    
        onClick={() => setOpenButton(!openButton)}
        aria-controls="Collapse-fuel-content"
        aria-expanded={openButton}
-       >{ButtonName}
-      </Button>
-  
+       >{buttonName}
+      </Button>        
    </>
  );
 }
