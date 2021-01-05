@@ -28,22 +28,22 @@ function Fakta (){
        activeKey={keyTab}
        onSelect={(k) => setKeyTab(k)} 
       >
-      <Tab eventKey ="Fossilt bränsle" title="Fossilt bränsle" tabClassName="profile-tabitem1" >
+      <Tab eventKey ="Fossilt bränsle" title="Fossilt bränsle" tabClassName="tabitem1" >
        <div className="mt-5">
         <FossilFuel/>
        </div>
       </Tab>
-      <Tab eventKey="Global uppvärmning" title="Global uppvärmning" tabClassName="profile-tabitem2">
+      <Tab eventKey="Global uppvärmning" title="Global uppvärmning" tabClassName="tabitem2">
        <div className="mt-5">
         <GlobalWarming/>
        </div> 
       </Tab>
-      <Tab eventKey="Glaciärstorlek" title="Glaciärstorlek" tabClassName="profile-tabitem3">
+      <Tab eventKey="Glaciärstorlek" title="Glaciärstorlek" tabClassName="tabitem3">
        <div className="mt-5">
         <GlacierSize/>
        </div>
       </Tab>
-      <Tab eventKey="Havsnivå" title="Havsnivå" tabClassName="profile-tabitem4">
+      <Tab eventKey="Havsnivå" title="Havsnivå" tabClassName="tabitem4">
        <div className="mt-5">
         <SeaLevel/>
        </div>  
