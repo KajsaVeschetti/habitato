@@ -44,6 +44,42 @@ h1, h2, h3, h4, h5 {
   margin: auto; 
 }
 
+
+.nav-link.active {
+  font-weight: bold;
+  color:black !important;
+  border: solid black 2px; 
+  /*color:white !important;
+  background-color: blue !important;*/
+}
+
+.profile-tabitem1{
+  color: white;
+  background-color: rgba(41, 170, 225, 0.9);
+}
+
+.profile-tabitem2{
+  color: white;
+  background-color: rgba(68, 118, 128, 0.9);
+}
+
+
+.profile-tabitem3{
+  color: white;
+  background-color: rgba(0, 144, 170, 0.9);
+}
+
+
+.profile-tabitem4{
+  color: white;
+  background-color: rgba(20, 109, 177, 0.9);
+}
+
+.profile-tabitem1:hover, .profile-tabitem2:hover, .profile-tabitem3:hover, .profile-tabitem4:hover {
+  color: white;
+}
+
+
 /*--------------------  Navbar  --------------------*/
 
 .navbar {
