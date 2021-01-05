@@ -257,22 +257,10 @@ div.charts {
 
 /* -------------------------  CommentComponent  ------------------------- */
 
-/* .commentComponentStyle {  
-  margin: 0 20%;
-  background: rgba(249, 249, 249, 0.8);
-  border: 1px solid #999;
-  border-radius: 5px;
-  padding: 2em;
-}
-
-.commentComponentGridStyle {
-  display: grid;
-  grid-template-columns: 50% 50%;
-}*/
-
 .comFirstRow {
  border-bottom: solid 1em #0090AA;
 }
+
 .comCompStyle{
   margin: 5em;
 }
@@ -280,12 +268,10 @@ div.charts {
 .comCompStyle h1 {
   text-align: center;
 margin: auto auto;
-/* margin-top: 3em; */
 padding: 3em 2em 1em;
 }
 
 .comImg {
-  /* border: green solid 5px; */
   padding: 3em 0em 0em 5em;
   margin-bottom: 0;
 }
@@ -310,22 +296,14 @@ padding: 3em 2em 1em;
   border-radius: 1em;
   padding: 0.5em;
   margin: 2em 2em;
-/* background-color: lightpink; */
-  /* max-width: 18rem; */
 }
 
 .comDisplayName {
   text-align: right;
-  /* margin-left: 2em; */
-  /* border-left: solid #17A2B8 0.1em; */
-  /* padding: 1em 2em 1em 2em; */
 }
 
 .comDisplayComment {
   text-align: left;
-  /* margin-left: 1em; */
-
-  /* padding: 1em 2em 1em 2em; */
 }
 
 
