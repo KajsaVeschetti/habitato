@@ -58,7 +58,7 @@ playAgain = () => {
                     selected={answer => this.computeAnswer(answer, correct_answer)}
                 />
                 )}
-                                {/* knappar försvinner och visar resultat */}
+                {/* knappar försvinner och visar resultat */}
 
                 {this.state.responses  === 9 ? (  <Resultat score={this.state.score} playAgain={this.playAgain} /> ) : null } 
                 </div>   
