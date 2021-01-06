@@ -286,6 +286,7 @@ padding: 3em 2em 1em;
   margin: 1.5em auto 0 auto;
 }
 
+
 .comDisplayContainer {  
   border-left: solid #17A2B8 0.3em;
   border-top: solid #17A2B8 0.2em;
@@ -333,7 +334,7 @@ padding: 3em 2em 1em;
 }
 
 
-/* -------------------------  ReadMoreComponent  ------------------------- */
+/* -------------------------  ReadMoreComponent - Diagrams  ------------------------- */
 
 .extra {
   width: 600px;
@@ -396,19 +397,30 @@ h2.chartTitle {
 
 .conTitle {
   text-align: center;
-  margin: auto;
-  padding: 1em;
+  margin: 3em auto 1em auto;
+  padding-top: 1em;
+  padding-bottom: 0.3em;
+}
+
+.conIntroTxt {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 2em;
 }
 
 .conAboutContainer {
-  margin-left: 3em;
+  margin-left: 2em;
+  margin-right: 2em;
+  /* width: 80%; */
 }
 
 .aboutCard {
   border: green 5px solid;
   /* width: 12.3em; */
-  width: 90%;
+  width:23%;
   margin-bottom: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .aboutUsImg {
@@ -416,6 +428,23 @@ h2.chartTitle {
   padding: 0.5em 0.5em 0 0.5em;
 }
 
+.conReadMoreBtn {
+  margin: 0.5em auto;
+}
+
+.conAboutPerson {
+ margin-top: 0.5em;
+ padding-bottom: 1em;
+}
+
+.conFormContainer {
+  text-align: left;
+}
+
+
+
+
+/*----------------------  ? Vilken Component ?  ----------------------*/
 
 @media only screen and (max-width: 600px) {
 

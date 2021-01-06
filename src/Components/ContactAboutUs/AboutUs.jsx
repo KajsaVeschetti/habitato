@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
 import { Container, Card, Button, Row, Col } from 'react-bootstrap';
+import ReadMoreKarl from "./aboutReadMoreKarl";
+import ReadMoreLars from "./aboutReadMoreLars";
+import ReadMoreLinn from "./aboutReadMoreLinn";
+import ReadMoreAnn from "./aboutReadMoreAnn";
 import karl from "./img/karl.svg";
 import lars from "./img/lars.svg";
 import linn from "./img/linn.svg";
 import ann from "./img/ann.svg";
 
+
+
 class AboutUs extends Component {
     render() {
+
         return (
            <Container >
                 <Row>
-                    <Col>
                         <Card className="aboutCard cardKarl">
                             <Card.Img 
                                 className="aboutUsImg" 
@@ -20,18 +26,15 @@ class AboutUs extends Component {
                                 <Card.Title>
                                     Karl Larsson
                                 </Card.Title>
-                                <Card.Text>
-                                    Karl Larsson är professor i Fysik och Geovetenskap, att förstå jorden ligger honom varmt om hjärtat. 
-                                </Card.Text>
+                                <ReadMoreKarl />
                                 <Button 
+                                    block
                                     variant="info" 
                                     href="mailto:#">
-                                        Kontakta Karl
+                                        Mejla Karl
                                 </Button>
                             </Card.Body>
                         </Card>
-                    </Col>
-                    <Col>
                         <Card className="aboutCard cardLars">
                             <Card.Img 
                                 className="aboutUsImg" 
@@ -41,20 +44,16 @@ class AboutUs extends Component {
                                 <Card.Title>
                                     Lars Karlsson
                                 </Card.Title>
-                                <Card.Text>
-                                    Lars Karlsson är professor i Biologi och Etologi och intresserar sig mycket i natur, blommor och bin.
-                                </Card.Text>
+                                <ReadMoreLars />
                                 <Button 
+                                    block
                                     variant="info" 
                                     href="mailto:#">
-                                        Kontakta Lars
+                                       Mejla Lars
                                 </Button>
                             </Card.Body>
                         </Card>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
+                   
                         <Card className=" aboutCard cardLinn">
                             <Card.Img 
                                 className="aboutUsImg" 
@@ -64,18 +63,16 @@ class AboutUs extends Component {
                                 <Card.Title>
                                     Linn Annson
                                 </Card.Title>
-                                <Card.Text>
-                                    Linn Annson är professor i Social-antropologi med intresse för samhället och kultur. 
-                                </Card.Text>
+                                <ReadMoreLinn />
                                 <Button 
+                                    block
                                     variant="info" 
                                     href="mailto:#">
-                                        Kontakta Linn
+                                        Mejla Linn
                                 </Button>
                             </Card.Body>
                         </Card>
-                    </Col>
-                    <Col>
+                   
                         <Card className="aboutCard cardAnn">
                             <Card.Img 
                                 className="aboutUsImg" 
@@ -85,17 +82,16 @@ class AboutUs extends Component {
                                 <Card.Title>
                                     Ann Linnson
                                 </Card.Title>
-                                <Card.Text>
-                                    Ann Linnson är forskare inom Vulkanologi och brinner för att hitta lösningar för att bevara jorden. 
-                                </Card.Text>
-                                <Button 
+                                <ReadMoreAnn />
+                                <Button
+                                    block
                                     variant="info" 
                                     href="mailto:#">
-                                        Kontakta Ann
+                                       Mejla Ann
                                 </Button>
                             </Card.Body>
                         </Card>
-                    </Col>
+                   
                 </Row>
             </Container>
         );
