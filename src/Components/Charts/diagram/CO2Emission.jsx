@@ -40,15 +40,6 @@ export default class BarCharts extends Component {
 1
 
     render() { 
-
-      const linkStyle = {
-        // fontSize: "14px",
-        // color:"#5f5f5f",
-        // textDecoration:"none",
-        // listStyleType: "none", 
-        // paddingRight:"50px",
-        // paddingLeft:"50px",
-     }
         let co2 = this.props.CO2Emission;
 
         if(co2 === undefined) return <p>Ingen data finns</p>;
@@ -61,7 +52,7 @@ export default class BarCharts extends Component {
             {name: 'Flar', CO2: co2["Gas Flaring"]},
           ];
 
-        const COLORS =[ "#d9534f", "#5bc0de", "#5cb85c", "#428bca" ]
+        const COLORS =[ "#ff595e", "#f8961e", "#8ac926", "#1982c4", "#6a4c93"  ]
 
 
         return (
@@ -87,16 +78,16 @@ export default class BarCharts extends Component {
                 <Cell  fill ={COLORS[1]}/>
                 <Cell  fill ={COLORS[2]}/>
                 <Cell  fill ={COLORS[3]}/>
-                <Cell  fill ={COLORS[0]}/>
+                <Cell  fill ={COLORS[4]}/>
                 </Bar>
                 </BarChart>
                 <div className="dataAbbrContainer">
                   <ul>
-                    <li className="dataAbbrGas" style={linkStyle}>Gas = Gas fuel</li>
-                    <li className="dataAbbrLiq" style={linkStyle}>Liq = Liquid fuel</li>
-                    <li className="dataAbbrSol" style={linkStyle}>Sol = Solid fuel</li>
-                    <li className="dataAbbrCem" style={linkStyle}>Cem = Cement</li>
-                    <li className="dataAbbrFlar" style={linkStyle}>Flar = Gas Flaring</li>
+                    <li className="dataAbbrGas" >Gas = Gas fuel</li>
+                    <li className="dataAbbrLiq" >Liq = Liquid fuel</li>
+                    <li className="dataAbbrSol" >Sol = Solid fuel</li>
+                    <li className="dataAbbrCem" >Cem = Cement</li>
+                    <li className="dataAbbrFlar" >Flar = Gas Flaring</li>
                   </ul>
                 </div>
             </div>
