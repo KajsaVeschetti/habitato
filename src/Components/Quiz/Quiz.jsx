@@ -7,13 +7,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Quiz extends Component {
     state = {
-        // array med namnet: questionArray. Här hamnar frågorna när man hämtat dom från filen
+        // array med namnet: questionArray. Här hamnar frågorna när man hämtat dom från filen. Här sparas även användarens resultat och antal svar man gjort med hjälp av funktionen nedan.
         questionArray:[],
         score: 0,
         responses: 0
     }
 
-// lifecykle metod. Tar in objekt och lägger i state
+// Tar in objekt och lägger i state
 // funktionen ser om svar matchar med rätt svar och lägger till poång i statevariabel score
 computeAnswer = (answer, correct_answer) => {
     if (answer  === correct_answer){
@@ -21,9 +21,15 @@ computeAnswer = (answer, correct_answer) => {
             score: this.state.score +1
         });
     }
-    // håller koll på hur många frågor användaren svarat på +1 oavsätt rätt eller fel *conditional (ternary) operator*
+    
+    //*conditional (ternary) operator* Kort version av if else
+   // ett villkor följt av ett frågtecken
+   // Sen vad som ska utföras om villkoret är sant följt av kolon
+   //till sist vad som ska utgföras om villkoret är falskt. 
+   //*condition ? exprIfTrue : exprIfFalse*
+   
     this.setState({
-        responses: this.state.responses < 9 ? this.state.responses + 1 : 9
+        responses: this.state.responses < 10 ? this.state.responses + 1 : 10 
     });
 };
 
@@ -49,18 +55,16 @@ playAgain = () => {
                 {/* renderar data från state */}
                 <div className="chartContainer">
                 {this.state.questionArray.length > 0 && 
-                this.state.responses < 9 &&
-                // mapar genom data och delar upp information
-                    this.state.questionArray.map(({question, correct_answer, incorrect_answer}) => 
-                    // Props // renderar komponent med knappar
+                this.state.responses < 10 &&
+                    this.state.questionArray.map(({question, correct_answer, answer, questionId}) => 
                     <QBtns question={question} 
-                    options={correct_answer, incorrect_answer}
+                    options={correct_answer, answer} key={questionId}
                     selected={answer => this.computeAnswer(answer, correct_answer)}
                 />
                 )}
-                {/* knappar försvinner och visar resultat */}
-
-                {this.state.responses  === 9 ? (  <Resultat score={this.state.score} playAgain={this.playAgain} /> ) : null } 
+{/* om antal responses är exakt 10 visa komponent resultat. 
+Deklarerar vad state score, playAgian och responsens är. */}
+                {this.state.responses  === 10 ? (  <Resultat score={this.state.score} playAgain={this.playAgain} responses={this.state.responses} /> ) : null } 
                 </div>   
             </div>
             </Container>

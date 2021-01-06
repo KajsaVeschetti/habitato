@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Button } from 'react-bootstrap';
+import { Button, Container, Row, Col, Form, Card, Image } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LikeButton from "./LikeButton";
-
+import tipsIcon from "./img/tipsIcon.svg";
 
 class Comments extends Component {
   constructor(props) {        // Constructorn visar hur objektet byggs
@@ -21,9 +21,11 @@ class Comments extends Component {
   handleChangeName(event) {
     this.setState({ name: event.target.value });
   }
+
   handleChangeComment(event) {
     this.setState({ comment: event.target.value });
   }
+  
   handleSubmit(event) {     // Säger vad som ska hända när man trycker på knappen
     this.state.commentList.push({
       name: this.state.name,
@@ -35,78 +37,173 @@ class Comments extends Component {
   }
 
 
-
-  
-
-
-  
-
-
-
-
   render() {
-
     return (
-      <div className="commentComponentStyle">
-        <h2>Dela med dig av ditt bästa miljötips!</h2>
-        <LikeButton />
-        <div className="commentComponentGridStyle">
-            <form 
-            className="commentComponentFormStyle"
-            onSubmit={this.handleSubmit}>
-              <label>
-                Namn: 
-                <br />
-                <input 
-                  className="commentInputAreaStyle"
-                  type="text" 
-                  value={this.state.name}
-                  onChange={this.handleChangeName}
-                  required
-                />
-              </label>{" "}
-              <br />
-              <label>
-                Kommentar:
-                <br />
-                <textarea
-                  className="commentInputAreaStyle"
-                  value={this.state.comment}
-                  onChange={this.handleChangeComment} 
-                  required
-                />
-              </label>
-              <br />
-              <Button as="input" type="submit" variant="info" size="sm" value="Skicka kommentar"></Button>
-              {/* <input 
-              style={commentInputBtnStyle}
-              type="submit" 
-              value="Skicka kommentar" /> */}
-            </form>
-        
-          <div className="commentDisplayStyle" >
-            {this.state.commentList.map((item) => (       // skriver ut kommentaren, {item.name}&{item.comment} tar value från formuläret och skriver ut det
-              <div className="commentContainer">
-                <p>
-                  <div className="commentDisplayNameStyle" key={item.commentLikeButton} >
-                  {item.name} 
-                  </div>            
-                
-                  <div className="commentDisplayCommentStyle" >
-                  {item.comment} <LikeButton />
-                  </div>
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-        
-      </div>
+      <Container className="charts col-lg-9 comCompStyle">
+        <Row className="comFirstRow">
+          <Col xs={7}>
+            <h1>Dela med dig av ditt bästa miljötips!</h1>
+          </Col>
+          <Col>
+            <Image 
+            src={tipsIcon} rounded 
+            className="comImg"/>
+          </Col>
+        </Row>
+        <Row>
+          <Container>
+            <Row>
+              <Col xs={7} >
+                <Form 
+                    className="comCompFormStyle"
+                    onSubmit={this.handleSubmit}>
+                  <Form.Group 
+                      className="charts " >
+                    <Row>
+                      <Form.Label className="comFormLabel" >
+                        NAMN
+                      </Form.Label>
+                    </Row>
+                    <Row>
+                      <Form.Control 
+                          placeholder="Skriv ditt namn här..."
+                          className="comFormInput"
+                          type="text" 
+                          value={this.state.name}
+                          onChange={this.handleChangeName}
+                          required/>
+                    </Row>
+                    <Row>
+                      <Form.Label className="comFormLabel">
+                        KOMMENTAR
+                      </Form.Label>
+                    </Row>
+                    <Row>
+                      <Form.Control 
+                          as="textarea" 
+                          rows={3}
+                          placeholder="Skriv ditt bästa miljötips här..."
+                          className="comFormInput"
+                          value={this.state.comment}
+                          onChange={this.handleChangeComment} 
+                          required />
+                    </Row>  
+                    <Row>
+                      <Button 
+                        className="comFormBtn"
+                        as="input" 
+                        type="submit" 
+                        variant="info" 
+                        size="sm" 
+                        value="Skicka kommentar"/>
+                    </Row>        
+                  </Form.Group>
+                </Form>
+              </Col>
+              <Col>
+                <Container className=" charts " >
+                  <p> Läs vad dina vänner gör för att minska negativ påverkan på jorden:</p>
+                  {this.state.commentList.map((item) => (       // skriver ut kommentaren, {item.name}&{item.comment} tar value från formuläret och skriver ut det
+                    <Container className="comDisplayContainer " >
+                     
+                      <Card.Title className="comDisplayName" key={item.commentLikeButton} >
+                          {item.name} 
+                      </Card.Title>
+                      
+                      
+                      <Card.Text className="comDisplayComment" >
+                          {item.comment} 
+                        {/* <LikeButton/> */}
+                      </Card.Text> 
+                     
+                    
+                      <LikeButton/>
+                     
+                    </Container> 
+                  ))}
+                </Container>
+              </Col>
+            </Row>
+          </Container>
+        </Row>
+      </Container>
     );
   }
 }
 
 export default Comments;
+
+
+
+// TEST 5 --------------------------------------------------TEST 5
+
+// render() {
+
+//   return (
+//     <div className="commentComponentStyle">
+//       <h1>Dela med dig av ditt bästa miljötips!</h1>
+//       <LikeButton />
+//       <div className="commentComponentGridStyle">
+//           <form 
+//           className="commentComponentFormStyle"
+//           onSubmit={this.handleSubmit}>
+//             <label>
+//               Namn: 
+//               <br />
+//               <input 
+//                 className="commentInputAreaStyle"
+//                 type="text" 
+//                 value={this.state.name}
+//                 onChange={this.handleChangeName}
+//                 required
+//               />
+//             </label>{" "}
+//             <br />
+//             <label>
+//               Kommentar:
+//               <br />
+//               <textarea
+//                 className="commentInputAreaStyle"
+//                 value={this.state.comment}
+//                 onChange={this.handleChangeComment} 
+//                 required
+//               />
+//             </label>
+//             <br />
+//             <Button as="input" type="submit" variant="info" size="sm" value="Skicka kommentar"></Button>
+//             {/* <input 
+//             style={commentInputBtnStyle}
+//             type="submit" 
+//             value="Skicka kommentar" /> */}
+//           </form>
+      
+//         <div className="commentDisplayStyle" >
+//           {this.state.commentList.map((item) => (       // skriver ut kommentaren, {item.name}&{item.comment} tar value från formuläret och skriver ut det
+//             <div className="commentContainer">
+//               <p>
+//                 <div className="commentDisplayNameStyle" key={item.commentLikeButton} >
+//                 {item.name} 
+//                 </div>            
+              
+//                 <div className="commentDisplayCommentStyle" >
+//                 {item.comment} <LikeButton />
+//                 </div>
+//               </p>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+      
+//     </div>
+
+//   );
+// }
+// }
+
+// export default Comments;
+
+
+
 
 
 
@@ -208,4 +305,6 @@ export default Comments;
 // https://stackoverflow.com/questions/53106250/react-js-user-enters-value-in-the-input-field-on-button-click-to-display-the-val
 
 // https://stackoverflow.com/questions/54256701/how-to-highlight-empty-mandatory-input-field-with-red-border-click-on-button
+
+// https://react-bootstrap.github.io/components/images/
 

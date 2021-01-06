@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 import {  BrowserRouter as Router,
   Route, Switch, Redirect,
   NavLink, Link } from "react-router-dom";
@@ -10,7 +10,8 @@ import Quiz from "./Quiz/Quiz";
 import Fakta from "./Fakta/FaktaRutor";
 import AllCharts from "./Charts/AllCharts";
 import Comments from "./Comments/Comments";  
-import Kontakt from "./Kontakt";
+import Kontakt from "./ContactAboutUs/Kontakt";
+
 
 
 
@@ -20,17 +21,16 @@ class NavBar extends Component {
     render () {
  
 
-    // test
+   {/*// test
     const activeLink = {
       fontWeight: "bold",
       color: "#17A2B8",
       textDecoration: "underline",
       textDecorationColor: "#17A2B8",
       textDecorationStyle: "double"
-    }
+    }*/}
 
         return(
-            <div className="fixedHeader">
              <Router>
               <Navbar collapseOnSelect expand="lg" bg="light" variant="light" className="pr-4">
               {/* <Link class="navbar-toggler border-0" to="index.html"><img src={Habitato1} style={logoStyle}  alt="Habitato logotyp"/></Link> */}
@@ -38,7 +38,8 @@ class NavBar extends Component {
               <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                <Navbar.Collapse id="responsive-navbar-nav">
                <Nav className="mx-auto text-left" >
-                  <NavLink className="nav-link "
+                  
+                  {/*<NavLink className="nav-link "
                         className="navLink" 
                         to="/Charts/AllCharts" 
                         activeStyle={activeLink}>
@@ -82,6 +83,27 @@ class NavBar extends Component {
                         <Link className="nav-link" style={linkStyle} to="/Faktarutor">
                             FAKTA 
                         </Link> */}
+
+           <NavLink className="navLink" 
+             to="/Charts/AllCharts" activeClassName="activeLink">
+              HEM
+           </NavLink>
+           <NavLink className="navLink" 
+              to="/Quiz" activeClassName="activeLink">
+               QUIZ
+          </NavLink>
+          <NavLink className="navbar-brand d-none d-lg-block" 
+            to="/"><img src={Habitato1} alt="Habitato logo" className="navLogo"/>
+          </NavLink>
+          <NavLink className="navLink" 
+            to="/Comments" activeClassName="activeLink">
+             TIPS
+         </NavLink>
+         <NavLink className="navLink" 
+            to="/Faktarutor" activeClassName="activeLink">
+             FAKTA
+         </NavLink>
+
               </Nav>
             </Navbar.Collapse>
             </Navbar> 
@@ -101,7 +123,7 @@ class NavBar extends Component {
         <Route exact path="/FaktaRutor"component={Fakta} >
           <Fakta/>
           </Route>
-          <Route exact path="/Kontakt"component={Kontakt}>
+          <Route exact path="/ContactAboutUs/Kontakt"component={Kontakt}>
             <Kontakt/>
           </Route>
 
@@ -110,7 +132,6 @@ class NavBar extends Component {
         
         </Switch>
         </Router>
-          </div>
         );
     }
 }

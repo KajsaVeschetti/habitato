@@ -7,7 +7,8 @@ import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is requir
 
 
 
-import InfoTemp from './infoTemp';
+//import InfoTemp from './infoTemp';
+import CarouSelTemp from '../../CarouSelTemp';
 
 //Nedan kod är hämtad från https://react.semantic-ui.com/modules/modal/ för att få till popup knappar på förstasidan.
 
@@ -88,9 +89,9 @@ export default function PopupTemp() {
         }}
       >
         <Fade in={open}>
-          <div className={classes.paper} style={{background:"rgba(68, 118, 128, 0.9)", overflow:"scroll", maxHeight:"600px", minHeight:"100%"}}>
-            <h2 id="spring-modal-title" className="chartTitle">Global Temperatur</h2>
-            <InfoTemp/>
+        <div style={{ overflow:"scroll", maxHeight:"600px", minHeight:"100%" }}> 
+            {/*<InfoTemp/>*/}
+            <CarouSelTemp/>
           </div>
         </Fade>
       </Modal>

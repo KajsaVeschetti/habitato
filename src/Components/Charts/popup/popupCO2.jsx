@@ -9,8 +9,8 @@ import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is requir
 //Nedan kod är hämtad från https://react.semantic-ui.com/modules/modal/ för att få till popup knappar på förstasidan.
 
 
-import InfoCo2 from './infoCO2';
-
+//import InfoCo2 from './infoCO2';
+import CarouSelCo2 from '../../CarouSelCo2';
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -58,9 +58,10 @@ Fade.propTypes = {
 };
 
 export default function PopupCO2() {
-  const classes = useStyles();
+  const classes = useStyles()
   const [open, setOpen] = React.useState(false);
-
+  
+ 
   const handleOpen = () => {
     setOpen(true);
   };
@@ -71,10 +72,9 @@ export default function PopupCO2() {
 
   return (
     /*Nedan kod skapar en knapp som när man trycker på den visar ett diagram */
-    <div>
-      
+    <div> 
       <button type="button" className="popupButton" style={{background:"rgba(41, 170, 225, 0.9)"}} onClick={handleOpen}>
-       CO2 Emission
+       Koldioxidutsläpp
       </button>
       <Modal
         aria-labelledby="spring-modal-title"
@@ -86,13 +86,14 @@ export default function PopupCO2() {
         BackdropComponent={Backdrop}
         BackdropProps={{
           timeout: 500,
-        }} 
+        }}
       >
-        <Fade in={open}>
-          <div className={classes.paper} style={{background:"rgba(41, 170, 225, 0.9)", overflow:"scroll", maxHeight:"600px", minHeight:"100%"}}>
-            <h2 id="spring-modal-title" className="chartTitle">CO2 Emission</h2>
-            <InfoCo2/>
-          </div>
+        <Fade in={open}> 
+        
+          <div style={{ overflow:"scroll", maxHeight:"600px", minHeight:"100%" }}>
+            {/*<InfoCo2/>*/}
+            <CarouSelCo2/>  
+        </div>
         </Fade>
       </Modal>
 

@@ -7,9 +7,9 @@ import ReadMoreGS from "../InfoCharts/ReadMoreGS"
 
 
 
-
-
 class InfoGlacier extends Component {
+
+  
   // skapar arrayer för de olika typerna av information
     state = {
         GlacierSize: [],
@@ -61,12 +61,15 @@ class InfoGlacier extends Component {
            /*Nedan kod hämtar ner datan till de två diagram som ska synas. Dessa diagram hämtas från en annan komponent
           Där finnen en div för att bygga in de två diagrammen och en informationsruta till en bredd.
           Varje diagram har ett chartName för att kunna hämta data från det årtal som skrivs in  */  
-          <div>
-              <div class="card mx-auto charts " style={{width:"750px"}}>
+          <div> 
+            <div style={{background:"rgba(0, 144, 170, 0.9)", paddingBottom: "15px", border:'2px solid #000'}}>
+            <h2 id="spring-modal-title"className="chartTitle pt-3">Glaciärstorlek</h2>
+
+              <div className="card mx-auto charts " style={{width:"750px"}}>
               <div className="chartHeader">
               <h3>Skriv in två årtal och se vad <br/> klimatförändringarna har gjort under åren</h3>
               </div>
-              <div class="mx-auto chartContainer"> 
+              <div className="mx-auto chartContainer"> 
                         <div component={Glacier}>
                         <Glacier
                         chartName="Glacier1"
@@ -79,14 +82,18 @@ class InfoGlacier extends Component {
                         {/* Glasiär-info */}
                         <ReadMoreGS />
                         </div>
-                     
+                      
 
                       </div>
+                      
           </div>  
+        </div>
         </div>
         );
     }
 
 }
+
+
 
 export default InfoGlacier;

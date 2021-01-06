@@ -6,7 +6,8 @@ import Backdrop from '@material-ui/core/Backdrop';
 import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is required for IE 11 support
 import 'semantic-ui-css/semantic.min.css'
 
-import InfoSea from './infoSea';
+//import InfoSea from './infoSea';
+import CarouSelSea from '../../CarouSelSea';
 
 //Nedan kod är hämtad från https://react.semantic-ui.com/modules/modal/ för att få till popup knappar på förstasidan.
 
@@ -87,9 +88,9 @@ export default function PopupSea() {
         }}
       >
         <Fade in={open}>
-          <div className={classes.paper} style={{background:"rgba(20, 109, 177, 0.9)",overflow:"scroll", maxHeight:"600px", minHeight:"100%"}}>
-            <h2 id="spring-modal-title" className="chartTitle">Havsnivån</h2>
-            <InfoSea/>
+          <div style={{ overflow:"scroll", maxHeight:"600px", minHeight:"100%" }}> 
+            {/*<InfoSea/>*/}
+            <CarouSelSea/>
           </div>
         </Fade>
       </Modal>

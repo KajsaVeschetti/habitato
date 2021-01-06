@@ -1,41 +1,82 @@
-import React, { useState } from 'react';
-import {Button, Collapse, Image, Card} from 'react-bootstrap';
-import globalWarming from "./faktaImg/globalWarming.jpg";
+import React, { useState } from 'react'; //Importerar useState hook från React. 
+import {Button, Collapse, Card} from 'react-bootstrap'; //Importerar Button, Collapse, Card från react-bootstrap
+import globalWarming from "./faktaImg/globalWarming.jpg"; //Importerar globalWarming-bild från faktaImg-mappen.
+
 
 function GlobalWarming() {
+  //En ny state-variabel deklareras genom att kalla på useState hook. Den returnerar ett par värden som namngetts.
+  //Variabeln kallas openButton eftersom den håller värdena för knappen. Knappens värde sätts till false eftersom
+  //knappen inte är tryckt och därmed är innehållet dolt.
+  //Den andra delen, som själv är en funktion, gör att knappens nuvarande värde kan uppdateras, dvs när knappen trycks 
+  //visas ytterligare innehåll.
   const [openButton, setOpenButton] = useState(false);
-
-  const buttonName=openButton?'Mindre info':'Mer info'
+ 
+   //Gör så texten på knappen ändras från "Läs mer" (före knappen trycks) till "Visa mindre" (efter att knappen tryckts), och vice versa.
+  const buttonName=openButton?'Visa mindre':'Läs mer'
 
   return ( 
     <>
-  
-    <Card.Img className="px-lg-5 pb-5" variant="top" src={globalWarming} alt="Bright sun with clouds"/>
-    <Card.Title>Vad menas med global uppvärmning?</Card.Title>
-    <Card.Text className="text-left pb-3">Den förstärka växthuseffekten som leder till att upphettningen i atmosfären hela tiden ökar brukar kallas global uppvärmning. Den naturliga växthuseffekten, som gör att en del av värmen från solens strålar hålls kvar på jordytan via växthusgaser, är ett måste för att vi ska kunna leva på jorden. Utan den skull jorden vara en kall och livlös planet. Den förhöjda växthuseffekten är en följd av vår användning av fossila bränslen som gör att växthusgaserna ökar i sådan takt att balansen i det naturliga kretsloppet förändras. Följden blir att värmen hålls kvar längre på jordytan, vilket leder till att temperaturen höjs och klimatet förändras.</Card.Text>
-
-      <Collapse in={openButton}> 
-        <div id="warming-collapse-text">
-        <Card.Title>Vilka konsekvenser får global uppvärmning?</Card.Title>
-        <Card.Text className="text-left">Temperaturen stiger och klimatet förändras med allvarliga konsekvenser som följd: glaciärer smälter, havsnivåer höjs, extremare väder blir vanligare, tillgången till mat och friskt vatten minskar, djur och biologisk mångfald påverkas osv Det finns också en stor risk för att det i framtiden blir mer vanligt med klimatflyktingar, som tvingas fly på grund av översvämningar, torka och att skördar förstörs. Den global uppvärmning kommer därför påverka våra dagliga liv i allt större utsträckning, allt från försämrad världsekonomi till att förändrade levnadsvillkor.</Card.Text>.
-        <Card.Title>Vad kan vi göra?</Card.Title>
-        <Card.Text className="text-left">Vi måste minska användningen av fossila bränslen, men också rent allmänt börja agera mer miljövänligt i vår vardag. Det är dags att välja väg för framtiden. Vi kan hjälpa till genom att arbeta för att minska utsläppen och genom att vi lära oss att leva mer klimatsmart; shoppa mindre, äta mer vegetariskt, välja hållbara energikällor, slänga mindre (både matvaror och prylar) osv.</Card.Text>
+       {/* Bild, rubrik och text*/}  
+       <Card.Img className="px-lg-5 pb-5" variant="top" 
+        src={globalWarming} fluid alt="Bright sun with clouds"/>
+       <Card.Title>
+        <h3>Vad menas med global uppvärmning?</h3>
+       </Card.Title>
+       <Card.Text className="text-left pb-3">
+         Den förstärka växthuseffekten, som gör att jordens medeltemperatur stiger, brukar kallas för global uppvärmning. 
+         Till skillnad från den förstärka växthuseffekten är den naturliga växthuseffekten ett måste för att vi ska 
+         kunna leva på jorden. En del av värmen från solens strålar hålls, via växthusgaser, kvar på jordytan och värmer
+         upp vår planet. Utan den naturliga växthuseffekten skulle jorden vara kall och livlös. Problemet är den förhöjda 
+         växthuseffekten som är en direkt följd av de utsläpp som vi människor står för, t.ex. via förbränning av fossila 
+         bränslen, skogsavverkning och från jordbruk. Utsläppen gör att växthusgaserna ökar i sådan takt att det naturliga 
+         kretsloppet förstärks. Följden blir att värmen hålls kvar längre på jordytan, vilket leder till att medeltemperaturen 
+         stiger och klimatet förändras som en följd därav. Växthusgaser är således å ena sidan livsnödvändiga då de är själva 
+         grundförutsättningen för allt liv på jorden, å andra sidan också farliga när mängden i atmosfären ökar i sådan takt 
+         att den naturliga växthuseffekten förstärks.
+       </Card.Text>
+        {/*Gör så att innehållet (rubriker, text plus video) döljs efter att knappen tryckts*/}
+       <Collapse in={openButton}> 
+        <div id="Warming-collapse-content">
+        {/*Innehåll med rubriker, text samt inbäddad youtube-video som är responsive*/}  
+        <Card.Title>
+          <h3>Vilka konsekvenser får global uppvärmning?</h3>
+        </Card.Title>
+        <Card.Text className="text-left pb-2">
+          Temperaturen stiger och klimatet förändras med allvarliga konsekvenser som följd: glaciärer smälter, havsnivåer höjs, 
+          extremare väder blir vanligare, tillgången till mat och friskt vatten minskar, djur och biologisk mångfald påverkas osv. 
+          Det finns också en stor risk för att det i framtiden blir mer vanligt med klimatflyktingar som tvingas fly på grund av 
+          översvämningar, torka och att skördar förstörs. Den global uppvärmning kommer därför påverka våra dagliga liv i allt större 
+          utsträckning, allt från inverkan på världsekonomi till förändrade levnadsvillkor.
+        </Card.Text>
+        <Card.Title>
+          <h3>Vad kan vi göra?</h3>
+        </Card.Title>
+        <Card.Text className="text-left pb-2">
+          Utsläppen av växthusgaser behöver minska. Det kan exempelvis ske genom att fossila bränslen ersätts av miljövänligare 
+          alternativ. Vi kan också påverka utsläppen av fossila bränslen genom att spara energi. Vi kan spara energi genom att 
+          t.ex. sortera sopor, köra miljövänliga bilar, välja lågenergilampor och att använda kollektiva transportmedel, såsom 
+          exempelvis bus och tåg. Hur tycker du att vi kan hjälpa till med att minska klimatförändringarna? Dela med dig av dina 
+          bästa <a href="/Comments"> tips</a>.
+        </Card.Text>
         <h4>Vill du veta mer? Titta på en video om global uppvärmning.</h4>
         <div className="embed-responsive embed-responsive-16by9 mb-4">
-          <iframe title="Youtube-video about global warming" className="embed-responsive-item" width="560" height="315" src="https://www.youtube-nocookie.com/embed/Z_b2A-d5hGY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
+         <iframe title="Youtube-video about global warming" 
+            className="embed-responsive-item" width="560" height="315" 
+            src="https://www.youtube-nocookie.com/embed/Z_b2A-d5hGY" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+         </iframe>
         </div>
+       </div>
       </Collapse>
 
+      {/*Gör så att innehållet (rubriker, text plus video) blir synligt när knappen trycks*/}
       <Button variant="info" size="sm" block    
-      onClick={() => setOpenButton(!openButton)}
-      aria-controls="warming-collapse-text"
-      aria-expanded={openButton}
-     >{buttonName}
-     </Button> 
-    
+       onClick={() => setOpenButton(!openButton)}
+       aria-controls="Warming-collapse-content"
+       aria-expanded={openButton}
+       >{buttonName}
+      </Button> 
    </>
-
   );
 }
 

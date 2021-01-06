@@ -5,10 +5,9 @@ import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is required for IE 11 support
 
-import InfoGlacier from './infoGlacier';
-
+//import InfoGlacier from './infoGlacier';
+import CarouSelGlacier from '../../CarouSelGlacier';
 //Nedan kod är hämtad från https://react.semantic-ui.com/modules/modal/ för att få till popup knappar på förstasidan.
-
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -21,8 +20,11 @@ const useStyles = makeStyles((theme) => ({
     border: '2px solid #000',
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
+  
   },
 }));
+
+
 
 const Fade = React.forwardRef(function Fade(props, ref) {
   const { in: open, children, onEnter, onExited, ...other } = props;
@@ -86,9 +88,13 @@ export default function PopupGL() {
         }}
       >
         <Fade in={open}>
-          <div className={classes.paper} style={{background:"rgba(0, 144, 170, 0.9)"}}>
-            <h2 id="spring-modal-title" className="chartTitle">Glaciärstorlek</h2>
-            <InfoGlacier/>
+          {/*<div className={classes.paper} style={{background:"rgba(0, 144, 170, 0.9)"}}>*/}
+          {/*<div className={classes.paper} style={{background:"rgba(68, 118, 128, 0.9)", overflow:"scroll", maxHeight:"600px", minHeight:"100%"}}>
+          <h2 id="spring-modal-title" className="chartTitle">Glaciärstorlek</h2>*/}
+          
+          <div style={{ overflow:"scroll", maxHeight:"600px", minHeight:"100%"}}> 
+            {/*<InfoGlacier/>*/}
+            <CarouSelGlacier/>
           </div>
         </Fade>
       </Modal>
