@@ -7,7 +7,7 @@ import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is requir
 import 'semantic-ui-css/semantic.min.css'
 
 //import InfoSea from './infoSea';
-import CarouSelSea from '../../CarouSelSea';
+import CarouSelSea from './CarouSelSea';
 
 //Nedan kod är hämtad från https://react.semantic-ui.com/modules/modal/ för att få till popup knappar på förstasidan.
 
