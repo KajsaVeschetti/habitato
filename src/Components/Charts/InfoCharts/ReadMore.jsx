@@ -17,7 +17,7 @@ function ReadMore() { // False = Knappen är inte tryckt på = texten gömd
   
   const BtnName=
   // Variabel med de olika namnen som knappen ska toggla mellan. 
-  readMore?'Göm info ':'Läs mer om Co2 '
+  readMore?'Göm info ':'Läs mer om Koldioxidsläpp '
   
   // Här renderas en knapp med ett onClick event.
   // setReadMore 
