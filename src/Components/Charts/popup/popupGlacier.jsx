@@ -6,7 +6,7 @@ import Backdrop from '@material-ui/core/Backdrop';
 import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is required for IE 11 support
 
 //import InfoGlacier from './infoGlacier';
-import CarouSelGlacier from '../../CarouSelGlacier';
+import CarouSelGlacier from './CarouSelGlacier';
 //Nedan kod är hämtad från https://react.semantic-ui.com/modules/modal/ för att få till popup knappar på förstasidan.
 
 const useStyles = makeStyles((theme) => ({
