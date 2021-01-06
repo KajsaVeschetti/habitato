@@ -10,7 +10,7 @@ import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is requir
 
 
 //import InfoCo2 from './infoCO2';
-import CarouSelCo2 from '../../CarouSelCo2';
+import CarouSelCo2 from './CarouSelCo2';
 
 const useStyles = makeStyles((theme) => ({
   modal: {

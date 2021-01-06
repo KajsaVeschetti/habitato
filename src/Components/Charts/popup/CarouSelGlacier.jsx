@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import {Carousel} from 'react-bootstrap';
-import InfoGlacier from './Charts/popup/infoGlacier';
-import InfoSea from './Charts/popup/infoSea';
-import InfoTemp from './Charts/popup/infoTemp';
-import InfoCo2 from './Charts/popup/infoCO2';
-//import PopupCO2 from './Charts/popup/popupCO2';
-//import PopupTemp from './Charts/popup/popupTemp';
-//import PopupGL from './Charts/popup/popupGlacier';
-//import PopupSea from './Charts/popup/popupSea';
+import InfoGlacier from './infoGlacier';
+import InfoSea from './infoSea';
+import InfoTemp from './infoTemp';
+import InfoCo2 from './infoCO2';
+
 
 
 class CarouSelGlacier extends Component {

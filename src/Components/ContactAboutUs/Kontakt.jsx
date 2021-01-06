@@ -55,16 +55,29 @@ return (
     <Container className= "charts col-lg-9">
         <Row>
             <h1 className="conTitle"> 
+                Det här är vi! 
+            </h1>
+        </Row>
+        <Row className="charts col-lg-11 mx-auto ">
+          <p className="conIntroTxt">
+              Hej! <br/> 
+              Det är vi som står bakom Habitato! <br/> 
+              Vi är fyra kollegor men också mycket goda vänner, 
+              som brinner för att så många som möjligt ska veta varför och hur de ska kunna 
+              göra sitt allra bästa för att hjälpa till att underlätta för vår planet. <br/><br/>
+              Vi har bara en planet, låt oss tillsammans ta hand om den! 
+          </p>
+                <AboutUs />
+          
+           
+        </Row>
+        <Row><Col>
+        <Row>
+            <h1 className="conTitle"> 
             Kontakta oss
             </h1>
         </Row>
-        <Row>
-            <Col xs={7} className="charts conAboutContainer">
-                <AboutUs/>
-            </Col>
-            <Col>
-        
-                <Container className="charts col-lg-9">
+                <Container className="charts col-lg-11 conFormContainer">
                     <Form>
                         <Form.Group controlId="exampleForm.ControlInput1">
                             <Form.Control placeholder="Namn" required/>

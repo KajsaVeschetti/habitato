@@ -47,7 +47,7 @@ class Temp extends Component {
 
     ];
 
-    const COLORS =[ "#d9534f", "#5bc0de", "#5cb85c", "#428bca" ]
+    const COLORS =[ "#ff595e", "#f8961e", "#8ac926", "#1982c4", "#6a4c93" ]
         return ( 
             <React.Fragment>
                <div style={{width:"300px", height:"400px", float:"left"}}>

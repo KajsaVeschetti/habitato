@@ -8,7 +8,7 @@ import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is requir
 
 
 //import InfoTemp from './infoTemp';
-import CarouSelTemp from '../../CarouSelTemp';
+import CarouSelTemp from './CarouSelTemp';
 
 //Nedan kod är hämtad från https://react.semantic-ui.com/modules/modal/ för att få till popup knappar på förstasidan.
 
