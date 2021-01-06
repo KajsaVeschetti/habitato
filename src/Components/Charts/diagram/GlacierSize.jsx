@@ -47,7 +47,7 @@ class Glacier extends Component {
  
       ];
 
-      const COLORS =[ "#d9534f", "#5bc0de", "#5cb85c", "#428bca" ]
+      const COLORS =[ "#ff595e", "#f8961e", "#8ac926", "#1982c4", "#6a4c93" ]
 
         return ( 
             <React.Fragment>
@@ -66,8 +66,8 @@ class Glacier extends Component {
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Bar dataKey="GLA" fill="#8884d8" shape={<TriangleBar/>} label={{ position: 'top' }}> 
-                <Cell  fill ={COLORS[0]}/>
-                <Cell  fill ={COLORS[1]}/>
+                <Cell  fill ={COLORS[4]}/>
+                <Cell  fill ={COLORS[3]}/>
                 </Bar>
        
                 </BarChart> 
