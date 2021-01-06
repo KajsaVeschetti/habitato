@@ -43,7 +43,7 @@ class Sea extends Component {
 
     ];
 
-    const COLORS =[ "#d9534f", "#5bc0de", "#5cb85c", "#428bca" ] 
+    const COLORS =[ "#ff595e", "#f8961e", "#8ac926", "#1982c4", "#6a4c93" ] 
         return ( 
             <React.Fragment>
               <div style={{width:"300px", height:"400px", float:"left"}}>
@@ -61,8 +61,8 @@ class Sea extends Component {
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Bar dataKey="SEA" fill="#8884d8" shape={<TriangleBar/>} label={{ position: 'top' }}> 
-                <Cell  fill ={COLORS[0]}/>
-                <Cell  fill ={COLORS[1]}/>
+                <Cell  fill ={COLORS[3]}/>
+                <Cell  fill ={COLORS[24]}/>
                 </Bar>
        
                 </BarChart> 
