@@ -94,7 +94,6 @@ class Comments extends Component {
                         as="input" 
                         type="submit" 
                         variant="info" 
-                        size="sm" 
                         value="Skicka kommentar"/>
                     </Row>        
                   </Form.Group>
