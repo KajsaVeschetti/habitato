@@ -1,0 +1,691 @@
+const tempdata = [
+	{
+	"Row": 1,
+	"Year": 2016,
+	"GCAG": 0.9363,
+	"GISTEMP": 0.99
+}, {
+	"Row": 2,
+	"Year": 2015,
+	"GCAG": 0.8998,
+	"GISTEMP": 0.87
+}, {
+	"Row": 3,
+	"Year": 2014,
+	"GCAG": 0.7408,
+	"GISTEMP": 0.74
+}, {
+	"Row": 4,
+	"Year": 2013,
+	"GCAG": 0.6679,
+	"GISTEMP": 0.65
+}, {
+	"Row": 5,
+	"Year": 2012,
+	"GCAG": 0.624,
+	"GISTEMP": 0.63
+}, {
+	"Row": 6,
+	"Year": 2011,
+	"GCAG": 0.5788,
+	"GISTEMP": 0.6
+}, {
+	"Row": 7,
+	"Year": 2010,
+	"GCAG": 0.7014,
+	"GISTEMP": 0.71
+}, {
+	"Row": 8,
+	"Year": 2009,
+	"GCAG": 0.6367,
+	"GISTEMP": 0.64
+}, {
+	"Row": 9,
+	"Year": 2008,
+	"GCAG": 0.5419,
+	"GISTEMP": 0.54
+}, {
+	"Row": 10,
+	"Year": 2007,
+	"GCAG": 0.61,
+	"GISTEMP": 0.66
+}, {
+	"Row": 11,
+	"Year": 2006,
+	"GCAG": 0.6125,
+	"GISTEMP": 0.63
+}, {
+	"Row": 12,
+	"Year": 2005,
+	"GCAG": 0.6585,
+	"GISTEMP": 0.69
+}, {
+	"Row": 13,
+	"Year": 2004,
+	"GCAG": 0.5783,
+	"GISTEMP": 0.55
+}, {
+	"Row": 14,
+	"Year": 2003,
+	"GCAG": 0.6134,
+	"GISTEMP": 0.62
+},  {
+	"Row": 15,
+	"Year": 2002,
+	"GCAG": 0.6023,
+	"GISTEMP": 0.63
+}, {
+	"Row": 16,
+	"Year": 2001,
+	"GCAG": 0.5473,
+	"GISTEMP": 0.55
+}, {
+	"Row": 17,
+	"Year": 2000,
+	"GCAG": 0.4262,
+	"GISTEMP": 0.42
+}, {
+	"Row": 18,
+	"Year": 1999,
+	"GCAG": 0.4438,
+	"GISTEMP": 0.42
+}, {
+	"Row": 19,
+	"Year": 1998,
+	"GCAG": 0.6344,
+	"GISTEMP": 0.64
+}, {
+	"Row": 20,
+	"Year": 1997,
+	"GCAG": 0.5187,
+	"GISTEMP": 0.48
+}, {
+	"Row": 21,
+	"Year": 1996,
+	"GCAG": 0.3228,
+	"GISTEMP": 0.35
+}, {
+	"Row": 22,
+	"Year": 1995,
+	"GCAG": 0.4577,
+	"GISTEMP": 0.46
+}, {
+	"Row": 23,
+	"Year": 1994,
+	"GCAG": 0.3409,
+	"GISTEMP": 0.32
+}, {
+	"Row": 24,
+	"Year": 1993,
+	"GCAG": 0.2853,
+	"GISTEMP": 0.24
+}, {
+	"Row": 25,
+	"Year": 1992,
+	"GCAG": 0.2571,
+	"GISTEMP": 0.23
+}, {
+	"Row": 26,
+	"Year": 1991,
+	"GCAG": 0.4055,
+	"GISTEMP": 0.43
+}, {
+	"Row": 27,
+	"Year": 1990,
+	"GCAG": 0.4328,
+	"GISTEMP": 0.44
+}, {
+	"Row": 28,
+	"Year": 1989,
+	"GCAG": 0.297,
+	"GISTEMP": 0.29
+}, {
+	"Row": 29,
+	"Year": 1988,
+	"GCAG": 0.3757,
+	"GISTEMP": 0.41
+}, {
+	"Row": 30,
+	"Year": 1987,
+	"GCAG": 0.3696,
+	"GISTEMP": 0.33
+}, {
+	"Row": 31,
+	"Year": 1986,
+	"GCAG": 0.2296,
+	"GISTEMP": 0.19
+}, {
+	"Row": 32,
+	"Year": 1985,
+	"GCAG": 0.1342,
+	"GISTEMP": 0.12
+}, {
+	"Row": 33,
+	"Year": 1984,
+	"GCAG": 0.149,
+	"GISTEMP": 0.15
+}, {
+	"Row": 34,
+	"Year": 1983,
+	"GCAG": 0.3411,
+	"GISTEMP": 0.3
+}, {
+	"Row": 35,
+	"Year": 1982,
+	"GCAG": 0.1815,
+	"GISTEMP": 0.13
+}, {
+	"Row": 36,
+	"Year": 1981,
+	"GCAG": 0.2999,
+	"GISTEMP": 0.33
+}, {
+	"Row": 37,
+	"Year": 1980,
+	"GCAG": 0.2637,
+	"GISTEMP": 0.27
+}, {
+	"Row": 38,
+	"Year": 1979,
+	"GCAG": 0.2273,
+	"GISTEMP": 0.17
+}, {
+	"Row": 39,
+	"Year": 1978,
+	"GCAG": 0.1123,
+	"GISTEMP": 0.07
+}, {
+	"Row": 40,
+	"Year": 1977,
+	"GCAG": 0.1978,
+	"GISTEMP": 0.18
+}, {
+	"Row": 41,
+	"Year": 1976,
+	"GCAG": -0.0792,
+	"GISTEMP": -0.11
+}, {
+	"Row": 42,
+	"Year": 1975,
+	"GCAG": 0.0034,
+	"GISTEMP": -0.02
+}, {
+	"Row": 43,
+	"Year": 1974,
+	"GCAG": -0.0719,
+	"GISTEMP": -0.07
+}, {
+	"Row": 44,
+	"Year": 1973,
+	"GCAG": 0.1641,
+	"GISTEMP": 0.15
+}, {
+	"Row": 45,
+	"Year": 1972,
+	"GCAG": 0.0264,
+	"GISTEMP": 0.01
+}, {
+	"Row": 46,
+	"Year": 1971,
+	"GCAG": -0.0783,
+	"GISTEMP": -0.09
+}, {
+	"Row": 47,
+	"Year": 1970,
+	"GCAG": 0.0372,
+	"GISTEMP": 0.02
+}, {
+	"Row": 48,
+	"Year": 1969,
+	"GCAG": 0.0929,
+	"GISTEMP": 0.07
+}, {
+	"Row": 49,
+	"Year": 1968,
+	"GCAG": -0.0296,
+	"GISTEMP": -0.07
+}, {
+	"Row": 50,
+	"Year": 1967,
+	"GCAG": -0.0131,
+	"GISTEMP": -0.02
+}, {
+	"Row": 51,
+	"Year": 1966,
+	"GCAG": -0.0227,
+	"GISTEMP": -0.5
+},  {
+	"Row": 52,
+	"Year": 1965,
+	"GCAG": -0.078,
+	"GISTEMP": -0.1
+}, {
+	"Row": 53,
+	"Year": 1964,
+	"GCAG": -0.1495,
+	"GISTEMP": -0.2
+}, {
+	"Row": 54,
+	"Year": 1963,
+	"GCAG": 0.1068,
+	"GISTEMP": 0.06
+}, {
+	"Row": 55,
+	"Year": 1962,
+	"GCAG": 0.0888,
+	"GISTEMP": 0.03
+}, {
+	"Row": 56,
+	"Year": 1961,
+	"GCAG": 0.0775,
+	"GISTEMP": 0.05
+}, {
+	"Row": 57,
+	"Year": 1960,
+	"GCAG": 0.0204,
+	"GISTEMP": -0.02
+}, {
+	"Row": 58,
+	"Year": 1959,
+	"GCAG": 0.0596,
+	"GISTEMP": 0.03
+}, {
+	"Row": 59,
+	"Year": 1958,
+	"GCAG": 0.1095,
+	"GISTEMP": 0.07
+},  {
+	"Row": 60,
+	"Year": 1957,
+	"GCAG": 0.0488,
+	"GISTEMP": 0.04
+},  {
+	"Row": 61,
+	"Year": 1956,
+	"GCAG": -0.199,
+	"GISTEMP": -0.2
+},  {
+	"Row": 62,
+	"Year": 1955,
+	"GCAG": -0.1354,
+	"GISTEMP": -0.15
+}, {
+	"Row": 63,
+	"Year": 1954,
+	"GCAG": -0.1165,
+	"GISTEMP": -0.13
+}, {
+	"Row": 64,
+	"Year": 1953,
+	"GCAG": 0.0952,
+	"GISTEMP": 0.08
+}, {
+	"Row": 65,
+	"Year": 1952,
+	"GCAG": 0.0248,
+	"GISTEMP": 0.01
+}, {
+	"Row": 66,
+	"Year": 1951,
+	"GCAG": -0.0132,
+	"GISTEMP": -0.07
+}, {
+	"Row": 67,
+	"Year": 1950,
+	"GCAG": -0.1616,
+	"GISTEMP": -0.18
+}, {
+	"Row": 68,
+	"Year": 1949,
+	"GCAG": -0.0568,
+	"GISTEMP": -0.09
+}, {
+	"Row": 69,
+	"Year": 1948,
+	"GCAG": -0.0487,
+	"GISTEMP": -0.09
+}, {
+	"Row": 70,
+	"Year": 1947,
+	"GCAG": -0.0477,
+	"GISTEMP": -0.05
+}, {
+	"Row": 71,
+	"Year": 1946,
+	"GCAG": -0.004,
+	"GISTEMP": -0.04
+}, {
+	"Row": 72,
+	"Year": 1945,
+	"GCAG": 0.171,
+	"GISTEMP": 0.12
+}, {
+	"Row": 73,
+	"Year": 1944,
+	"GCAG": 0.2928,
+	"GISTEMP": 0.25
+}, {
+	"Row": 74,
+	"Year": 1943,
+	"GCAG": 0.157,
+	"GISTEMP": 0.13
+}, {
+	"Row": 75,
+	"Year": 1942,
+	"GCAG": 0.1538,
+	"GISTEMP": 0.09
+}, {
+	"Row": 76,
+	"Year": 1941,
+	"GCAG": 0.196,
+	"GISTEMP": 0.12
+}, {
+	"Row": 77,
+	"Year": 1940,
+	"GCAG": 0.0947,
+	"GISTEMP": 0.08
+}, {
+	"Row": 78,
+	"Year": 1939,
+	"GCAG": -0.0139,
+	"GISTEMP": -0.03
+}, {
+	"Row": 79,
+	"Year": 1938,
+	"GCAG": -0.0288,
+	"GISTEMP": -0.03
+}, {
+	"Row": 80,
+	"Year": 1937,
+	"GCAG": -0.0157,
+	"GISTEMP": -0.03
+}, {
+	"Row": 90,
+	"Year": 1936,
+	"GCAG": -0.1134,
+	"GISTEMP": -0.15
+}, {
+	"Row": 91,
+	"Year": 1935,
+	"GCAG": -0.1392,
+	"GISTEMP": -0.2
+}, {
+	"Row": 92,
+	"Year": 1934,
+	"GCAG": -0.1015,
+	"GISTEMP": -0.14
+}, {
+	"Row": 93,
+	"Year": 1933,
+	"GCAG": -0.2439,
+	"GISTEMP": -0.29
+}, {
+	"Row": 94,
+	"Year": 1932,
+	"GCAG": -0.1168,
+	"GISTEMP": -0.17
+}, {
+	"Row": 95,
+	"Year": 1931,
+	"GCAG": -0.0686,
+	"GISTEMP": -0.09
+}, {
+	"Row": 96,
+	"Year": 1930,
+	"GCAG": -0.1003,
+	"GISTEMP": -0.15
+}, {
+	"Row": 97,
+	"Year": 1929,
+	"GCAG": -0.2985,
+	"GISTEMP": -0.36
+}, {
+	"Row": 98,
+	"Year": 1928,
+	"GCAG": -0.1774,
+	"GISTEMP": -0.21
+}, {
+	"Row": 99,
+	"Year": 1927,
+	"GCAG": -0.1546,
+	"GISTEMP": -0.21
+}, {
+	"Row": 100,
+	"Year": 1926,
+	"GCAG": -0.0667,
+	"GISTEMP": -0.1
+}, {
+	"Row": 101,
+	"Year": 1925,
+	"GCAG": -0.1481,
+	"GISTEMP": -0.21
+}, {
+	"Row": 102,
+	"Year": 1924,
+	"GCAG": -0.2486,
+	"GISTEMP": -0.28
+}, {
+	"Row": 103,
+	"Year": 1923,
+	"GCAG": -0.2156,
+	"GISTEMP": -0.24
+}, {
+	"Row": 104,
+	"Year": 1922,
+	"GCAG": -0.2304,
+	"GISTEMP": -0.28
+}, {
+	"Row": 105,
+	"Year": 1921,
+	"GCAG": -0.1485,
+	"GISTEMP": -0.21
+}, {
+	"Row": 106,
+	"Year": 1920,
+	"GCAG": -0.2105,
+	"GISTEMP": -0.27
+}, {
+	"Row": 107,
+	"Year": 1919,
+	"GCAG": -0.2055,
+	"GISTEMP": -0.22
+}, {
+	"Row": 108,
+	"Year": 1918,
+	"GCAG": -0.2084,
+	"GISTEMP": -0.26
+}, {
+	"Row": 109,
+	"Year": 1917,
+	"GCAG": -0.3146,
+	"GISTEMP": -0.4
+}, {
+	"Row": 110,
+	"Year": 1916,
+	"GCAG": -0.293,
+	"GISTEMP": -0.34
+}, {
+	"Row": 111,
+	"Year": 1915,
+	"GCAG": -0.0693,
+	"GISTEMP": -0.11
+}, {
+	"Row": 112,
+	"Year": 1914,
+	"GCAG": -0.1395,
+	"GISTEMP": -0.16
+}, {
+	"Row": 113,
+	"Year": 1913,
+	"GCAG": -0.3162,
+	"GISTEMP": -0.34
+}, {
+	"Row": 114,
+	"Year": 1912,
+	"GCAG": -0.3288,
+	"GISTEMP": -0.35
+}, {
+	"Row": 115,
+	"Year": 1911,
+	"GCAG": -0.4332,
+	"GISTEMP": -0.44
+}, {
+	"Row": 116,
+	"Year": 1910,
+	"GCAG": -0.3789,
+	"GISTEMP": -0.42
+}, {
+	"Row": 117,
+	"Year": 1909,
+	"GCAG": -0.4261,
+	"GISTEMP": -0.47
+}, {
+	"Row": 118,
+	"Year": 1908,
+	"GCAG": -0.4396,
+	"GISTEMP": -0.43
+}, {
+	"Row": 119,
+	"Year": 1907,
+	"GCAG": -0.3706,
+	"GISTEMP": -0.4
+}, {
+	"Row": 120,
+	"Year": 1906,
+	"GCAG": -0.2174,
+	"GISTEMP": -0.23
+}, {
+	"Row": 121,
+	"Year": 1905,
+	"GCAG": -0.2931,
+	"GISTEMP": -0.28
+}, {
+	"Row": 122,
+	"Year": 1904,
+	"GCAG": -0.4194,
+	"GISTEMP": -0.44
+}, {
+	"Row": 123,
+	"Year": 1903,
+	"GCAG": -0.3369,
+	"GISTEMP": -0.35
+}, {
+	"Row": 124,
+	"Year": 1902,
+	"GCAG": -0.2463,
+	"GISTEMP": -0.27
+}, {
+	"Row": 125,
+	"Year": 1901,
+	"GCAG": -0.1417,
+	"GISTEMP": -0.15
+}, {
+	"Row": 126,
+	"Year": 1900,
+	"GCAG": -0.0679,
+	"GISTEMP": -0.09
+}, {
+	"Row": 127,
+	"Year": 1899,
+	"GCAG": -0.1173,
+	"GISTEMP": -0.16
+}, {
+	"Row": 128,
+	"Year": 1898,
+	"GCAG": -0.2546,
+	"GISTEMP": -0.28
+}, {
+	"Row": 129,
+	"Year": 1897,
+	"GCAG": -0.1224,
+	"GISTEMP": -0.11
+}, {
+	"Row": 130,
+	"Year": 1896,
+	"GCAG": -0.0974,
+	"GISTEMP": -0.15
+}, {
+	"Row": 131,
+	"Year": 1895,
+	"GCAG": -0.229,
+	"GISTEMP": -0.21
+}, {
+	"Row": 132,
+	"Year": 1894,
+	"GCAG": -0.2808,
+	"GISTEMP": -0.31
+}, {
+	"Row": 133,
+	"Year": 1893,
+	"GCAG": -0.3212,
+	"GISTEMP": -0.3
+}, {
+	"Row": 134,
+	"Year": 1892,
+	"GCAG": -0.3062,
+	"GISTEMP": -0.27
+}, {
+	"Row": 135,
+	"Year": 1891,
+	"GCAG": -0.2532,
+	"GISTEMP": -0.24
+}, {
+	"Row": 136,
+	"Year": 1890,
+	"GCAG": -0.322,
+	"GISTEMP": -0.37
+}, {
+	"Row": 137,
+	"Year": 1889,
+	"GCAG": -0.0982,
+	"GISTEMP": -0.12
+}, {
+	"Row": 138,
+	"Year": 1888,
+	"GCAG": -0.1471,
+	"GISTEMP": -0.2
+}, {
+	"Row": 139,
+	"Year": 1887,
+	"GCAG": -0.2489,
+	"GISTEMP": -0.33
+}, {
+	"Row": 140,
+	"Year": 1886,
+	"GCAG": -0.2003,
+	"GISTEMP": -0.31
+}, {
+	"Row": 141,
+	"Year": 1885,
+	"GCAG": -0.2125,
+	"GISTEMP": -0.32
+}, {
+	"Row": 142,
+	"Year": 1884,
+	"GCAG": -0.2009,
+	"GISTEMP": -0.28
+}, {
+	"Row": 143,
+	"Year": 1883,
+	"GCAG": -0.1424,
+	"GISTEMP":  -0.21
+}, {
+	"Row": 144,
+	"Year": 1882,
+	"GCAG": -0.0648,
+	"GISTEMP": -0.1
+}, {
+	"Row": 145,
+	"Year": 1881,
+	"GCAG": -0.0628,
+	"GISTEMP": -0.12
+},  {
+	"Row": 146,
+	"Year": 1880,
+	"GCAG": -0.1148,
+	"GISTEMP": -0.2
+}];
+
+export function getTempdata() {
+	return tempdata;
+}
