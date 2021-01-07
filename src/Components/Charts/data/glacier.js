@@ -3,7 +3,7 @@ const glacierdata = [
 	"Row": 1,
 	"Year": 1945,
 	"Mean cumulative mass balance": 0,
-	"Number of observations": null
+	"Number of observations": 0
 }, {
 	"Row": 2,
 	"Year": 1946,
