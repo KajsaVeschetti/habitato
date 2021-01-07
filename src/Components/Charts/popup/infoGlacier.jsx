@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getGlacierdata } from "../data/glacier";
+import { getGlacierdata } from "../../data/glacier";
 
 import Glacier from '../diagram/GlacierSize';
 
