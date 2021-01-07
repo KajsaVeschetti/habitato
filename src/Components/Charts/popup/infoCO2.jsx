@@ -69,6 +69,7 @@ class InfoCo2 extends Component {
               <h4>Skriv in ett årtal mellan 1751-2014 och tryck på enter för att få fram värden.</h4>
             </div>
                         
+<<<<<<< HEAD
                         <div className="chartContainer mx-auto"> 
                         <div component={BarCharts}>
                         <BarCharts 
@@ -84,12 +85,28 @@ class InfoCo2 extends Component {
                        <ReadMoreButton/>
                         </div>   
                                       <div>
+=======
+                <div className="chartContainer mx-auto"> 
+                 <div component={BarCharts}>
+                    <BarCharts 
+                      chartName="Bar1"
+                      CO2Emission={this.state.CO2Emission[this.state.indexYear1]} 
+                      onYearFilter={this.handleYearFilter}/>
+                    <BarCharts
+                      chartName="Bar2"
+                      CO2Emission={this.state.CO2Emission[this.state.indexYear2]} 
+                      onYearFilter={this.handleYearFilter}/>
+                   {/* Co2-info */}
+                   <ReadMore/> 
+                 </div>   
+                <div>
+>>>>>>> 6183318300cd02da15a6b10744998a343384373a
                                                     
-                      </div>  
-                    </div>       
-                    </div>
+               </div>  
+               </div>       
+                </div>
   
-                  </div>
+            </div>
         
         
         
