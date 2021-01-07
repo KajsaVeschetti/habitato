@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { getCO2data } from "../data/co2";
+import ReadMoreButton from '../../btn';
+import { getCO2data } from "../../data/co2";
+import { getReadMore } from '../../data/readMore';
 
 
 import BarCharts from '../diagram/CO2Emission';
@@ -13,7 +15,8 @@ class InfoCo2 extends Component {
     state = {
         CO2Emission: [],
         indexYear1:0,
-        indexYear2:0
+        indexYear2:0,
+        readMore:[]
       };
 
 
@@ -23,6 +26,7 @@ class InfoCo2 extends Component {
 
         this.setState({
           CO2Emission: getCO2data(),
+          readMore: getReadMore(),
         
         });
       }
@@ -77,6 +81,7 @@ class InfoCo2 extends Component {
                         onYearFilter={this.handleYearFilter}/>
                        {/* Co2-info */}
                        <ReadMore/> 
+                       <ReadMoreButton/>
                         </div>   
                                       <div>
                                                     
