@@ -69,7 +69,8 @@ class InfoTemp extends Component {
 
               <div className="card mx-auto charts " style={{width:"750px"}}>
               <div className="chartHeader">
-              <h3>Skriv in två årtal och se vad <br/> klimatförändringarna har gjort under åren</h3>
+              <h3>I det här diagrammet kan vi se hur temperaturen har ändrats på vår jord genom åren.</h3>
+              <h4>Skriv in ett årtal mellan 1880-2016 och tryck på enter för att få fram värden.</h4>
               </div>
               <div className="mx-auto chartContainer">
               <div  component={Temp}>
