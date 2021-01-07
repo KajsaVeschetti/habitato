@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getTempdata } from "../data/temp";
+import { getTempdata } from "../../data/temp";
 
 import Temp from '../diagram/Temp';
 
