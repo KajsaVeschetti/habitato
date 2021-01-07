@@ -90,6 +90,7 @@ export default function PopupTemp() {
       >
         <Fade in={open}>
         <div style={{ overflow:"scroll", maxHeight:"600px", minHeight:"100%" }}> 
+        
             {/*<InfoTemp/>*/}
             <CarouSelTemp/>
           </div>
