@@ -28,6 +28,9 @@ y: PropTypes.number,
 width: PropTypes.number,
 height: PropTypes.number,
 };
+
+
+
 export default class BarCharts extends Component {
 
   handleYear = e => {
@@ -54,14 +57,38 @@ export default class BarCharts extends Component {
 
         const COLORS =[ "#ff595e", "#f8961e", "#8ac926", "#1982c4", "#6a4c93"  ]
 
+        function getIntroOfPage(label) {
+          if (label === 'Gas') {
+            return 'Gas är en förkortning av Gas Fuel. På svenska Energigas. Med detta menas bränslen i gasfrom så som biogas, naturgas och gasol. Detta värde visar kolutsläpp från bränsleförbrukning. ';
+          } if (label === 'Liq') {
+            return 'Liq är en förkortning av Liquid Fuel. På svenska Flytande bränsel. Med detta menas bränslen i form av olja så som Diesel och bensin. Detta värde visar kolutsläpp från bränsleförbrukning.';
+          } if (label === 'Sol') {
+            return 'Sol är en förkortning av Solid Fuel. På svenska Fast bränsle. Med detta menas bränslen i fast form så som kol, trä och biomassa. Detta värde visar kolutsläpp från bränsleförbrukning.';
+          } if (label === 'Cem') {
+            return 'Cem är en förkortning av Cement. För detta mäter man kolutsläppet vid produktionen av cement.';
+          } if (label === 'Flar') {
+            return 'Flar är en förkortning av Gas Flaring. Med detta menas gas som brinner, detta används ofta som en industriell process. För detta mäter man kolutsläppet vid flammorna.';
+          } 
+        }
+        
+        function CustomTooltip({ payload, label, active }) {
+          if (active) {
+            return (
+              <div className="custom-tooltip" style={{width:"200px", border:"1px solid white", background:"rgba(249, 249, 249, 0.8)"}}>
+                <p className="label">{`${label} : ${payload[0].value}`}</p>
+                <p className="intro">{getIntroOfPage(label)}</p>
+              </div>
+            );
+          }
+          return null;
+        }
 
         return (
           
             
-          <div style={{width:"280px", height:"600px", float:"left"}}>
-              <div style={{textAlign:"center", marginLeft:"3.5em"}}>
-              <label>Koldioxidutsläpp från fossila bränslen <br/> Välj årtal mellan 1751-2014</label>
-                <input className="diagramInput" type="text" placeholder="Välj år och tryck enter" style={{textAlign:"center"}} onKeyDown={e=> this.handleYear(e)}></input>
+          <div style={{width:"300px", height:"400px", float:"left", }}>
+              <div style={{textAlign:"center", marginLeft:"3em"}}>
+                <input className="diagramInput" type="text" placeholder="Skriv in ett år och tryck enter" style={{textAlign:"center"}} onKeyDown={e=> this.handleYear(e)}></input>
                 </div>
                 <BarChart
                     width={300}
@@ -72,7 +99,8 @@ export default class BarCharts extends Component {
                     }}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="name" />
-                <YAxis />
+                <YAxis type= "number" domain={[0, 4500]}/>
+                <Tooltip content={<CustomTooltip/>}/>
                 <Bar dataKey="CO2" fill="#8884d8" shape={<TriangleBar/>} label={{ position: 'top' }}> 
                 <Cell  fill ={COLORS[0]}/>
                 <Cell  fill ={COLORS[1]}/>
@@ -81,7 +109,7 @@ export default class BarCharts extends Component {
                 <Cell  fill ={COLORS[4]}/>
                 </Bar>
                 </BarChart>
-                <div className="dataAbbrContainer">
+                {/* <div className="dataAbbrContainer">
                   <ul>
                     <li className="dataAbbrGas" >Gas = Gas fuel</li>
                     <li className="dataAbbrLiq" >Liq = Liquid fuel</li>
@@ -89,12 +117,12 @@ export default class BarCharts extends Component {
                     <li className="dataAbbrCem" >Cem = Cement</li>
                     <li className="dataAbbrFlar" >Flar = Gas Flaring</li>
                   </ul>
-                </div>
+                </div> */}
             </div>
             
             
             
         );
     }
-}
- 
+  }
+
