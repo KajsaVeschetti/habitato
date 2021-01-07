@@ -43,17 +43,37 @@ class Glacier extends Component {
 
       const dataGlacier = [
         {name: 'Nivå', GLA : parseInt(glacier["Mean cumulative mass balance"])}, 
-        {name: 'Antal observationer', GLA : glacier["Number of observations"]}, 
+        {name: 'Antal Observationer', GLA : glacier["Number of observations"]}, 
  
       ];
 
       const COLORS =[ "#ff595e", "#f8961e", "#8ac926", "#1982c4", "#6a4c93" ]
 
+      function getIntroOfPage(label) {
+        if (label === 'Nivå') {
+          return 'Här kan vi se den genomsnittliga massan av den uppmätta glaciären. Med detta menas hur stor glaciären är.';
+        } if (label === 'Antal Observationer') {
+          return 'Här visas antalet glaciärer som har observerats';
+        } 
+      }
+      
+      function CustomTooltip({ payload, label, active }) {
+        if (active) {
+          return (
+            <div className="custom-tooltip" style={{width:"200px", border:"1px solid white", background:"rgba(249, 249, 249, 0.8)"}}>
+              <p className="label">{`${label} : ${payload[0].value}`}</p>
+              <p className="intro">{getIntroOfPage(label)}</p>
+            </div>
+          );
+        }
+        return null;
+      }
+
         return ( 
             <React.Fragment>
             <div style={{width:"300px", height:"350px", float:"left"}}>
               <div style={{textAlign:"center", marginLeft:"3em"}}>
-            <input className="diagramInput" type="text" placeholder="Välj ett år" onKeyDown={e=> this.handleYear(e)}></input>
+            <input className="diagramInput" type="text" placeholder="Skriv in ett år" onKeyDown={e=> this.handleYear(e)}></input>
             </div>
             <BarChart
                     width={300}
@@ -64,10 +84,11 @@ class Glacier extends Component {
                     }}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="name" />
-                <YAxis />
+                <YAxis type= "number" domain={[-40, 40]}/>
+                <Tooltip content={<CustomTooltip/>}/>
                 <Bar dataKey="GLA" fill="#8884d8" shape={<TriangleBar/>} label={{ position: 'top' }}> 
-                <Cell  fill ={COLORS[4]}/>
                 <Cell  fill ={COLORS[3]}/>
+                <Cell  fill ={COLORS[4]}/>
                 </Bar>
        
                 </BarChart> 

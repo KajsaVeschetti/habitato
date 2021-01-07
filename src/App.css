@@ -180,7 +180,7 @@ div.charts {
 
 
 /* -------------------------  Charts Data Abbreviations  ------------------------- */
-
+/* 
 .dataAbbrContainer {
   text-align:center;
   margin-left: 3.5em;
@@ -216,7 +216,7 @@ div.charts {
 
 .dataAbbrFlar {
   border-left: #d9534f solid 15px;
-}
+} */
 
 
 /* -------------------------  CommentComponent  ------------------------- */
@@ -368,8 +368,16 @@ h2.chartTitle {
   color: #555;
   font-family: 'Quicksand', sans-serif;
   font-weight: 600;
-  padding-bottom: 1em;
   padding-top: 1em;
+}
+.chartHeader h4 {
+  text-align: center;
+  color: #555;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  padding-bottom: 1em;
+  margin-top: 1em;
+  
 }
 
 

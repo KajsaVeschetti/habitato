@@ -4,8 +4,6 @@ import { getCO2data } from "../data/co2";
 
 import BarCharts from '../diagram/CO2Emission';
 import ReadMore from "../InfoCharts/ReadMore"
-import { makeStyles } from '@material-ui/core/styles';
-
 
 
 class InfoCo2 extends Component {
@@ -63,10 +61,11 @@ class InfoCo2 extends Component {
               <div className="card mx-auto charts " style={{width:"750px"}}> 
              
               <div className="chartHeader">
-              <h3>Skriv in två årtal och se vad <br/> klimatförändringarna har gjort under åren</h3>
+              <h3>I nedan diagram kan du jämföra koldioxidutsläppen <br/> från olika typer av fossila bränslen.</h3> 
+              <h4>Skriv in ett årtal mellan 1751-2014 och tryck på enter för att få fram värden.</h4>
             </div>
                         
-                        <div className="chartContainer mx-auto col-sm-10 my-auto col-6"> 
+                        <div className="chartContainer mx-auto"> 
                         <div component={BarCharts}>
                         <BarCharts 
                         chartName="Bar1"

@@ -42,13 +42,33 @@ class Temp extends Component {
       if(temp === undefined) return <p>Ingen data finns</p>;
 
     const dataTemp = [
-      {name: 'GCAG', TEMP : parseInt(temp["Mean"])}, 
-      {name: 'GISTEMP', TEMP : temp["Mean"]}, 
-
+      {name: 'GCAG', TEMP : temp["GCAG"]}, 
+      {name: 'GISTEMP', TEMP : temp["GISTEMP"]}, 
     ];
 
     const COLORS =[ "#ff595e", "#f8961e", "#8ac926", "#1982c4", "#6a4c93" ]
-        return ( 
+    
+    function getIntroOfPage(label) {
+      if (label === 'GCAG') {
+        return 'GCAG står för Global component of Climate at a Glance. Detta verktyp ger en så nära realtidsanalys av månatliga och årliga temperaturer för världen.  ';
+      } if (label === 'GISTEMP') {
+        return 'GISTEMP står för GISS Surface Temperature Analysis. Detta är en uppskattning av global förändriogn i yttemperaturen. Denna mätning görs av NASA.';
+      }  
+    }
+    
+    function CustomTooltip({ payload, label, active }) {
+      if (active) {
+        return (
+          <div className="custom-tooltip" style={{width:"200px", border:"1px solid white", background:"rgba(249, 249, 249, 0.8)"}}>
+            <p className="label">{`${label} : ${payload[0].value}`}</p>
+            <p className="intro">{getIntroOfPage(label)}</p>
+          </div>
+        );
+      }
+      return null;
+    }
+
+    return ( 
             <React.Fragment>
                <div style={{width:"300px", height:"400px", float:"left"}}>
                <div style={{textAlign:"center", marginLeft:"3.5em"}}>
@@ -63,7 +83,8 @@ class Temp extends Component {
                     }}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="name" />
-                <YAxis />
+                <YAxis type= "number" domain={[-1, 1]}/>
+                <Tooltip content={<CustomTooltip/>}/>
                 <Bar dataKey="TEMP" fill="#8884d8" shape={<TriangleBar/>} label={{ position: 'top' }}> 
                 <Cell  fill ={COLORS[0]}/>
                 <Cell  fill ={COLORS[1]}/>
