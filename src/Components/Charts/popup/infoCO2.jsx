@@ -16,7 +16,7 @@ class InfoCo2 extends Component {
         CO2Emission: [],
         indexYear1:0,
         indexYear2:0,
-        readMore:[]
+        readMore:[0]
       };
 
 
@@ -52,7 +52,10 @@ class InfoCo2 extends Component {
         }
       };
     
+
       render() {
+
+        
         return (
           /*Nedan kod hämtar ner datan till de två diagram som ska synas. Dessa diagram hämtas från en annan komponent
           Där finnen en div för att bygga in de två diagrammen och en informationsruta till en bredd.
@@ -69,7 +72,6 @@ class InfoCo2 extends Component {
               <h4>Skriv in ett årtal mellan 1751-2014 och tryck på enter för att få fram värden.</h4>
             </div>
                         
-<<<<<<< HEAD
                         <div className="chartContainer mx-auto"> 
                         <div component={BarCharts}>
                         <BarCharts 
@@ -82,25 +84,9 @@ class InfoCo2 extends Component {
                         onYearFilter={this.handleYearFilter}/>
                        {/* Co2-info */}
                        <ReadMore/> 
-                       <ReadMoreButton/>
+                       <ReadMoreButton readMore={this.state.readMore}/>
                         </div>   
                                       <div>
-=======
-                <div className="chartContainer mx-auto"> 
-                 <div component={BarCharts}>
-                    <BarCharts 
-                      chartName="Bar1"
-                      CO2Emission={this.state.CO2Emission[this.state.indexYear1]} 
-                      onYearFilter={this.handleYearFilter}/>
-                    <BarCharts
-                      chartName="Bar2"
-                      CO2Emission={this.state.CO2Emission[this.state.indexYear2]} 
-                      onYearFilter={this.handleYearFilter}/>
-                   {/* Co2-info */}
-                   <ReadMore/> 
-                 </div>   
-                <div>
->>>>>>> 6183318300cd02da15a6b10744998a343384373a
                                                     
                </div>  
                </div>       
