@@ -250,11 +250,6 @@ padding: 3em 2em 1em;
   margin: auto auto;
 }
 
-.comFormBtn {
-  margin: 1.5em auto 0 auto;
-}
-
-
 .comDisplayContainer {  
   border-left: solid #17A2B8 0.3em;
   border-top: solid #17A2B8 0.2em;
@@ -427,6 +422,11 @@ h2.chartTitle {
 
 .conFormContainer {
   text-align: left;
+}
+
+.sendBtn {
+  background:#34627A !important;
+  margin: 1.5em auto 0 auto;
 }
 
 

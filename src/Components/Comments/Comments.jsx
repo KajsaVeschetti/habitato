@@ -90,11 +90,12 @@ class Comments extends Component {
                     </Row>  
                     <Row>
                       <Button 
-                        className="comFormBtn"
+                        className="sendBtn"
                         as="input" 
                         type="submit" 
                         variant="info" 
-                        value="Skicka kommentar"/>
+                        value="Skicka kommentar"
+                        />
                     </Row>        
                   </Form.Group>
                 </Form>

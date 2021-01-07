@@ -107,7 +107,7 @@ return (
                             </Form.Label>
                             <Form.Control as="textarea" rows={3} required/>
                         </Form.Group>
-                        <Button variant="info" type="submit">
+                        <Button variant="info" type="submit" className="sendBtn" block>
                             Skicka
                         </Button>
                     </Form>           
