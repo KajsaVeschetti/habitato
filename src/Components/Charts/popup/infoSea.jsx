@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getSeadata } from "../data/sealevel";
+import { getSeadata } from "../../data/sealevel";
 
 import Sea from '../diagram/SeaLevel';
 
