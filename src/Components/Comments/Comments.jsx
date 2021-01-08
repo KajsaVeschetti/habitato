@@ -32,7 +32,6 @@ class Comments extends Component {
       comment: this.state.comment,
     });
     this.setState(this.state.commentList);
-    // alert("Din kommentar är publicerad: " + "Namn: " + this.state.name + " Kommentar: " + this.state.comment);
     event.preventDefault();
   }
 
@@ -94,8 +93,7 @@ class Comments extends Component {
                         as="input" 
                         type="submit" 
                         variant="info" 
-                        value="Skicka kommentar"
-                        />
+                        value="Skicka kommentar"/>
                     </Row>        
                   </Form.Group>
                 </Form>
@@ -105,20 +103,17 @@ class Comments extends Component {
                   <p> Läs vad dina vänner gör för att minska negativ påverkan på jorden:</p>
                   {this.state.commentList.map((item) => (       // skriver ut kommentaren, {item.name}&{item.comment} tar value från formuläret och skriver ut det
                     <Container className="comDisplayContainer " >
-                     
-                      <Card.Title className="comDisplayName" key={item.commentLikeButton} >
+                      <Card.Title 
+                        className="comDisplayName" 
+                        key={item.commentLikeButton} >
                           {item.name} 
                       </Card.Title>
-                      
-                      
-                      <Card.Text className="comDisplayComment" >
+                      <Card.Text 
+                        className="comDisplayComment" >
                           {item.comment} 
                         {/* <LikeButton/> */}
                       </Card.Text> 
-                     
-                    
                       <LikeButton/>
-                     
                     </Container> 
                   ))}
                 </Container>

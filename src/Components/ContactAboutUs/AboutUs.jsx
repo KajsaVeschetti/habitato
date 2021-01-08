@@ -17,81 +17,78 @@ class AboutUs extends Component {
         return (
            <Container >
                 <Row>
-                        <Card className="aboutCard cardKarl">
-                            <Card.Img 
-                                className="aboutUsImg" 
-                                variant="top" 
-                                src={karl}/>
-                            <Card.Body>
-                                <Card.Title>
-                                    Karl Larsson
-                                </Card.Title>
-                                <ReadMoreKarl />
-                                <Button 
-                                    block
-                                    variant="info" 
-                                    href="mailto:#">
-                                        Mejla Karl
-                                </Button>
-                            </Card.Body>
-                        </Card>
-                        <Card className="aboutCard cardLars">
-                            <Card.Img 
-                                className="aboutUsImg" 
-                                variant="top" 
-                                src={lars}/>
-                            <Card.Body>
-                                <Card.Title>
-                                    Lars Karlsson
-                                </Card.Title>
-                                <ReadMoreLars />
-                                <Button 
-                                    block
-                                    variant="info" 
-                                    href="mailto:#">
-                                       Mejla Lars
-                                </Button>
-                            </Card.Body>
-                        </Card>
-                   
-                        <Card className=" aboutCard cardLinn">
-                            <Card.Img 
-                                className="aboutUsImg" 
-                                variant="top" 
-                                src={linn}/>
-                            <Card.Body>
-                                <Card.Title>
-                                    Linn Annson
-                                </Card.Title>
-                                <ReadMoreLinn />
-                                <Button 
-                                    block
-                                    variant="info" 
-                                    href="mailto:#">
-                                        Mejla Linn
-                                </Button>
-                            </Card.Body>
-                        </Card>
-                   
-                        <Card className="aboutCard cardAnn">
-                            <Card.Img 
-                                className="aboutUsImg" 
-                                variant="top" 
-                                src={ann}/>
-                            <Card.Body>
-                                <Card.Title>
-                                    Ann Linnson
-                                </Card.Title>
-                                <ReadMoreAnn />
-                                <Button
-                                    block
-                                    variant="info" 
-                                    href="mailto:#">
-                                       Mejla Ann
-                                </Button>
-                            </Card.Body>
-                        </Card>
-                   
+                    <Card className="aboutCard cardKarl">
+                        <Card.Img 
+                            className="aboutUsImg" 
+                            variant="top" 
+                            src={karl}/>
+                        <Card.Body>
+                            <Card.Title>
+                                Karl Larsson
+                            </Card.Title>
+                            <ReadMoreKarl />
+                            <Button 
+                                block
+                                variant="info" 
+                                href="mailto:#">
+                                    Mejla Karl
+                            </Button>
+                        </Card.Body>
+                    </Card>
+                    <Card className="aboutCard cardLars">
+                        <Card.Img 
+                            className="aboutUsImg" 
+                            variant="top" 
+                            src={lars}/>
+                        <Card.Body>
+                            <Card.Title>
+                                Lars Karlsson
+                            </Card.Title>
+                            <ReadMoreLars />
+                            <Button 
+                                block
+                                variant="info" 
+                                href="mailto:#">
+                                    Mejla Lars
+                            </Button>
+                        </Card.Body>
+                    </Card>
+                    <Card className=" aboutCard cardLinn">
+                        <Card.Img 
+                            className="aboutUsImg" 
+                            variant="top" 
+                            src={linn}/>
+                        <Card.Body>
+                            <Card.Title>
+                                Linn Annson
+                            </Card.Title>
+                            <ReadMoreLinn />
+                            <Button 
+                                block
+                                variant="info" 
+                                href="mailto:#">
+                                    Mejla Linn
+                            </Button>
+                        </Card.Body>
+                    </Card>
+                    <Card className="aboutCard cardAnn">
+                        <Card.Img 
+                            className="aboutUsImg" 
+                            variant="top" 
+                            src={ann}/>
+                        <Card.Body>
+                            <Card.Title>
+                                Ann Linnson
+                            </Card.Title>
+                            <ReadMoreAnn />
+                            <Button
+                                block
+                                variant="info" 
+                                href="mailto:#">
+                                    Mejla Ann
+                            </Button>
+                        </Card.Body>
+                    </Card>
                 </Row>
             </Container>
         );
