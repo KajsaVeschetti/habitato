@@ -1,42 +1,38 @@
-const textArray = [
+export const infoData = [
     {
-        "id": "co2",
+        "name": "Co2",
         "text": "Co2 är den kemiska formeln för Koldioxid. Koldioxid är en färg- och luktfri gas. Runt jorden, i vår atmosfär, finns det flera olika gaser, bland annat koldioxid. Men även metan, lustgas och andra så kallade växthusgaser. Växthusgaserna hjälper till att hålla jorden varm, utan den naturliga växthuseffekten skulle vår jord vara ungefär 30 grader kallare än vad den är idag. När växthusgaserna ökar i atmosfären förstärks den naturliga växthuseffekten, vilket leder till att jordens medeltemperatur ökar. Det är den här temperaturökningen som kallas för global uppvärmning."
     },
     {
-        "id": "gt",
+        "name": "Gs",
         "text": "hguejdisoaåghuedwisoaåghewauioå"
     },
     {
-        "id": "gs",
+        "name": "Gt",
         "text": "hguejdisoaåghuedwisoaåghewauioå"
     },
     {
-        "id": "sl",
+        "name": "Sl",
         "text": "hguejdisoaåghuedwisoaåghewauioå"
     },
     {
-        "id": "karl",
+        "name": "Lars",
         "text": "hguejdisoaåghuedwisoaåghewauioå"
     },
     {
-        "id": "lars",
+        "name": "Karl",
         "text": "hguejdisoaåghuedwisoaåghewauioå"
     },
     {
-        "id": "linn",
+        "name": "Linn",
         "text": "hguejdisoaåghuedwisoaåghewauioå"
     },
     {
-        "id": "ann",
+        "name": "Ann",
         "text": "Ann Linnson är forskare inom Vulkanologi och brinner för att hitta lösningar för att bevara jorden. "
     }
     
     
 ];
 
-
-export function getReadMore() {
-	return textArray;
-}
 
