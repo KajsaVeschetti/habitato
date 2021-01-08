@@ -19,7 +19,6 @@ class Page extends Component {
      <div className="wrapper">
        <div className="contentWrap">
         <NavBar/>
-      <ReadMoreButton/>
    
       </div>
      
