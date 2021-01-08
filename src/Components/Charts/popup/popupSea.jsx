@@ -1,8 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
+import MuiDialogTitle from '@material-ui/core/DialogTitle';
+import Typography from '@material-ui/core/Typography';
+
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
 import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is required for IE 11 support
 import 'semantic-ui-css/semantic.min.css'
 
@@ -50,6 +56,36 @@ const Fade = React.forwardRef(function Fade(props, ref) {
   );
 });
 
+const styles = (theme) => ({
+  root: {
+    margin: 0,
+    padding: theme.spacing(2),
+    
+  },
+  closeButton: {
+    position: 'absolute',
+    right: theme.spacing(23),
+    top: theme.spacing(3.5),
+    color: theme.palette.grey[100],
+    backgroundColor: 'rgba(0, 0, 0, 0.5)'
+
+  },
+});
+
+const DialogTitle = withStyles(styles)((props) => {
+  const { children, classes, onClose, ...other } = props;
+  return (
+    <MuiDialogTitle disableTypography className={classes.root} {...other}>
+      <Typography variant="h6">{children}</Typography>
+      {onClose ? (
+        <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
+          <CloseIcon style={{fontSize:"30px"}}/>
+        </IconButton>
+      ) : null}
+    </MuiDialogTitle>
+  );
+});
+
 Fade.propTypes = {
   children: PropTypes.element,
   in: PropTypes.bool.isRequired,
@@ -89,6 +125,7 @@ export default function PopupSea() {
       >
         <Fade in={open}>
           <div style={{ overflow:"scroll", maxHeight:"600px", minHeight:"100%" }}> 
+          <DialogTitle id="customized-dialog-title" onClose={handleClose}/>
             {/*<InfoSea/>*/}
             <CarouSelSea/>
           </div>
