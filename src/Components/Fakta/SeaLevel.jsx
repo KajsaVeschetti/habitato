@@ -55,8 +55,8 @@ function SeaLevel() {
          <div className="embed-responsive embed-responsive-16by9">
           <iframe title="Youtube-video about sea level" 
            className="embed-responsive-item" width="560" height="315" 
-           src="https://www.youtube.com/embed/QH-KYmRAzOA" frameborder="0" 
-           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowFullScreen">
+           src="https://www.youtube-nocookie.com/embed/QH-KYmRAzOA" frameborder="0" 
+           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowFullScreen>
           </iframe>
          </div>
          <p className="pt-3 mb-4">Testa dina klimatkunskaper med ett <a href="/quiz">quiz</a>. Hur många rätt får du?</p>
