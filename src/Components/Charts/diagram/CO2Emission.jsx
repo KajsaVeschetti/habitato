@@ -109,15 +109,7 @@ export default class BarCharts extends Component {
                 <Cell  fill ={COLORS[4]}/>
                 </Bar>
                 </BarChart>
-                {/* <div className="dataAbbrContainer">
-                  <ul>
-                    <li className="dataAbbrGas" >Gas = Gas fuel</li>
-                    <li className="dataAbbrLiq" >Liq = Liquid fuel</li>
-                    <li className="dataAbbrSol" >Sol = Solid fuel</li>
-                    <li className="dataAbbrCem" >Cem = Cement</li>
-                    <li className="dataAbbrFlar" >Flar = Gas Flaring</li>
-                  </ul>
-                </div> */}
+          
             </div>
             
             
