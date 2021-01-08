@@ -3,14 +3,13 @@ import {Button, Collapse, Card} from 'react-bootstrap'; //Importerar Button, Col
 import fossilFuel from "./faktaImg/fossilFuel.jpg"; //Importerar fossilFuel-bild från faktaImg-mappen.
 
 function FossilFuel () {
-  //En ny state-variabel deklareras genom att kalla på useState hook. Den returnerar ett par värden som namngetts.
-  //Variabeln kallas openButton eftersom den håller värdena för knappen. Knappens värde sätts till false eftersom
-  //knappen inte är tryckt och därmed är innehållet dolt.
-  //Den andra delen, som själv är en funktion, gör att knappens nuvarande värde kan uppdateras, dvs när knappen trycks 
-  //visas ytterligare innehåll.
+  {/*En ny state-variabel deklareras genom att kalla på useState hook. Den returnerar ett par värden som namngetts.
+     Variabeln kallas openButton eftersom den håller värdena för knappen. Knappens värde sätts till false eftersom
+     knappen inte är tryckt och därmed är innehållet dolt. SetOpenButton, som själv är en funktion, gör att knappens 
+     nuvarande värde kan uppdateras, dvs när knappen trycks visas ytterligare innehåll.*/}
    const [openButton, setOpenButton] = useState(false);
 
-  //Gör så texten på knappen ändras från "Läs mer" (före knappen trycks) till "Visa mindre" (efter att knappen tryckts), och vice versa.
+   //Gör så texten på knappen ändras från "Läs mer" (före knappen trycks) till "Visa mindre" (efter att knappen tryckts), och vice versa.
    const buttonName=openButton?'Visa mindre':'Läs mer'
 
 
@@ -18,7 +17,7 @@ function FossilFuel () {
      <>
        {/* Bild, rubrik och text*/}
        <Card.Img className="px-lg-5 pb-5" variant="top" 
-        src= {fossilFuel} fluid alt="Factories with smoke coming out of large chimneys"/>
+        src= {fossilFuel} alt="Factories with smoke coming out of large chimneys"/>
        <Card.Title> 
         <h3>Vad är fossila bränslen?</h3>
        </Card.Title>
@@ -58,7 +57,7 @@ function FossilFuel () {
          <iframe title="Youtube-video about fossil fuel" 
            className="embed-responsive-item" width="560" height="315" 
            src="https://www.youtube-nocookie.com/embed/zaXBVYr9Ij0" frameborder="0" 
-           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>
          </iframe>
         </div>
        </div>
