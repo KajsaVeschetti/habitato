@@ -6,9 +6,8 @@ import seaLevel from "./faktaImg/seaLevel.jpg"; //Importerar seaLevel-bild från
 function SeaLevel() {
 {/*En ny state-variabel deklareras genom att kalla på useState hook. Den returnerar ett par värden som namngetts.
    Variabeln kallas openButton eftersom den håller värdena för knappen. Knappens värde sätts till false eftersom
-   knappen inte är tryckt och därmed är innehållet dolt.
-   Den andra delen, som själv är en funktion, gör att knappens nuvarande värde kan uppdateras, dvs när knappen trycks 
-   visas ytterligare innehåll.*/}
+   knappen inte är tryckt och därmed är innehållet dolt.SetOpenButton, som själv är en funktion, gör att knappens 
+   nuvarande värde kan uppdateras, dvs när knappen trycks visas ytterligare innehåll.*/}
   let [openButton, setOpenButton] = useState(false);
 
   //Gör så texten på knappen ändras från "Läs mer" (före knappen trycks) till "Visa mindre" (efter att knappen tryckts), och vice versa.
@@ -18,7 +17,7 @@ function SeaLevel() {
      <>
        {/* Bild, rubrik och text*/}  
        <Card.Img className="px-lg-5 pb-5" variant="top" 
-        src={seaLevel} fluid rounded alt="Close up of a sea"/>
+        src={seaLevel} alt="Close up of a sea"/>
        <Card.Title>
          <h3>Varför stiger havsnivåerna?</h3>
        </Card.Title>
@@ -56,8 +55,8 @@ function SeaLevel() {
          <div className="embed-responsive embed-responsive-16by9">
           <iframe title="Youtube-video about sea level" 
            className="embed-responsive-item" width="560" height="315" 
-           src="https://www.youtube.com/embed/QH-KYmRAzOA" frameborder="0" 
-           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+           src="https://www.youtube-nocookie.com/embed/QH-KYmRAzOA" frameborder="0" 
+           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"allowFullScreen>
           </iframe>
          </div>
          <p className="pt-3 mb-4">Testa dina klimatkunskaper med ett <a href="/quiz">quiz</a>. Hur många rätt får du?</p>

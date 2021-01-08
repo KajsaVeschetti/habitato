@@ -7,21 +7,21 @@ import SeaLevel from './SeaLevel'; //Importerar SeaLevel från mappen Faktarutor
 
 
 function Fakta (){
-  //En ny state-variabel deklareras genom att kalla på useState hook. Den returnerar ett par värden som namngetts.
-  //Variabeln kallas keyTab eftersom den håller värdena för flikarna. Flikens värde sätts till "Fossilt bränsle"
-  //eftersom det visar vad som är själva utgångsläget. Den andra delen, som själv är en funktion, gör att flikarnas 
-  //nuvarande värde uppdateras.
+  {/*En ny state-variabel deklareras genom att kalla på useState hook. Den returnerar ett par värden som namngetts.
+     Variabeln kallas keyTab eftersom den håller värdena för flikarna. Flikens värde sätts till "Fossilt bränsle"
+     eftersom det visar vad som är själva utgångsläget. SetKeyTab, som själv är en funktion, gör att flikarnas 
+     nuvarande värde uppdateras.*/}
 
    const [keyTab, setKeyTab] = useState();
    return(
    <>
+     {/*Container och Card skapar via bootstrap rutorna som håller innehållet*/}
      <Container className="charts col-lg-9 col-xs-12 px-lg-5 pb-5">
        <h1>Fakta om klimatförändringar</h1>
       <Card className="bg-light pb-3 px-lg-5">   
       <Card.Body>
 
-     {/*När man trycker på en namngiven flik ändras innehållet så det överenstämmer med titeln (nav med flikar). Flikarna är responsiva*/}
-     
+     {/*När man trycker på namngiven flik ändras innehållet så det överenstämmer med titeln (nav med flikar). Flikarna är responsiva*/}
      
      <Tabs      
        className="d-lg-flex d-block"
