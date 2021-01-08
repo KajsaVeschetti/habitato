@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ReadMoreButton from '../../btn';
 import { getCO2data } from "../../data/co2";
-import { getReadMore } from '../../data/readMore';
+import { infoData } from '../../data/readMore';
+
 
 
 import BarCharts from '../diagram/CO2Emission';
@@ -10,24 +11,20 @@ import ReadMore from "../InfoCharts/ReadMore"
 
 class InfoCo2 extends Component {
 
- 
   // skapar arrayer för de olika typerna av information
-    state = {
+   state = {
         CO2Emission: [],
         indexYear1:0,
         indexYear2:0,
-        readMore:[0]
+        infoData: [0]
       };
 
-
-    
       //hämtar information från de olika data filerna 
-      async componentDidMount() {
+      componentDidMount() {
 
         this.setState({
           CO2Emission: getCO2data(),
-          readMore: getReadMore(),
-        
+          infoData : infoData
         });
       }
     
@@ -51,56 +48,46 @@ class InfoCo2 extends Component {
           alert("Kunde inte finna någon information")
         }
       };
-    
 
       render() {
 
         
+        console.log(this.state.infoData[0])
         return (
           /*Nedan kod hämtar ner datan till de två diagram som ska synas. Dessa diagram hämtas från en annan komponent
           Där finnen en div för att bygga in de två diagrammen och en informationsruta till en bredd.
           Varje diagram har ett chartName för att kunna hämta data från det årtal som skrivs in  */  
          
           <div style={{background:"rgba(41, 170, 225, 0.9)", paddingBottom: "15px", border:'2px solid #000' }}>
-          <h2 id="spring-modal-title" className="chartTitle pt-3">Koldioxidutsläpp</h2>
-        
-
-              <div className="card mx-auto charts " style={{width:"750px"}}> 
-             
-              <div className="chartHeader">
+            <h2 id="spring-modal-title" className="chartTitle pt-3">Koldioxidutsläpp</h2>
+          <div className="card mx-auto charts " style={{width:"750px"}}>  
+            <div className="chartHeader">
               <h3>I nedan diagram kan du jämföra koldioxidutsläppen <br/> från olika typer av fossila bränslen.</h3> 
               <h4>Skriv in ett årtal mellan 1751-2014 och tryck på enter för att få fram värden.</h4>
             </div>
-                        
-                        <div className="chartContainer mx-auto"> 
-                        <div component={BarCharts}>
-                        <BarCharts 
-                        chartName="Bar1"
-                        CO2Emission={this.state.CO2Emission[this.state.indexYear1]} 
-                        onYearFilter={this.handleYearFilter}/>
-                        <BarCharts
-                        chartName="Bar2"
-                        CO2Emission={this.state.CO2Emission[this.state.indexYear2]} 
-                        onYearFilter={this.handleYearFilter}/>
-                       {/* Co2-info */}
-                       <ReadMore/> 
-                       <ReadMoreButton readMore={this.state.readMore}/>
-                        </div>   
-                                      <div>
-                                                    
-               </div>  
-               </div>       
-                </div>
+          <div className="chartContainer mx-auto"> 
+            <div component={BarCharts}>
+              <BarCharts 
+                chartName="Bar1"
+                CO2Emission={this.state.CO2Emission[this.state.indexYear1]} 
+                onYearFilter={this.handleYearFilter}/>
+              <BarCharts
+                chartName="Bar2"
+                CO2Emission={this.state.CO2Emission[this.state.indexYear2]} 
+                onYearFilter={this.handleYearFilter}/>
+              {/* Co2-info */}
+              <ReadMore/> 
+              {/* <ReadMoreButton infoData={this.state.infoData[0]}/> */}
+                     
+            </div>  
   
-            </div>
-        
-        
-        
-      
+          </div>       
+         </div>       
+        </div>       
+                
+          
         );
-    
     }
-
   }
 export default InfoCo2;
 
