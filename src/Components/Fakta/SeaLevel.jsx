@@ -17,7 +17,7 @@ function SeaLevel() {
      <>
        {/* Bild, rubrik och text*/}  
        <Card.Img className="px-lg-5 pb-5" variant="top" 
-        src={seaLevel} alt="Close up of a sea"/>
+        src={seaLevel} alt="Närbild av havsyta"/>
        <Card.Title>
          <h3>Varför stiger havsnivåerna?</h3>
        </Card.Title>
