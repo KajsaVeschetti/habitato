@@ -2,10 +2,17 @@ import React from "react";
 import AboutUs from "./AboutUs";
 import { Form, Container, Button, Row, Col } from "react-bootstrap";
 
+// Function Kontakt returnerar det som ska ses i vyn för Kontakt och AboutUs. 
+// Det är uppdelat i rader och stylat med react bootstrap
+// required används för att visa vilka fält som måste fyllas i för att skicka iväg formuläret.
+// About us skrivs ut, som importeras från AboutUs.jsx 
+// Exporterar sedan funktionen "Kontakt".
+
+
 function Kontakt() {
   return (
     <Container className="charts col-lg-9">
-      <Row>
+      <Row> 
         <h1 className="conTitle">
             Det här är vi!
         </h1>
@@ -86,5 +93,8 @@ function Kontakt() {
 }
 
 export default Kontakt;
+
+
+// Referenser:
 
 // https://react-bootstrap.github.io/components/cards/
