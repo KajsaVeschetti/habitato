@@ -12,6 +12,7 @@ function GlacierSize () {
  //Gör så texten på knappen ändras från "Läs mer" (före knappen trycks) till "Visa mindre" (efter att knappen tryckts), och vice versa.
   const buttonName=openButton?'Visa mindre':'Läs mer'
 
+
   return ( 
     <>
        {/* Bild, rubrik och text*/}
@@ -64,7 +65,7 @@ function GlacierSize () {
        </Collapse>
 
      {/*Gör så att innehållet (rubriker, text plus video) blir synligt när knappen trycks*/}
-     <Button variant="info" size="sm" block    
+     <Button variant="info" size="sm"  block  
        onClick={() => setOpenButton(!openButton)}
        aria-controls="Glacier-collapse-content"
        aria-expanded={openButton}
