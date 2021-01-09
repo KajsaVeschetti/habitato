@@ -39,7 +39,7 @@ class NavBar extends Component {
                     QUIZ
                 </NavLink>
                 <NavLink className="navbar-brand d-none d-lg-block" 
-                     to="/"><img src={Habitato1} alt="Habitato logo" className="navLogo"/>
+                     to="/"><img src={Habitato1} alt="Habitato logga" className="navLogo"/>
                </NavLink>
                <NavLink className="navLink" 
                      to="/Comments" activeClassName="activeLink">
