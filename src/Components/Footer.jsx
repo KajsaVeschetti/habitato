@@ -22,9 +22,9 @@ class Footer extends Component {
           <div >
          <a href="https://www.facebook.com/" >
 
-           <FontAwesomeIcon className="footerLogo"  icon={faFacebookSquare}/></a>
+           <FontAwesomeIcon className="footerLogo" title="Facebook" icon={faFacebookSquare}/></a>
          <a href="https://www.instagram.com/">
-          <FontAwesomeIcon className="footerLogo"   icon={faInstagram}/></a>
+          <FontAwesomeIcon className="footerLogo" title="Instagram"   icon={faInstagram}/></a>
          </div>
      </footer>
   
