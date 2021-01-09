@@ -17,7 +17,7 @@ class AllCharts extends Component {
         return (  
             <>
           {/*<React.Fragment>*/}
-        
+             {/*Skapar en ruta med rubrik*/}
                <Card className="mx-auto charts col-lg-9">
                      <Card.Title className="containerTitle row">
                        <h2>Se hur klimatförändringen har påverkat jorden under åren genom att använda våra diagram för att jämföra två olika år</h2>
@@ -31,6 +31,7 @@ class AllCharts extends Component {
 
                 
                     {/*<ul className="mx-auto justify-content-center popup" >*/}
+                    {/*Skapar lista med popup*/}
                     <ul className="mx-auto popup">
                         <li> 
                             <PopupCO2 />
