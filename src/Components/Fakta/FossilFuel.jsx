@@ -17,7 +17,7 @@ function FossilFuel () {
      <>
        {/* Bild, rubrik och text*/}
        <Card.Img className="px-lg-5 pb-5" variant="top" 
-        src= {fossilFuel} alt="Factories with smoke coming out of large chimneys"/>
+        src= {fossilFuel} alt="Fabriker med rök som kommer ut ur stora skorstenar"/>
        <Card.Title> 
         <h3>Vad är fossila bränslen?</h3>
        </Card.Title>
