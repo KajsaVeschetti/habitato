@@ -17,7 +17,7 @@ function GlobalWarming() {
     <>
        {/* Bild, rubrik och text*/}  
        <Card.Img className="px-lg-5 pb-5" variant="top" 
-        src={globalWarming} alt="Bright sun with clouds"/>
+        src={globalWarming} alt="Stark sol med moln"/>
        <Card.Title>
         <h3>Vad menas med global uppvärmning?</h3>
        </Card.Title>
