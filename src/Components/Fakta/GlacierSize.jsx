@@ -17,7 +17,7 @@ function GlacierSize () {
     <>
        {/* Bild, rubrik och text*/}
        <Card.Img className="px-lg-5 pb-5" variant="top" 
-        src={glacierSize} alt="Glaciers in water"/>
+        src={glacierSize} alt="Glaciär i vatten"/>
        <Card.Title>
         <h3>Varför minskar glaciärerna i storlek?</h3>
        </Card.Title>
