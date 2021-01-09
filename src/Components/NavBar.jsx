@@ -20,52 +20,55 @@ class NavBar extends Component {
 
     render () {
  
-        return(
-             <Router>
-              <Navbar collapseOnSelect expand="lg" bg="light" variant="light" className="pr-4">
-              <NavLink class="navbar-toggler border-0" to="/"><img src={Habitato1} className="navLogo" alt="Habitato logotyp"/></NavLink>
-              <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
-               <Navbar.Collapse id="responsive-navbar-nav">
+       return(
+          <Router>
+               {/*Skapar en responsiv navbar (hamburgermenyn). Menyn fälls ut för deskop (brytpunkten är lg). En logga som syns i mindre 
+                  skärmar läggs till. Loggan är klickbar och tar en till "hem"*/}
+          <Navbar collapseOnSelect expand="lg" bg="light" variant="light" className="pr-4">
+           <NavLink class="navbar-toggler border-0" to="/"><img src={Habitato1} className="navLogo" alt="Habitato logotyp"/></NavLink>
+           <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
+           <Navbar.Collapse id="responsive-navbar-nav">
                <Nav className="mx-auto text-left" >
-
-           <NavLink className="navLink" 
-             to="/Charts/AllCharts" activeClassName="activeLink">
-              HEM
-           </NavLink>
-           <NavLink className="navLink" 
-              to="/Quiz" activeClassName="activeLink">
-               QUIZ
-          </NavLink>
-          <NavLink className="navbar-brand d-none d-lg-block" 
-            to="/"><img src={Habitato1} alt="Habitato logo" className="navLogo"/>
-          </NavLink>
-          <NavLink className="navLink" 
-            to="/Comments" activeClassName="activeLink">
-             TIPS
-         </NavLink>
-         <NavLink className="navLink" 
-            to="/Faktarutor" activeClassName="activeLink">
-             FAKTA
-         </NavLink>
-
+                {/*Skapar navigationslänkar som renderas v*/}
+                <NavLink className="navLink" 
+                     to="/Charts/AllCharts" activeClassName="activeLink">
+                   HEM
+                </NavLink>
+                <NavLink className="navLink" 
+                     to="/Quiz" activeClassName="activeLink">
+                    QUIZ
+                </NavLink>
+                <NavLink className="navbar-brand d-none d-lg-block" 
+                     to="/"><img src={Habitato1} alt="Habitato logo" className="navLogo"/>
+               </NavLink>
+               <NavLink className="navLink" 
+                     to="/Comments" activeClassName="activeLink">
+                    TIPS
+              </NavLink>
+              <NavLink className="navLink" 
+                     to="/Faktarutor" activeClassName="activeLink">
+                    FAKTA
+              </NavLink>
               </Nav>
             </Navbar.Collapse>
-            </Navbar> 
+          </Navbar> 
             
        
-        <Switch>
-       
-        <Route exact path="/Charts/AllCharts"component={AllCharts}>
+         <Switch>
+           {/* Route hanterar sökvägen (path). Om sökvägen matchar länknamnet så renderas den exakta platsen via exact path. Switch 
+               renderar enbart den första matchade rutten, till skillnad från route. Det beror på att route render inkluderande medan 
+               switch renderar exkluderande. Det gör att switch måste kopplas till en "exact path" om det finns fler barnkomponenter*/}
+          <Route exact path="/Charts/AllCharts"component={AllCharts}>
             <AllCharts/>
           </Route>
-        <Route exact path="/Quiz"component={Quiz}>
+          <Route exact path="/Quiz"component={Quiz}>
             <Quiz/>
           </Route>
-        <Route exact path="/Comments"component={Comments} >
-        <Comments/>
+          <Route exact path="/Comments"component={Comments} >
+            <Comments/>
           </Route>
-        <Route exact path="/FaktaRutor"component={Fakta} >
-          <Fakta/>
+          <Route exact path="/FaktaRutor"component={Fakta} >
+             <Fakta/>
           </Route>
           <Route exact path="/ContactAboutUs/Kontakt"component={Kontakt}>
             <Kontakt/>
@@ -75,7 +78,7 @@ class NavBar extends Component {
           <Redirect from="/" exact to="/Charts/AllCharts"></Redirect>
         
         </Switch>
-        </Router>
+       </Router>
         );
     }
 }
