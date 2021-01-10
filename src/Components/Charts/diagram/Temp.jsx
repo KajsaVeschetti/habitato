@@ -5,7 +5,7 @@ import {
 } from 'recharts';
 import PropTypes from 'prop-types';
 
-
+// Kod hämtad från recharts
 
 const getPath = (x, y, width, height) => `M${x},${y + height}
 C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3} ${x + width / 2}, ${y}
@@ -46,8 +46,10 @@ class Temp extends Component {
       {name: 'GISTEMP', TEMP : temp["GISTEMP"]}, 
     ];
 
+    /*Färger på staplar*/
     const COLORS =[ "#ff595e", "#f8961e", "#8ac926", "#1982c4", "#6a4c93" ]
     
+    /* Information om de olika staplarna */
     function getIntroOfPage(label) {
       if (label === 'GCAG') {
         return 'GCAG står för Global component of Climate at a Glance. Detta verktyp ger en så nära realtidsanalys av månatliga och årliga temperaturer för världen.  ';
@@ -56,6 +58,7 @@ class Temp extends Component {
       }  
     }
     
+    /*Hämtar informationen från ovan funktion */
     function CustomTooltip({ payload, label, active }) {
       if (active) {
         return (
