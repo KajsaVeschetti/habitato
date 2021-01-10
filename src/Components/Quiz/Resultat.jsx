@@ -5,6 +5,12 @@ import { Button } from 'react-bootstrap';
 
 
 
+//const med vad som ska visas när vy visas
+//score, play again och responses har deklarerats i quizkomponent
+
+//rad 22 visar knapp som kör funktion play again som deklarerats i quizkomponent.
+//rad 24 infogar facit-komponent
+
 
 const Resultat = ({score, playAgain, responses }) => 
 <div className="contentWrap" >
