@@ -124,7 +124,7 @@ export default function PopupSea() {
         }}
       >
         <Fade in={open}>
-          <div style={{ overflow:"scroll", maxHeight:"600px", minHeight:"100%" }}> 
+          <div style={{ overflow:"scroll", maxHeight:"900px", minHeight:"100%" }}> 
           <DialogTitle id="customized-dialog-title" onClose={handleClose}/>
             {/*<InfoSea/>*/}
             <CarouSelSea/>
