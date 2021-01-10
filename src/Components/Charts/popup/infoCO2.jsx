@@ -54,7 +54,7 @@ class InfoCo2 extends Component {
         
         console.log(this.state.infoData[0])
         return (
-          /*Nedan kod hämtar ner datan till de två diagram som ska synas. Dessa diagram hämtas från en annan komponent
+          /*Nedan kod hämtar datan till de två diagram som ska synas. Dessa diagram hämtas från en annan komponent
           Där finnen en div för att bygga in de två diagrammen och en informationsruta till en bredd.
           Varje diagram har ett chartName för att kunna hämta data från det årtal som skrivs in  */  
          
