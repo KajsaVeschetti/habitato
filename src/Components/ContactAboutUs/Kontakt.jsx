@@ -4,10 +4,6 @@ import { Form, Container, Button, Row, Col } from "react-bootstrap";
 
 // Function Kontakt returnerar det som ska ses i vyn för Kontakt och AboutUs. 
 // Det är uppdelat i rader och stylat med react bootstrap
-// required används för att visa vilka fält som måste fyllas i för att skicka iväg formuläret.
-// About us skrivs ut, som importeras från AboutUs.jsx 
-// Exporterar sedan funktionen "Kontakt".
-
 
 function Kontakt() {
   return (
@@ -30,7 +26,7 @@ function Kontakt() {
           <br />
           Vi har bara en planet, låt oss tillsammans ta hand om den!
         </p>
-        <AboutUs />
+        <AboutUs />                      {/* About us skrivs ut, som importeras från AboutUs.jsx */}
       </Row>
       <Row>
         <Col>
@@ -59,7 +55,7 @@ function Kontakt() {
                 <Form.Control 
                     type="email" 
                     placeholder="Mailadress" 
-                    required />
+                    required />        {/* required används för att visa vilka fält som måste fyllas i för att skicka iväg formuläret. */}
                 <Form.Text className="text-muted">
                   Vi sparar inte din mailadress
                 </Form.Text>
@@ -100,7 +96,7 @@ function Kontakt() {
   );
 }
 
-export default Kontakt;
+export default Kontakt;             // Exporterar funktionen "Kontakt".
 
 
 // Referenser:
