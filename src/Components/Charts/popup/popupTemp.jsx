@@ -11,14 +11,11 @@ import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is required for IE 11 support
 
-
-
-//import InfoTemp from './infoTemp';
 import CarouSelTemp from './CarouSelTemp';
 
 //Nedan kod är hämtad från https://react.semantic-ui.com/modules/modal/ för att få till popup knappar på förstasidan.
 
-
+/* Styling för popuprutan */
 const useStyles = makeStyles((theme) => ({
   modal: {
     display: 'flex',
@@ -33,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+/* Gör att popup rutan öppnas och stängs med en fade */
 const Fade = React.forwardRef(function Fade(props, ref) {
   const { in: open, children, onEnter, onExited, ...other } = props;
   const style = useSpring({
@@ -57,6 +55,7 @@ const Fade = React.forwardRef(function Fade(props, ref) {
   );
 });
 
+/* Styling för iconen för att stänga popupen */
 const styles = (theme) => ({
   root: {
     margin: 0,
@@ -73,6 +72,7 @@ const styles = (theme) => ({
   },
 });
 
+/* Denna kod skapar stängningsknappen iform av ett kryss. Denna kod kommer från material-ui. */
 const DialogTitle = withStyles(styles)((props) => {
   const { children, classes, onClose, ...other } = props;
   return (
@@ -98,16 +98,18 @@ export default function PopupTemp() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
-  const handleOpen = () => {
+  const handleOpen = () => {  /*Hanterar öppningen av popuprutan */
     setOpen(true);
   };
 
-  const handleClose = () => {
+  const handleClose = () => {  /*Hanterar stängningen av popuprutan*/
     setOpen(false);
   };
 
   return (
-    /*Nedan kod skapar en knapp som när man trycker på den visar ett diagram */
+       /*Nedan kod skapar en knapp som genererar en popupruta. I denna ruta hämtas diagrammet för koldioxidutläpp. 
+    Detta hämtas i komponenten CarouSelTemp*/
+
     <div>
       <button type="button" className="popupButton" style={{background:"rgba(68, 118, 128, 0.9)"}} onClick={handleOpen}>
        Global Temperatur
@@ -126,9 +128,7 @@ export default function PopupTemp() {
       >
         <Fade in={open}>
         <div style={{ overflow:"scroll", maxHeight:"900px", minHeight:"100%" }}> 
-        <DialogTitle id="customized-dialog-title" onClose={handleClose}/>
-        
-            {/*<InfoTemp/>*/}
+        <DialogTitle id="customized-dialog-title" onClose={handleClose}/>  /* Denna del hämtar stängningsknappen som kommer upp för att stänga ner popupen*/
             <CarouSelTemp/>
           </div>
         </Fade>
