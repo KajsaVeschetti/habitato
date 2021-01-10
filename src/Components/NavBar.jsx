@@ -29,7 +29,7 @@ class NavBar extends Component {
            <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
            <Navbar.Collapse id="responsive-navbar-nav">
                <Nav className="mx-auto text-left" >
-                {/*Skapar navigationslänkar */}
+                {/*Skapar navigationslänkar och logga som enbart visas på större skärmar */}
                 <NavLink className="navLink" 
                      to="/Charts/AllCharts" activeClassName="activeLink">
                    HEM
