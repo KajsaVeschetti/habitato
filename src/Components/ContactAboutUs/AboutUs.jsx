@@ -17,7 +17,7 @@ import ann from "./img/ann.svg";
 class AboutUs extends Component {
     render() {
         return (
-           <Container >
+           <Container>
                 <Row>
                     <Card className="aboutCard cardKarl">
                         <Card.Img 
@@ -29,7 +29,7 @@ class AboutUs extends Component {
                             <Card.Title>
                                 Karl Larsson
                             </Card.Title>
-                            <ReadMoreKarl />
+                            <ReadMoreKarl/>
                             <Button 
                                 block
                                 variant="info" 
@@ -48,7 +48,7 @@ class AboutUs extends Component {
                             <Card.Title>
                                 Lars Karlsson
                             </Card.Title>
-                            <ReadMoreLars />
+                            <ReadMoreLars/>
                             <Button 
                                 block
                                 variant="info" 
@@ -67,7 +67,7 @@ class AboutUs extends Component {
                             <Card.Title>
                                 Linn Annson
                             </Card.Title>
-                            <ReadMoreLinn />
+                            <ReadMoreLinn/>
                             <Button 
                                 block
                                 variant="info" 
@@ -86,7 +86,7 @@ class AboutUs extends Component {
                             <Card.Title>
                                 Ann Linnson
                             </Card.Title>
-                            <ReadMoreAnn />
+                            <ReadMoreAnn/>
                             <Button
                                 block
                                 variant="info" 
