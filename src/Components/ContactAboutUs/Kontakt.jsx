@@ -4,10 +4,6 @@ import { Form, Container, Button, Row, Col } from "react-bootstrap";
 
 // Function Kontakt returnerar det som ska ses i vyn för Kontakt och AboutUs. 
 // Det är uppdelat i rader och stylat med react bootstrap
-// required används för att visa vilka fält som måste fyllas i för att skicka iväg formuläret.
-// About us skrivs ut, som importeras från AboutUs.jsx 
-// Exporterar sedan funktionen "Kontakt".
-
 
 function Kontakt() {
   return (
@@ -30,7 +26,7 @@ function Kontakt() {
           <br />
           Vi har bara en planet, låt oss tillsammans ta hand om den!
         </p>
-        <AboutUs />
+        <AboutUs />                      {/* About us skrivs ut, som importeras från AboutUs.jsx */}
       </Row>
       <Row>
         <Col>
@@ -42,23 +38,31 @@ function Kontakt() {
           <Container className="charts col-lg-11 conFormContainer">
             <Form>
               <Form.Group controlId="exampleForm.ControlInput1">
+              <Form.Label className="conFormLabel">
+                    Namn *
+                </Form.Label>
+                
                 <Form.Control 
                     placeholder="Namn" 
                     required />
                 <Form.Text className="text-muted">
                   Det är ok att ange ett alias
                 </Form.Text>
+                <Form.Label className="conFormLabel">
+                    Mailadress *
+                </Form.Label>
+                
                 <Form.Control 
                     type="email" 
                     placeholder="Mailadress" 
-                    required />
+                    required />        {/* required används för att visa vilka fält som måste fyllas i för att skicka iväg formuläret. */}
                 <Form.Text className="text-muted">
                   Vi sparar inte din mailadress
                 </Form.Text>
               </Form.Group>
               <Form.Group controlId="exampleForm.ControlSelect1">
-                <Form.Label>
-                    Vad gäller ditt ärende?
+                <Form.Label className="conFormLabel">
+                    Vad gäller ditt ärende? *
                 </Form.Label>
                 <Form.Control as="select">
                   <option>Diagrammen</option>
@@ -69,8 +73,8 @@ function Kontakt() {
                 </Form.Control>
               </Form.Group>
               <Form.Group controlId="exampleForm.ControlTextarea1">
-                <Form.Label>
-                    Meddelande
+                <Form.Label className="conFormLabel">
+                    Meddelande *
                 </Form.Label>
                 <Form.Control 
                     as="textarea" 
@@ -92,7 +96,7 @@ function Kontakt() {
   );
 }
 
-export default Kontakt;
+export default Kontakt;             // Exporterar funktionen "Kontakt".
 
 
 // Referenser:
