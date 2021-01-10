@@ -19,7 +19,7 @@ function ReadMore() {
   
   return (
     <div className="App">
-      <Button  className="mt-5" size="sm" variant="info"  onClick={()=>{setReadMore(!readMore)}}>{BtnName}</Button> {readMore && extraContent}
+      <Button   size="sm" variant="info"  onClick={()=>{setReadMore(!readMore)}}>{BtnName}</Button> {readMore && extraContent}
     </div>
   );
 }
