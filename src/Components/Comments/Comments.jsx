@@ -28,11 +28,15 @@ class Comments extends Component {
   
   handleSubmit(event) {                 // Säger vad som ska hända när man trycker på knappen
     this.state.commentList.push({       
-      name: this.state.name,            // lägger till namn och kommentar från inputfälten
+      name: this.state.name,                // lägger till namn och kommentar från inputfälten
       comment: this.state.comment,
     });
     this.setState(this.state.commentList);  // skriver listan till state så att den kan visas
-    event.preventDefault();                 
+    event.preventDefault();  
+    this.setState({                         // rensar inputfälten 
+      name: '' ,
+      comment: ''
+    });             
   }
 
 
@@ -148,3 +152,8 @@ export default Comments;                                       // exporterar Com
 // https://stackoverflow.com/questions/54256701/how-to-highlight-empty-mandatory-input-field-with-red-border-click-on-button
 
 // https://react-bootstrap.github.io/components/images/
+
+// https://stackoverflow.com/questions/46539480/react-clearing-an-input-value-after-form-submit
+
+
+
