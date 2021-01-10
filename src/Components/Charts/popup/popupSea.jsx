@@ -12,12 +12,11 @@ import CloseIcon from '@material-ui/icons/Close';
 import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is required for IE 11 support
 import 'semantic-ui-css/semantic.min.css'
 
-//import InfoSea from './infoSea';
 import CarouSelSea from './CarouSelSea';
 
 //Nedan kod är hämtad från https://react.semantic-ui.com/modules/modal/ för att få till popup knappar på förstasidan.
 
-
+/* Styling för popuprutan */
 const useStyles = makeStyles((theme) => ({
   modal: {
     display: 'flex',
@@ -32,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+/* Gör att popup rutan öppnas och stängs med en fade */
 const Fade = React.forwardRef(function Fade(props, ref) {
   const { in: open, children, onEnter, onExited, ...other } = props;
   const style = useSpring({
@@ -56,6 +56,7 @@ const Fade = React.forwardRef(function Fade(props, ref) {
   );
 });
 
+/* Styling för iconen för att stänga popupen */
 const styles = (theme) => ({
   root: {
     margin: 0,
@@ -72,6 +73,7 @@ const styles = (theme) => ({
   },
 });
 
+/* Denna kod skapar stängningsknappen iform av ett kryss. Denna kod kommer från material-ui. */
 const DialogTitle = withStyles(styles)((props) => {
   const { children, classes, onClose, ...other } = props;
   return (
@@ -97,17 +99,17 @@ export default function PopupSea() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
-  const handleOpen = () => {
+  const handleOpen = () => { /*Hanterar öppning av popuprutan*/
     setOpen(true);
   };
 
-  const handleClose = () => {
+  const handleClose = () => { /*Hanterar stängningen av popuprutan*/
     setOpen(false);
   };
 
   return (
-    /*Nedan kod skapar en knapp som när man trycker på den visar ett diagram */
-    <div>
+     /*Nedan kod skapar en knapp som genererar en popupruta. I denna ruta hämtas diagrammet för koldioxidutläpp. 
+    Detta hämtas i komponenten CarouSelSea*/    <div>
       <button type="button" className="popupButton" style={{background:"rgba(20, 109, 177, 0.9)"}} onClick={handleOpen}>
         Havsnivå
       </button>
@@ -125,7 +127,7 @@ export default function PopupSea() {
       >
         <Fade in={open}>
           <div style={{ overflow:"scroll", maxHeight:"900px", minHeight:"100%" }}> 
-          <DialogTitle id="customized-dialog-title" onClose={handleClose}/>
+          <DialogTitle id="customized-dialog-title" onClose={handleClose}/>  /* Denna del hämtar stängningsknappen som kommer upp för att stänga ner popupen*/
             {/*<InfoSea/>*/}
             <CarouSelSea/>
           </div>
