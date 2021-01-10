@@ -109,16 +109,29 @@ class Comments extends Component {
                   {this.state.commentList.map((item) => (       // skriver ut kommentaren, {item.name}&{item.comment} tar value från formuläret och skriver ut det
                     <Container className="comDisplayContainer " >
                       <Card.Title 
-                        className="comDisplayName">             
+                        className="comDisplayName" 
+                        controlId="exampleForm.ControlSelect1">             
                           {item.name}                           {/* {item.name}  skriver ut det nya namnet*/}
                       </Card.Title>
                       <Card.Text 
-                        className="comDisplayComment" >
+                        className="comDisplayComment" 
+                        controlId="exampleForm.ControlTextarea1">
                           {item.comment}                        {/* {item.comment}  skriver ut den nya kommentaren*/}
                       </Card.Text> 
                       <LikeButton/>                             {/* Skriver ut LikeButton komponenten som importerats tidigare */}
                     </Container> 
                   ))}
+                    <Container className="comDisplayContainer " > {/*  Statisk kommentar som visar hur kommentarsfältet ser ut eftersom vi inte har någon databas som sparar tidigare skrivna kommentarer*/}
+                      <Card.Title 
+                        className="comDisplayName">             
+                          Linus                          
+                      </Card.Title>
+                      <Card.Text 
+                        className="comDisplayComment" >
+                          Hej, mitt tips är att dra ut alla kontakter ur väggen när du inte använder grejerna. Det var svårt att komma ihåg i början men nu gör jag det hela tiden.                        
+                      </Card.Text> 
+                      <LikeButton/>                            
+                    </Container> 
                 </Container>
               </Col>
             </Row>
