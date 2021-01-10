@@ -86,7 +86,7 @@ export default class BarCharts extends Component {
         return (
           
             
-          <div style={{width:"300px", height:"400px", float:"left", }}>
+          <div style={{width:"300px", height:"360px", float:"left", }}>
               <div style={{textAlign:"center", marginLeft:"3em"}}>
                 <input className="diagramInput" type="text" placeholder="Skriv in ett år och tryck enter" style={{textAlign:"center"}} onKeyDown={e=> this.handleYear(e)}></input>
                 </div>
