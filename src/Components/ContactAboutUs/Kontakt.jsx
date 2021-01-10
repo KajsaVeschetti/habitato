@@ -42,12 +42,20 @@ function Kontakt() {
           <Container className="charts col-lg-11 conFormContainer">
             <Form>
               <Form.Group controlId="exampleForm.ControlInput1">
+              <Form.Label className="conFormLabel">
+                    Namn *
+                </Form.Label>
+                
                 <Form.Control 
                     placeholder="Namn" 
                     required />
                 <Form.Text className="text-muted">
                   Det är ok att ange ett alias
                 </Form.Text>
+                <Form.Label className="conFormLabel">
+                    Mailadress *
+                </Form.Label>
+                
                 <Form.Control 
                     type="email" 
                     placeholder="Mailadress" 
@@ -57,8 +65,8 @@ function Kontakt() {
                 </Form.Text>
               </Form.Group>
               <Form.Group controlId="exampleForm.ControlSelect1">
-                <Form.Label>
-                    Vad gäller ditt ärende?
+                <Form.Label className="conFormLabel">
+                    Vad gäller ditt ärende? *
                 </Form.Label>
                 <Form.Control as="select">
                   <option>Diagrammen</option>
@@ -69,8 +77,8 @@ function Kontakt() {
                 </Form.Control>
               </Form.Group>
               <Form.Group controlId="exampleForm.ControlTextarea1">
-                <Form.Label>
-                    Meddelande
+                <Form.Label className="conFormLabel">
+                    Meddelande *
                 </Form.Label>
                 <Form.Control 
                     as="textarea" 
