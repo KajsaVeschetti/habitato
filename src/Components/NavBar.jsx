@@ -29,7 +29,7 @@ class NavBar extends Component {
            <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
            <Navbar.Collapse id="responsive-navbar-nav">
                <Nav className="mx-auto text-left" >
-                {/*Skapar navigationslänkar som renderas v*/}
+                {/*Skapar navigationslänkar */}
                 <NavLink className="navLink" 
                      to="/Charts/AllCharts" activeClassName="activeLink">
                    HEM
@@ -56,7 +56,7 @@ class NavBar extends Component {
        
          <Switch>
            {/* Route hanterar sökvägen (path). Om sökvägen matchar länknamnet så renderas den exakta platsen via exact path. Switch 
-               renderar enbart den första matchade rutten, till skillnad från route. Det beror på att route render inkluderande medan 
+               renderar enbart den första matchade rutten, till skillnad från route. Det beror på att route renderar inkluderande medan 
                switch renderar exkluderande. Det gör att switch måste kopplas till en "exact path" om det finns fler barnkomponenter*/}
           <Route exact path="/Charts/AllCharts"component={AllCharts}>
             <AllCharts/>
