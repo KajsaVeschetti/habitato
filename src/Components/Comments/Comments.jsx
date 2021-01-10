@@ -6,33 +6,33 @@ import tipsIcon from "./img/tipsIcon.svg";
 
 class Comments extends Component {
   constructor(props) {        // Constructorn visar hur objektet byggs
-    super(props);             //  super pekar på "Component", måste användas innan "this."
+    super(props);             // super ärver från "Component", måste användas innan "this."
     this.state = {            // listar komponentens data som hanteras
       name: "",               // lista med state-objektets attribut
       comment: "",
       commentList: [],
     };
 
-    this.handleChangeName = this.handleChangeName.bind(this);
+    this.handleChangeName = this.handleChangeName.bind(this);  // binder funktionerna till this-objektet.
     this.handleChangeComment = this.handleChangeComment.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChangeName(event) {
+  handleChangeName(event) {               // hanterar värdet i inputfältet för namn
     this.setState({ name: event.target.value });
   }
 
-  handleChangeComment(event) {
+  handleChangeComment(event) {           // hanterar värdet i inputfältet för namn
     this.setState({ comment: event.target.value });
   }
   
-  handleSubmit(event) {     // Säger vad som ska hända när man trycker på knappen
-    this.state.commentList.push({
-      name: this.state.name,
+  handleSubmit(event) {                 // Säger vad som ska hända när man trycker på knappen
+    this.state.commentList.push({       
+      name: this.state.name,            // lägger till namn och kommentar från inputfälten
       comment: this.state.comment,
     });
-    this.setState(this.state.commentList);
-    event.preventDefault();
+    this.setState(this.state.commentList);  // skriver listan till state så att den kan visas
+    event.preventDefault();                 
   }
 
 
@@ -125,7 +125,7 @@ class Comments extends Component {
   }
 }
 
-export default Comments;                                       {/* exporterar Comments */}
+export default Comments;                                       // exporterar Comments
 
 
 
@@ -148,132 +148,3 @@ export default Comments;                                       {/* exporterar Co
 // https://stackoverflow.com/questions/54256701/how-to-highlight-empty-mandatory-input-field-with-red-border-click-on-button
 
 // https://react-bootstrap.github.io/components/images/
-
-
-
-// backup 
-
-
-// class Comments extends Component {
-//   constructor(props) {        // Constructorn visar hur objektet byggs
-//     super(props);             //  super pekar på "Component", måste användas innan "this."
-//     this.state = {            // listar komponentens data som hanteras
-//       name: "",               // lista med state-objektets attribut
-//       comment: "",
-//       commentList: [],
-//     };
-
-//     this.handleChangeName = this.handleChangeName.bind(this);
-//     this.handleChangeComment = this.handleChangeComment.bind(this);
-//     this.handleSubmit = this.handleSubmit.bind(this);
-//   }
-
-//   handleChangeName(event) {
-//     this.setState({ name: event.target.value });
-//   }
-
-//   handleChangeComment(event) {
-//     this.setState({ comment: event.target.value });
-//   }
-  
-//   handleSubmit(event) {     // Säger vad som ska hända när man trycker på knappen
-//     this.state.commentList.push({
-//       name: this.state.name,
-//       comment: this.state.comment,
-//     });
-//     this.setState(this.state.commentList);
-//     event.preventDefault();
-//   }
-
-
-//   render() {
-//     return (
-//       <Container className="charts col-lg-9 comCompStyle">
-//         <Row className="comFirstRow">
-//           <Col xs={7}>
-//             <h1>Dela med dig av ditt bästa miljötips!</h1>
-//           </Col>
-//           <Col>
-//             <Image 
-//             src={tipsIcon} rounded 
-//             className="comImg"/>
-//           </Col>
-//         </Row>
-//         <Row>
-//           <Container>
-//             <Row>
-//               <Col xs={7} >
-//                 <Form 
-//                     className="comCompFormStyle"
-//                     onSubmit={this.handleSubmit}>
-//                   <Form.Group 
-//                       className="charts " >
-//                     <Row>
-//                       <Form.Label className="comFormLabel" >
-//                         NAMN
-//                       </Form.Label>
-//                     </Row>
-//                     <Row>
-//                       <Form.Control 
-//                           placeholder="Skriv ditt namn här..."
-//                           className="comFormInput"
-//                           type="text" 
-//                           value={this.state.name}          // kopplar value till stateobjektets attribut "name"
-//                           onChange={this.handleChangeName} // Eventhanterare som hänvisar till funktionen handleChangeName som visar vad som ska hända när ett namn skrivs in i denna textrutan i formuläret.
-//                           required/>
-//                     </Row>
-//                     <Row>
-//                       <Form.Label className="comFormLabel">
-//                         KOMMENTAR
-//                       </Form.Label>
-//                     </Row>
-//                     <Row>
-//                       <Form.Control 
-//                           as="textarea" 
-//                           rows={3}
-//                           placeholder="Skriv ditt bästa miljötips här..."
-//                           className="comFormInput"
-//                           value={this.state.comment}
-//                           onChange={this.handleChangeComment} 
-//                           required />
-//                     </Row>  
-//                     <Row>
-//                       <Button 
-//                         className="sendBtn"
-//                         as="input" 
-//                         type="submit" 
-//                         variant="info" 
-//                         value="Skicka kommentar"/>
-//                     </Row>        
-//                   </Form.Group>
-//                 </Form>
-//               </Col>
-//               <Col>
-//                 <Container className=" charts " >
-//                   <p> Läs vad dina vänner gör för att minska negativ påverkan på jorden:</p>
-//                   {this.state.commentList.map((item) => (       // skriver ut kommentaren, {item.name}&{item.comment} tar value från formuläret och skriver ut det
-//                     <Container className="comDisplayContainer " >
-//                       <Card.Title 
-//                         className="comDisplayName" 
-//                         key={item.LikeButton} >                 {/* {item.LikeButton} */}
-//                           {item.name}                           {/* {item.name}  skriver ut det nya namnet*/}
-//                       </Card.Title>
-//                       <Card.Text 
-//                         className="comDisplayComment" >
-//                           {item.comment} 
-//                         {/* <LikeButton/> */}
-//                       </Card.Text> 
-//                       <LikeButton/>
-//                     </Container> 
-//                   ))}
-//                 </Container>
-//               </Col>
-//             </Row>
-//           </Container>
-//         </Row>
-//       </Container>
-//     );
-//   }
-// }
-
-// export default Comments;
