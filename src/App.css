@@ -146,8 +146,8 @@ div.charts {
   background: rgba(249, 249, 249, 0.8);
   border: 1px solid #999;
   border-radius: 5px;
-  padding-bottom: 2em;
-  padding-top: 2em;
+  padding-bottom: 1em;
+  padding-top: 0.5em;
   margin-top: 15px;
   margin-bottom: 20px;
 }
@@ -363,7 +363,7 @@ h2.chartTitle {
   color: #555;
   font-family: 'Quicksand', sans-serif;
   font-weight: 600;
-  padding-top: 1em;
+  padding-top: .1em;
 }
 .chartHeader h4 {
   text-align: center;
