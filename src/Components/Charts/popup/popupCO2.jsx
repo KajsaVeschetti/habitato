@@ -130,7 +130,7 @@ export default function PopupCO2() {
         }}
       >
         <Fade in={open}> 
-        <DialogTitle id="customized-dialog-title" onClose={handleClose}/>  /* Denna del hämtar stängningsknappen som kommer upp för att stänga ner popupen*/
+        <DialogTitle id="customized-dialog-title" onClose={handleClose}/>  {/* Denna del hämtar stängningsknappen som kommer upp för att stänga ner popupen*/}
           <div style={{ overflow:"scroll", maxHeight:"900px", minHeight:"100%" }}>
             <CarouSelCo2/>             
         </div>
