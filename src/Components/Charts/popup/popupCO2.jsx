@@ -10,13 +10,13 @@ import Backdrop from '@material-ui/core/Backdrop';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is required for IE 11 support
+import CarouSelCo2 from './CarouSelCo2';
 
-
-//Nedan kod är hämtad från https://react.semantic-ui.com/modules/modal/ för att få till popup knappar på förstasidan.
+//Nedan kod är hämtad från https://material-ui.com/components/modal/#modal för att få till popup knappar på förstasidan. Med react-spring
 
 
 //import InfoCo2 from './infoCO2';
-import CarouSelCo2 from './CarouSelCo2';
+
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -64,8 +64,8 @@ const styles = (theme) => ({
   },
   closeButton: {
     position: 'absolute',
-    right: theme.spacing(23),
-    top: theme.spacing(3.5),
+    right: theme.spacing(20),
+    top: theme.spacing(5),
     color: theme.palette.grey[100],
     backgroundColor: 'rgba(0, 0, 0, 0.5)'
 
@@ -128,7 +128,7 @@ export default function PopupCO2() {
       >
         <Fade in={open}> 
         <DialogTitle id="customized-dialog-title" onClose={handleClose}/>
-          <div style={{ overflow:"scroll", maxHeight:"600px", minHeight:"100%" }}>
+          <div style={{ overflow:"scroll", maxHeight:"900px", minHeight:"100%" }}>
             <CarouSelCo2/> 
             
         </div>
