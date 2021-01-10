@@ -61,7 +61,7 @@ class Comments extends Component {
                       className="charts">
                     <Row>
                       <Form.Label className="comFormLabel">
-                        NAMN
+                        NAMN *
                       </Form.Label>
                     </Row>
                     <Row>
@@ -75,7 +75,7 @@ class Comments extends Component {
                     </Row>
                     <Row>
                       <Form.Label className="comFormLabel">
-                        KOMMENTAR
+                        KOMMENTAR *
                       </Form.Label>
                     </Row>
                     <Row>
