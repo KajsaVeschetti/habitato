@@ -12,6 +12,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import { useSpring, animated } from 'react-spring/web.cjs'; // web.cjs is required for IE 11 support
 import CarouSelCo2 from './CarouSelCo2';
 
+
 //Nedan kod är hämtad från https://material-ui.com/components/modal/#modal för att få till popup knappar på förstasidan. Med react-spring
 
 
@@ -129,9 +130,9 @@ export default function PopupCO2() {
         <Fade in={open}> 
         <DialogTitle id="customized-dialog-title" onClose={handleClose}/>
           <div style={{ overflow:"scroll", maxHeight:"900px", minHeight:"100%" }}>
-            <CarouSelCo2/> 
-            
+            <CarouSelCo2/>             
         </div>
+
         </Fade>
       </Modal>
      
