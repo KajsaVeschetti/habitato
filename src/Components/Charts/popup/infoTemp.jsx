@@ -74,11 +74,11 @@ class InfoTemp extends Component {
               </div>
               <div className="mx-auto chartContainer">
               <div  component={Temp}>
-                        <Temp 
+                        <Temp  /* Hämtar in diagrammet */
                         chartName="Temp1"
                         GlobalTemp={this.state.GlobalTemp[this.state.indexYear1]}
                         onYearFilter={this.handleYearFilter}/>
-                        <Temp 
+                        <Temp   /* Hämtar in diagrammet */
                         chartName="Temp2"
                         GlobalTemp={this.state.GlobalTemp[this.state.indexYear2]}
                         onYearFilter={this.handleYearFilter}/>
