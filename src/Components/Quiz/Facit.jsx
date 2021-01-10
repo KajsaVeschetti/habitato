@@ -1,10 +1,11 @@
-import React,{useState} from 'react';
+import React,{useState} from 'react'; //Importerar useState hook from React för att kunna använda useState i en funktion
 import { Button, Container } from 'react-bootstrap';
 
 
 function Facit() {
-  const [readMore,setReadMore]=useState(false);
-  const extraContent=<div>
+  const [readMore,setReadMore]=useState(false); // False = Knappen är inte tryckt på = texten gömd  // Const att förvara text man vill visa/gömma. 
+  const extraContent=<div> 
+    
     <Container className="bg-light">
 <p className="extra-content">
                 <div className="row row-cols-1">
@@ -54,7 +55,14 @@ function Facit() {
       </p>
       </Container>
   </div>
+  
+    // Const med de olika namnen som knappen ska toggla mellan. 
   const BtnName=readMore?'Göm facit ':'Visa frågor och de rätta svaren'
+
+    // Här renderas en knapp med ett onClick event som startar setReadMore funktionen
+  // Readmore - Växlar mellan knappnamn beroende på vad den gör
+  // btnname - namnen som knappen ska toggla mellan.
+  //extraContent= min text som ska visat 
   return (
     <div className="App">
       <Button variant="info" size="sm" onClick={()=>{setReadMore(!readMore)}}>{BtnName}</Button>
