@@ -16,9 +16,7 @@ import CarouSelCo2 from './CarouSelCo2';
 //Nedan kod är hämtad från https://material-ui.com/components/modal/#modal för att få till popup knappar på förstasidan. Med react-spring
 
 
-//import InfoCo2 from './infoCO2';
-
-
+/* Styling för popuprutan */
 const useStyles = makeStyles((theme) => ({
   modal: {
     display: 'flex',
@@ -33,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+/* Gör att popup rutan öppnas och stängs med en fade */
 const Fade = React.forwardRef(function Fade(props, ref) {
   const { in: open, children, onEnter, onExited, ...other } = props;
   const style = useSpring({
@@ -57,6 +56,7 @@ const Fade = React.forwardRef(function Fade(props, ref) {
   );
 });
 
+/* Styling för iconen för att stänga popupen */
 const styles = (theme) => ({
   root: {
     margin: 0,
@@ -73,6 +73,7 @@ const styles = (theme) => ({
   },
 });
 
+/* Denna kod skapar stängningsknappen iform av ett kryss. Denna kod kommer från material-ui. */
 const DialogTitle = withStyles(styles)((props) => {
   const { children, classes, onClose, ...other } = props;
   return (
@@ -80,7 +81,7 @@ const DialogTitle = withStyles(styles)((props) => {
       <Typography variant="h6">{children}</Typography>
       {onClose ? (
         <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
-          <CloseIcon style={{fontSize:"30px"}}/>
+          <CloseIcon style={{fontSize:"30px"}}/> /* Iconen som visas */
         </IconButton>
       ) : null}
     </MuiDialogTitle>
@@ -100,17 +101,18 @@ export default function PopupCO2() {
   const [open, setOpen] = React.useState(false);
   
  
-  const handleOpen = () => {
+  const handleOpen = () => { /*Hanterar öppningen av popuprutan*/
     setOpen(true);
   };
 
-  const handleClose = () => {
+  const handleClose = () => { /*Hanterar stängningen av popuprutan*/
     setOpen(false);
   };
 
 
   return (
-    /*Nedan kod skapar en knapp som när man trycker på den visar ett diagram */
+    /*Nedan kod skapar en knapp som genererar en popupruta. I denna ruta hämtas diagrammet för koldioxidutläpp. 
+    Detta hämtas i komponenten CarouSelCo2*/
     <div> 
       <button type="button" className="popupButton" style={{background:"rgba(41, 170, 225, 0.9)"}} onClick={handleOpen}>
        Koldioxidutsläpp
@@ -128,7 +130,7 @@ export default function PopupCO2() {
         }}
       >
         <Fade in={open}> 
-        <DialogTitle id="customized-dialog-title" onClose={handleClose}/>
+        <DialogTitle id="customized-dialog-title" onClose={handleClose}/>  /* Denna del hämtar stängningsknappen som kommer upp för att stänga ner popupen*/
           <div style={{ overflow:"scroll", maxHeight:"900px", minHeight:"100%" }}>
             <CarouSelCo2/>             
         </div>
