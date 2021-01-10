@@ -128,7 +128,7 @@ export default function PopupGL() {
       >
         <Fade in={open}>
           <div style={{ overflow:"scroll", maxHeight:"900px", minHeight:"100%"}}> 
-          <DialogTitle id="customized-dialog-title" onClose={handleClose}/>  /* Denna del hämtar stängningsknappen som kommer upp för att stänga ner popupen*/
+          <DialogTitle id="customized-dialog-title" onClose={handleClose}/>  {/* Denna del hämtar stängningsknappen som kommer upp för att stänga ner popupen*/}
             <CarouSelGlacier/>
           </div>
         </Fade>
