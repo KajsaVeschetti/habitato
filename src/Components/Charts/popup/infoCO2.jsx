@@ -60,7 +60,7 @@ class InfoCo2 extends Component {
          
           <div style={{background:"rgba(41, 170, 225, 0.9)", paddingBottom: "15px", border:'2px solid #000' }}>
             <h2 id="spring-modal-title" className="chartTitle pt-3">Koldioxidutsläpp</h2>
-          <div className="card mx-auto charts " style={{width:"750px"}}>  
+          <div className="card mx-auto charts " style={{width:"700px"}}>  
             <div className="chartHeader">
               <h3>I nedan diagram kan du jämföra koldioxidutsläppen <br/> från olika typer av fossila bränslen.</h3> 
               <h4>Skriv in ett årtal mellan 1751-2014 och tryck på enter för att få fram värden.</h4>
