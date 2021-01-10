@@ -72,15 +72,14 @@ class InfoGlacier extends Component {
               </div>
               <div className="mx-auto chartContainer"> 
                         <div component={Glacier}>
-                        <Glacier
+                        <Glacier  /* Hämtar in diagrammet */
                         chartName="Glacier1"
                         GlacierSize={this.state.GlacierSize[this.state.indexYear1]}
                         onYearFilter={this.handleYearFilter}/>
-                        <Glacier 
+                        <Glacier   /* Hämtar in diagrammet */
                         chartName="Glacier2"
                         GlacierSize={this.state.GlacierSize[this.state.indexYear2]}
                         onYearFilter={this.handleYearFilter}/>
-                        {/* Glasiär-info */}
                         <ReadMoreGS />
                         </div>
                       
