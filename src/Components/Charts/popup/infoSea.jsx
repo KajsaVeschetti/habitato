@@ -71,15 +71,14 @@ class InfoSea extends Component {
               </div>
               <div className="mx-auto chartContainer">
                         <div component={Sea}>
-                        <Sea 
+                        <Sea  /* Hämtar in diagrammet */
                         chartName="Sea1"
                         SeaLevel={this.state.SeaLevel[this.state.indexYear1]}
                         onYearFilter={this.handleYearFilter}/>
-                        <Sea 
+                        <Sea   /* Hämtar in diagrammet */
                         chartName="Sea2"
                         SeaLevel={this.state.SeaLevel[this.state.indexYear2]}
                         onYearFilter={this.handleYearFilter}/>
-                        {/* Havsnivå-info  */}
                         <ReadMoreSL />
                         </div>
 
