@@ -394,12 +394,10 @@ h2.chartTitle {
 .conAboutContainer {
   margin-left: 2em;
   margin-right: 2em;
-  /* width: 80%; */
 }
 
 .aboutCard {
   border: green 5px solid;
-  /* width: 12.3em; */
   width:23%;
   margin-bottom: 1.5em;
   margin-left: auto;
@@ -422,6 +420,15 @@ h2.chartTitle {
 
 .conFormContainer {
   text-align: left;
+}
+
+.conFormLabel {
+  margin-top: 1em;
+  padding-left: 0.5em;
+}
+
+.text-muted {
+  padding-left: 0.5em;
 }
 
 .sendBtn {
