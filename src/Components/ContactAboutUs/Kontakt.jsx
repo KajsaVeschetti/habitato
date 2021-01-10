@@ -16,17 +16,17 @@ function Kontakt() {
       <Row className="charts col-lg-11 mx-auto ">
         <p className="conIntroTxt">
           Hej! 
-          <br />
+          <br/>
           Det är vi som står bakom Habitato! 
-          <br />
+          <br/>
           Vi är fyra kollegor men också mycket goda vänner, som brinner för att
           så många som möjligt ska veta varför och hur de ska kunna göra sitt
           allra bästa för att hjälpa till att underlätta för vår planet. 
-          <br />
-          <br />
+          <br/>
+          <br/>
           Vi har bara en planet, låt oss tillsammans ta hand om den!
         </p>
-        <AboutUs />                      {/* About us skrivs ut, som importeras från AboutUs.jsx */}
+        <AboutUs/>                      {/* About us skrivs ut, som importeras från AboutUs.jsx */}
       </Row>
       <Row>
         <Col>
@@ -41,7 +41,6 @@ function Kontakt() {
               <Form.Label className="conFormLabel">
                     Namn *
                 </Form.Label>
-                
                 <Form.Control 
                     placeholder="Namn" 
                     required />
@@ -51,7 +50,6 @@ function Kontakt() {
                 <Form.Label className="conFormLabel">
                     Mailadress *
                 </Form.Label>
-                
                 <Form.Control 
                     type="email" 
                     placeholder="Mailadress" 
@@ -86,7 +84,7 @@ function Kontakt() {
                 type="submit" 
                 className="sendBtn" 
                 block>
-                        Skicka
+                  Skicka
               </Button>
             </Form>
           </Container>
