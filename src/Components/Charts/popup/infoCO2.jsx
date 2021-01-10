@@ -16,7 +16,6 @@ class InfoCo2 extends Component {
         CO2Emission: [],
         indexYear1:0,
         indexYear2:0,
-        infoData: [0]
       };
 
       //hämtar information från de olika data filerna 
@@ -24,7 +23,7 @@ class InfoCo2 extends Component {
 
         this.setState({
           CO2Emission: getCO2data(),
-          infoData : infoData
+     
         });
       }
     
@@ -51,8 +50,6 @@ class InfoCo2 extends Component {
 
       render() {
 
-        
-        console.log(this.state.infoData[0])
         return (
           /*Nedan kod hämtar datan till de två diagram som ska synas. Dessa diagram hämtas från en annan komponent
           Där finnen en div för att bygga in de två diagrammen och en informationsruta till en bredd.
@@ -67,17 +64,16 @@ class InfoCo2 extends Component {
             </div>
           <div className="chartContainer mx-auto"> 
             <div component={BarCharts}>
-              <BarCharts 
+              <BarCharts   /* Hämtar in diagrammet */
                 chartName="Bar1"
                 CO2Emission={this.state.CO2Emission[this.state.indexYear1]} 
                 onYearFilter={this.handleYearFilter}/>
-              <BarCharts
+              <BarCharts  /* Hämtar in diagrammet */
                 chartName="Bar2"
                 CO2Emission={this.state.CO2Emission[this.state.indexYear2]} 
                 onYearFilter={this.handleYearFilter}/>
-              {/* Co2-info */}
               <ReadMore/> 
-              {/* <ReadMoreButton infoData={this.state.infoData[0]}/> */}
+              
                      
             </div>  
   
