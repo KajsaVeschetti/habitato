@@ -10,10 +10,10 @@ class LikeButton extends React.Component {
   };
 
   addLike = () => {                         // arrow function som räknar
-    let newCount = this.state.likes + 1;
-    this.setState({
-      likes: newCount,
-      bgColor: '#EB2805'
+    let newCount = this.state.likes + 1;    // varje gång addLike anropas plussas 1 på antalet
+    this.setState({                         // listar komponentens data som hanteras
+      likes: newCount,                      // lista med state-objektets attribut
+      bgColor: '#EB2805'                    // sätter ny färg
     });
   }
 
@@ -21,20 +21,20 @@ class LikeButton extends React.Component {
     return (
       <Container className="likeBtnContainer">
         <FontAwesomeIcon 
-          icon={faHeart} 
-          onClick={this.addLike} 
+          icon={faHeart}                          // skriver ut hjärtikonen som importerats från fontawesome
+          onClick={this.addLike}                  // vid klick anropas funktionen addLike
           className="likeBtnIcon" 
           title="Gillaknapp"
-          style={{color:this.state.bgColor}}/>
+          style={{color:this.state.bgColor}}/>    {/* Vid klick anropas bgColor som byter färg på ikonen */}
         <span>
-           {this.state.likes} 
+           {this.state.likes}                     {/* Skriver ut nytt antal likes från this.state.likes */}
         </span>
       </Container>
     );
   }
 }
     
-export default LikeButton;
+export default LikeButton;                        //exporterar LikeButton
 
 
 
