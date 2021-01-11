@@ -71,3 +71,29 @@ playAgain = () => {
     }
 }
  export default Quiz;
+
+//  Chris Blakely. (24 November 2020). React Quiz App Tutorial (w/ starter code + working example) | Beginner React Projects [Video]. YouTube. https://www.freecodecamp.org/news/how-to-build-a-quiz-app-using-react/
+
+// freeCodeCamp.org. (25 November 2020). React / Typescript Tutorial - Build a Quiz App.  [Video]. YouTube. https://www.youtube.com/watch?v=F2JCjVSZlG0&t=1077s
+
+// geeksforgeeks. (28 December 2020). Create a Quiz App using ReactJS. https://www.geeksforgeeks.org/create-a-quiz-app-using-reactjs/?fbclid=IwAR3N1Ri5SSv9JeF-ZAK6QKsc3B7h4q0sgQ63JfjWuL3Z6jkHauxwLeTXrKI
+
+// mitchgavan. (24 November 2020). Create a quiz with React https://mitchgavan.com/react-quiz/
+
+// Mozilla. (14 December 2020). async function. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
+
+// Mozilla. (17 december 2020). Conditional (ternary) operator. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+
+// KnowledgeHut. (17 December 2020). Build a Quiz App From Scratch Using React Components | React Tutorial For Beginners | Knowledgehut. [Video]. YouTube. https://www.youtube.com/watch?v=aq-fCtg_gG4&t=1774s
+
+// Rajdeep singh. (28 December 2020). Create Modern Quiz With React Js. https://officialrajdeepsingh.medium.com/create-modern-quiz-with-react-js-8902f34074db
+
+// Sathishravi. (24 November 2020) How To Create A Quiz App in React. https://medium.com/javascript-in-plain-english/how-to-create-a-quiz-app-in-react-5a6fefa3a100
+
+// sitepoint. (22 December 2020) Responsive Web Design Tips from Bootstrap's CSS. https://www.sitepoint.com/responsive-web-design-tips-bootstrap-css/
+
+// stackoverflow. (6 januari 2020). How to toggle boolean state of react component? https://stackoverflow.com/questions/40359800/how-to-toggle-boolean-state-of-react-component
+
+// geeksforgeeks. (22 December 2020) Meaning of numbers in “col-md-4”,“ col-xs-1”, “col-lg-2” in Bootstrap. https://www.geeksforgeeks.org/meaning-of-numbers-in-col-md-4-col-xs-1-col-lg-2-in-bootstrap/
+
+// Logrocket . (14 december 2020). useState in React: A complete guide. https://blog.logrocket.com/a-guide-to-usestate-in-react-ecb9952e406c/#declaringstateinreacthttps://www.youtube.com/watch?v=Lya-qYiDqIA
