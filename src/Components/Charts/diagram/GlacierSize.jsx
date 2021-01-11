@@ -51,7 +51,7 @@ class Glacier extends Component {
 
       function getIntroOfPage(label) {
         if (label === 'Nivå') {
-          return 'Här kan vi se den genomsnittliga massan av den uppmätta glaciären. Med detta menas hur stor glaciären är.';
+          return 'Här kan vi se den genomsnittliga massan av den uppmätta glaciären. Med detta menas hur stor glaciären är. Detta mäts i i meter vattenekvivalenter, vilket representerar förändringar i en glaciers genomsnittliga tjocklek.';
         } if (label === 'Antal Observationer') {
           return 'Här visas antalet glaciärer som har observerats';
         } 
