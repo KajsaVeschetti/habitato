@@ -26,3 +26,5 @@ function ReadMore() {
 }
 
 export default ReadMore;
+
+// havet.nu. (4 December 2020). VÄRT ATT VETA. Klimat i förändring. https://www.havet.nu/klimat-i-forandring
