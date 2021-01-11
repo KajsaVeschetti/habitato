@@ -7,7 +7,7 @@ import {
 } from 'recharts';
 
 
-
+// Kod hämtad från recharts
   const getPath = (x, y, width, height) => `M${x},${y + height}
   C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3} ${x + width / 2}, ${y}
   C${x + width / 2},${y + height / 3} ${x + 2 * width / 3},${y + height} ${x + width}, ${y + height}
@@ -55,8 +55,10 @@ export default class BarCharts extends Component {
             {name: 'Flar', CO2: co2["Gas Flaring"]},
           ];
 
+        /*Färger på staplar*/
         const COLORS =[ "#ff595e", "#f8961e", "#8ac926", "#1982c4", "#6a4c93"  ]
-
+        
+        /* Information om de olika staplarna */
         function getIntroOfPage(label) {
           if (label === 'Gas') {
             return 'Gas är en förkortning av Gas Fuel. På svenska Energigas. Med detta menas bränslen i gasfrom så som biogas, naturgas och gasol. Detta värde visar kolutsläpp från bränsleförbrukning. ';
@@ -71,6 +73,7 @@ export default class BarCharts extends Component {
           } 
         }
         
+          /*Hämtar informationen från ovan funktion */
         function CustomTooltip({ payload, label, active }) {
           if (active) {
             return (
@@ -82,10 +85,9 @@ export default class BarCharts extends Component {
           }
           return null;
         }
-
+        
+    //Nedan kod skapar diagrammet och hämtas sedan i infoCO2.jsx
         return (
-          
-            
           <div style={{width:"300px", height:"360px", float:"left", }}>
               <div style={{textAlign:"center", marginLeft:"3em"}}>
                 <input className="diagramInput" type="text" placeholder="Skriv in ett år och tryck enter" style={{textAlign:"center"}} onKeyDown={e=> this.handleYear(e)}></input>
