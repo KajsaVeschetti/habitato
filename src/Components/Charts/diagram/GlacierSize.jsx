@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 
+// Kod hämtad från recharts
 
 const getPath = (x, y, width, height) => `M${x},${y + height}
 C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3} ${x + width / 2}, ${y}
@@ -47,8 +48,10 @@ class Glacier extends Component {
  
       ];
 
+      /*Färger på staplar*/
       const COLORS =[ "#ff595e", "#f8961e", "#8ac926", "#1982c4", "#6a4c93" ]
 
+      /* Information om de olika staplarna */
       function getIntroOfPage(label) {
         if (label === 'Nivå') {
           return 'Här kan vi se den genomsnittliga massan av den uppmätta glaciären. Med detta menas hur stor glaciären är. Detta mäts i i meter vattenekvivalenter, vilket representerar förändringar i en glaciers genomsnittliga tjocklek.';
@@ -57,6 +60,7 @@ class Glacier extends Component {
         } 
       }
       
+      /*Hämtar informationen från ovan funktion */
       function CustomTooltip({ payload, label, active }) {
         if (active) {
           return (
@@ -69,8 +73,8 @@ class Glacier extends Component {
         return null;
       }
 
+      //Nedan kod skapar diagrammet och hämtas sedan i infoTemp.jsx
         return ( 
-            <React.Fragment>
             <div style={{width:"300px", height:"360px", float:"left"}}>
               <div style={{textAlign:"center", marginLeft:"3em"}}>
             <input className="diagramInput" type="text" placeholder="Skriv in ett år" onKeyDown={e=> this.handleYear(e)}></input>
@@ -94,7 +98,6 @@ class Glacier extends Component {
                 </BarChart> 
      
           </div>
-          </React.Fragment>
 
          );
     }
