@@ -63,3 +63,5 @@ export default Fakta;
 
 
 
+//https://react-bootstrap.github.io/components/tabs/
+//https://react-bootstrap.github.io/components/cards/
