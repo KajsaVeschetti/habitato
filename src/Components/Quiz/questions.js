@@ -14,7 +14,7 @@ const questions = [
     {
       question: "Vad är konsekvensen av den förstärkta växthuseffekten?",
       correct_answer: "Temperaturen stiger",
-      answer: ["Temperaturen är oförändrad", "Temperaturen stiger", "Temperaturen sjunker"],
+      answer: ["Medeltemperaturen är oförändrad", "Medeltemperaturen stiger", "Medeltemperaturen sjunker"],
 
     },
     {
