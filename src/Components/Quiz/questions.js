@@ -63,3 +63,10 @@ const questions = [
 export function getQuestions(){
     return questions;
 }
+
+// golangprograms. (17 december 2020). Display JSON Data in React JS. https://www.golangprograms.com/display-json-data-in-reactjs.html
+
+// Klimataktion. (26 November 2020). Testa dina klimatkunskaper, samla på våra frågekort. https://klimataktion.se/samarbete/testa-dina-klimatkunskaper-samla-pa-vara-fragekort/
+
+// Pluralsight. (17 December 2020). Load and Render JSON Data into React Components. https://www.pluralsight.com/guides/load-and-render-json-data-into-react-components
+
