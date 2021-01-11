@@ -71,9 +71,9 @@ class Temp extends Component {
       return null;
     }
 
+    //Nedan kod skapar diagrammet och hämtas sedan i infoTemp.jsx
     return ( 
-            <React.Fragment>
-               <div style={{width:"300px", height:"360px", float:"left"}}>
+          <div style={{width:"300px", height:"360px", float:"left"}}>
                <div style={{textAlign:"center", marginLeft:"3.5em"}}>
             <input className="diagramInput" type="text" placeholder="Välj ett år" onKeyDown={e=> this.handleYear(e)}></input>
             </div>
@@ -95,7 +95,6 @@ class Temp extends Component {
        
                 </BarChart> 
             </div>
-            </React.Fragment>
          );
     }
 }
