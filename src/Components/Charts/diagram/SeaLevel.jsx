@@ -6,7 +6,7 @@ import React, { Component } from 'react';
   import PropTypes from 'prop-types';
 
 
-  
+  // Kod hämtad från recharts
   const getPath = (x, y, width, height) => `M${x},${y + height}
   C${x + width / 3},${y + height} ${x + width / 2},${y + height / 3} ${x + width / 2}, ${y}
   C${x + width / 2},${y + height / 3} ${x + 2 * width / 3},${y + height} ${x + width}, ${y + height}
@@ -46,8 +46,10 @@ class Sea extends Component {
 
     ];
 
+    /*Färger på staplar*/
     const COLORS =[ "#ff595e", "#f8961e", "#8ac926", "#1982c4", "#6a4c93" ] 
     
+    /* Information om de olika staplarna */
     function getIntroOfPage(label) {
       if (label === 'GMSL') {
         return 'GMSL betyder global mean sea level. På svenska global genomsnittlig havsnivå. Detta är en rekonsturerad genomsnittlig havsnivå i mm ';
@@ -56,6 +58,7 @@ class Sea extends Component {
       } 
     }
     
+    /*Hämtar informationen från ovan funktion */
     function CustomTooltip({ payload, label, active }) {
       if (active) {
         return (
@@ -68,9 +71,9 @@ class Sea extends Component {
       return null;
     }
     
+    //Nedan kod skapar diagrammet och hämtas sedan i infoSea.jsx
     return ( 
-            <React.Fragment>
-              <div style={{width:"300px", height:"360px", float:"left"}}>
+     <div style={{width:"300px", height:"360px", float:"left"}}>
               <div style={{textAlign:"center", marginLeft:"3.5em"}}>
             <input className="diagramInput" type="text" placeholder="Välj ett år" onKeyDown={e=> this.handleYear(e)}></input>
               </div>
@@ -91,8 +94,7 @@ class Sea extends Component {
                 </Bar>
        
                 </BarChart> 
-          </div>
-          </React.Fragment>
+        </div>
          );
     }
 }
