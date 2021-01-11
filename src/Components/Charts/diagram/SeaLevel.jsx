@@ -50,9 +50,9 @@ class Sea extends Component {
     
     function getIntroOfPage(label) {
       if (label === 'GMSL') {
-        return 'GMSL betyder global mean sea level. På svenska global genomsnittlig havsnivå. Detta är rekonsturerad genbomsnittlig havsnivå i mm ';
+        return 'GMSL betyder global mean sea level. På svenska global genomsnittlig havsnivå. Detta är en rekonsturerad genomsnittlig havsnivå i mm ';
       } if (label === 'GMSL ovisshet') {
-        return 'Denna spalt visar den ovisshet som orsakas av rekonstruktionen.';
+        return 'Denna spalt visar den ovisshet i mm som orsakas av rekonstruktionen.';
       } 
     }
     
