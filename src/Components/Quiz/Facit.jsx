@@ -73,3 +73,5 @@ function Facit() {
 
 
 export default Facit;
+
+// Klimataktion. (26 November 2020). Testa dina klimatkunskaper, samla på våra frågekort. https://klimataktion.se/samarbete/testa-dina-klimatkunskaper-samla-pa-vara-fragekort/
