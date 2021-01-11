@@ -32,3 +32,6 @@ function ReadMore() { // False = Knappen är inte tryckt på = texten gömd
 
 export default ReadMore;
 
+// Nippongases. (4 December). Koldioxid, Den livsviktiga gasen. https://nippongases.com/se-sv/gaserna/koldioxid?gclid=CjwKCAiAn7L-BRBbEiwAl9UtkO6J-_UMm9oTL6z5eZh9nyv5ZONSzluaLaSVszlaM1g3xiiPV6Qw-BoCnf4QAvD_BwE
+
+// Pluralsight. (8 December). How to Implement a "Read More" Link in React. https://www.pluralsight.com/guides/how-to-implement-a-read-more-link-in-react
