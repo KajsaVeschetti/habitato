@@ -1,18 +1,13 @@
 import React, {Component} from "react";
-// import {BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 
 
-// import Test from "./Quiz/Test";
-import Kontakt from "./ContactAboutUs/Kontakt";
 
-
+//Denna komponent är den enda komponent som är kopplad till App.js här anropas endas navbar och footer
 
 class Page extends Component {
   
- 
-
   render(){
 
     return(
