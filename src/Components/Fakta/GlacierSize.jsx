@@ -75,3 +75,11 @@ function GlacierSize () {
  );
 }
 export default GlacierSize; 
+
+
+
+
+
+//https://react-bootstrap.github.io/utilities/transitions/
+//https://react-bootstrap.github.io/components/cards/
+////https://getbootstrap.com/docs/4.0/utilities/embed/
