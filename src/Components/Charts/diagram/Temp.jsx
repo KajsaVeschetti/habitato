@@ -52,9 +52,9 @@ class Temp extends Component {
     /* Information om de olika staplarna */
     function getIntroOfPage(label) {
       if (label === 'GCAG') {
-        return 'GCAG står för Global component of Climate at a Glance. Detta verktyp ger en så nära realtidsanalys av månatliga och årliga temperaturer för världen.  ';
+        return 'GCAG står för Global component of Climate at a Glance. Detta verktyg ger en så nära realtidsanalys av månatliga och årliga temperaturer för världen. Temperaturen mäts i grader Celsius. ';
       } if (label === 'GISTEMP') {
-        return 'GISTEMP står för GISS Surface Temperature Analysis. Detta är en uppskattning av global förändriogn i yttemperaturen. Denna mätning görs av NASA.';
+        return 'GISTEMP står för GISS Surface Temperature Analysis. Detta är en uppskattning av global förändriogn i yttemperaturen. Denna mätning görs av NASA. Temperaturen mäts i grader Celsius.';
       }  
     }
     
