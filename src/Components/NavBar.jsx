@@ -2,8 +2,8 @@ import React, {Component} from "react";
 
 import {  BrowserRouter as Router,
   Route, Switch, Redirect,
-  NavLink} from "react-router-dom";
-import {Nav, Navbar} from 'react-bootstrap';   
+  NavLink} from "react-router-dom";  //Importeraar BrowserRouter från react-router-dom
+import {Nav, Navbar} from 'react-bootstrap';   //Importer Nav, Navbar från react-bootstrap
 import Habitato1 from "../img/Habitato1.jpg";
 
 import Quiz from "./Quiz/Quiz";
@@ -22,8 +22,8 @@ class NavBar extends Component {
  
        return(
           <Router>
-               {/*Skapar en responsiv navbar (hamburgermenyn). Menyn fälls ut för deskop (brytpunkten är lg). En logga som syns i mindre 
-                  skärmar läggs till. Loggan är klickbar och tar en till "hem"*/}
+               {/* Skapar med hjälp av react-bootstrap en responsiv navbar (hamburgermenyn). Menyn fälls ut för deskop 
+                   (brytpunkten är lg). En logga som syns i mindre skärmar läggs till. Loggan är klickbar och tar en till "hem"*/}
           <Navbar collapseOnSelect expand="lg" bg="light" variant="light" className="pr-4">
            <NavLink class="navbar-toggler border-0" to="/"><img src={Habitato1} className="navLogo" alt="Habitato logotyp"/></NavLink>
            <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
@@ -74,7 +74,7 @@ class NavBar extends Component {
             <Kontakt/>
           </Route>
 
-
+           {/*Omdirigerar till /Charts/AllCharts*/}
           <Redirect from="/" exact to="/Charts/AllCharts"></Redirect>
         
         </Switch>
@@ -87,5 +87,6 @@ export default NavBar;
 
 
 
-
+// https://www.geeksforgeeks.org/reactjs-router/
 // https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/api/NavLink.md
+// https://react-bootstrap.github.io/components/navbar/
