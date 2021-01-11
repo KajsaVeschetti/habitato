@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import ReadMoreButton from '../../btn';
 import { getCO2data } from "../../data/co2";
-import { infoData } from '../../data/readMore';
-
-
 
 import BarCharts from '../diagram/CO2Emission';
 import ReadMore from "../InfoCharts/ReadMore"
