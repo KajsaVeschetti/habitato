@@ -22,3 +22,5 @@ function ReadMore() {
 }
 
 export default ReadMore;
+
+// Naturskyddsföreningen. (4 December 2020). Faktablad: Växthuseffekten. https://www.naturskyddsforeningen.se/skola/energifallet/faktablad-vaxthuseffekten?gclid=CjwKCAiAn7L-BRBbEiwAl9UtkNPhhQxA1CFw4rOqYxg2Cal-RDjAwAtUtUUgVHvOEFALwpOHODFk5RoCxxwQAvD_BwE
